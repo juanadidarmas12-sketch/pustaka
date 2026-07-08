@@ -51,6 +51,7 @@
       <span id="reader-book-title"></span>
       <span id="reader-chapter-label"></span>
     </div>
+    <button class="icon-btn" id="reader-listen-btn" aria-label="Dengarkan bab ini">&#127911;</button>
     <button class="icon-btn" id="reader-settings-btn" aria-label="Pengaturan tampilan">Aa</button>
   </header>
 
@@ -91,6 +92,52 @@
       <ol id="toc-list"></ol>
     </div>
   </div>
+</main>
+
+<!-- ===== VIEW: DENGARKAN (podcast) ===== -->
+<main id="view-listen" class="view listen" hidden>
+  <header class="listen-topbar">
+    <button class="icon-btn" id="listen-back" aria-label="Kembali">&#8592;</button>
+    <div class="listen-headtitle">Mendengarkan</div>
+    <button class="icon-btn" id="listen-voice-btn" aria-label="Pilih suara">&#9881;</button>
+  </header>
+
+  <div class="listen-hero">
+    <div class="listen-cover" id="listen-cover"></div>
+    <h2 id="listen-book"></h2>
+    <p id="listen-chapter"></p>
+    <p class="listen-engine" id="listen-engine"></p>
+  </div>
+
+  <div class="listen-live" id="listen-live"></div>
+
+  <div class="listen-seek" id="listen-seek-wrap" hidden>
+    <input type="range" id="listen-seek" min="0" max="1000" value="0" aria-label="Posisi audio">
+    <div class="listen-time"><span id="listen-cur">0:00</span><span id="listen-dur">0:00</span></div>
+  </div>
+
+  <div class="listen-controls">
+    <button class="lc-btn" id="listen-prevch" aria-label="Bab sebelumnya">&#9198;</button>
+    <button class="lc-btn" id="listen-rew" aria-label="Mundur">&#8630;15</button>
+    <button class="lc-main" id="listen-play" aria-label="Putar / jeda">&#9654;</button>
+    <button class="lc-btn" id="listen-ffw" aria-label="Maju">15&#8631;</button>
+    <button class="lc-btn" id="listen-nextch" aria-label="Bab berikutnya">&#9197;</button>
+  </div>
+
+  <div class="listen-row2">
+    <button class="chip2" id="listen-speed">1.0&#215;</button>
+    <button class="chip2" id="listen-sleep">Timer: Off</button>
+    <button class="chip2" id="listen-chlist">Daftar Bab</button>
+  </div>
+
+  <div class="voice-sheet" id="voice-sheet" hidden>
+    <div class="voice-inner">
+      <div class="toc-head"><h2>Pilih Suara</h2><button class="icon-btn" id="voice-close">&#10005;</button></div>
+      <div id="voice-list"></div>
+    </div>
+  </div>
+
+  <audio id="audio-el" preload="metadata"></audio>
 </main>
 
 <div id="toast" class="toast" hidden></div>

@@ -82,12 +82,16 @@ function router() {
   $('#view-library').hidden = true;
   $('#view-detail').hidden = true;
   $('#view-reader').hidden = true;
+  $('#view-listen').hidden = true;
+  if (parts[0] !== 'dengar') stopListening();
   document.body.style.overflow = '';
 
   if (parts[0] === 'buku' && parts[1]) {
     renderDetail(parts[1]);
   } else if (parts[0] === 'baca' && parts[1]) {
     openReader(parts[1], parseInt(parts[2] || '0', 10) || 0);
+  } else if (parts[0] === 'dengar' && parts[1]) {
+    openListen(parts[1], parseInt(parts[2] || '0', 10) || 0);
   } else {
     currentBook = null;
     renderLibrary();
@@ -203,10 +207,16 @@ async function renderDetail(id) {
     '<p class="detail-desc">' + escHTML(meta.description) + '</p>' +
     '<p class="detail-source">Sumber: ' + escHTML(meta.source) + '</p>' +
     '<button class="btn-primary" id="btn-read">' + startLabel + '</button>' +
+    '<button class="btn-ghost" id="btn-listen">&#127911; Dengarkan' +
+      (AUDIO_MANIFEST[id] ? ' <span class="badge-audio">Audio HD</span>' : '') + '</button>' +
     '<div class="detail-toc"><h3>Daftar Bab</h3><ol id="detail-toc-list"><li>Memuat…</li></ol></div>';
 
   $('#btn-read').onclick = () => {
     location.hash = '#/baca/' + id + '/' + (p ? p.ch : 0);
+  };
+  $('#btn-listen').onclick = () => {
+    const ap = getListenPos()[id];
+    location.hash = '#/dengar/' + id + '/' + (ap ? ap.ch : (p ? p.ch : 0));
   };
 
   try {
@@ -598,7 +608,12 @@ async function boot() {
   $('#toc-close').onclick = () => { $('#toc-sheet').hidden = true; };
   $('#toc-sheet').onclick = (e) => { if (e.target === $('#toc-sheet')) $('#toc-sheet').hidden = true; };
 
+  $('#reader-listen-btn').onclick = () => {
+    if (currentBook) location.hash = '#/dengar/' + currentBook.meta.id + '/' + currentChapter;
+  };
+
   bindPagerGestures();
+  bindListenControls();
 
   window.addEventListener('keydown', (e) => {
     if ($('#view-reader').hidden || !currentBook) return;
@@ -631,6 +646,9 @@ async function boot() {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   }
 
+  try { AUDIO_MANIFEST = await (await fetch('audio/index.json')).json(); }
+  catch (e) { AUDIO_MANIFEST = {}; }
+
   try {
     const res = await fetch('books/index.json');
     INDEX = await res.json();
@@ -642,6 +660,320 @@ async function boot() {
     return;
   }
   router();
+}
+
+/* ============ Dengarkan (audiobook / TTS) ============ */
+let AUDIO_MANIFEST = {};
+const LS_AUDIO = 'pustaka.audio';
+const SPEEDS = [0.8, 0.9, 1, 1.1, 1.25, 1.5];
+const SLEEPS = [0, 15, 30, 60];
+
+const listen = {
+  active: false, mode: null, bookId: null, ch: 0,
+  sents: [], idx: 0, playing: false,
+  rate: 1, sleepDeadline: 0, saveTick: 0
+};
+
+function getListenPos() { return loadJSONLS(LS_AUDIO, {}); }
+function saveListenPos() {
+  if (!listen.bookId) return;
+  const all = getListenPos();
+  all[listen.bookId] = {
+    ch: listen.ch,
+    idx: listen.idx,
+    sec: listen.mode === 'audio' ? Math.floor($('#audio-el').currentTime) : 0,
+    updated: new Date().toISOString()
+  };
+  saveJSONLS(LS_AUDIO, all);
+}
+
+function splitSentences(text) {
+  const m = text.match(/[^.!?…]+[.!?…]+["')\]]*\s*|[^.!?…]+$/g);
+  return (m || [text]).map(s => s.trim()).filter(Boolean);
+}
+
+async function openListen(id, ch) {
+  const meta = INDEX.find(b => b.id === id);
+  if (!meta) { location.hash = '#/'; return; }
+  let book;
+  try { book = await loadBook(meta); }
+  catch (e) { location.hash = '#/buku/' + id; return; }
+
+  const wasPlaying = listen.playing && listen.bookId === id;
+  stopListening(true);
+
+  $('#view-listen').hidden = false;
+  document.body.style.overflow = 'hidden';
+  listen.active = true;
+  listen.bookId = id;
+  listen.ch = Math.max(0, Math.min(ch, book.chapters.length - 1));
+  const chap = book.chapters[listen.ch];
+
+  const angle = 130 + (hashCode(id) % 55);
+  const cover = $('#listen-cover');
+  cover.style.background = 'linear-gradient(' + angle + 'deg, var(--c-' + meta.category + '-1), var(--c-' + meta.category + '-2))';
+  cover.textContent = meta.title[0];
+  $('#listen-book').textContent = meta.title;
+  $('#listen-chapter').textContent = chap.title + ' · ' + (listen.ch + 1) + '/' + book.chapters.length;
+
+  const manifest = AUDIO_MANIFEST[id];
+  const episode = manifest && (manifest.episodes || []).find(e => e.ch === listen.ch);
+  const audio = $('#audio-el');
+  const saved = getListenPos()[id];
+
+  if (episode) {
+    listen.mode = 'audio';
+    $('#listen-seek-wrap').hidden = false;
+    $('#listen-engine').textContent = 'Audio HD · narasi neural (Andrew)';
+    $('#listen-live').textContent = '\u{1F3A7}';
+    if (audio.dataset.url !== episode.url) {
+      audio.src = episode.url;
+      audio.dataset.url = episode.url;
+      if (saved && saved.ch === listen.ch && saved.sec > 5) {
+        audio.addEventListener('loadedmetadata', () => { audio.currentTime = saved.sec; }, { once: true });
+      }
+    }
+    audio.playbackRate = listen.rate;
+    setMediaSession(meta, chap);
+    if (wasPlaying) audio.play().catch(() => {});
+  } else {
+    listen.mode = 'tts';
+    $('#listen-seek-wrap').hidden = true;
+    $('#listen-engine').textContent = 'Text-to-Speech perangkat · pilih suara di ⚙';
+    listen.sents = [chap.title + '.'].concat(
+      chap.paragraphs.map(p => splitSentences(p)).flat());
+    listen.idx = (saved && saved.ch === listen.ch && saved.idx < listen.sents.length) ? saved.idx : 0;
+    renderLive();
+    if (wasPlaying) startTTS();
+  }
+  updatePlayIcon();
+}
+
+function stopListening(keepView) {
+  if (!listen.active && !keepView) return;
+  listen.playing = false;
+  try { speechSynthesis.cancel(); } catch (e) { /* tidak tersedia */ }
+  const audio = $('#audio-el');
+  if (audio && !audio.paused) audio.pause();
+  if (!keepView) listen.active = false;
+  updatePlayIcon();
+}
+
+function renderLive() {
+  if (listen.mode !== 'tts') return;
+  const el = $('#listen-live');
+  el.textContent = listen.sents[listen.idx] || '';
+}
+
+function updatePlayIcon() {
+  const audio = $('#audio-el');
+  const playing = listen.mode === 'audio' ? !audio.paused : listen.playing;
+  $('#listen-play').innerHTML = playing ? '&#9208;' : '&#9654;';
+}
+
+function checkSleep() {
+  if (listen.sleepDeadline && Date.now() > listen.sleepDeadline) {
+    listen.sleepDeadline = 0;
+    $('#listen-sleep').textContent = 'Timer: Off';
+    stopListening(true);
+    return true;
+  }
+  return false;
+}
+
+function pickVoice() {
+  const want = getSettings().voiceURI;
+  const voices = speechSynthesis.getVoices();
+  if (want) { const v = voices.find(v => v.voiceURI === want); if (v) return v; }
+  return voices.find(v => /en[-_]/i.test(v.lang) && /natural|neural/i.test(v.name)) ||
+         voices.find(v => /en[-_]US/i.test(v.lang)) ||
+         voices.find(v => /^en/i.test(v.lang)) || null;
+}
+
+function startTTS() {
+  listen.playing = true;
+  updatePlayIcon();
+  speakCurrent();
+}
+
+function speakCurrent() {
+  if (!listen.playing || checkSleep()) return;
+  if (listen.idx >= listen.sents.length) { listenNextChapter(true); return; }
+  const u = new SpeechSynthesisUtterance(listen.sents[listen.idx]);
+  u.rate = listen.rate;
+  const v = pickVoice();
+  if (v) u.voice = v;
+  const advance = () => {
+    if (!listen.playing) return;
+    listen.idx++;
+    saveListenPos();
+    renderLive();
+    speakCurrent();
+  };
+  u.onend = advance;
+  u.onerror = advance;
+  renderLive();
+  speechSynthesis.speak(u);
+}
+
+function listenPlayPause() {
+  if (listen.mode === 'audio') {
+    const audio = $('#audio-el');
+    if (audio.paused) audio.play().catch(() => {});
+    else audio.pause();
+  } else {
+    if (listen.playing) { listen.playing = false; speechSynthesis.cancel(); }
+    else startTTS();
+  }
+  updatePlayIcon();
+}
+
+function listenSeekBy(delta) {
+  if (listen.mode === 'audio') {
+    const audio = $('#audio-el');
+    audio.currentTime = Math.max(0, audio.currentTime + delta);
+  } else {
+    const step = delta > 0 ? 1 : -1;
+    listen.idx = Math.max(0, Math.min(listen.sents.length - 1, listen.idx + step));
+    saveListenPos();
+    if (listen.playing) { speechSynthesis.cancel(); listen.playing = true; speakCurrent(); }
+    else renderLive();
+  }
+}
+
+function listenNextChapter(auto) {
+  const book = BOOK_CACHE[listen.bookId];
+  if (!book) return;
+  if (listen.ch >= book.chapters.length - 1) {
+    stopListening(true);
+    $('#listen-live').textContent = 'Tamat — kamu menyelesaikan buku ini. \u{1F389}';
+    return;
+  }
+  const keep = auto || listen.playing || (listen.mode === 'audio' && !$('#audio-el').paused);
+  listen.playing = keep;
+  const all = getListenPos();
+  all[listen.bookId] = { ch: listen.ch + 1, idx: 0, sec: 0, updated: new Date().toISOString() };
+  saveJSONLS(LS_AUDIO, all);
+  history.replaceState(null, '', '#/dengar/' + listen.bookId + '/' + (listen.ch + 1));
+  openListen(listen.bookId, listen.ch + 1);
+}
+
+function listenPrevChapter() {
+  if (listen.ch <= 0) return;
+  const keep = listen.playing || (listen.mode === 'audio' && !$('#audio-el').paused);
+  listen.playing = keep;
+  const all = getListenPos();
+  all[listen.bookId] = { ch: listen.ch - 1, idx: 0, sec: 0, updated: new Date().toISOString() };
+  saveJSONLS(LS_AUDIO, all);
+  history.replaceState(null, '', '#/dengar/' + listen.bookId + '/' + (listen.ch - 1));
+  openListen(listen.bookId, listen.ch - 1);
+}
+
+function setMediaSession(meta, chap) {
+  if (!('mediaSession' in navigator)) return;
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: chap.title, artist: meta.author, album: meta.title
+  });
+  navigator.mediaSession.setActionHandler('play', () => listenPlayPause());
+  navigator.mediaSession.setActionHandler('pause', () => listenPlayPause());
+  navigator.mediaSession.setActionHandler('seekbackward', () => listenSeekBy(-15));
+  navigator.mediaSession.setActionHandler('seekforward', () => listenSeekBy(15));
+  navigator.mediaSession.setActionHandler('previoustrack', () => listenPrevChapter());
+  navigator.mediaSession.setActionHandler('nexttrack', () => listenNextChapter(false));
+}
+
+function fmtTime(s) {
+  if (!isFinite(s)) return '0:00';
+  s = Math.floor(s);
+  const m = Math.floor(s / 60), sec = s % 60;
+  return m + ':' + String(sec).padStart(2, '0');
+}
+
+function openListenSheet(type) {
+  const sheet = $('#voice-sheet');
+  const listEl = $('#voice-list');
+  const title = sheet.querySelector('.toc-head h2');
+  if (type === 'voices') {
+    title.textContent = 'Pilih Suara';
+    const cur = getSettings().voiceURI;
+    const voices = speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang));
+    listEl.innerHTML = voices.length
+      ? voices.map(v =>
+          '<button data-uri="' + escHTML(v.voiceURI) + '"' +
+          ((cur ? v.voiceURI === cur : v === pickVoice()) ? ' class="voice-active"' : '') + '>' +
+          escHTML(v.name) + ' <small>(' + escHTML(v.lang) + ')</small></button>'
+        ).join('')
+      : '<p style="padding:16px 4px;color:var(--ink-soft)">Suara belum termuat — coba lagi sebentar.</p>';
+    listEl.querySelectorAll('button').forEach(b => {
+      b.onclick = () => {
+        const s = getSettings(); s.voiceURI = b.dataset.uri; saveJSONLS(LS_SETTINGS, s);
+        sheet.hidden = true;
+        if (listen.playing && listen.mode === 'tts') { speechSynthesis.cancel(); speakCurrent(); }
+      };
+    });
+  } else {
+    title.textContent = 'Daftar Bab';
+    const book = BOOK_CACHE[listen.bookId];
+    listEl.innerHTML = book.chapters.map((c, i) =>
+      '<button data-ch="' + i + '"' + (i === listen.ch ? ' class="voice-active"' : '') + '>' +
+      (i + 1) + '. ' + escHTML(c.title) + '</button>').join('');
+    listEl.querySelectorAll('button').forEach(b => {
+      b.onclick = () => {
+        sheet.hidden = true;
+        history.replaceState(null, '', '#/dengar/' + listen.bookId + '/' + b.dataset.ch);
+        openListen(listen.bookId, parseInt(b.dataset.ch, 10));
+      };
+    });
+  }
+  sheet.hidden = false;
+}
+
+function bindListenControls() {
+  const audio = $('#audio-el');
+  $('#listen-back').onclick = () => { location.hash = '#/buku/' + (listen.bookId || ''); };
+  $('#listen-play').onclick = listenPlayPause;
+  $('#listen-rew').onclick = () => listenSeekBy(-15);
+  $('#listen-ffw').onclick = () => listenSeekBy(15);
+  $('#listen-prevch').onclick = listenPrevChapter;
+  $('#listen-nextch').onclick = () => listenNextChapter(false);
+  $('#listen-voice-btn').onclick = () => openListenSheet('voices');
+  $('#listen-chlist').onclick = () => openListenSheet('chapters');
+  $('#voice-close').onclick = () => { $('#voice-sheet').hidden = true; };
+  $('#voice-sheet').onclick = (e) => { if (e.target === $('#voice-sheet')) $('#voice-sheet').hidden = true; };
+
+  $('#listen-speed').onclick = () => {
+    const i = SPEEDS.indexOf(listen.rate);
+    listen.rate = SPEEDS[(i + 1) % SPEEDS.length];
+    $('#listen-speed').textContent = listen.rate.toFixed(listen.rate === 1 ? 1 : 2).replace(/0$/, '') + '×';
+    audio.playbackRate = listen.rate;
+    if (listen.playing && listen.mode === 'tts') { speechSynthesis.cancel(); speakCurrent(); }
+  };
+  $('#listen-sleep').onclick = () => {
+    const cur = SLEEPS.findIndex(m => listen.sleepDeadline
+      ? Math.abs((listen.sleepDeadline - Date.now()) / 60000 - m) < m * 0.5 + 1 : m === 0);
+    const next = SLEEPS[(Math.max(0, cur) + 1) % SLEEPS.length];
+    listen.sleepDeadline = next ? Date.now() + next * 60000 : 0;
+    $('#listen-sleep').textContent = 'Timer: ' + (next ? next + 'm' : 'Off');
+  };
+
+  audio.addEventListener('play', updatePlayIcon);
+  audio.addEventListener('pause', updatePlayIcon);
+  audio.addEventListener('ended', () => listenNextChapter(true));
+  audio.addEventListener('timeupdate', () => {
+    if (listen.mode !== 'audio') return;
+    if (checkSleep()) return;
+    $('#listen-cur').textContent = fmtTime(audio.currentTime);
+    $('#listen-dur').textContent = fmtTime(audio.duration);
+    if (audio.duration) $('#listen-seek').value = Math.round(audio.currentTime / audio.duration * 1000);
+    const now = Date.now();
+    if (now - listen.saveTick > 3000) { listen.saveTick = now; saveListenPos(); }
+  });
+  $('#listen-seek').addEventListener('input', () => {
+    if (audio.duration) audio.currentTime = $('#listen-seek').value / 1000 * audio.duration;
+  });
+  if (typeof speechSynthesis !== 'undefined') {
+    speechSynthesis.onvoiceschanged = () => { /* daftar suara siap */ };
+  }
 }
 
 function openTOC() {

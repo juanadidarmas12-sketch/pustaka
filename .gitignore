@@ -1,3 +1,5 @@
 books_raw/
 *.tmp
 *.bak.*
+audio_build/
+*.mp3
