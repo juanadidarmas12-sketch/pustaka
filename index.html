@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a1714">
+<title>Pustaka</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== VIEW: PERPUSTAKAAN ===== -->
+<main id="view-library" class="view">
+  <header class="lib-header">
+    <div>
+      <h1 class="brand">Pustaka</h1>
+      <p class="tagline">Karya-karya besar, gratis &amp; legal.</p>
+    </div>
+  </header>
+
+  <section id="continue-card" class="continue-card" hidden></section>
+
+  <nav class="chips" id="category-chips" aria-label="Filter kategori"></nav>
+
+  <section class="shelf" id="shelf" aria-live="polite"></section>
+
+  <footer class="lib-footer">
+    <p>Semua buku dari <strong>Project Gutenberg</strong> — domain publik, legal &amp; gratis.</p>
+  </footer>
+</main>
+
+<!-- ===== VIEW: DETAIL BUKU ===== -->
+<main id="view-detail" class="view" hidden>
+  <header class="detail-topbar">
+    <button class="icon-btn" id="detail-back" aria-label="Kembali">&#8592;</button>
+  </header>
+  <div id="detail-body"></div>
+</main>
+
+<!-- ===== VIEW: PEMBACA ===== -->
+<main id="view-reader" class="view reader" hidden>
+  <div class="reader-progress"><div id="reader-progress-fill"></div></div>
+
+  <header class="reader-topbar" id="reader-topbar">
+    <button class="icon-btn" id="reader-back" aria-label="Kembali">&#8592;</button>
+    <div class="reader-title">
+      <span id="reader-book-title"></span>
+      <span id="reader-chapter-label"></span>
+    </div>
+    <button class="icon-btn" id="reader-settings-btn" aria-label="Pengaturan tampilan">Aa</button>
+  </header>
+
+  <div class="reader-settings" id="reader-settings" hidden>
+    <div class="rs-row">
+      <span class="rs-label">Ukuran</span>
+      <div class="rs-group">
+        <button class="rs-btn" id="font-dec" aria-label="Perkecil huruf">A&#8722;</button>
+        <button class="rs-btn" id="font-inc" aria-label="Perbesar huruf">A+</button>
+      </div>
+    </div>
+    <div class="rs-row">
+      <span class="rs-label">Tema</span>
+      <div class="rs-group">
+        <button class="theme-dot theme-dot-light" data-theme="terang" aria-label="Tema terang"></button>
+        <button class="theme-dot theme-dot-sepia" data-theme="sepia" aria-label="Tema sepia"></button>
+        <button class="theme-dot theme-dot-dark" data-theme="gelap" aria-label="Tema gelap"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pager" id="pager">
+    <article class="reader-content" id="reader-content"></article>
+  </div>
+
+  <nav class="reader-nav" id="reader-nav">
+    <button class="nav-btn" id="page-prev" aria-label="Halaman sebelumnya">&#8592;</button>
+    <button class="nav-btn nav-pos" id="page-pos" aria-label="Posisi baca, buka daftar bab">Hal 1/1</button>
+    <button class="nav-btn" id="page-next" aria-label="Halaman berikutnya">&#8594;</button>
+  </nav>
+
+  <div class="toc-sheet" id="toc-sheet" hidden>
+    <div class="toc-inner">
+      <div class="toc-head">
+        <h2>Daftar Bab</h2>
+        <button class="icon-btn" id="toc-close" aria-label="Tutup">&#10005;</button>
+      </div>
+      <ol id="toc-list"></ol>
+    </div>
+  </div>
+</main>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
