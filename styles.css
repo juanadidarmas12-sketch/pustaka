@@ -314,6 +314,62 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   z-index: 50; max-width: 88vw; text-align: center;
 }
 
+/* ============ Flip halaman 3D (seperti kertas) ============ */
+.pager { perspective: 2600px; }
+.flip-page {
+  position: absolute; top: 14px; bottom: 6px; z-index: 6;
+  overflow: hidden; background: var(--r-bg);
+  transform-origin: left center;
+  backface-visibility: hidden;
+  will-change: transform;
+  box-shadow: 2px 4px 18px rgba(0,0,0,.30);
+  border-radius: 0 3px 3px 0;
+}
+.flip-underlay { z-index: 5; box-shadow: none; border-radius: 0; }
+.flip-shade {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(0,0,0,.50), rgba(0,0,0,.08) 45%, rgba(0,0,0,0) 75%);
+  opacity: 0;
+}
+.flip-clone { transition: none !important; }
+
+/* ============ Mode imersif: tap tengah menyembunyikan bar ============ */
+.reader-topbar, .reader-nav { transition: transform .28s ease, opacity .28s ease; }
+.reader.chrome-hidden .reader-topbar { transform: translateY(-115%); opacity: 0; pointer-events: none; }
+.reader.chrome-hidden .reader-nav { transform: translateY(115%); opacity: 0; pointer-events: none; }
+
+/* ============ Polesan perpustakaan ============ */
+.lib-stats { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.stat-chip {
+  font-size: 11.5px; padding: 4px 10px; border-radius: 999px;
+  background: var(--bg-soft); border: 1px solid var(--line); color: var(--ink-soft);
+}
+.cover .cv-mark {
+  position: absolute; right: 4px; bottom: -6px;
+  font-family: var(--serif); font-size: 76px; font-weight: 700; line-height: 1;
+  color: #fff; opacity: .09; pointer-events: none; user-select: none;
+}
+.cover { transition: transform .18s ease, box-shadow .18s ease; }
+.book-card:hover .cover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 6px 16px rgba(60,45,25,.16), 0 18px 40px rgba(60,45,25,.18); }
+.cover .cv-rule { /* garis ornamen di bawah judul */
+  width: 26px; height: 2px; margin-top: 8px;
+  background: rgba(255,255,255,.55); border-radius: 1px;
+}
+
+/* ============ Polesan halaman detail ============ */
+.detail-hero { position: relative; }
+.detail-hero::before {
+  content: ""; position: absolute; left: -40px; right: -40px; top: -60px; height: 240px;
+  background: radial-gradient(55% 75% at 30% 25%, var(--tint, transparent), transparent 72%);
+  opacity: .30; filter: blur(24px); pointer-events: none; z-index: -1;
+}
+.detail-hero .cover { box-shadow: 0 10px 24px rgba(30,20,10,.28), 0 24px 60px rgba(30,20,10,.22); }
+.toc-no {
+  flex: none; width: 26px; color: var(--ink-soft); font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+}
+#toc-list .toc-no { color: var(--r-soft); }
+
 /* layar sempit */
 @media (max-width: 380px) {
   .shelf { grid-template-columns: repeat(2, 1fr); }
