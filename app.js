@@ -1395,7 +1395,26 @@ async function boot() {
   // service worker (jangan crash di file://; skip di localhost supaya dev tidak kena cache basi)
   const isLocalDev = /^(localhost|127\.)/.test(location.hostname);
   if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0 && !isLocalDev) {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register('sw.js').then((reg) => {
+      // deteksi SW baru → suruh aktif segera; reload sekali saat controller berganti
+      reg.addEventListener('updatefound', () => {
+        const nw = reg.installing;
+        if (!nw) return;
+        nw.addEventListener('statechange', () => {
+          if (nw.state === 'installed' && navigator.serviceWorker.controller) {
+            nw.postMessage('skipWaiting');
+          }
+        });
+      });
+      // cek update tiap app dibuka kembali
+      reg.update().catch(() => {});
+    }).catch(() => {});
+    let reloadedForSW = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (reloadedForSW) return;
+      reloadedForSW = true;
+      location.reload();
+    });
   }
 
   try { AUDIO_MANIFEST = await (await fetch('audio/index.json')).json(); }
