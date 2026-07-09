@@ -551,6 +551,24 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .author-hero img {
   width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
   display: block; filter: saturate(.92);
+  opacity: 0; transform: scale(1.09);
+  animation: heroReveal .9s cubic-bezier(.22,.61,.36,1) forwards;
+  will-change: transform;
+}
+.author-hero-fallback {
+  width: 100%; height: 100%; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.author-hero-fallback::before { /* motif kutip dekoratif, bukan sekadar huruf polos */
+  content: "\201C"; position: absolute; font-family: var(--serif); font-weight: 700;
+  font-size: 260px; line-height: 1; color: rgba(255,255,255,.10);
+  top: -40px; left: -10px;
+}
+.author-hero-fallback .hf-letter {
+  font-family: var(--serif); font-size: 72px; color: rgba(255,255,255,.92);
+  opacity: 0; animation: heroReveal .9s cubic-bezier(.22,.61,.36,1) forwards;
+  position: relative;
 }
 .author-hero-overlay {
   position: absolute; inset: 0;
@@ -560,61 +578,124 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .author-hero-text {
   position: absolute; left: 20px; right: 20px; bottom: 16px; color: #fff;
 }
-.author-hero-name { font-family: var(--serif); font-size: 26px; line-height: 1.15; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,.4); }
-.author-hero-meta { font-size: 13px; opacity: .92; margin: 4px 0 0; text-shadow: 0 1px 4px rgba(0,0,0,.4); }
+.author-hero-name {
+  font-family: var(--serif); font-size: 26px; line-height: 1.15; margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,.4);
+  opacity: 0; animation: fadeSlideUp .55s ease-out .25s forwards;
+}
+.author-hero-meta {
+  font-size: 13px; opacity: 0; margin: 4px 0 0; text-shadow: 0 1px 4px rgba(0,0,0,.4);
+  animation: fadeSlideUp .55s ease-out .38s forwards;
+}
 
 .author-tabs {
   display: flex; gap: 4px; padding: 12px 20px; overflow-x: auto;
   scrollbar-width: none; border-bottom: 1px solid var(--line);
+  opacity: 0; animation: fadeSlideUp .5s ease-out .48s forwards;
 }
 .author-tabs::-webkit-scrollbar { display: none; }
 .at-btn {
   flex: none; padding: 8px 15px; border-radius: 999px; font-size: 13.5px; font-weight: 600;
   color: var(--ink-soft); background: var(--bg-soft); border: 1px solid var(--line);
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
 }
 .at-btn.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
 .author-panel { padding: 18px 20px 40px; max-width: 600px; margin: 0 auto; }
+.panel-fade { opacity: 0; transform: translateY(10px); animation: fadeSlideUp .32s ease-out forwards; }
 
 /* Ringkasan */
 .author-quote {
   margin: 0 0 20px; padding: 16px 18px; border-left: 3px solid var(--accent);
   background: var(--bg-soft); border-radius: 0 12px 12px 0;
+  position: relative; overflow: hidden;
 }
-.author-quote p { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.5; margin: 0 0 6px; }
-.author-quote cite { font-size: 12px; color: var(--ink-soft); font-style: normal; }
+.author-quote::before {
+  content: "\201C"; position: absolute; right: 6px; top: -22px;
+  font-family: var(--serif); font-size: 88px; color: var(--accent); opacity: .12;
+}
+.author-quote p { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.5; margin: 0 0 6px; position: relative; }
+.author-quote cite { font-size: 12px; color: var(--ink-soft); font-style: normal; position: relative; }
 .author-summary-bio { font-size: 14.5px; line-height: 1.65; }
 .author-stat-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
+.author-stat-row .stat-pill {
+  opacity: 0; animation: fadeSlideUp .4s ease-out forwards;
+}
+.author-stat-row .stat-pill:nth-child(1) { animation-delay: .06s; }
+.author-stat-row .stat-pill:nth-child(2) { animation-delay: .12s; }
+.author-stat-row .stat-pill:nth-child(3) { animation-delay: .18s; }
 
 /* Kisah Hidup — timeline */
 .life-timeline { position: relative; padding-left: 26px; }
 .life-timeline::before {
   content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px;
   background: var(--line);
+  transform: scaleY(0); transform-origin: top; animation: growLine .9s ease-out .15s forwards;
 }
-.life-step { position: relative; margin-bottom: 26px; }
+.life-step {
+  position: relative; margin-bottom: 26px;
+  opacity: 0; animation: fadeSlideUp .5s ease-out forwards;
+  animation-delay: calc(var(--i, 0) * 130ms + 120ms);
+}
 .life-step:last-child { margin-bottom: 0; }
 .life-step::before {
   content: ""; position: absolute; left: -26px; top: 3px; width: 13px; height: 13px;
   border-radius: 50%; background: var(--accent); border: 3px solid var(--bg);
   box-shadow: 0 0 0 1px var(--line);
+  transform: scale(0); animation: popIn .4s cubic-bezier(.34,1.56,.64,1) forwards;
+  animation-delay: calc(var(--i, 0) * 130ms + 60ms);
 }
 .life-step h3 { font-size: 14.5px; margin: 0 0 6px; color: var(--accent); }
 .life-step p { font-size: 14px; line-height: 1.6; margin: 0; }
 
 /* Pengaruh */
-.influence-block { margin-bottom: 22px; }
+.influence-block {
+  margin-bottom: 22px; opacity: 0; animation: fadeSlideUp .45s ease-out forwards;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
 .influence-block h3 { font-size: 12.5px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); margin: 0 0 10px; }
 .influence-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .inf-chip {
   padding: 8px 14px; border-radius: 999px; font-size: 13.5px;
   background: var(--bg-soft); border: 1px solid var(--line); color: var(--ink);
+  opacity: 0; transform: scale(.85); animation: popIn .35s ease-out forwards;
+  animation-delay: calc(var(--ci, 0) * 55ms + 80ms);
+  transition: transform .15s ease;
 }
 .inf-chip.linked { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 600; }
+.inf-chip.linked:active { transform: scale(.94); }
 .influence-empty { font-size: 13.5px; color: var(--ink-soft); }
 
 /* Karya (books grid reuses .shelf/.book-card via inline class) */
 .author-panel .shelf { padding: 0; }
+.author-panel .shelf .book-card {
+  opacity: 0; animation: fadeSlideUp .4s ease-out forwards;
+  animation-delay: calc(var(--ci, 0) * 70ms);
+}
+
+@keyframes heroReveal {
+  from { opacity: 0; transform: scale(1.09); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes growLine {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .author-hero img, .author-hero-fallback .hf-letter, .author-hero-name, .author-hero-meta,
+  .author-tabs, .author-panel.panel-in, .life-step, .life-step::before, .life-timeline::before,
+  .influence-block, .inf-chip, .author-stat-row .stat-pill, .author-panel .shelf .book-card {
+    animation: none !important; opacity: 1 !important; transform: none !important;
+  }
+}
 
 /* layar sempit */
 @media (max-width: 380px) {

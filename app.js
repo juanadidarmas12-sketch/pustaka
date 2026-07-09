@@ -317,14 +317,17 @@ function renderAuthorProfile(name) {
     return;
   }
   const books = INDEX.filter(b => b.author === name);
-  const photo = info.photo
-    ? '<div class="author-hero"><img src="' + escHTML(info.photo) + '" alt="' + escHTML(name) + '" loading="lazy">' +
-      '<div class="author-hero-overlay"></div><div class="author-hero-text">' +
-      '<h1 class="author-hero-name">' + escHTML(name) + '</h1>' +
-      '<p class="author-hero-meta">' + (info.years ? escHTML(info.years) : '') +
-      (info.nationality ? ' · ' + escHTML(info.nationality) : '') + '</p></div></div>'
-    : '<div class="author-hero" style="background:' + avatarColor(name) + ';display:flex;align-items:center;justify-content:center">' +
-      '<span style="font-family:var(--serif);font-size:64px;color:#fff;opacity:.5">' + escHTML(name[0]) + '</span>' +
+  const heroInner = info.photo
+    ? '<img src="' + escHTML(info.photo) + '" alt="' + escHTML(name) + '" loading="lazy">'
+    : (() => {
+        const angle = 130 + (hashCode(name) % 55);
+        const cat = books[0] ? books[0].category : 'filsafat';
+        return '<div class="author-hero-fallback" style="background:linear-gradient(' + angle +
+          'deg, var(--c-' + cat + '-1), var(--c-' + cat + '-2))">' +
+          '<span class="hf-letter">' + escHTML(name[0]) + '</span></div>';
+      })();
+  const photo =
+    '<div class="author-hero">' + heroInner +
       '<div class="author-hero-overlay"></div><div class="author-hero-text">' +
       '<h1 class="author-hero-name">' + escHTML(name) + '</h1>' +
       '<p class="author-hero-meta">' + (info.years ? escHTML(info.years) : '') +
@@ -358,40 +361,41 @@ function renderAuthorProfile(name) {
 
 function renderAuthorPanel(name, info, books) {
   const panel = $('#author-panel');
+  let inner = '';
   if (authorTab === 'kisah' && info.lifeStory) {
-    panel.innerHTML = '<div class="life-timeline">' + info.lifeStory.map(step =>
-      '<div class="life-step"><h3>' + escHTML(step.heading) + '</h3><p>' + escHTML(step.text) + '</p></div>'
+    inner = '<div class="life-timeline">' + info.lifeStory.map((step, i) =>
+      '<div class="life-step" style="--i:' + i + '"><h3>' + escHTML(step.heading) + '</h3><p>' + escHTML(step.text) + '</p></div>'
     ).join('') + '</div>';
   } else if (authorTab === 'pengaruh') {
-    const block = (title, list) => {
+    let ci = 0;
+    const block = (title, list, bi) => {
       if (!list || !list.length) return '';
-      return '<div class="influence-block"><h3>' + title + '</h3><div class="influence-chips">' +
+      return '<div class="influence-block" style="--i:' + bi + '"><h3>' + title + '</h3><div class="influence-chips">' +
         list.map(n => {
           const linked = AUTHORS[n] ? true : false;
-          return '<button class="inf-chip' + (linked ? ' linked' : '') + '"' +
+          const html = '<button class="inf-chip' + (linked ? ' linked' : '') + '" style="--ci:' + ci + '"' +
             (linked ? ' data-goto="' + escHTML(n) + '"' : ' disabled') + '>' + escHTML(n) + '</button>';
+          ci++;
+          return html;
         }).join('') + '</div></div>';
     };
-    const html = block('Dipengaruhi oleh', info.influencedBy) + block('Mempengaruhi', info.influenced);
-    panel.innerHTML = html || '<p class="influence-empty">Belum ada data pengaruh untuk penulis ini.</p>';
-    panel.querySelectorAll('[data-goto]').forEach(btn => {
-      btn.onclick = () => { location.hash = '#/penulis/' + slugAuthor(btn.dataset.goto); };
-    });
+    const html = block('Dipengaruhi oleh', info.influencedBy, 0) + block('Mempengaruhi', info.influenced, 1);
+    inner = html || '<p class="influence-empty">Belum ada data pengaruh untuk penulis ini.</p>';
   } else if (authorTab === 'karya') {
-    if (!books.length) { panel.innerHTML = '<p class="influence-empty">Belum ada buku.</p>'; return; }
-    panel.innerHTML = '<div class="shelf">' + books.map(meta => {
-      const pct = bookPercent(meta);
-      const cover = coverHTML(meta).replace('%%PROGRESS%%',
-        pct > 0 ? '<div class="cv-progress"><div style="width:' + pct + '%"></div></div>' : '');
-      return '<button class="book-card" data-id="' + meta.id + '">' + cover +
-        '<div class="book-meta"><p class="bm-title">' + escHTML(meta.title) + '</p>' +
-        '<p class="bm-sub">' + estMinutes(meta.words) + (pct > 0 ? ' · ' + pct + '%' : '') + '</p></div></button>';
-    }).join('') + '</div>';
-    panel.querySelectorAll('.book-card').forEach(btn => {
-      btn.onclick = () => { location.hash = '#/buku/' + btn.dataset.id; };
-    });
+    if (!books.length) {
+      inner = '<p class="influence-empty">Belum ada buku.</p>';
+    } else {
+      inner = '<div class="shelf">' + books.map((meta, i) => {
+        const pct = bookPercent(meta);
+        const cover = coverHTML(meta).replace('%%PROGRESS%%',
+          pct > 0 ? '<div class="cv-progress"><div style="width:' + pct + '%"></div></div>' : '');
+        return '<button class="book-card" data-id="' + meta.id + '" style="--ci:' + i + '">' + cover +
+          '<div class="book-meta"><p class="bm-title">' + escHTML(meta.title) + '</p>' +
+          '<p class="bm-sub">' + estMinutes(meta.words) + (pct > 0 ? ' · ' + pct + '%' : '') + '</p></div></button>';
+      }).join('') + '</div>';
+    }
   } else { // ringkasan
-    panel.innerHTML =
+    inner =
       (info.quote ? '<div class="author-quote"><p>&#8220;' + escHTML(info.quote.text) + '&#8221;</p>' +
         '<cite>— ' + escHTML(info.quote.bookTitle || name) + '</cite></div>' : '') +
       '<div class="author-stat-row">' +
@@ -401,6 +405,14 @@ function renderAuthorPanel(name, info, books) {
       '</div>' +
       '<p class="author-summary-bio">' + escHTML(info.bio || '') + '</p>';
   }
+
+  panel.innerHTML = '<div class="panel-fade">' + inner + '</div>';
+  panel.querySelectorAll('[data-goto]').forEach(btn => {
+    btn.onclick = () => { location.hash = '#/penulis/' + slugAuthor(btn.dataset.goto); };
+  });
+  panel.querySelectorAll('.book-card').forEach(btn => {
+    btn.onclick = () => { location.hash = '#/buku/' + btn.dataset.id; };
+  });
 }
 
 /* ---------- detail buku ---------- */

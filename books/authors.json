@@ -154,7 +154,11 @@
    "Revolusi Tiongkok",
    "Gerakan buruh dan sosialis dunia",
    "Sosiologi dan ilmu sosial modern"
-  ]
+  ],
+  "quote": {
+   "text": "A spectre is haunting Europe—the spectre of Communism.",
+   "bookTitle": "The Communist Manifesto"
+  }
  },
  "Plato": {
   "years": "±428-348 SM",
@@ -1493,7 +1497,11 @@
    "Konstitusionalisme Amerika modern",
    "Mahkamah Agung Amerika Serikat",
    "Teori checks and balances di negara demokrasi lain"
-  ]
+  ],
+  "quote": {
+   "text": "If men were angels, no government would be necessary.",
+   "bookTitle": "Federalist 51"
+  }
  },
  "Jean-Jacques Rousseau": {
   "years": "1712-1778",
