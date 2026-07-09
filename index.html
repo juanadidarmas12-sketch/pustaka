@@ -24,7 +24,21 @@
 
   <section id="continue-card" class="continue-card" hidden></section>
 
+  <div class="search-row">
+    <div class="search-box">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" id="search-input" placeholder="Cari judul atau penulis..." autocomplete="off">
+      <button class="search-clear" id="search-clear" hidden aria-label="Bersihkan pencarian">&#10005;</button>
+    </div>
+  </div>
+
+  <div class="group-toggle" id="group-toggle" role="tablist">
+    <button class="gt-btn active" data-group="genre" role="tab">Genre</button>
+    <button class="gt-btn" data-group="author" role="tab">Penulis</button>
+  </div>
+
   <nav class="chips" id="category-chips" aria-label="Filter kategori"></nav>
+  <div class="author-list" id="author-list" hidden></div>
 
   <section class="shelf" id="shelf" aria-live="polite"></section>
 

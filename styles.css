@@ -74,6 +74,79 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .continue-card .cc-pct { font-size: 12px; opacity: .85; margin-top: 4px; }
 .continue-card .cc-go { font-size: 22px; opacity: .9; }
 
+/* pencarian */
+.search-row { padding: 4px 16px 0; }
+.search-box {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: 12px; padding: 10px 12px;
+}
+.search-icon { font-size: 14px; opacity: .6; flex: none; }
+#search-input {
+  flex: 1; border: none; background: transparent; outline: none;
+  font-size: 14.5px; color: var(--ink); min-width: 0;
+}
+#search-input::placeholder { color: var(--ink-soft); }
+.search-clear {
+  flex: none; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--line); color: var(--ink-soft); font-size: 11px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* toggle genre/penulis */
+.group-toggle {
+  display: flex; gap: 4px; margin: 14px 16px 2px; padding: 3px;
+  background: var(--bg-soft); border-radius: 11px; width: fit-content;
+}
+.gt-btn {
+  padding: 7px 16px; border-radius: 8px; font-size: 13px; font-weight: 600;
+  color: var(--ink-soft);
+}
+.gt-btn.active { background: var(--card); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+
+/* daftar penulis */
+.author-list { padding: 4px 16px 8px; }
+.author-search-empty { padding: 20px 4px; color: var(--ink-soft); font-size: 14px; text-align: center; }
+.author-group-label {
+  font-size: 12px; font-weight: 700; color: var(--accent);
+  padding: 14px 2px 4px; letter-spacing: .5px;
+}
+.author-group-label:first-child { padding-top: 2px; }
+.author-row {
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  padding: 11px 4px; border-bottom: 1px solid var(--line); text-align: left;
+}
+.author-avatar {
+  flex: none; width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-weight: 700; font-size: 16px; color: #fff;
+}
+.author-row-info { flex: 1; min-width: 0; }
+.author-row-name { font-size: 14.5px; font-weight: 600; }
+.author-row-sub { font-size: 12px; color: var(--ink-soft); margin-top: 1px; }
+.author-row-chev { color: var(--ink-soft); font-size: 13px; flex: none; }
+
+/* kartu bio penulis di halaman detail */
+.author-card {
+  display: flex; gap: 12px; margin: 18px 0; padding: 14px;
+  background: var(--bg-soft); border-radius: 14px; border: 1px solid var(--line);
+}
+.author-card .author-avatar { width: 46px; height: 46px; font-size: 18px; }
+.author-card-body { flex: 1; min-width: 0; }
+.author-card-name { font-size: 14.5px; font-weight: 700; }
+.author-card-meta { font-size: 12px; color: var(--ink-soft); margin: 1px 0 6px; }
+.author-card-bio { font-size: 13.5px; line-height: 1.55; color: var(--ink); }
+.author-card-more {
+  display: inline-block; margin-top: 8px; font-size: 12.5px; font-weight: 600;
+  color: var(--accent);
+}
+
+.shelf-back-wrap { grid-column: 1 / -1; }
+.shelf-back {
+  font-size: 13px; font-weight: 600; color: var(--ink-soft);
+  padding: 8px 4px; margin-bottom: 2px;
+}
+
 /* chips kategori */
 .chips {
   display: flex; gap: 8px; padding: 16px; overflow-x: auto;

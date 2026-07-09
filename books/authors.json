@@ -1,0 +1,387 @@
+{
+  "Niccolò Machiavelli": {
+    "years": "1469-1527",
+    "nationality": "Italia",
+    "bio": "Diplomat dan penulis Florence yang jatuh dari kekuasaan lalu menulis 'The Prince' sambil berharap bisa kembali bekerja untuk penguasa baru kotanya. Namanya sendiri jadi kata sifat, 'Machiavellian', padahal dalam karya lain dia sebenarnya penggemar berat pemerintahan republik."
+  },
+  "Marcus Aurelius": {
+    "years": "121-180 M",
+    "nationality": "Romawi",
+    "bio": "Kaisar Romawi yang menghabiskan sebagian besar masa pemerintahannya di medan perang, tapi tetap menyempatkan diri menulis catatan renungan pribadi yang tidak pernah dia maksudkan untuk dibaca orang lain. Filsafat Stoic baginya bukan teori akademis, tapi cara bertahan waras sambil memimpin kekaisaran terbesar di dunia."
+  },
+  "Sun Tzu": {
+    "years": "±544-496 SM",
+    "nationality": "Tiongkok",
+    "bio": "Jenderal dan ahli strategi militer dari akhir era Musim Semi dan Gugur, meski identitas historisnya sampai sekarang masih diperdebatkan sejarawan. 'The Art of War' begitu ringkas dan padat sampai kini lebih sering dikutip pebisnis dan pelatih olahraga dibanding jenderal sungguhan."
+  },
+  "Karl Marx & Friedrich Engels": {
+    "years": "Marx 1818-1883, Engels 1820-1895",
+    "nationality": "Jerman",
+    "bio": "Marx sang filsuf-ekonom dan Engels sang putra pengusaha tekstil yang mendanai hidupnya, berteman sepanjang hidup dan sama-sama yakin sejarah bergerak lewat pertentangan kelas. 'Communist Manifesto' yang mereka tulis bersama saat masih muda ikut membentuk arah politik dunia selama lebih dari satu abad setelahnya."
+  },
+  "Plato": {
+    "years": "±428-348 SM",
+    "nationality": "Yunani",
+    "bio": "Murid Socrates yang mendirikan Akademia di Athena, salah satu institusi pendidikan tertinggi tertua di dunia Barat. Hampir semua karyanya ditulis dalam bentuk dialog dengan Socrates sebagai tokoh utama, sehingga sulit memisahkan mana pemikiran gurunya dan mana yang murni miliknya sendiri."
+  },
+  "Edward Gibbon": {
+    "years": "1737-1794",
+    "nationality": "Inggris",
+    "bio": "Sejarawan yang menghabiskan hampir dua puluh tahun menulis 'The Decline and Fall of the Roman Empire', proyek yang katanya terinspirasi saat dia duduk merenung di reruntuhan Kapitolium Roma. Gaya prosanya yang megah dan ironis membuat karyanya tetap enak dibaca meski sudah berusia lebih dari dua abad."
+  },
+  "David Ricardo": {
+    "years": "1772-1823",
+    "nationality": "Inggris",
+    "bio": "Mantan pialang saham yang sudah kaya raya sebelum beralih total ke ekonomi teori, terinspirasi setelah membaca 'The Wealth of Nations' karya Adam Smith. Teorinya soal keunggulan komparatif sampai sekarang jadi argumen dasar mengapa negara-negara untung berdagang satu sama lain."
+  },
+  "Alexis de Tocqueville": {
+    "years": "1805-1859",
+    "nationality": "Prancis",
+    "bio": "Bangsawan muda Prancis yang dikirim pemerintahnya ke Amerika untuk 'meneliti sistem penjara', tapi pulang membawa analisis mendalam tentang demokrasi itu sendiri. Pengamatannya soal bahaya tirani mayoritas dan individualisme masih dikutip tiap kali orang membahas kelemahan-kelemahan demokrasi modern."
+  },
+  "John Stuart Mill": {
+    "years": "1806-1873",
+    "nationality": "Inggris",
+    "bio": "Anak ajaib yang dididik sangat keras oleh ayahnya sejak usia tiga tahun, sempat mengalami depresi berat di usia dua puluhan sebelum akhirnya menemukan suaranya sendiri sebagai filsuf liberal. Istrinya, Harriet Taylor, ikut memengaruhi banyak pemikirannya soal kebebasan dan kesetaraan perempuan."
+  },
+  "Friedrich Nietzsche": {
+    "years": "1844-1900",
+    "nationality": "Jerman",
+    "bio": "Profesor filologi yang berhenti mengajar karena sakit-sakitan, lalu menghabiskan sisa hidupnya menulis dalam kesendirian sebelum akhirnya mengalami keruntuhan mental total di usia 44 tahun. Karyanya yang menyerang moralitas konvensional sering disalahpahami dan disalahgunakan justru oleh gerakan-gerakan yang paling dia benci."
+  },
+  "Herodotus": {
+    "years": "±484-425 SM",
+    "nationality": "Yunani",
+    "bio": "Disebut Cicero sebagai 'Bapak Sejarah', Herodotus berkelana luas ke Mesir, Persia, dan berbagai negeri lain untuk mengumpulkan cerita sebelum menuliskannya. Sebagian isinya jelas dilebih-lebihkan, tapi dialah orang pertama yang mencoba menulis sejarah sebagai narasi yang bisa dinikmati, bukan sekadar daftar peristiwa."
+  },
+  "Thorstein Veblen": {
+    "years": "1857-1929",
+    "nationality": "Amerika Serikat",
+    "bio": "Anak imigran Norwegia yang jadi ekonom nyentrik, dikenal karena gaya hidupnya yang eksentrik dan kariernya yang penuh kontroversi di berbagai universitas. Istilah 'conspicuous consumption' yang dia ciptakan di 'The Theory of the Leisure Class' masih jadi kosakata standar tiap kali orang membahas gaya hidup pamer."
+  },
+  "W. E. B. Du Bois": {
+    "years": "1868-1963",
+    "nationality": "Amerika Serikat",
+    "bio": "Orang kulit hitam pertama yang meraih gelar doktor dari Harvard, sekaligus salah satu pendiri NAACP yang memperjuangkan hak sipil sepanjang hidupnya. Di usia sembilan puluh lebih, dia pindah ke Ghana dan menjadi warga negara di sana, kecewa dengan rasisme yang tak kunjung usai di negara asalnya."
+  },
+  "John Locke": {
+    "years": "1632-1704",
+    "nationality": "Inggris",
+    "bio": "Dokter dan filsuf yang sempat harus melarikan diri ke Belanda karena terlibat urusan politik yang berbahaya di Inggris. Gagasannya soal hak alami dan pemerintahan atas persetujuan rakyat ikut jadi bahan bakar Revolusi Amerika, meski dia sudah lama wafat saat itu terjadi."
+  },
+  "Thomas More": {
+    "years": "1478-1535",
+    "nationality": "Inggris",
+    "bio": "Negarawan dan penasihat dekat Raja Henry VIII yang akhirnya dihukum mati karena menolak mengakui raja sebagai kepala Gereja Inggris. Kata 'utopia' yang dia ciptakan sendiri sebenarnya permainan kata Yunani yang bisa berarti 'tempat baik' atau 'tempat yang tidak ada', dan sampai sekarang tidak ada yang yakin mana maksud sebenarnya."
+  },
+  "Henry David Thoreau": {
+    "years": "1817-1862",
+    "nationality": "Amerika Serikat",
+    "bio": "Penulis dan naturalis yang tinggal sendirian di pondok kecil tepi Danau Walden selama dua tahun sebagai eksperimen hidup sederhana, meski faktanya dia sering jalan kaki pulang ke rumah ibunya untuk makan. Esainya soal pembangkangan sipil kelak menginspirasi Gandhi dan Martin Luther King Jr."
+  },
+  "Thomas Paine": {
+    "years": "1737-1809",
+    "nationality": "Inggris-Amerika",
+    "bio": "Anak tukang korset dari Inggris yang gagal di berbagai pekerjaan sebelum pindah ke Amerika dan menemukan panggilannya sebagai penulis pamflet revolusioner. Ironisnya, meski tulisannya ikut memicu dua revolusi besar (Amerika dan Prancis), dia wafat miskin dan nyaris dilupakan di New York."
+  },
+  "Laozi": {
+    "years": "±abad ke-6 SM (legendaris)",
+    "nationality": "Tiongkok",
+    "bio": "Tokoh yang menurut legenda adalah pencatat arsip kerajaan yang memutuskan meninggalkan dunia ramai, dan baru menulis Tao Te Ching saat dicegat penjaga gerbang perbatasan yang memintanya berbagi kebijaksanaan dulu. Keberadaan historisnya sampai sekarang diperdebatkan, tapi pengaruh ajarannya terhadap Taoisme tidak terbantahkan."
+  },
+  "Thucydides": {
+    "years": "±460-400 SM",
+    "nationality": "Yunani",
+    "bio": "Jenderal Athena yang dibuang dari kotanya sendiri setelah gagal mempertahankan sebuah kota selama Perang Peloponnesos, dan memakai masa pengasingannya untuk menulis sejarah perang itu dengan jarak yang dingin. Berbeda dari Herodotus, dia berusaha keras memisahkan fakta dari mitos, menjadikannya salah satu sejarawan paling 'ilmiah' di zaman kuno."
+  },
+  "Mary Wollstonecraft": {
+    "years": "1759-1797",
+    "nationality": "Inggris",
+    "bio": "Penulis dan pemikir yang membesarkan dirinya sendiri lewat menulis di zaman ketika sangat sedikit perempuan bisa mencari nafkah dengan cara itu. Dia wafat sepuluh hari setelah melahirkan anak keduanya, yang kelak tumbuh menjadi Mary Shelley, penulis novel 'Frankenstein'."
+  },
+  "Thomas Hobbes": {
+    "years": "1588-1679",
+    "nationality": "Inggris",
+    "bio": "Lahir prematur karena ibunya panik mendengar kabar Armada Spanyol akan menyerang Inggris, yang membuat Hobbes bercanda dirinya 'lahir kembar dengan ketakutan'. Pengalamannya hidup di masa perang saudara Inggris membentuk pandangannya yang suram tentang kodrat manusia dan perlunya negara yang kuat."
+  },
+  "Aristotle": {
+    "years": "384-322 SM",
+    "nationality": "Yunani",
+    "bio": "Murid Plato yang kemudian jadi guru pribadi Alexander Agung, sebelum mendirikan sekolahnya sendiri, Lyceum, di Athena. Kalau Plato asyik dengan dunia ide abstrak, Aristoteles justru gemar mengamati, mengklasifikasi, dan menyusun sistem, dari biologi sampai etika hingga politik."
+  },
+  "Epictetus": {
+    "years": "±55-135 M",
+    "nationality": "Yunani-Romawi",
+    "bio": "Lahir sebagai budak di Asia Kecil, kakinya konon menjadi cacat karena disiksa tuannya sendiri, tapi dia akhirnya dibebaskan dan menjadi salah satu guru Stoic paling dihormati di Roma. Dia tidak pernah menulis apa pun sendiri; semua ajarannya yang bertahan sampai sekarang dicatat oleh muridnya, Arrian."
+  },
+  "Lucretius": {
+    "years": "±99-55 SM",
+    "nationality": "Romawi",
+    "bio": "Nyaris tidak ada yang diketahui pasti tentang hidupnya selain bahwa dia mengagumi filsuf Yunani Epicurus dan menuangkan seluruh ajarannya ke dalam satu puisi panjang, 'On the Nature of Things'. Karyanya sempat nyaris hilang sepenuhnya sebelum ditemukan kembali di sebuah biara pada abad ke-15, mengubah arah pemikiran Renaisans."
+  },
+  "Boethius": {
+    "years": "±477-524 M",
+    "nationality": "Romawi",
+    "bio": "Negarawan dan cendekiawan Romawi yang menjabat posisi tinggi di bawah raja Ostrogoth Theodoric, sebelum dituduh berkhianat dan dipenjara menunggu eksekusi. Dari sel penjara itulah lahir 'The Consolation of Philosophy', ditulis oleh orang yang tahu persis dia akan segera mati saat menulisnya."
+  },
+  "René Descartes": {
+    "years": "1596-1650",
+    "nationality": "Prancis",
+    "bio": "Dulu tentara bayaran sebelum menetap dan menghabiskan hidupnya di Belanda demi kebebasan berpikir yang lebih longgar dibanding Prancis. Terkenal suka bangun siang dan berpikir sambil berbaring di ranjang, sampai akhirnya wafat karena harus mengajar Ratu Swedia jam lima pagi dalam cuaca dingin yang tidak biasa baginya."
+  },
+  "Baruch Spinoza": {
+    "years": "1632-1677",
+    "nationality": "Belanda",
+    "bio": "Keturunan Yahudi Portugis yang dikucilkan dari komunitasnya sendiri karena pandangannya dianggap terlalu radikal, lalu mencari nafkah sebagai penggosok lensa kacamata sambil menulis filsafat di waktu senggang. Dia menolak semua tawaran jabatan akademik demi mempertahankan kebebasan berpikirnya, dan wafat muda diduga karena menghirup debu kaca dari pekerjaannya sendiri."
+  },
+  "David Hume": {
+    "years": "1711-1776",
+    "nationality": "Skotlandia",
+    "bio": "Filsuf yang begitu skeptis sampai dijuluki 'atheis' oleh lawan-lawannya, meski dia sendiri lebih suka disebut agnostik. Dikenal juga sebagai orang yang riang dan disukai banyak teman, jauh dari citra filsuf skeptis yang suram, bahkan tetap tenang dan bercanda saat menghadapi kematiannya sendiri."
+  },
+  "Immanuel Kant": {
+    "years": "1724-1804",
+    "nationality": "Jerman",
+    "bio": "Hidupnya begitu teratur sampai warga kota Königsberg konon bisa menyetel jam mereka berdasarkan jadwal jalan sorenya, yang hanya pernah dia lewatkan sekali seumur hidup. Dari kota kecil itu, tanpa pernah bepergian jauh, dia menghasilkan salah satu sistem filsafat paling berpengaruh dalam sejarah pemikiran Barat."
+  },
+  "Arthur Schopenhauer": {
+    "years": "1788-1860",
+    "nationality": "Jerman",
+    "bio": "Filsuf yang terkenal pemarah dan sinis, pernah mendorong tetangganya dari tangga karena kesal diganggu saat sedang berpikir, dan harus membayar tunjangan seumur hidup untuk perempuan itu. Pandangan pesimisnya tentang hidup sangat dipengaruhi filsafat Buddha dan Hindu yang saat itu baru mulai dikenal di Eropa."
+  },
+  "Francis Bacon": {
+    "years": "1561-1626",
+    "nationality": "Inggris",
+    "bio": "Negarawan dan filsuf yang sempat menjabat Lord Chancellor Inggris sebelum jatuh karena tuduhan korupsi. Dia dikenal sebagai bapak metode ilmiah modern, dan menurut legenda populer (meski diperdebatkan) wafat karena masuk angin setelah bereksperimen mengawetkan ayam dengan salju."
+  },
+  "George Berkeley": {
+    "years": "1685-1753",
+    "nationality": "Irlandia",
+    "bio": "Uskup Anglikan yang juga filsuf, terkenal karena idealismenya yang ekstrem bahwa dunia materi hanya ada dalam persepsi. Dia sempat mencoba mendirikan universitas misionaris di Bermuda dan tinggal bertahun-tahun di Rhode Island menunggu dana yang tak kunjung cair dari pemerintah Inggris."
+  },
+  "William James": {
+    "years": "1842-1910",
+    "nationality": "Amerika Serikat",
+    "bio": "Dokter yang beralih jadi psikolog lalu filsuf, dan dianggap salah satu pendiri psikologi modern di Amerika. Kakaknya adalah novelis terkenal Henry James, dan keduanya sering saling menyindir soal siapa yang menulis lebih 'seperti novel' dan siapa yang lebih 'seperti filsafat'."
+  },
+  "Bertrand Russell": {
+    "years": "1872-1970",
+    "nationality": "Inggris",
+    "bio": "Bangsawan, matematikawan, filsuf, sekaligus aktivis anti-perang yang sempat dipenjara karena menentang Perang Dunia I. Dia hidup sangat panjang, sampai sempat ikut kampanye menentang senjata nuklir di usia sembilan puluhan, dan meraih Hadiah Nobel Sastra di tahun 1950."
+  },
+  "Ralph Waldo Emerson": {
+    "years": "1803-1882",
+    "nationality": "Amerika Serikat",
+    "bio": "Mantan pendeta yang berhenti dari gerejanya karena merasa ritual keagamaan formal mengekang, lalu jadi tokoh utama gerakan transendentalisme Amerika. Dia adalah mentor sekaligus tetangga Henry David Thoreau, yang tanahnya di tepi Danau Walden dipinjamkan Emerson untuk eksperimen hidup sederhana muridnya itu."
+  },
+  "Confucius": {
+    "years": "±551-479 SM",
+    "nationality": "Tiongkok",
+    "bio": "Guru dan pejabat rendahan yang gagal mendapat posisi tinggi di pemerintahan pada masanya sendiri, tapi ajarannya kemudian jadi fondasi moral dan politik Tiongkok selama lebih dari dua milenium. Dia tidak pernah menulis bukunya sendiri; semua yang kita tahu tentang ajarannya datang dari catatan murid-muridnya setelah dia wafat."
+  },
+  "Blaise Pascal": {
+    "years": "1623-1662",
+    "nationality": "Prancis",
+    "bio": "Anak ajaib matematika yang menciptakan mesin hitung mekanik di usia sembilan belas tahun, sebelum mengalami pengalaman religius mendalam yang mengubah arah hidupnya menuju perenungan filosofis dan teologis. Dia wafat muda di usia 39 tahun, meninggalkan catatan-catatan Pensees yang tidak sempat dirapikannya sendiri."
+  },
+  "Alexander Hamilton, James Madison & John Jay": {
+    "years": "Hamilton 1755-1804, Madison 1751-1836, Jay 1745-1829",
+    "nationality": "Amerika Serikat",
+    "bio": "Tiga tokoh pendiri Amerika yang menulis 85 esai di bawah nama samaran bersama 'Publius' untuk meyakinkan publik New York menerima Konstitusi yang baru dirancang. Hamilton sendiri wafat dalam duel pistol melawan wakil presiden saat itu, Aaron Burr, salah satu kematian paling terkenal dalam sejarah politik Amerika."
+  },
+  "Jean-Jacques Rousseau": {
+    "years": "1712-1778",
+    "nationality": "Swiss-Prancis",
+    "bio": "Tumbuh tanpa ibu (wafat saat melahirkannya) dan sempat hidup berpindah-pindah sebagai pekerja serabutan sebelum menemukan namanya lewat tulisan-tulisan filsafat politik yang radikal. Gagasannya soal kebebasan dan kehendak umum begitu berpengaruh sampai ikut membentuk arah Revolusi Prancis, meski dia sendiri wafat sebelas tahun sebelum revolusi itu pecah."
+  },
+  "Edmund Burke": {
+    "years": "1729-1797",
+    "nationality": "Irlandia-Inggris",
+    "bio": "Anggota Parlemen Inggris yang dianggap bapak konservatisme modern, meski dia sendiri juga membela kemerdekaan koloni Amerika dan mengkritik keras penjajahan Inggris di India. Kombinasi sikapnya yang tampak kontradiktif ini sebenarnya konsisten: dia curiga pada perubahan yang dipaksakan lewat kekerasan, dari arah mana pun datangnya."
+  },
+  "Emma Goldman": {
+    "years": "1869-1940",
+    "nationality": "Rusia-Amerika",
+    "bio": "Imigran Yahudi Rusia yang jadi salah satu tokoh anarkis paling vokal di Amerika, berulang kali dipenjara karena aktivismenya sebelum akhirnya dideportasi ke Rusia pada 1919. Dia juga pembela hak reproduksi dan kebebasan seksual perempuan jauh sebelum gagasan itu diterima secara luas."
+  },
+  "Walter Bagehot": {
+    "years": "1826-1877",
+    "nationality": "Inggris",
+    "bio": "Editor majalah The Economist yang juga menulis luas soal politik dan keuangan, dengan gaya yang tajam tapi tetap mudah dipahami orang awam. Prinsip-prinsipnya soal peran bank sentral saat krisis, dikenal sebagai 'Bagehot's Dictum', masih diajarkan di sekolah ekonomi sampai sekarang."
+  },
+  "Mikhail Bakunin": {
+    "years": "1814-1876",
+    "nationality": "Rusia",
+    "bio": "Bangsawan Rusia yang berubah jadi revolusioner keliling Eropa, terlibat di hampir setiap pemberontakan besar abad ke-19 dan berkali-kali dipenjara serta diasingkan. Perseteruannya dengan Karl Marx soal arah gerakan buruh internasional akhirnya memecah gerakan sosialis jadi dua kubu besar: Marxis dan anarkis."
+  },
+  "Peter Kropotkin": {
+    "years": "1842-1921",
+    "nationality": "Rusia",
+    "bio": "Pangeran Rusia terlatih sebagai ilmuwan geografi yang justru meninggalkan gelar bangsawannya untuk jadi salah satu pemikir anarkis paling dihormati. Penelitian ilmiahnya tentang alam liar Siberia jadi bukti empiris yang dia pakai untuk membela gagasan kerja sama sebagai kekuatan evolusi, bukan cuma persaingan."
+  },
+  "Plutarch": {
+    "years": "±46-120 M",
+    "nationality": "Yunani-Romawi",
+    "bio": "Pendeta dan penulis Yunani yang menghabiskan hidupnya di kota kecil kelahirannya, Chaeronea, sambil menjabat sebagai pendeta di Kuil Delphi yang terkenal. Karya biografinya jadi jembatan yang membuat pembaca Latin dan Yunani sama-sama mengenal tokoh-tokoh besar dari kedua peradaban itu."
+  },
+  "Julius Caesar": {
+    "years": "100-44 SM",
+    "nationality": "Romawi",
+    "bio": "Jenderal, negarawan, sekaligus penulis yang naskahnya sendiri tentang penaklukan Galia jadi salah satu contoh propaganda politik paling canggih di dunia kuno. Dia dibunuh oleh sekelompok senator, termasuk sahabat dekatnya Brutus, tepat pada Ides of March tahun 44 SM."
+  },
+  "Tacitus": {
+    "years": "±56-120 M",
+    "nationality": "Romawi",
+    "bio": "Sejarawan dan senator Romawi yang hidup di bawah kaisar-kaisar yang dia kritik keras dalam tulisannya sendiri, sehingga sebagian karyanya baru bisa ditulis lebih bebas setelah kaisar-kaisar itu wafat. Gaya bahasanya yang ringkas dan penuh sindiran membuatnya salah satu penulis Latin paling sulit sekaligus paling dihargai."
+  },
+  "Xenophon": {
+    "years": "±430-354 SM",
+    "nationality": "Yunani",
+    "bio": "Murid Socrates yang memilih jalan hidup sebagai tentara bayaran dan petualang, bukan filsuf murni seperti Plato. Pengalamannya memimpin sepuluh ribu tentara Yunani pulang dari jantung Persia jadi bahan 'Anabasis', salah satu kisah bertahan hidup paling awal yang pernah ditulis."
+  },
+  "Suetonius": {
+    "years": "±69-122 M",
+    "nationality": "Romawi",
+    "bio": "Sekretaris pribadi Kaisar Hadrian yang punya akses ke arsip kekaisaran, sebelum dipecat diduga karena terlalu dekat dengan istri kaisar. Akses istimewa itulah yang membuat biografinya tentang dua belas kaisar pertama penuh detail personal dan gosip yang tidak akan ditemukan di sumber resmi mana pun."
+  },
+  "Thomas Carlyle": {
+    "years": "1795-1881",
+    "nationality": "Skotlandia",
+    "bio": "Penulis dan sejarawan yang gaya prosanya begitu bertenaga dan dramatis sampai dijuluki 'Sage of Chelsea' oleh publik Victoria. Kisah terkenal tentang naskah pertama 'The French Revolution' yang tak sengaja dibakar jadi abu oleh pembantu temannya membuatnya harus menulis ulang seluruh buku itu dari nol."
+  },
+  "H. G. Wells": {
+    "years": "1866-1946",
+    "nationality": "Inggris",
+    "bio": "Lebih dikenal sebagai bapak fiksi ilmiah lewat 'The War of the Worlds' dan 'The Time Machine', Wells juga punya ambisi besar menuliskan sejarah dan masa depan umat manusia secara utuh. Dia percaya sejarah dunia perlu dipahami sebagai satu kesatuan agar manusia berhenti saling berperang."
+  },
+  "Benjamin Franklin": {
+    "years": "1706-1790",
+    "nationality": "Amerika Serikat",
+    "bio": "Tukang cetak yang jadi ilmuwan, diplomat, sekaligus salah satu Bapak Pendiri Amerika Serikat, dikenal luas lewat eksperimen layang-layangnya soal listrik. Otobiografinya yang tidak pernah dia selesaikan sendiri ini ternyata jadi salah satu memoar paling berpengaruh dalam sastra Amerika."
+  },
+  "Frederick Douglass": {
+    "years": "±1818-1895",
+    "nationality": "Amerika Serikat",
+    "bio": "Lahir sebagai budak dan tidak pernah tahu pasti tanggal lahirnya sendiri, Douglass melarikan diri di usia dua puluhan dan menjadi salah satu orator serta penulis anti-perbudakan paling berpengaruh di Amerika. Dia kelak juga jadi penasihat presiden dan diplomat, perjalanan hidup yang nyaris mustahil untuk ukuran zamannya."
+  },
+  "Marco Polo": {
+    "years": "1254-1324",
+    "nationality": "Italia",
+    "bio": "Pedagang Venesia yang menghabiskan hampir dua puluh empat tahun berkelana di Asia, termasuk lama tinggal di istana Kubilai Khan. Catatan perjalanannya didiktekan dari dalam penjara di Genoa, tempat dia ditawan setelah kalah dalam pertempuran laut, kepada penulis cerita fiksi bernama Rustichello."
+  },
+  "Polybius": {
+    "years": "±200-118 SM",
+    "nationality": "Yunani",
+    "bio": "Perwira Yunani yang dibawa sebagai tawanan politik ke Roma, di mana dia justru berteman dekat dengan elite Romawi dan mendapat akses istimewa untuk mempelajari bagaimana kekuasaan mereka bekerja. Posisinya sebagai orang luar yang diterima orang dalam membuat analisisnya soal kebangkitan Roma sangat berharga."
+  },
+  "Einhard": {
+    "years": "±775-840 M",
+    "nationality": "Frank (Jerman-Prancis)",
+    "bio": "Cendekiawan istana yang tumbuh dan mengabdi langsung di lingkungan Charlemagne, sehingga biografinya ditulis dari pengamatan pribadi, bukan sekadar riset dari jauh. Gayanya jelas-jelas mencontoh biografi Suetonius tentang para kaisar Romawi, model yang dia anggap paling pas untuk pemimpin sebesar Charlemagne."
+  },
+  "Flavius Josephus": {
+    "years": "±37-100 M",
+    "nationality": "Yahudi-Romawi",
+    "bio": "Jenderal Yahudi yang menyerah kepada Romawi saat pemberontakan besar, lalu berubah posisi jadi penasihat dan sejarawan di pihak penakluknya sendiri. Posisinya yang kontroversial ini membuatnya dicap pengkhianat oleh sebagian orang Yahudi, tapi juga menjadikannya saksi mata langka dari kedua sisi konflik itu."
+  },
+  "Karl Marx": {
+    "years": "1818-1883",
+    "nationality": "Jerman",
+    "bio": "Filsuf dan ekonom yang menghabiskan sebagian besar hidup dewasanya dalam pengasingan di London, sering dalam kemiskinan, ditopang bantuan finansial sahabatnya Friedrich Engels. Analisisnya tentang kapitalisme dan perjuangan kelas mengubah arah politik dunia jauh melampaui apa yang dia bayangkan sendiri saat menulisnya."
+  },
+  "Thomas Robert Malthus": {
+    "years": "1766-1834",
+    "nationality": "Inggris",
+    "bio": "Pendeta Anglikan yang juga ekonom, dikenal karena ramalan suramnya soal pertumbuhan populasi yang akan selalu melampaui pasokan pangan. Meski ramalannya banyak meleset karena revolusi teknologi pertanian, istilah 'Malthusian' tetap jadi rujukan standar tiap kali orang bicara soal batas daya dukung bumi."
+  },
+  "Henry George": {
+    "years": "1839-1897",
+    "nationality": "Amerika Serikat",
+    "bio": "Wartawan otodidak tanpa pendidikan formal tinggi yang menulis salah satu buku ekonomi terlaris di zamannya, terinspirasi oleh ketimpangan yang dia saksikan langsung di California saat demam emas. Gagasan pajak tunggal atas tanahnya sempat jadi gerakan politik besar, bahkan dia nyaris terpilih jadi wali kota New York."
+  },
+  "John Maynard Keynes": {
+    "years": "1883-1946",
+    "nationality": "Inggris",
+    "bio": "Ekonom brilian yang juga terlibat aktif sebagai negosiator pemerintah Inggris, termasuk hadir di perundingan damai Versailles yang dia kritik keras lewat bukunya sendiri. Gagasannya soal peran aktif pemerintah dalam mengelola ekonomi membentuk kebijakan ekonomi dunia sepanjang sebagian besar abad ke-20."
+  },
+  "Adam Smith": {
+    "years": "1723-1790",
+    "nationality": "Skotlandia",
+    "bio": "Profesor filsafat moral yang dikenal pelupa dan ceroboh dalam kehidupan sehari-hari, konon pernah berjalan dalam gaun tidur sejauh belasan kilometer sambil melamun soal filsafat. Sebelum jadi 'bapak ekonomi modern' lewat 'The Wealth of Nations', dia lebih dulu menulis soal moralitas dan simpati manusia."
+  },
+  "Frederick Winslow Taylor": {
+    "years": "1856-1915",
+    "nationality": "Amerika Serikat",
+    "bio": "Insinyur yang mulai kariernya sebagai pekerja pabrik biasa sebelum naik jadi konsultan yang mengubah cara dunia industri berpikir soal efisiensi kerja. Metodenya yang mengukur setiap gerakan pekerja dengan stopwatch sangat berpengaruh, tapi juga jadi simbol kritik terhadap perlakuan pekerja seperti mesin."
+  },
+  "John Ruskin": {
+    "years": "1819-1900",
+    "nationality": "Inggris",
+    "bio": "Awalnya dikenal sebagai kritikus seni paling berpengaruh di Inggris Victoria, sebelum beralih menulis kritik sosial dan ekonomi yang jauh lebih radikal dari yang diharapkan publiknya. Gaya hidup dan pandangannya yang tidak biasa membuatnya sering jadi bahan gunjingan, tapi pengaruh pemikirannya jauh melampaui dunia seni."
+  },
+  "John Bates Clark": {
+    "years": "1847-1938",
+    "nationality": "Amerika Serikat",
+    "bio": "Salah satu ekonom Amerika paling berpengaruh di masanya, dikenal lewat teori produktivitas marjinal yang jadi jawaban arus utama terhadap kritik ekonom sosialis. Hadiah bergengsi untuk ekonom muda terbaik Amerika, John Bates Clark Medal, dinamai untuk menghormatinya."
+  },
+  "Frédéric Bastiat": {
+    "years": "1801-1850",
+    "nationality": "Prancis",
+    "bio": "Petani anggur yang jadi ekonom otodidak dengan bakat satire yang tajam, memakai humor untuk membongkar argumen-argumen proteksionisme yang menurutnya masuk akal di permukaan tapi keliru secara logika. Dia wafat muda karena tuberkulosis, tapi gaya menulisnya yang tajam dan lucu tetap dikagumi para ekonom pasar bebas sampai sekarang."
+  },
+  "Booker T. Washington": {
+    "years": "1856-1915",
+    "nationality": "Amerika Serikat",
+    "bio": "Lahir sebagai budak dan belajar membaca secara mandiri, Washington kelak mendirikan Tuskegee Institute dan menjadi salah satu pemimpin kulit hitam Amerika paling berpengaruh pasca-perbudakan. Pendekatannya yang menekankan pendidikan vokasional dan akomodasi politik sempat memicu perdebatan sengit dengan aktivis lain seperti W. E. B. Du Bois."
+  },
+  "Jane Addams": {
+    "years": "1860-1935",
+    "nationality": "Amerika Serikat",
+    "bio": "Salah satu pendiri gerakan 'settlement house' di Amerika lewat Hull House di Chicago, tempat dia bekerja langsung membantu komunitas imigran miskin. Dia meraih Hadiah Nobel Perdamaian pada 1931, salah satu perempuan pertama yang mendapat penghargaan itu."
+  },
+  "Jacob Riis": {
+    "years": "1849-1914",
+    "nationality": "Denmark-Amerika",
+    "bio": "Imigran Denmark yang sempat hidup sebagai gelandangan di New York sebelum jadi wartawan foto yang mengekspos kondisi permukiman kumuh kota itu. Karyanya jadi salah satu contoh paling awal jurnalisme foto yang benar-benar mengubah kebijakan publik, termasuk menarik perhatian Theodore Roosevelt."
+  },
+  "Charlotte Perkins Gilman": {
+    "years": "1860-1935",
+    "nationality": "Amerika Serikat",
+    "bio": "Penulis dan aktivis feminis yang juga menulis fiksi terkenal 'The Yellow Wallpaper', terinspirasi dari pengalamannya sendiri diperlakukan lewat terapi istirahat total yang justru memperparah depresinya. Dia jadi salah satu suara paling awal yang menghubungkan feminisme langsung dengan analisis ekonomi."
+  },
+  "Gustave Le Bon": {
+    "years": "1841-1931",
+    "nationality": "Prancis",
+    "bio": "Dokter dan polimatik Prancis yang tertarik pada berbagai bidang, dari antropologi sampai fisika, sebelum menulis karya paling terkenalnya tentang psikologi massa. Analisisnya soal kerumunan diam-diam dibaca dan dipelajari oleh sejumlah tokoh politik abad ke-20 yang kemudian menyalahgunakannya untuk memanipulasi opini publik."
+  },
+  "Sigmund Freud": {
+    "years": "1856-1939",
+    "nationality": "Austria",
+    "bio": "Neurolog Wina yang jadi bapak psikoanalisis, mengubah cara dunia memahami pikiran bawah sadar, mimpi, dan represi. Dia terpaksa melarikan diri ke London di akhir hidupnya untuk menghindari penganiayaan Nazi, dan wafat tak lama setelahnya."
+  },
+  "Olive Schreiner": {
+    "years": "1855-1920",
+    "nationality": "Afrika Selatan",
+    "bio": "Penulis dan aktivis kelahiran Afrika Selatan yang novelnya 'The Story of an African Farm' membuatnya terkenal di Inggris sebelum dia fokus menulis nonfiksi feminis. Dia juga vokal menentang kebijakan rasial di negaranya sendiri, jauh sebelum sistem apartheid resmi terbentuk."
+  },
+  "Samuel Smiles": {
+    "years": "1812-1904",
+    "nationality": "Skotlandia",
+    "bio": "Dokter yang beralih jadi penulis setelah kecewa dengan dunia politik reformasi, dan menemukan panggilannya lewat kisah-kisah inspiratif orang biasa yang berhasil lewat kerja keras. 'Self-Help' jadi buku laris luar biasa di era Victoria dan menjadikannya bapak spiritual seluruh genre motivasi diri modern."
+  },
+  "Leo Tolstoy": {
+    "years": "1828-1910",
+    "nationality": "Rusia",
+    "bio": "Bangsawan Rusia yang menulis novel-novel epik seperti 'War and Peace' sebelum mengalami krisis spiritual mendalam di usia lima puluhan yang mengubahnya jadi pertapa religius dan pasifis radikal. Dia bahkan menolak sebagian karya besarnya sendiri sebagai 'seni yang tidak bermoral' setelah pertobatannya."
+  },
+  "William Graham Sumner": {
+    "years": "1840-1910",
+    "nationality": "Amerika Serikat",
+    "bio": "Pendeta yang beralih jadi salah satu sosiolog dan ekonom akademis pertama di Amerika, mengajar di Yale selama puluhan tahun. Dia dikenal sebagai pendukung gigih laissez-faire dan penentang keras campur tangan pemerintah dalam urusan ekonomi maupun sosial."
+  },
+  "Henry Adams": {
+    "years": "1838-1918",
+    "nationality": "Amerika Serikat",
+    "bio": "Cicit presiden John Adams dan cucu presiden John Quincy Adams, tumbuh dengan beban warisan keluarga yang begitu berat sampai dia merasa dunia modern tidak lagi punya tempat untuknya. Otobiografinya yang ditulis dalam sudut pandang orang ketiga baru diterbitkan secara luas setelah dia wafat."
+  }
+}

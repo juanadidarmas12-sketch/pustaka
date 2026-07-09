@@ -12,10 +12,17 @@ const CAT_LABELS = {
 };
 
 let INDEX = [];               // books/index.json
+let AUTHORS = {};              // books/authors.json
 const BOOK_CACHE = {};        // id -> book json
 let currentBook = null;       // buku yg sedang dibaca
 let currentChapter = 0;
 let activeCategory = 'semua';
+let groupMode = 'genre';       // 'genre' | 'author'
+let activeAuthor = null;       // author string ketika drill-down dari daftar penulis
+let searchQuery = '';
+
+const AVATAR_COLORS = ['#9a5b2e','#6b5fa8','#a8455a','#4f8a5c','#47899a','#b98a3e','#7a4b6d'];
+function avatarColor(name) { return AVATAR_COLORS[hashCode(name) % AVATAR_COLORS.length]; }
 
 /* ---------- util ---------- */
 const $ = (sel) => document.querySelector(sel);
@@ -105,7 +112,72 @@ function renderLibrary() {
   renderStats();
   renderContinueCard();
   renderChips();
+  renderAuthorList();
+  applyGroupMode();
   renderShelf();
+}
+
+function applyGroupMode() {
+  $('#category-chips').hidden = groupMode !== 'genre';
+  $('#author-list').hidden = groupMode !== 'author' || !!activeAuthor;
+  $('#shelf').hidden = groupMode === 'author' && !activeAuthor;
+  document.querySelectorAll('.gt-btn').forEach(b => b.classList.toggle('active', b.dataset.group === groupMode));
+}
+
+function matchesSearch(meta, q) {
+  if (!q) return true;
+  return meta.title.toLowerCase().includes(q) || meta.author.toLowerCase().includes(q);
+}
+
+function filteredBooks() {
+  const q = searchQuery.trim().toLowerCase();
+  return INDEX.filter(b => {
+    if (!matchesSearch(b, q)) return false;
+    if (groupMode === 'author') return activeAuthor ? b.author === activeAuthor : false;
+    return activeCategory === 'semua' || b.category === activeCategory;
+  });
+}
+
+function renderAuthorList() {
+  const q = searchQuery.trim().toLowerCase();
+  const byAuthor = {};
+  INDEX.forEach(b => { (byAuthor[b.author] = byAuthor[b.author] || []).push(b); });
+  let names = Object.keys(byAuthor).sort((a, b) => a.localeCompare(b));
+  if (q) names = names.filter(n => n.toLowerCase().includes(q) || byAuthor[n].some(b => b.title.toLowerCase().includes(q)));
+
+  if (activeAuthor && !names.includes(activeAuthor) && !q) names = Object.keys(byAuthor).sort((a, b) => a.localeCompare(b));
+
+  if (!names.length) {
+    $('#author-list').innerHTML = '<p class="author-search-empty">Tidak ada penulis yang cocok.</p>';
+    return;
+  }
+
+  let curLetter = '';
+  let html = '';
+  names.forEach(name => {
+    const letter = name[0].toUpperCase();
+    if (letter !== curLetter) { html += '<div class="author-group-label">' + letter + '</div>'; curLetter = letter; }
+    const info = AUTHORS[name];
+    const books = byAuthor[name];
+    html +=
+      '<button class="author-row" data-author="' + escHTML(name) + '">' +
+        '<div class="author-avatar" style="background:' + avatarColor(name) + '">' + escHTML(name[0]) + '</div>' +
+        '<div class="author-row-info">' +
+          '<div class="author-row-name">' + escHTML(name) + '</div>' +
+          '<div class="author-row-sub">' + books.length + ' buku' + (info && info.years ? ' · ' + escHTML(info.years) : '') + '</div>' +
+        '</div>' +
+        '<div class="author-row-chev">&#8250;</div>' +
+      '</button>';
+  });
+  $('#author-list').innerHTML = html;
+  $('#author-list').querySelectorAll('.author-row').forEach(btn => {
+    btn.onclick = () => {
+      activeAuthor = btn.dataset.author;
+      applyGroupMode();
+      renderShelf();
+      $('#shelf').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+  });
 }
 
 function renderStats() {
@@ -150,6 +222,25 @@ function renderContinueCard() {
   card.hidden = false;
 }
 
+function authorContextHTML(name) {
+  const info = AUTHORS[name] || {};
+  const count = INDEX.filter(b => b.author === name).length;
+  return (
+    '<div class="shelf-back-wrap">' +
+      '<button class="shelf-back" id="shelf-back-authors">&#8592; Semua Penulis</button>' +
+      '<div class="author-card">' +
+        '<div class="author-avatar" style="background:' + avatarColor(name) + '">' + escHTML(name[0]) + '</div>' +
+        '<div class="author-card-body">' +
+          '<div class="author-card-name">' + escHTML(name) + '</div>' +
+          '<div class="author-card-meta">' + (info.years ? escHTML(info.years) : '') +
+            (info.nationality ? ' · ' + escHTML(info.nationality) : '') + ' · ' + count + ' buku</div>' +
+          '<div class="author-card-bio">' + escHTML(info.bio || '') + '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>'
+  );
+}
+
 function renderChips() {
   const cats = ['semua'].concat(Object.keys(CAT_LABELS).filter(c => INDEX.some(b => b.category === c)));
   $('#category-chips').innerHTML = cats.map(c =>
@@ -162,8 +253,14 @@ function renderChips() {
 }
 
 function renderShelf() {
-  const list = INDEX.filter(b => activeCategory === 'semua' || b.category === activeCategory);
-  $('#shelf').innerHTML = list.map(meta => {
+  const list = filteredBooks();
+  if (groupMode === 'author' && !activeAuthor) { $('#shelf').innerHTML = ''; return; }
+  if (!list.length) {
+    $('#shelf').innerHTML = '<p class="author-search-empty" style="grid-column:1/-1">Tidak ada buku yang cocok.</p>';
+    return;
+  }
+  const backRow = (groupMode === 'author' && activeAuthor) ? authorContextHTML(activeAuthor) : '';
+  $('#shelf').innerHTML = backRow + list.map(meta => {
     const pct = bookPercent(meta);
     const cover = coverHTML(meta).replace('%%PROGRESS%%',
       pct > 0 ? '<div class="cv-progress"><div style="width:' + pct + '%"></div></div>' : '');
@@ -179,6 +276,25 @@ function renderShelf() {
   $('#shelf').querySelectorAll('.book-card').forEach(btn => {
     btn.onclick = () => { location.hash = '#/buku/' + btn.dataset.id; };
   });
+  const backBtn = $('#shelf-back-authors');
+  if (backBtn) backBtn.onclick = () => { activeAuthor = null; applyGroupMode(); renderShelf(); };
+}
+
+function authorCardHTML(name) {
+  const info = AUTHORS[name];
+  if (!info) return '';
+  return (
+    '<div class="author-card">' +
+      '<div class="author-avatar" style="background:' + avatarColor(name) + '">' + escHTML(name[0]) + '</div>' +
+      '<div class="author-card-body">' +
+        '<div class="author-card-name">' + escHTML(name) + '</div>' +
+        '<div class="author-card-meta">' + (info.years ? escHTML(info.years) : '') +
+          (info.nationality ? ' · ' + escHTML(info.nationality) : '') + '</div>' +
+        '<div class="author-card-bio">' + escHTML(info.bio || '') + '</div>' +
+        '<button class="author-card-more" data-author="' + escHTML(name) + '">Lihat buku lain &#8250;</button>' +
+      '</div>' +
+    '</div>'
+  );
 }
 
 /* ---------- detail buku ---------- */
@@ -205,6 +321,7 @@ async function renderDetail(id) {
       '</div>' +
     '</div>' +
     '<p class="detail-desc">' + escHTML(meta.description) + '</p>' +
+    authorCardHTML(meta.author) +
     '<p class="detail-source">Sumber: ' + escHTML(meta.source) + '</p>' +
     '<button class="btn-primary" id="btn-read">' + startLabel + '</button>' +
     '<button class="btn-ghost" id="btn-listen">&#127911; Dengarkan' +
@@ -217,6 +334,11 @@ async function renderDetail(id) {
   $('#btn-listen').onclick = () => {
     const ap = getListenPos()[id];
     location.hash = '#/dengar/' + id + '/' + (ap ? ap.ch : (p ? p.ch : 0));
+  };
+  const moreBtn = $('#detail-body .author-card-more');
+  if (moreBtn) moreBtn.onclick = () => {
+    groupMode = 'author'; activeAuthor = moreBtn.dataset.author; searchQuery = '';
+    location.hash = '#/';
   };
 
   try {
@@ -621,6 +743,27 @@ async function boot() {
   document.querySelectorAll('.theme-dot').forEach(d => {
     d.onclick = () => setSettings({ theme: d.dataset.theme });
   });
+  $('#search-input').addEventListener('input', () => {
+    searchQuery = $('#search-input').value;
+    $('#search-clear').hidden = !searchQuery;
+    if (groupMode === 'author') renderAuthorList();
+    renderShelf();
+  });
+  $('#search-clear').onclick = () => {
+    searchQuery = ''; $('#search-input').value = ''; $('#search-clear').hidden = true;
+    if (groupMode === 'author') renderAuthorList();
+    renderShelf();
+  };
+  document.querySelectorAll('.gt-btn').forEach(btn => {
+    btn.onclick = () => {
+      groupMode = btn.dataset.group;
+      if (groupMode === 'genre') activeAuthor = null;
+      applyGroupMode();
+      if (groupMode === 'author') renderAuthorList();
+      renderShelf();
+    };
+  });
+
   $('#page-prev').onclick = () => goPage(-1);
   $('#page-next').onclick = () => goPage(1);
   $('#page-pos').onclick = () => openTOC();
@@ -667,6 +810,9 @@ async function boot() {
 
   try { AUDIO_MANIFEST = await (await fetch('audio/index.json')).json(); }
   catch (e) { AUDIO_MANIFEST = {}; }
+
+  try { AUTHORS = await (await fetch('books/authors.json')).json(); }
+  catch (e) { AUTHORS = {}; }
 
   try {
     const res = await fetch('books/index.json');
