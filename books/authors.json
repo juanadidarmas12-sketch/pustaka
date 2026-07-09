@@ -37,7 +37,50 @@
   "quote": {
    "text": "Upon this a question arises: whether it be better to be loved than feared or feared than loved?",
    "bookTitle": "The Prince"
-  }
+  },
+  "connections": [
+   {
+    "to": "Livy",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "sejarawan Romawi favoritnya"
+   },
+   {
+    "to": "Cicero",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Xenophon",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Hobbes",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Realisme politik & Hubungan Internasional modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Francis Bacon",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Tacitus",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Polybius",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Marcus Aurelius": {
   "years": "121-180 M",
@@ -78,7 +121,44 @@
   "quote": {
    "text": "O Nature! from thee are all things, in thee all things subsist, and to thee all tend.",
    "bookTitle": "Meditations"
-  }
+  },
+  "connections": [
+   {
+    "to": "Epictetus",
+    "type": "guru",
+    "inCatalog": true,
+    "note": "fondasi Stoisisme batinnya"
+   },
+   {
+    "to": "Junius Rusticus",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "mengenalkan catatan Epictetus"
+   },
+   {
+    "to": "Zeno dari Citium",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "pendiri Stoisisme"
+   },
+   {
+    "to": "Seneca",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "sesama penulis Stoa"
+   },
+   {
+    "to": "Matthew Arnold",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "penyair Victorian yang mengaguminya"
+   },
+   {
+    "to": "Gerakan Stoisisme modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Sun Tzu": {
   "years": "±544-496 SM",
@@ -117,7 +197,21 @@
   "quote": {
    "text": "If you know the enemy and know yourself, you need not fear the result of a hundred battles.",
    "bookTitle": "The Art of War"
-  }
+  },
+  "connections": [
+   {
+    "to": "Filsafat Taois awal",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "kelenturan mengalahkan kekakuan"
+   },
+   {
+    "to": "Mao Zedong",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "strategi perang gerilya"
+   }
+  ]
  },
  "Karl Marx & Friedrich Engels": {
   "years": "Marx 1818-1883, Engels 1820-1895",
@@ -158,7 +252,63 @@
   "quote": {
    "text": "A spectre is haunting Europe—the spectre of Communism.",
    "bookTitle": "The Communist Manifesto"
-  }
+  },
+  "connections": [
+   {
+    "to": "G.W.F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ludwig Feuerbach",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Adam Smith",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "ekonom klasik Inggris"
+   },
+   {
+    "to": "David Ricardo",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "ekonom klasik Inggris"
+   },
+   {
+    "to": "Revolusi-revolusi Eropa 1848",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Vladimir Lenin",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "Revolusi Rusia"
+   },
+   {
+    "to": "Revolusi Tiongkok",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan buruh dan sosialis dunia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sosiologi dan ilmu sosial modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Karl Marx",
+    "type": "kolaborator",
+    "inCatalog": true,
+    "note": "penulis solo di katalog ini"
+   }
+  ]
  },
  "Plato": {
   "years": "±428-348 SM",
@@ -199,7 +349,70 @@
   "quote": {
    "text": "To them, I said, the truth would be literally nothing but the shadows of the images.",
    "bookTitle": "The Republic"
-  }
+  },
+  "connections": [
+   {
+    "to": "Socrates",
+    "type": "guru",
+    "inCatalog": false
+   },
+   {
+    "to": "Pythagoras",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Parmenides",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Heraclitus",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Aristotle",
+    "type": "murid",
+    "inCatalog": true
+   },
+   {
+    "to": "Neoplatonisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Agustinus dari Hippo",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "filsafat Kristen abad pertengahan"
+   },
+   {
+    "to": "Tradisi filsafat Barat",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thomas More",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Boethius",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Arthur Schopenhauer",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Plutarch",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Edward Gibbon": {
   "years": "1737-1794",
@@ -238,7 +451,42 @@
   "quote": {
    "text": "...which is, indeed, little more than the register of the crimes, follies, and misfortunes of mankind.",
    "bookTitle": "The Decline and Fall of the Roman Empire (Vol. 1)"
-  }
+  },
+  "connections": [
+   {
+    "to": "Tacitus",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "sejarawan klasik"
+   },
+   {
+    "to": "Livy",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "sejarawan klasik"
+   },
+   {
+    "to": "Montesquieu",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Winston Churchill",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "mengagumi gaya prosanya"
+   },
+   {
+    "to": "Penulisan sejarah naratif modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Diskursus kejatuhan imperium modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "David Ricardo": {
   "years": "1772-1823",
@@ -278,7 +526,50 @@
   "quote": {
    "text": "Possessing utility, commodities derive their exchangeable value from two sources: from their scarcity, and from the quantity of labour required to obtain them.",
    "bookTitle": "Principles of Political Economy"
-  }
+  },
+  "connections": [
+   {
+    "to": "Adam Smith",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Robert Malthus",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "memakai teori nilai kerja, beda simpulan"
+   },
+   {
+    "to": "John Stuart Mill",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Teori perdagangan internasional modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ekonomi klasik dan neoklasik",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Karl Marx & Friedrich Engels",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Walter Bagehot",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Alexis de Tocqueville": {
   "years": "1805-1859",
@@ -317,7 +608,34 @@
   "quote": {
    "text": "Amongst the novel objects that attracted my attention during my stay in the United States, nothing struck me more forcibly than the general equality of conditions.",
    "bookTitle": "Democracy in America (Vol. 1)"
-  }
+  },
+  "connections": [
+   {
+    "to": "Montesquieu",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ilmu politik dan sosiologi modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Diskursus populisme dan polarisasi kontemporer",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Pemikir komunitarian abad ke-20",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Edmund Burke",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "John Stuart Mill": {
   "years": "1806-1873",
@@ -358,7 +676,73 @@
   "quote": {
    "text": "Over himself, over his own body and mind, the individual is sovereign.",
    "bookTitle": "On Liberty"
-  }
+  },
+  "connections": [
+   {
+    "to": "James Mill",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "ayahnya"
+   },
+   {
+    "to": "Jeremy Bentham",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Harriet Taylor Mill",
+    "type": "kolaborator",
+    "inCatalog": false,
+    "note": "istrinya, mitra intelektual"
+   },
+   {
+    "to": "William Wordsworth",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "puisi Romantik"
+   },
+   {
+    "to": "Samuel Taylor Coleridge",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "puisi Romantik"
+   },
+   {
+    "to": "Liberalisme politik modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan hak pilih perempuan",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Filsafat utilitarian lanjutan",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "David Ricardo",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Mary Wollstonecraft",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Bertrand Russell",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Henry George",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Friedrich Nietzsche": {
   "years": "1844-1900",
@@ -398,7 +782,52 @@
   "quote": {
    "text": "And if thou gaze long into an abyss, the abyss will also gaze into thee.",
    "bookTitle": "Beyond Good and Evil"
-  }
+  },
+  "connections": [
+   {
+    "to": "Arthur Schopenhauer",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Richard Wagner",
+    "type": "menentang",
+    "inCatalog": false,
+    "note": "awalnya kagum, lalu berbalik menentang"
+   },
+   {
+    "to": "Filologi dan tragedi Yunani klasik",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Eksistensialisme",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "Sartre, Camus"
+   },
+   {
+    "to": "Postmodernisme",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "Foucault, Derrida"
+   },
+   {
+    "to": "Sigmund Freud",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Sastra modern abad ke-20",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ralph Waldo Emerson",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Herodotus": {
   "years": "±484-425 SM",
@@ -437,7 +866,36 @@
   "quote": {
    "text": "For no one is so senseless as to choose of his own will war rather peace, since in peace the sons bury their fathers, but in war the fathers bury their sons.",
    "bookTitle": "The History of Herodotus (Vol. 1)"
-  }
+  },
+  "connections": [
+   {
+    "to": "Homer",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "tradisi epik lisan Yunani"
+   },
+   {
+    "to": "Perang Yunani-Persia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thucydides",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "bereaksi dengan metode lebih ketat"
+   },
+   {
+    "to": "Tradisi penulisan sejarah naratif Barat",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Antropologi dan etnografi modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Thorstein Veblen": {
   "years": "1857-1929",
@@ -476,7 +934,36 @@
   "quote": {
    "text": "Conspicuous consumption of valuable goods is a means of reputability to the gentleman of leisure.",
    "bookTitle": "The Theory of the Leisure Class"
-  }
+  },
+  "connections": [
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "kritik kapitalisme, beda pendekatan"
+   },
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "evolusi diterapkan pada institusi sosial"
+   },
+   {
+    "to": "Sosiologi ekonomi modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Studi konsumerisme dan status sosial",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ekonomi kelembagaan (institutional economics)",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "W. E. B. Du Bois": {
   "years": "1868-1963",
@@ -515,7 +1002,36 @@
   "quote": {
    "text": "The problem of the Twentieth Century is the problem of the color-line.",
    "bookTitle": "The Souls of Black Folk"
-  }
+  },
+  "connections": [
+   {
+    "to": "William James",
+    "type": "guru",
+    "inCatalog": true,
+    "note": "gurunya di Harvard"
+   },
+   {
+    "to": "Pan-Afrikanisme",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "tradisi intelektual & gerakan kemerdekaan Afrika"
+   },
+   {
+    "to": "Gerakan hak sipil Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Studi ras dan sosiologi kritis modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Frederick Douglass",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "John Locke": {
   "years": "1632-1704",
@@ -555,7 +1071,88 @@
   "quote": {
    "text": "The natural liberty of man is to be free from any superior power on earth, and not to be under the will or legislative authority of man, but to have only the law of nature for his rule.",
    "bookTitle": "Second Treatise of Government"
-  }
+  },
+  "connections": [
+   {
+    "to": "Robert Boyle",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "lingkungan ilmiah Royal Society"
+   },
+   {
+    "to": "Earl of Shaftesbury",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "patronnya"
+   },
+   {
+    "to": "Perang Saudara Inggris",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thomas Jefferson",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "Deklarasi Kemerdekaan Amerika"
+   },
+   {
+    "to": "Revolusi Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Liberalisme klasik modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Voltaire",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "Pencerahan Prancis"
+   },
+   {
+    "to": "Thomas Paine",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Hobbes",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "David Hume",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "George Berkeley",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Alexander Hamilton, James Madison & John Jay",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Jean-Jacques Rousseau",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Edmund Burke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Benjamin Franklin",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Thomas More": {
   "years": "1478-1535",
@@ -594,7 +1191,41 @@
   "quote": {
    "text": "Pride thinks its own happiness shines the brighter, by comparing it with the misfortunes of other persons; that by displaying its own wealth they may feel their poverty the more sensibly.",
    "bookTitle": "Utopia"
-  }
+  },
+  "connections": [
+   {
+    "to": "Erasmus dari Rotterdam",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "sahabat dekatnya"
+   },
+   {
+    "to": "Plato",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "terutama 'The Republic'"
+   },
+   {
+    "to": "Humanisme Renaisans",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Tradisi sastra utopia dan distopia modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sosialisme utopis abad ke-19",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Reformasi sosial dan keadilan ekonomi",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Henry David Thoreau": {
   "years": "1817-1862",
@@ -634,7 +1265,45 @@
   "quote": {
    "text": "The mass of men lead lives of quiet desperation.",
    "bookTitle": "Walden"
-  }
+  },
+  "connections": [
+   {
+    "to": "Ralph Waldo Emerson",
+    "type": "guru",
+    "inCatalog": true,
+    "note": "mentor dan tetangganya"
+   },
+   {
+    "to": "Transendentalisme Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Filsafat Hindu dan Timur",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Mahatma Gandhi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Martin Luther King Jr.",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan lingkungan dan konservasi alam modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan hidup sederhana (simple living)",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Thomas Paine": {
   "years": "1737-1809",
@@ -674,7 +1343,46 @@
   "quote": {
    "text": "Society is produced by our wants, and government by our wickedness",
    "bookTitle": "Common Sense"
-  }
+  },
+  "connections": [
+   {
+    "to": "Benjamin Franklin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "John Locke",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "Pencerahan"
+   },
+   {
+    "to": "Jean-Jacques Rousseau",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "Pencerahan"
+   },
+   {
+    "to": "Revolusi Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Revolusi Prancis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Tradisi pamflet politik dan jurnalisme persuasif modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan republikanisme demokratis",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Laozi": {
   "years": "±abad ke-6 SM (legendaris)",
@@ -713,7 +1421,34 @@
   "quote": {
    "text": "The Tao that can be trodden is not the enduring and unchanging Tao.",
    "bookTitle": "Tao Te Ching"
-  }
+  },
+  "connections": [
+   {
+    "to": "Tradisi kearifan rakyat dan kosmologi Tiongkok kuno",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Taoisme sebagai agama dan filsafat",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Zhuangzi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Seni bela diri dan pengobatan tradisional Tiongkok",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan mindfulness dan minimalisme modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Thucydides": {
   "years": "±460-400 SM",
@@ -752,7 +1487,36 @@
   "quote": {
    "text": "The strong do what they can and the weak suffer what they must.",
    "bookTitle": "The History of the Peloponnesian War"
-  }
+  },
+  "connections": [
+   {
+    "to": "Herodotus",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "mengkritik metode pendahulunya"
+   },
+   {
+    "to": "Sofisme dan retorika Athena",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ilmu hubungan internasional dan teori realisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Historiografi ilmiah modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Perangkap Thukydides",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "analisis geopolitik kontemporer"
+   }
+  ]
  },
  "Mary Wollstonecraft": {
   "years": "1759-1797",
@@ -791,7 +1555,42 @@
   "quote": {
    "text": "I do not wish them to have power over men; but over themselves.",
    "bookTitle": "A Vindication of the Rights of Woman"
-  }
+  },
+  "connections": [
+   {
+    "to": "Jean-Jacques Rousseau",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "mengkritik keras soal pendidikan perempuan"
+   },
+   {
+    "to": "Revolusi Prancis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Joseph Johnson",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "lingkaran penerbit radikal London"
+   },
+   {
+    "to": "John Stuart Mill",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "'The Subjection of Women'"
+   },
+   {
+    "to": "Gerakan hak pilih perempuan (suffragette)",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Feminisme gelombang pertama dan kedua",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Thomas Hobbes": {
   "years": "1588-1679",
@@ -832,7 +1631,49 @@
   "quote": {
    "text": "And the life of man, solitary, poore, nasty, brutish, and short.",
    "bookTitle": "Leviathan"
-  }
+  },
+  "connections": [
+   {
+    "to": "Euclid",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Galileo Galilei",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Perang Saudara Inggris",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "John Locke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Jean-Jacques Rousseau",
+    "type": "menentang",
+    "inCatalog": true
+   },
+   {
+    "to": "Baruch Spinoza",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Teori kontrak sosial modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Aristotle": {
   "years": "384-322 SM",
@@ -871,7 +1712,49 @@
   "quote": {
    "text": "It is evident that a city is a natural production, and that man is naturally a political animal.",
    "bookTitle": "Politics"
-  }
+  },
+  "connections": [
+   {
+    "to": "Plato",
+    "type": "guru",
+    "inCatalog": true
+   },
+   {
+    "to": "Socrates",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thomas Aquinas",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Skolastik Abad Pertengahan",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ibnu Rusyd (Averroes)",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Etika kebajikan modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Francis Bacon",
+    "type": "menentang",
+    "inCatalog": true
+   },
+   {
+    "to": "Polybius",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Epictetus": {
   "years": "±55-135 M",
@@ -910,7 +1793,39 @@
   "quote": {
    "text": "Men are disturbed not by things, but by the views which they take of things.",
    "bookTitle": "The Enchiridion"
-  }
+  },
+  "connections": [
+   {
+    "to": "Musonius Rufus",
+    "type": "guru",
+    "inCatalog": false
+   },
+   {
+    "to": "Zeno dari Citium",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Stoisisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Marcus Aurelius",
+    "type": "murid",
+    "inCatalog": true
+   },
+   {
+    "to": "Terapi Perilaku Kognitif (CBT) modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan Stoisisme modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Lucretius": {
   "years": "±99-55 SM",
@@ -948,7 +1863,39 @@
   "quote": {
    "text": "Nothing from nothing ever yet was born.",
    "bookTitle": "On the Nature of Things"
-  }
+  },
+  "connections": [
+   {
+    "to": "Epicurus",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Democritus",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Pemikiran atomis Renaisans",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Materialisme ilmiah modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Virgil",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Horace",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Boethius": {
   "years": "±477-524 M",
@@ -987,7 +1934,39 @@
   "quote": {
    "text": "I turn the wheel that spins. I delight to see the high come down and the low ascend.",
    "bookTitle": "The Consolation of Philosophy"
-  }
+  },
+  "connections": [
+   {
+    "to": "Plato",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Neoplatonisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Stoisisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Geoffrey Chaucer",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Dante Alighieri",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Teologi Skolastik",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "René Descartes": {
   "years": "1596-1650",
@@ -1026,7 +2005,51 @@
   "quote": {
    "text": "I think, therefore I am (COGITO ERGO SUM)",
    "bookTitle": "Discourse on the Method"
-  }
+  },
+  "connections": [
+   {
+    "to": "Euclid",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "geometrinya"
+   },
+   {
+    "to": "Galileo Galilei",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Pendidikan Skolastik Jesuit",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Baruch Spinoza",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Empirisisme Inggris",
+    "type": "menentang",
+    "inCatalog": false,
+    "note": "muncul sebagai tandingan pemikirannya"
+   },
+   {
+    "to": "Isaac Newton",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "George Berkeley",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Blaise Pascal",
+    "type": "menentang",
+    "inCatalog": true
+   }
+  ]
  },
  "Baruch Spinoza": {
   "years": "1632-1677",
@@ -1067,7 +2090,49 @@
   "quote": {
    "text": "A free man thinks of death least of all things; and his wisdom is a meditation not of death but of life.",
    "bookTitle": "Ethics"
-  }
+  },
+  "connections": [
+   {
+    "to": "René Descartes",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Yudaisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Stoisisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thomas Hobbes",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Pencerahan Eropa",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Albert Einstein",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kritik biblika modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "G.W.F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "David Hume": {
   "years": "1711-1776",
@@ -1106,7 +2171,45 @@
   "quote": {
    "text": "A wise man, therefore, proportions his belief to the evidence.",
    "bookTitle": "An Enquiry Concerning Human Understanding"
-  }
+  },
+  "connections": [
+   {
+    "to": "John Locke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "George Berkeley",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Francis Bacon",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Immanuel Kant",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Positivisme logis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Adam Smith",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sahabat dekat, Pencerahan Skotlandia"
+   },
+   {
+    "to": "Edmund Burke",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Immanuel Kant": {
   "years": "1724-1804",
@@ -1146,7 +2249,54 @@
   "quote": {
    "text": "Nothing can possibly be conceived in the world, or even out of it, which can be called good, without qualification, except a good will.",
    "bookTitle": "Fundamental Principles of the Metaphysic of Morals"
-  }
+  },
+  "connections": [
+   {
+    "to": "David Hume",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Jean-Jacques Rousseau",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Gottfried Leibniz",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "G.W.F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Arthur Schopenhauer",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Etika deontologis modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Deklarasi hak asasi manusia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "George Berkeley",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Ralph Waldo Emerson",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Arthur Schopenhauer": {
   "years": "1788-1860",
@@ -1186,7 +2336,49 @@
   "quote": {
    "text": "Boredom is a form of suffering unknown to brutes, at any rate in their natural state.",
    "bookTitle": "Studies in Pessimism"
-  }
+  },
+  "connections": [
+   {
+    "to": "Immanuel Kant",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Plato",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Filsafat Hindu (Upanishad)",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Buddhisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Friedrich Nietzsche",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Sigmund Freud",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Richard Wagner",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Leo Tolstoy",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Francis Bacon": {
   "years": "1561-1626",
@@ -1226,7 +2418,50 @@
   "quote": {
    "text": "Reading maketh a full man; conference a ready man; and writing an exact man.",
    "bookTitle": "Essays"
-  }
+  },
+  "connections": [
+   {
+    "to": "Aristotle",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "lawan tanding metode skolastiknya"
+   },
+   {
+    "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Humanisme Renaisans",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Royal Society",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Isaac Newton",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Metode ilmiah modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Empirisisme Inggris",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "David Hume",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "George Berkeley": {
   "years": "1685-1753",
@@ -1265,7 +2500,39 @@
   "quote": {
    "text": "Their ESSE is PERCIPI, nor is it possible they should have any existence out of the minds or thinking things which perceive them.",
    "bookTitle": "A Treatise Concerning the Principles of Human Knowledge"
-  }
+  },
+  "connections": [
+   {
+    "to": "John Locke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "René Descartes",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Nicolas Malebranche",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "David Hume",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Immanuel Kant",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Idealisme modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "William James": {
   "years": "1842-1910",
@@ -1304,7 +2571,45 @@
   "quote": {
    "text": "What, in short, is the truth's cash-value in experiential terms?",
    "bookTitle": "Pragmatism"
-  }
+  },
+  "connections": [
+   {
+    "to": "Charles Sanders Peirce",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ralph Waldo Emerson",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "teori evolusi"
+   },
+   {
+    "to": "John Dewey",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Pragmatisme Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Psikologi fungsionalis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "W. E. B. Du Bois",
+    "type": "murid",
+    "inCatalog": true
+   }
+  ]
  },
  "Bertrand Russell": {
   "years": "1872-1970",
@@ -1343,7 +2648,41 @@
   "quote": {
    "text": "Through the greatness of the universe which philosophy contemplates, the mind also is rendered great, and becomes capable of that union with the universe which constitutes its highest good.",
    "bookTitle": "The Problems of Philosophy"
-  }
+  },
+  "connections": [
+   {
+    "to": "Gottlob Frege",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Alfred North Whitehead",
+    "type": "kolaborator",
+    "inCatalog": false,
+    "note": "co-author Principia Mathematica"
+   },
+   {
+    "to": "John Stuart Mill",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Ludwig Wittgenstein",
+    "type": "murid",
+    "inCatalog": false,
+    "note": "muridnya di Cambridge"
+   },
+   {
+    "to": "Filsafat analitik modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan anti-nuklir",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Ralph Waldo Emerson": {
   "years": "1803-1882",
@@ -1384,7 +2723,55 @@
   "quote": {
    "text": "A foolish consistency is the hobgoblin of little minds, adored by little statesmen and philosophers and divines.",
    "bookTitle": "Essays: First Series"
-  }
+  },
+  "connections": [
+   {
+    "to": "Immanuel Kant",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "via idealisme Jerman"
+   },
+   {
+    "to": "Samuel Taylor Coleridge",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thomas Carlyle",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Filsafat Hindu",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Henry David Thoreau",
+    "type": "murid",
+    "inCatalog": true
+   },
+   {
+    "to": "Walt Whitman",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Friedrich Nietzsche",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "William James",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Plutarch",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Confucius": {
   "years": "±551-479 SM",
@@ -1423,7 +2810,39 @@
   "quote": {
    "text": "Learning without thought is labour lost; thought without learning is perilous.",
    "bookTitle": "The Analects"
-  }
+  },
+  "connections": [
+   {
+    "to": "Dinasti Zhou awal",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Duke of Zhou",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Tradisi ritual Tiongkok kuno",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Mencius",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Konfusianisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sistem ujian birokrasi kekaisaran Tiongkok",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Blaise Pascal": {
   "years": "1623-1662",
@@ -1462,7 +2881,40 @@
   "quote": {
    "text": "The heart has its reasons, which reason does not know.",
    "bookTitle": "Pensees"
-  }
+  },
+  "connections": [
+   {
+    "to": "Jansenisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "René Descartes",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "sebagai lawan tanding"
+   },
+   {
+    "to": "Michel de Montaigne",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Eksistensialisme Kristen",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Teori probabilitas modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Apologetika Kristen modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Alexander Hamilton, James Madison & John Jay": {
   "years": "Hamilton 1755-1804, Madison 1751-1836, Jay 1745-1829",
@@ -1501,7 +2953,39 @@
   "quote": {
    "text": "If men were angels, no government would be necessary.",
    "bookTitle": "Federalist 51"
-  }
+  },
+  "connections": [
+   {
+    "to": "Montesquieu",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "John Locke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Kegagalan Articles of Confederation",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Konstitusionalisme Amerika modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Mahkamah Agung Amerika Serikat",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Teori checks and balances",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Jean-Jacques Rousseau": {
   "years": "1712-1778",
@@ -1541,7 +3025,56 @@
   "quote": {
    "text": "Man is born free; and everywhere he is in chains.",
    "bookTitle": "The Social Contract"
-  }
+  },
+  "connections": [
+   {
+    "to": "John Locke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Hobbes",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "sebagai lawan tanding"
+   },
+   {
+    "to": "Madame de Warens",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "pelindung di masa muda"
+   },
+   {
+    "to": "Revolusi Prancis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Immanuel Kant",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Romantisisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Teori pendidikan modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thomas Paine",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Mary Wollstonecraft",
+    "type": "menentang",
+    "inCatalog": true
+   }
+  ]
  },
  "Edmund Burke": {
   "years": "1729-1797",
@@ -1582,7 +3115,49 @@
   "quote": {
    "text": "I think these six massive pillars will be of strength sufficient to support the temple of British concord.",
    "bookTitle": "Speech on Conciliation with America"
-  }
+  },
+  "connections": [
+   {
+    "to": "John Locke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "David Hume",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Montesquieu",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Cicero",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Konservatisme modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Alexis de Tocqueville",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Russell Kirk",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Pemikiran politik Inggris abad ke-19",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Emma Goldman": {
   "years": "1869-1940",
@@ -1622,7 +3197,45 @@
   "quote": {
    "text": "Nothing short of a complete reconstruction of society will deliver mankind from the cancer of crime.",
    "bookTitle": "Anarchism and Other Essays"
-  }
+  },
+  "connections": [
+   {
+    "to": "Mikhail Bakunin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Peter Kropotkin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Peristiwa Haymarket",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Alexander Berkman",
+    "type": "kolaborator",
+    "inCatalog": false,
+    "note": "pasangan & rekan seperjuangan"
+   },
+   {
+    "to": "Gerakan hak reproduksi Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Anarkisme feminis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan buruh Amerika awal abad ke-20",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Walter Bagehot": {
   "years": "1826-1877",
@@ -1661,7 +3274,34 @@
   "quote": {
    "text": "Where great questions end, little parties begin.",
    "bookTitle": "The English Constitution"
-  }
+  },
+  "connections": [
+   {
+    "to": "Adam Smith",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "David Ricardo",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Kebijakan bank sentral modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "John Maynard Keynes",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Studi konstitusi perbandingan",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Mikhail Bakunin": {
   "years": "1814-1876",
@@ -1701,7 +3341,49 @@
   "quote": {
    "text": "The State is force, and for it, first of all, is the right of force, the triumphant argument of the needle-gun, of the chassepot.",
    "bookTitle": "God and the State"
-  }
+  },
+  "connections": [
+   {
+    "to": "G.W.F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Pierre-Joseph Proudhon",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Pemberontakan Eropa 1848",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Peter Kropotkin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Gerakan anarko-sindikalisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Emma Goldman",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Perang Saudara Spanyol (sayap anarkis)",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Karl Marx",
+    "type": "menentang",
+    "inCatalog": true
+   }
+  ]
  },
  "Peter Kropotkin": {
   "years": "1842-1921",
@@ -1741,7 +3423,39 @@
   "quote": {
    "text": "Weak people are usually supported; sick people are very well attended to; they never are abandoned or killed.",
    "bookTitle": "Mutual Aid: A Factor of Evolution"
-  }
+  },
+  "connections": [
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Mikhail Bakunin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Gerakan anarko-komunisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ekologi sosial",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Emma Goldman",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Gerakan koperasi",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Plutarch": {
   "years": "±46-120 M",
@@ -1780,7 +3494,39 @@
   "quote": {
    "text": "His conduct cannot be praised, and yet it is above censure.",
    "bookTitle": "Plutarch's Lives (Vol. 1)"
-  }
+  },
+  "connections": [
+   {
+    "to": "Plato",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Tradisi biografi Yunani",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "William Shakespeare",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ralph Waldo Emerson",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Genre biografi Barat modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Suetonius",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Julius Caesar": {
   "years": "100-44 SM",
@@ -1819,7 +3565,40 @@
   "quote": {
    "text": "In vain; for Caesar, by hasty marches, anticipated them in every place, nor did he allow any state leisure to consider the safety of others, in preference to their own.",
    "bookTitle": "Commentaries on the Gallic War"
-  }
+  },
+  "connections": [
+   {
+    "to": "Gaius Marius",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Tradisi militer Romawi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Pompey",
+    "type": "menentang",
+    "inCatalog": false,
+    "note": "rivalitas berujung perang saudara"
+   },
+   {
+    "to": "Augustus",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kekaisaran Romawi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Konsep kepemimpinan otokratis Barat",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Tacitus": {
   "years": "±56-120 M",
@@ -1858,7 +3637,34 @@
   "quote": {
    "text": "I wish neither to condemn nor to condone Tiberius: I desire, if it be possible, to see him as he is; and whether he be good or bad, he is very interesting.",
    "bookTitle": "The Annals"
-  }
+  },
+  "connections": [
+   {
+    "to": "Sallust",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Tradisi historiografi Romawi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Edward Gibbon",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Historiografi politik modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Xenophon": {
   "years": "±430-354 SM",
@@ -1897,7 +3703,41 @@
   "quote": {
    "text": "Sirs, the offerings are favourable to us, the omens are propitious, the victims more than promising; let us attack the enemy!",
    "bookTitle": "Anabasis"
-  }
+  },
+  "connections": [
+   {
+    "to": "Socrates",
+    "type": "guru",
+    "inCatalog": false
+   },
+   {
+    "to": "Cyrus Muda",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "pengalaman militer di Persia"
+   },
+   {
+    "to": "Studi kepemimpinan militer klasik",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Alexander Agung",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "via studi taktik"
+   },
+   {
+    "to": "Tradisi memoar perang",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Suetonius": {
   "years": "±69-122 M",
@@ -1936,7 +3776,40 @@
   "quote": {
    "text": "Neither age nor sex afforded any exemption from his insatiable thirst for blood.",
    "bookTitle": "The Lives of the Twelve Caesars"
-  }
+  },
+  "connections": [
+   {
+    "to": "Tradisi biografi Romawi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Hadrian",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "akses arsip kekaisaran"
+   },
+   {
+    "to": "Plutarch",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Einhard",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Genre biografi kekaisaran",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Persepsi populer sejarah Romawi",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Thomas Carlyle": {
   "years": "1795-1881",
@@ -1975,7 +3848,39 @@
   "quote": {
    "text": "Thus men break the axe with which they have done hateful things; the axe itself having grown hateful.",
    "bookTitle": "The French Revolution: A History"
-  }
+  },
+  "connections": [
+   {
+    "to": "Johann Wolfgang von Goethe",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Calvinisme Skotlandia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Filsafat idealisme Jerman",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Charles Dickens",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "John Ruskin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Ralph Waldo Emerson",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "H. G. Wells": {
   "years": "1866-1946",
@@ -2014,7 +3919,41 @@
   "quote": {
    "text": "The mind of the common man was awake in the world as it had never been before in all the experience of mankind.",
    "bookTitle": "A Short History of the World"
-  }
+  },
+  "connections": [
+   {
+    "to": "Thomas Henry Huxley",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "gurunya di Normal School of Science"
+   },
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Perang Dunia Pertama",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "traumanya"
+   },
+   {
+    "to": "Genre fiksi ilmiah modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan pemerintahan dunia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "George Orwell",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Benjamin Franklin": {
   "years": "1706-1790",
@@ -2053,7 +3992,44 @@
   "quote": {
    "text": "Let all your things have their places; let each part of your business have its time.",
    "bookTitle": "The Autobiography of Benjamin Franklin"
-  }
+  },
+  "connections": [
+   {
+    "to": "Pencerahan Eropa",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "John Locke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Tradisi Puritan Boston",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Samuel Smiles",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Etos kerja Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Konstitusi Amerika Serikat",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thomas Paine",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Frederick Douglass": {
   "years": "±1818-1895",
@@ -2093,7 +4069,39 @@
   "quote": {
    "text": "The louder she screamed, the harder he whipped; and where the blood ran fastest, there he whipped longest.",
    "bookTitle": "Narrative of the Life of Frederick Douglass"
-  }
+  },
+  "connections": [
+   {
+    "to": "William Lloyd Garrison",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Alkitab",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan abolisionis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Booker T. Washington",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "W. E. B. Du Bois",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Gerakan hak sipil Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Marco Polo": {
   "years": "1254-1324",
@@ -2132,7 +4140,40 @@
   "quote": {
    "text": "Whosoever is the bearer of that may order what he pleases, and his order shall be executed straightway.",
    "bookTitle": "The Travels of Marco Polo (Vol. 1)"
-  }
+  },
+  "connections": [
+   {
+    "to": "Niccolò dan Maffeo Polo",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "ayah dan pamannya"
+   },
+   {
+    "to": "Tradisi dagang Venesia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kubilai Khan",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Christopher Columbus",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Eksplorasi Eropa ke Asia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sastra perjalanan Barat",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Polybius": {
   "years": "±200-118 SM",
@@ -2171,7 +4212,39 @@
   "quote": {
    "text": "For it is no longer a case of the spectators pitying their neighbours, but themselves, as they recall the ruin of their own country.",
    "bookTitle": "The Histories of Polybius (Vol. 1)"
-  }
+  },
+  "connections": [
+   {
+    "to": "Aristotle",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Keluarga Scipio",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Tradisi historiografi pragmatis Yunani",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Cicero",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Perancang Konstitusi Amerika Serikat",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Einhard": {
   "years": "±775-840 M",
@@ -2209,7 +4282,34 @@
   "quote": {
    "text": "His gait was firm, all the habit of his body manly: his voice clear, but scarce corresponding to his stature.",
    "bookTitle": "Life of Charlemagne"
-  }
+  },
+  "connections": [
+   {
+    "to": "Suetonius",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Charlemagne",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Renaisans Karoling",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Historiografi biografi abad pertengahan",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Persepsi populer tentang Charlemagne",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Flavius Josephus": {
   "years": "±37-100 M",
@@ -2247,7 +4347,34 @@
   "quote": {
    "text": "You are the only people who think it a disgrace to be servants to those to whom all the world hath submitted.",
    "bookTitle": "The Wars of the Jews"
-  }
+  },
+  "connections": [
+   {
+    "to": "Tradisi keimaman Yahudi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Vespasian",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Filsafat Farisi dan Eseni",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Historiografi Kristen awal",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Studi sejarah Yudea kuno",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Karl Marx": {
   "years": "1818-1883",
@@ -2288,7 +4415,62 @@
   "quote": {
    "text": "Circulation itself constitutes such a vicious circle.",
    "bookTitle": "A Contribution to the Critique of Political Economy"
-  }
+  },
+  "connections": [
+   {
+    "to": "G.W.F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ludwig Feuerbach",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Karl Marx & Friedrich Engels",
+    "type": "kolaborator",
+    "inCatalog": true,
+    "note": "kolaborasi dengan Engels"
+   },
+   {
+    "to": "Adam Smith",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "membangun teori nilai kerja darinya lalu mengkritiknya"
+   },
+   {
+    "to": "David Ricardo",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Vladimir Lenin",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan buruh internasional",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Mikhail Bakunin",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "perseteruan di International"
+   },
+   {
+    "to": "Sosiologi dan ekonomi politik modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thorstein Veblen",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Thomas Robert Malthus": {
   "years": "1766-1834",
@@ -2328,7 +4510,46 @@
   "quote": {
    "text": "The rich man would feel his power and the poor man his dependence, and the evil effects of these two impressions on the human heart are well known.",
    "bookTitle": "An Essay on the Principle of Population"
-  }
+  },
+  "connections": [
+   {
+    "to": "Daniel Malthus",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "ayahnya"
+   },
+   {
+    "to": "William Godwin",
+    "type": "menentang",
+    "inCatalog": false,
+    "note": "via perdebatan"
+   },
+   {
+    "to": "Adam Smith",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "David Ricardo",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Kebijakan populasi modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ekonomi lingkungan",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Henry George": {
   "years": "1839-1897",
@@ -2367,7 +4588,39 @@
   "quote": {
    "text": "Get money—honestly, if you can, but at any rate get money!",
    "bookTitle": "Progress and Poverty"
-  }
+  },
+  "connections": [
+   {
+    "to": "Adam Smith",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Demam Emas California",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "John Stuart Mill",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Georgisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan pajak tunggal",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kebijakan pajak properti modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "John Maynard Keynes": {
   "years": "1883-1946",
@@ -2406,7 +4659,45 @@
   "quote": {
    "text": "Entangling alliances or entangling leagues are nothing to the entanglements of cash owing.",
    "bookTitle": "The Economic Consequences of the Peace"
-  }
+  },
+  "connections": [
+   {
+    "to": "Alfred Marshall",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "gurunya di Cambridge"
+   },
+   {
+    "to": "Perundingan Versailles",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Depresi Besar",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kebijakan New Deal",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ekonomi makro modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Negara kesejahteraan pascaperang",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Walter Bagehot",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Adam Smith": {
   "years": "1723-1790",
@@ -2446,7 +4737,72 @@
   "quote": {
    "text": "Man, according to the stoics, ought to regard himself, not as something separated and detached, but as a citizen of the world, a member of the vast commonwealth of nature.",
    "bookTitle": "The Theory of Moral Sentiments"
-  }
+  },
+  "connections": [
+   {
+    "to": "David Hume",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sahabat dekat, Pencerahan Skotlandia"
+   },
+   {
+    "to": "Para Fisiokrat Prancis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Francis Hutcheson",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "gurunya di Glasgow"
+   },
+   {
+    "to": "David Ricardo",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Karl Marx",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "dikritik olehnya"
+   },
+   {
+    "to": "Ekonomi klasik dan neoklasik",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Frédéric Bastiat",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Karl Marx & Friedrich Engels",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Walter Bagehot",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Robert Malthus",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Henry George",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "William Graham Sumner",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Frederick Winslow Taylor": {
   "years": "1856-1915",
@@ -2484,7 +4840,29 @@
   "quote": {
    "text": "The principal object of management should be to secure the maximum prosperity for the employer, coupled with the maximum prosperity for each employee.",
    "bookTitle": "The Principles of Scientific Management"
-  }
+  },
+  "connections": [
+   {
+    "to": "Tradisi teknik mesin Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Henry Ford",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ilmu teknik industri modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Manajemen operasi kontemporer",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "John Ruskin": {
   "years": "1819-1900",
@@ -2523,7 +4901,39 @@
   "quote": {
    "text": "What else we may have lost faith in, there shall be here no question; but assuredly we have lost faith in common honesty, and in the working power of it.",
    "bookTitle": "Unto This Last"
-  }
+  },
+  "connections": [
+   {
+    "to": "J. M. W. Turner",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Arsitektur Gothic Italia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Thomas Carlyle",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Mahatma Gandhi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan Arts and Crafts",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sosialisme demokratik Inggris",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "John Bates Clark": {
   "years": "1847-1938",
@@ -2561,7 +4971,34 @@
   "quote": {
    "text": "The debtor will get justice, enterprise will be safe, and wages will gain while industry gains.",
    "bookTitle": "Essentials of Economic Theory"
-  }
+  },
+  "connections": [
+   {
+    "to": "Ekonomi kelembagaan Jerman",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Revolusi marjinalis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kritik sosialis terhadap kapitalisme",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ekonomi neoklasik Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Teori distribusi pendapatan modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Frédéric Bastiat": {
   "years": "1801-1850",
@@ -2600,7 +5037,34 @@
   "quote": {
    "text": "But it is nevertheless true that you are deprived of the just compensation of your labor, while no one thinks of causing justice to be rendered to you.",
    "bookTitle": "Sophisms of the Protectionists"
-  }
+  },
+  "connections": [
+   {
+    "to": "Adam Smith",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Richard Cobden",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ekonomi Austria",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan pasar bebas modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Henry Hazlitt",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Booker T. Washington": {
   "years": "1856-1915",
@@ -2639,7 +5103,40 @@
   "quote": {
    "text": "Gentlemen of the Exposition, as we present to you our humble effort at an exhibition of our progress, you must not expect overmuch.",
    "bookTitle": "Up from Slavery"
-  }
+  },
+  "connections": [
+   {
+    "to": "Samuel Chapman Armstrong",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "mentornya di Hampton Institute"
+   },
+   {
+    "to": "Frederick Douglass",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Etos kerja Protestan",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Tuskegee Institute",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "George Washington Carver",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan pendidikan vokasional Afrika-Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Jane Addams": {
   "years": "1860-1935",
@@ -2678,7 +5175,41 @@
   "quote": {
    "text": "And yet this dream that men shall cease to waste strength in competition and shall come to pool their powers of production is coming to pass all over the face of the earth.",
    "bookTitle": "Twenty Years at Hull-House"
-  }
+  },
+  "connections": [
+   {
+    "to": "Toynbee Hall",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Ellen Gates Starr",
+    "type": "kolaborator",
+    "inCatalog": false,
+    "note": "pendiri bersama Hull House"
+   },
+   {
+    "to": "John Dewey",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "pragmatisme Amerika"
+   },
+   {
+    "to": "Gerakan pekerjaan sosial modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan hak pilih perempuan Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kebijakan kesejahteraan Progresif",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Jacob Riis": {
   "years": "1849-1914",
@@ -2717,7 +5248,34 @@
   "quote": {
    "text": "A few generations more in the slums, and all that will be changed.",
    "bookTitle": "How the Other Half Lives"
-  }
+  },
+  "connections": [
+   {
+    "to": "Teknologi fotografi flash",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan reformasi Progresif",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Theodore Roosevelt",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Jurnalisme foto dokumenter",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Reformasi perumahan perkotaan Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Charlotte Perkins Gilman": {
   "years": "1860-1935",
@@ -2756,7 +5314,35 @@
   "quote": {
    "text": "Only as we live think, feel, and work outside the home, do we become humanly developed, civilized, socialized.",
    "bookTitle": "Women and Economics"
-  }
+  },
+  "connections": [
+   {
+    "to": "Gerakan hak pilih perempuan",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Herbert Spencer",
+    "type": "menentang",
+    "inCatalog": false,
+    "note": "via kritik"
+   },
+   {
+    "to": "Feminisme ekonomi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Studi sastra feminis modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kritik terhadap kesehatan mental perempuan",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Gustave Le Bon": {
   "years": "1841-1931",
@@ -2795,7 +5381,40 @@
   "quote": {
    "text": "He is no longer himself, but has become an automaton who has ceased to be guided by his will.",
    "bookTitle": "The Crowd"
-  }
+  },
+  "connections": [
+   {
+    "to": "Hippolyte Taine",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Komune Paris",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Antropologi kolonial Prancis",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sigmund Freud",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "saling memengaruhi"
+   },
+   {
+    "to": "Teori propaganda abad ke-20",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Psikologi sosial modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Sigmund Freud": {
   "years": "1856-1939",
@@ -2835,7 +5454,58 @@
   "quote": {
    "text": "I am prepared to maintain that no dream is inspired by other than egoistic emotions.",
    "bookTitle": "Dream Psychology"
-  }
+  },
+  "connections": [
+   {
+    "to": "Jean-Martin Charcot",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "mentornya di Paris"
+   },
+   {
+    "to": "Josef Breuer",
+    "type": "kolaborator",
+    "inCatalog": false,
+    "note": "rekan riset histeria"
+   },
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Carl Gustav Jung",
+    "type": "murid",
+    "inCatalog": false,
+    "note": "protégé, lalu berpisah"
+   },
+   {
+    "to": "Psikoanalisis modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gustave Le Bon",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "saling memengaruhi"
+   },
+   {
+    "to": "Sastra dan seni abad ke-20",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Friedrich Nietzsche",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Arthur Schopenhauer",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
  },
  "Olive Schreiner": {
   "years": "1855-1920",
@@ -2873,7 +5543,24 @@
   "quote": {
    "text": "You cannot bring the water back into the dried-up pond!",
    "bookTitle": "Woman and Labour"
-  }
+  },
+  "connections": [
+   {
+    "to": "Herbert Spencer",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan hak pilih perempuan Inggris",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sastra pascakolonial Afrika Selatan",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Samuel Smiles": {
   "years": "1812-1904",
@@ -2912,7 +5599,39 @@
   "quote": {
    "text": "On the contrary, the timid and hesitating find everything impossible, chiefly because it seems so.",
    "bookTitle": "Self-Help"
-  }
+  },
+  "connections": [
+   {
+    "to": "Gerakan Chartist",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Benjamin Franklin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Etos kerja Protestan Skotlandia",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Genre buku motivasi diri modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Etika kerja Victoria",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Dale Carnegie",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Leo Tolstoy": {
   "years": "1828-1910",
@@ -2951,7 +5670,40 @@
   "quote": {
    "text": "Every man of the present day, if we go deep enough into the contradiction between his conscience and his life, is in a state of despair.",
    "bookTitle": "The Kingdom of God Is Within You"
-  }
+  },
+  "connections": [
+   {
+    "to": "Ajaran Yesus",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "pembacaan literal"
+   },
+   {
+    "to": "Perang Krimea",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Arthur Schopenhauer",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Mahatma Gandhi",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Martin Luther King Jr.",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan pasifisme Kristen",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "William Graham Sumner": {
   "years": "1840-1910",
@@ -2990,7 +5742,39 @@
   "quote": {
    "text": "All justice depends on the immediate coercion of wrongdoers by force.",
    "bookTitle": "Folkways"
-  }
+  },
+  "connections": [
+   {
+    "to": "Herbert Spencer",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Adam Smith",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Sosiologi Amerika awal",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Libertarianisme Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Kritik terhadap negara kesejahteraan",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  },
  "Henry Adams": {
   "years": "1838-1918",
@@ -3028,6 +5812,34 @@
   "quote": {
    "text": "Empires were always tumbling to pieces and diplomats were always picking them up.",
    "bookTitle": "The Education of Henry Adams"
-  }
+  },
+  "connections": [
+   {
+    "to": "Tradisi keluarga Adams",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Perang Saudara Amerika",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "via ayahnya"
+   },
+   {
+    "to": "Historiografi Amerika modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sastra otobiografi intelektual Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
  }
 }

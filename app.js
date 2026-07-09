@@ -83,7 +83,35 @@ function coverHTML(meta) {
 }
 
 /* ---------- routing ---------- */
+const REDUCE_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function supportsVT() { return !!document.startViewTransition && !REDUCE_MOTION; }
+
+// depth per route → menentukan arah transisi
+function routeDepth(hash) {
+  const p = (hash || '#/').replace(/^#\//, '').split('/')[0];
+  if (p === 'baca' || p === 'dengar') return 3;
+  if (p === 'buku' || p === 'penulis' || p === 'konstelasi') return 2;
+  return 1; // library
+}
+let lastDepth = 1;
+let firstRoute = true;
+
+// bungkus body dispatch router dalam VT + set arah
+function runRouterVT(dispatch) {
+  const newDepth = routeDepth(location.hash);
+  const dir = newDepth >= lastDepth ? 'forward' : 'back';
+  lastDepth = newDepth;
+  if (firstRoute || !supportsVT()) { firstRoute = false; dispatch(); return; }
+  document.documentElement.dataset.vt = dir;         // dipakai CSS
+  const t = document.startViewTransition(dispatch);
+  t.finished.finally(() => { delete document.documentElement.dataset.vt; });
+}
+
 function router() {
+  runRouterVT(() => routerDispatch());
+}
+
+function routerDispatch() {
   const h = location.hash || '#/';
   const parts = h.replace(/^#\//, '').split('/');
   $('#view-library').hidden = true;
@@ -91,6 +119,7 @@ function router() {
   $('#view-reader').hidden = true;
   $('#view-listen').hidden = true;
   $('#view-author').hidden = true;
+  $('#view-constellation').hidden = true;
   if (parts[0] !== 'dengar') stopListening();
   document.body.style.overflow = '';
 
@@ -98,6 +127,8 @@ function router() {
     renderDetail(parts[1]);
   } else if (parts[0] === 'penulis' && parts[1]) {
     renderAuthorProfile(decodeURIComponent(parts[1]));
+  } else if (parts[0] === 'konstelasi') {
+    renderConstellationMap();
   } else if (parts[0] === 'baca' && parts[1]) {
     openReader(parts[1], parseInt(parts[2] || '0', 10) || 0);
   } else if (parts[0] === 'dengar' && parts[1]) {
@@ -112,6 +143,9 @@ function router() {
 function renderLibrary() {
   $('#view-library').hidden = false;
   window.scrollTo(0, 0);
+  document.querySelectorAll('.cover[style*="view-transition-name"]').forEach(c => {
+    c.style.viewTransitionName = '';
+  });
   renderStats();
   renderContinueCard();
   renderChips();
@@ -278,7 +312,11 @@ function renderShelf() {
     );
   }).join('');
   $('#shelf').querySelectorAll('.book-card').forEach(btn => {
-    btn.onclick = () => { location.hash = '#/buku/' + btn.dataset.id; };
+    btn.onclick = () => {
+      const cov = btn.querySelector('.cover');
+      if (cov) cov.style.viewTransitionName = 'book-cover';
+      location.hash = '#/buku/' + btn.dataset.id;
+    };
   });
   const backBtn = $('#shelf-back-authors');
   if (backBtn) backBtn.onclick = () => { activeAuthor = null; applyGroupMode(); renderShelf(); };
@@ -303,6 +341,16 @@ function authorCardHTML(name) {
 
 /* ---------- profil penulis (interaktif) ---------- */
 let authorTab = 'ringkasan';
+const TAB_ORDER = ['ringkasan', 'kisah', 'pengaruh', 'karya'];
+
+function switchAuthorTab(newTab, doSwap) {
+  const dir = TAB_ORDER.indexOf(newTab) >= TAB_ORDER.indexOf(authorTab) ? 'tab-fwd' : 'tab-back';
+  authorTab = newTab;
+  if (!supportsVT()) { doSwap(); return; }
+  document.documentElement.dataset.vt = dir;
+  const t = document.startViewTransition(doSwap);
+  t.finished.finally(() => { delete document.documentElement.dataset.vt; });
+}
 
 function slugAuthor(name) { return encodeURIComponent(name); }
 
@@ -337,7 +385,7 @@ function renderAuthorProfile(name) {
   const tabs = [
     ['ringkasan', 'Ringkasan'],
     hasLifeStory ? ['kisah', 'Kisah Hidup'] : null,
-    (info.influencedBy || info.influenced) ? ['pengaruh', 'Pengaruh'] : null,
+    ((info.connections && info.connections.length) || info.influencedBy || info.influenced) ? ['pengaruh', 'Koneksi'] : null,
     ['karya', 'Karya (' + books.length + ')']
   ].filter(Boolean);
 
@@ -350,9 +398,10 @@ function renderAuthorProfile(name) {
 
   $('#author-tabs').querySelectorAll('.at-btn').forEach(btn => {
     btn.onclick = () => {
-      authorTab = btn.dataset.tab;
-      $('#author-tabs').querySelectorAll('.at-btn').forEach(b => b.classList.toggle('active', b === btn));
-      renderAuthorPanel(name, info, books);
+      switchAuthorTab(btn.dataset.tab, () => {
+        $('#author-tabs').querySelectorAll('.at-btn').forEach(b => b.classList.toggle('active', b === btn));
+        renderAuthorPanel(name, info, books);
+      });
     };
   });
 
@@ -367,20 +416,7 @@ function renderAuthorPanel(name, info, books) {
       '<div class="life-step" style="--i:' + i + '"><h3>' + escHTML(step.heading) + '</h3><p>' + escHTML(step.text) + '</p></div>'
     ).join('') + '</div>';
   } else if (authorTab === 'pengaruh') {
-    let ci = 0;
-    const block = (title, list, bi) => {
-      if (!list || !list.length) return '';
-      return '<div class="influence-block" style="--i:' + bi + '"><h3>' + title + '</h3><div class="influence-chips">' +
-        list.map(n => {
-          const linked = AUTHORS[n] ? true : false;
-          const html = '<button class="inf-chip' + (linked ? ' linked' : '') + '" style="--ci:' + ci + '"' +
-            (linked ? ' data-goto="' + escHTML(n) + '"' : ' disabled') + '>' + escHTML(n) + '</button>';
-          ci++;
-          return html;
-        }).join('') + '</div></div>';
-    };
-    const html = block('Dipengaruhi oleh', info.influencedBy, 0) + block('Mempengaruhi', info.influenced, 1);
-    inner = html || '<p class="influence-empty">Belum ada data pengaruh untuk penulis ini.</p>';
+    inner = renderConstellationEgo(name, info, books);
   } else if (authorTab === 'karya') {
     if (!books.length) {
       inner = '<p class="influence-empty">Belum ada buku.</p>';
@@ -411,8 +447,390 @@ function renderAuthorPanel(name, info, books) {
     btn.onclick = () => { location.hash = '#/penulis/' + slugAuthor(btn.dataset.goto); };
   });
   panel.querySelectorAll('.book-card').forEach(btn => {
-    btn.onclick = () => { location.hash = '#/buku/' + btn.dataset.id; };
+    btn.onclick = () => {
+      const cov = btn.querySelector('.cover');
+      if (cov) cov.style.viewTransitionName = 'book-cover';
+      location.hash = '#/buku/' + btn.dataset.id;
+    };
   });
+
+  if (authorTab === 'pengaruh') {
+    panel.querySelectorAll('[data-conn-note]').forEach(el => {
+      el.onclick = () => showToast(el.dataset.connNote);
+    });
+    panel.querySelectorAll('.cx-node[tabindex]').forEach(el => {
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (el.dataset.goto) location.hash = '#/penulis/' + slugAuthor(el.dataset.goto);
+          else if (el.dataset.connNote) showToast(el.dataset.connNote);
+        }
+      });
+    });
+    initScrollReveal(panel.querySelector('.constellation-scroll'));
+  }
+}
+
+/* ---------- toast ---------- */
+let toastTimer = null;
+function showToast(msg) {
+  const t = $('#toast');
+  if (!t || !msg) return;
+  t.textContent = msg;
+  t.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.hidden = true; }, 2600);
+}
+
+/* ---------- Konstelasi Pengetahuan ---------- */
+
+/* parser tahun bebas-teks → integer (SM = negatif). Lihat DESIGN_CONNECTIONS.md §3.2. */
+function yearToNum(years) {
+  if (!years || typeof years !== 'string') return null;
+  const s = years.replace(/±/g, '').trim();
+
+  // "abad ke-N" (century) — SM/M ditentukan dari keberadaan token "SM"
+  const abadMatch = s.match(/abad\s+ke-?\s*(\d+)/i);
+  if (abadMatch) {
+    const n = parseInt(abadMatch[1], 10);
+    const isSM = /\bSM\b/i.test(s);
+    return isSM ? -(n * 100 - 50) : (n * 100 - 50);
+  }
+
+  // angka bermakna pertama (mulai/lahir); gagal total → null (node tetap dirender, tidak crash)
+  const numMatch = s.match(/\d{1,4}/);
+  if (!numMatch) return null;
+  const n = parseInt(numMatch[0], 10);
+  const isSM = /\bSM\b/i.test(s);
+  return isSM ? -n : n;
+}
+
+function formatYearLabel(y) {
+  if (y == null) return '?';
+  return y < 0 ? (Math.abs(y) + ' SM') : String(y);
+}
+
+const CONN_TYPE_META = {
+  guru:        { color: 'var(--rel-guru)',        label: 'Guru' },
+  murid:       { color: 'var(--rel-murid)',       label: 'Murid' },
+  pengaruh:    { color: 'var(--rel-pengaruh)',    label: 'Pengaruh' },
+  sezaman:     { color: 'var(--rel-sezaman)',     label: 'Sezaman' },
+  menentang:   { color: 'var(--rel-menentang)',   label: 'Menentang' },
+  kolaborator: { color: 'var(--rel-kolaborator)', label: 'Kolaborator' }
+};
+
+/* alias ringan utk ejaan Indonesia → kunci katalog persis (fallback, tak perlu lengkap) */
+const CONN_ALIASES = {
+  'Aristoteles': 'Aristotle',
+  'Thomas Malthus': 'Thomas Robert Malthus'
+};
+
+function connTypeFromHint(hint) {
+  if (!hint) return null;
+  const h = hint.toLowerCase();
+  if (/\bguru(nya)?\b/.test(h) || /mengajar/.test(h)) return 'guru';
+  if (/\bmurid(nya)?\b/.test(h)) return 'murid';
+  if (/menentang|berbalik|berseteru|mengkritik|kritik/.test(h)) return 'menentang';
+  if (/kolaborat|menulis bersama|rekan penulis/.test(h)) return 'kolaborator';
+  return null;
+}
+
+function splitConnNames(base) {
+  return base.split(/\s+dan\s+|\s*,\s*|\s+&\s+/).map(s => s.trim()).filter(Boolean);
+}
+
+/* bangun connections-shaped array dari influencedBy/influenced lama, dipakai bila
+   info.connections belum ada/lengkap. Versi ringan dari DESIGN_CONNECTIONS.md §2.5. */
+function deriveFromLegacy(info, selfName) {
+  if (!info) return [];
+  const out = [];
+  const seen = new Set();
+  const addFrom = (list) => {
+    (list || []).forEach(raw => {
+      const m = raw.match(/^(.*?)\s*\(([^)]*)\)\s*$/);
+      const base = (m ? m[1] : raw).trim();
+      const hint = m ? m[2].trim() : '';
+      const type = connTypeFromHint(hint) || 'pengaruh';
+      splitConnNames(base).forEach(rawName => {
+        if (!rawName) return;
+        const to = CONN_ALIASES[rawName] || rawName;
+        if (selfName && to.toLowerCase() === selfName.toLowerCase()) return;
+        const key = to + '|' + type;
+        if (seen.has(key)) return;
+        seen.add(key);
+        out.push({ to, type, inCatalog: !!AUTHORS[to], note: hint || '' });
+      });
+    });
+  };
+  addFrom(info.influencedBy);
+  addFrom(info.influenced);
+  return out;
+}
+
+/* susun x per entitas sepanjang sumbu tahun + paksa jarak minimum antar node (beeswarm sederhana) */
+function layoutTimeline(entities, opts) {
+  opts = opts || {};
+  const marginX = opts.marginX || 56;
+  const minGap = opts.minGap || 92;
+  const minWidth = opts.minWidth || 360;
+  const years = entities.map(e => e.year).filter(y => y != null);
+  const minY = years.length ? Math.min.apply(null, years) : 0;
+  const maxY = years.length ? Math.max.apply(null, years) : 1;
+  const span = Math.max(1, maxY - minY);
+  let width = Math.max(minWidth, entities.length * minGap + marginX * 2);
+  const scale = (y) => marginX + ((y - minY) / span) * (width - marginX * 2);
+
+  const withX = entities.map(e => Object.assign({}, e, {
+    x: e.year != null ? scale(e.year) : width - marginX
+  }));
+  const order = withX.slice().sort((a, b) => a.x - b.x);
+  for (let i = 1; i < order.length; i++) {
+    if (order[i].x - order[i - 1].x < minGap) order[i].x = order[i - 1].x + minGap;
+  }
+  const maxX = order.length ? order[order.length - 1].x + marginX : width;
+  width = Math.max(width, maxX);
+  return { width, nodes: withX, minYear: minY, maxYear: maxY };
+}
+
+function pickAxisStep(span) {
+  const steps = [50, 100,200,250,500, 1000];
+  for (let i = 0; i < steps.length; i++) { if (span / steps[i] <= 8) return steps[i]; }
+  return 1000;
+}
+
+/* sumbu waktu bersama (garis + penanda abad) — dipakai ego-view & peta besar */
+function buildAxisTicks(minY, maxY, width, axisY, marginX) {
+  marginX = marginX || 56;
+  const span = Math.max(1, maxY - minY);
+  const scale = (y) => marginX + ((y - minY) / span) * (width - marginX * 2);
+  const step = pickAxisStep(span);
+  const start = Math.ceil(minY / step) * step;
+  let ticks = '';
+  for (let y = start; y <= maxY; y += step) {
+    const x = scale(y);
+    ticks +=
+      '<line class="cx-axis-tick" x1="' + x.toFixed(1) + '" y1="' + (axisY - 6) + '" x2="' + x.toFixed(1) + '" y2="' + (axisY + 6) + '"></line>' +
+      '<text class="cx-axis-label" x="' + x.toFixed(1) + '" y="' + (axisY + 20) + '" text-anchor="middle">' + escHTML(formatYearLabel(y)) + '</text>';
+  }
+  return '<line class="cx-axis-line" x1="' + marginX + '" y1="' + axisY + '" x2="' + (width - marginX) + '" y2="' + axisY + '"></line>' + ticks;
+}
+
+/* lajur anti-tumpuk utk ego-view: guru/lebih tua ke atas, murid/lebih muda ke bawah, sezaman dekat tengah */
+function assignEgoLanes(nodes, centerY) {
+  const above = [], below = [], mid = [];
+  nodes.forEach(n => {
+    if (n.type === 'sezaman') { mid.push(n); return; }
+    if (n.type === 'murid') { below.push(n); return; }
+    if (n.type === 'guru') { above.push(n); return; }
+    if (n.year != null && n._centerYear != null) {
+      (n.year <= n._centerYear ? above : below).push(n);
+    } else mid.push(n);
+  });
+  const place = (arr, sign) => {
+    arr.sort((a, b) => a.x - b.x);
+    arr.forEach((n, i) => { n.y = centerY + sign * (44 + (i % 3) * 38); });
+  };
+  place(above, -1);
+  place(below, 1);
+  mid.forEach((n, i) => { n.y = centerY + (i % 2 === 0 ? -20 : 20); });
+}
+
+/* lajur anti-tumpuk utk peta besar: penempatan greedy per-x, tanpa makna semantik lajur */
+function assignMapLanes(nodes, laneH, maxLanes, topPad) {
+  const sorted = nodes.slice().sort((a, b) => a.x - b.x);
+  const laneLastX = new Array(maxLanes).fill(-Infinity);
+  const minGapSameLane = 64;
+  sorted.forEach(n => {
+    let lane = 0, bestGap = -Infinity;
+    for (let l = 0; l < maxLanes; l++) {
+      const gap = n.x - laneLastX[l];
+      if (gap >= minGapSameLane) { lane = l; break; }
+      if (gap > bestGap) { bestGap = gap; lane = l; }
+    }
+    laneLastX[lane] = n.x;
+    n.lane = lane;
+    n.y = topPad + lane * laneH;
+  });
+}
+
+/* reveal bertahap saat scroll (scrollytelling ringan, §3.5b). Fallback: semua .revealed langsung
+   bila IntersectionObserver tak tersedia atau prefers-reduced-motion aktif. */
+function initScrollReveal(container) {
+  if (!container) return;
+  const nodes = container.querySelectorAll('.cx-node, .cx-edge');
+  if (REDUCE_MOTION || !('IntersectionObserver' in window)) {
+    nodes.forEach(n => n.classList.add('revealed'));
+    return;
+  }
+  try {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { root: container, threshold: 0.15 });
+    nodes.forEach(n => io.observe(n));
+  } catch (e) {
+    nodes.forEach(n => n.classList.add('revealed'));
+  }
+}
+
+/* ego-network kronologis: menggantikan isi tab "Koneksi" di profil penulis */
+function renderConstellationEgo(name, info, books) {
+  const conns = (info.connections && info.connections.length) ? info.connections : deriveFromLegacy(info, name);
+  if (!conns || !conns.length) {
+    return '<p class="influence-empty">Belum ada data pengaruh untuk penulis ini.</p>';
+  }
+
+  const centerYear = yearToNum(info.years);
+  const centerCat = books[0] ? books[0].category : null;
+
+  const entities = conns.map(c => {
+    const otherInfo = AUTHORS[c.to];
+    const year = c.inCatalog && otherInfo ? yearToNum(otherInfo.years) : centerYear;
+    const otherBook = c.inCatalog ? INDEX.find(b => b.author === c.to) : null;
+    return {
+      to: c.to, type: c.type || 'pengaruh', inCatalog: !!c.inCatalog, note: c.note || '',
+      year, cat: otherBook ? otherBook.category : null
+    };
+  });
+
+  const all = [{ isCenter: true, year: centerYear, cat: centerCat, to: name }].concat(entities);
+  const { width, nodes } = layoutTimeline(all, { marginX: 56, minGap: 92, minWidth: 360 });
+  const height = 360;
+  const centerY = 180;
+  const centerNode = nodes[0];
+  const others = nodes.slice(1);
+  others.forEach(n => { n._centerYear = centerYear; });
+  assignEgoLanes(others, centerY);
+
+  const typesPresent = Array.from(new Set(entities.map(e => e.type)));
+  const legendHTML = '<div class="constellation-legend">' +
+    typesPresent.map(t => {
+      const meta = CONN_TYPE_META[t] || CONN_TYPE_META.pengaruh;
+      return '<span class="cx-legend-item"><span class="cx-legend-dot" style="background:' + meta.color + '"></span>' + meta.label + '</span>';
+    }).join('') + '</div>';
+
+  const years = all.map(n => n.year).filter(y => y != null);
+  const minY = years.length ? Math.min.apply(null, years) : 0;
+  const maxY = years.length ? Math.max.apply(null, years) : 1;
+  const axisHTML = buildAxisTicks(minY, maxY, width, height - 26);
+
+  let edgesHTML = '';
+  others.forEach(n => {
+    const meta = CONN_TYPE_META[n.type] || CONN_TYPE_META.pengaruh;
+    const midX = (centerNode.x + n.x) / 2;
+    const solidCls = n.inCatalog ? ' cx-edge-solid' : ' cx-edge-dashed';
+    const dash = n.inCatalog ? '' : ' stroke-dasharray="5 4"';
+    const pathLen = n.inCatalog ? ' pathLength="1"' : '';
+    edgesHTML +=
+      '<path class="cx-edge' + solidCls + '" d="M ' + centerNode.x.toFixed(1) + ' ' + centerY.toFixed(1) +
+      ' Q ' + midX.toFixed(1) + ' ' + centerY.toFixed(1) + ' ' + n.x.toFixed(1) + ' ' + n.y.toFixed(1) + '"' +
+      ' stroke="' + meta.color + '" stroke-width="2" fill="none"' + dash + pathLen + '></path>';
+  });
+
+  let nodesHTML = '';
+  others.forEach(n => {
+    const r = 18;
+    const fill = n.inCatalog && n.cat ? 'var(--c-' + n.cat + '-2)' : 'var(--line)';
+    const dimmed = n.inCatalog ? '' : ' cx-node-dim';
+    const label = n.to.length > 14 ? n.to.slice(0, 13) + '…' : n.to;
+    const yearLabel = n.year != null ? formatYearLabel(n.year) : '';
+    const attrs = n.inCatalog
+      ? ' data-goto="' + escHTML(n.to) + '"'
+      : ' data-conn-note="' + escHTML(n.note || n.to) + '"';
+    nodesHTML +=
+      '<g class="cx-node' + dimmed + '" tabindex="0" role="button" aria-label="' + escHTML(n.to) + '"' + attrs + '>' +
+        '<title>' + escHTML(n.to + (n.note ? ' — ' + n.note : '')) + '</title>' +
+        '<rect class="cx-node-hit" x="' + (n.x - 46).toFixed(1) + '" y="' + (n.y - 24).toFixed(1) + '" width="92" height="76" fill="transparent"></rect>' +
+        '<circle cx="' + n.x.toFixed(1) + '" cy="' + n.y.toFixed(1) + '" r="' + r + '" fill="' + fill + '"></circle>' +
+        '<text class="cx-node-label" x="' + n.x.toFixed(1) + '" y="' + (n.y + r + 13).toFixed(1) + '" text-anchor="middle">' + escHTML(label) + '</text>' +
+        (yearLabel ? '<text class="cx-node-year" x="' + n.x.toFixed(1) + '" y="' + (n.y + r + 25).toFixed(1) + '" text-anchor="middle">' + escHTML(yearLabel) + '</text>' : '') +
+      '</g>';
+  });
+
+  const centerLabel = name.length > 16 ? name.slice(0, 15) + '…' : name;
+  const centerHTML =
+    '<g class="cx-node cx-node-center" aria-hidden="true">' +
+      '<circle class="cx-center-ring" cx="' + centerNode.x.toFixed(1) + '" cy="' + centerY.toFixed(1) + '" r="30" fill="none"></circle>' +
+      '<circle cx="' + centerNode.x.toFixed(1) + '" cy="' + centerY.toFixed(1) + '" r="26" fill="' + (centerCat ? 'var(--c-' + centerCat + '-2)' : 'var(--accent)') + '"></circle>' +
+      '<text class="cx-node-label cx-node-label-center" x="' + centerNode.x.toFixed(1) + '" y="' + (centerY + 26 + 15).toFixed(1) + '" text-anchor="middle">' + escHTML(centerLabel) + '</text>' +
+    '</g>';
+
+  const svg =
+    '<svg class="constellation-svg" viewBox="0 0 ' + width + ' ' + height + '" width="' + width + '" height="' + height + '" role="img">' +
+      '<title>Konstelasi koneksi ' + escHTML(name) + '</title>' +
+      '<desc>Peta koneksi intelektual ' + escHTML(name) + ' dengan ' + others.length + ' tokoh lain sepanjang garis waktu.</desc>' +
+      axisHTML + edgesHTML + nodesHTML + centerHTML +
+    '</svg>';
+
+  return legendHTML + '<div class="constellation-scroll">' + svg + '</div>';
+}
+
+/* peta besar #/konstelasi: 77 pemikir pada satu sumbu waktu, tanpa edge global */
+function renderConstellationMap() {
+  $('#view-constellation').hidden = false;
+  window.scrollTo(0, 0);
+  const body = $('#constellation-body');
+
+  const names = Object.keys(AUTHORS);
+  const entities = names.map(name => {
+    const info = AUTHORS[name];
+    const year = yearToNum(info.years);
+    const b = INDEX.find(bk => bk.author === name);
+    return { to: name, year, cat: b ? b.category : null };
+  });
+  const { width, nodes } = layoutTimeline(entities, { marginX: 60, minGap: 46, minWidth: 700 });
+  const laneH = 46, maxLanes = 8, topPad = 40;
+  assignMapLanes(nodes, laneH, maxLanes, topPad);
+  const height = topPad + maxLanes * laneH + 60;
+  const axisY = height - 34;
+
+  const years = nodes.map(n => n.year).filter(y => y != null);
+  const minY = years.length ? Math.min.apply(null, years) : 0;
+  const maxY = years.length ? Math.max.apply(null, years) : 1;
+  const axisHTML = buildAxisTicks(minY, maxY, width, axisY, 60);
+
+  let nodesHTML = '';
+  nodes.forEach(n => {
+    const fill = n.cat ? 'var(--c-' + n.cat + '-2)' : 'var(--ink-soft)';
+    const label = n.to.length > 12 ? n.to.slice(0, 11) + '…' : n.to;
+    nodesHTML +=
+      '<g class="cx-node cx-map-node" tabindex="0" role="button" aria-label="' + escHTML(n.to) + '" data-goto="' + escHTML(n.to) + '">' +
+        '<title>' + escHTML(n.to + (n.year != null ? ' (' + formatYearLabel(n.year) + ')' : '')) + '</title>' +
+        '<rect class="cx-node-hit" x="' + (n.x - 40).toFixed(1) + '" y="' + (n.y - 30).toFixed(1) + '" width="80" height="46" fill="transparent"></rect>' +
+        '<circle cx="' + n.x.toFixed(1) + '" cy="' + n.y.toFixed(1) + '" r="9" fill="' + fill + '"></circle>' +
+        '<text class="cx-map-label" x="' + n.x.toFixed(1) + '" y="' + (n.y - 13).toFixed(1) + '" text-anchor="middle">' + escHTML(label) + '</text>' +
+      '</g>';
+  });
+
+  const svg =
+    '<svg class="constellation-svg" viewBox="0 0 ' + width + ' ' + height + '" width="' + width + '" height="' + height + '" role="img">' +
+      '<title>Konstelasi Pengetahuan — semua pemikir</title>' +
+      '<desc>Peta ' + nodes.length + ' pemikir pada satu sumbu waktu bersama, diwarnai per kategori.</desc>' +
+      axisHTML + nodesHTML +
+    '</svg>';
+
+  const legendCats = Object.keys(CAT_LABELS).filter(c => INDEX.some(b => b.category === c));
+  const legendHTML = '<div class="constellation-legend">' + legendCats.map(c =>
+    '<span class="cx-legend-item"><span class="cx-legend-dot" style="background:var(--c-' + c + '-2)"></span>' + CAT_LABELS[c] + '</span>'
+  ).join('') + '</div>';
+
+  body.innerHTML =
+    '<h2 class="cx-map-title">Konstelasi Pengetahuan</h2>' +
+    '<p class="cx-map-sub">' + names.length + ' pemikir sepanjang &plusmn;2.500 tahun</p>' +
+    legendHTML +
+    '<div class="constellation-scroll">' + svg + '</div>';
+
+  body.querySelectorAll('[data-goto]').forEach(el => {
+    el.onclick = () => { location.hash = '#/penulis/' + slugAuthor(el.dataset.goto); };
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = '#/penulis/' + slugAuthor(el.dataset.goto); }
+    });
+  });
+  initScrollReveal(body.querySelector('.constellation-scroll'));
 }
 
 /* ---------- detail buku ---------- */
@@ -427,7 +845,8 @@ async function renderDetail(id) {
 
   $('#detail-body').innerHTML =
     '<div class="detail-hero" style="--tint:var(--c-' + meta.category + '-2)">' +
-      coverHTML(meta).replace('%%PROGRESS%%', '') +
+      coverHTML(meta).replace('%%PROGRESS%%', '').replace('style="background:',
+        'style="view-transition-name:book-cover;background:') +
       '<div class="detail-hd">' +
         '<h2>' + escHTML(meta.title) + '</h2>' +
         '<p class="dt-author">' + escHTML(meta.author) + ' · ' + escHTML(meta.year) + '</p>' +
@@ -844,6 +1263,7 @@ function escHTML(str) {
 /* ---------- boot ---------- */
 async function boot() {
   $('#detail-back').onclick = () => { location.hash = '#/'; };
+  $('#constellation-back').onclick = () => { location.hash = '#/'; };
   $('#reader-back').onclick = () => {
     if (currentBook) location.hash = '#/buku/' + currentBook.meta.id;
     else location.hash = '#/';

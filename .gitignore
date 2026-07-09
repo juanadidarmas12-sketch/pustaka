@@ -3,3 +3,4 @@ books_raw/
 *.bak.*
 audio_build/
 *.mp3
+.claude/
