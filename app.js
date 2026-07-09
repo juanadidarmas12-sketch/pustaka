@@ -238,6 +238,7 @@ function authorContextHTML(name) {
           '<div class="author-card-meta">' + (info.years ? escHTML(info.years) : '') +
             (info.nationality ? ' · ' + escHTML(info.nationality) : '') + ' · ' + count + ' buku</div>' +
           '<div class="author-card-bio">' + escHTML(info.bio || '') + '</div>' +
+          '<a class="author-card-more" href="#/penulis/' + slugAuthor(name) + '">Lihat Profil Lengkap &#8250;</a>' +
         '</div>' +
       '</div>' +
     '</div>'
