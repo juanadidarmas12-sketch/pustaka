@@ -467,7 +467,10 @@ function renderAuthorPanel(name, info, books) {
         }
       });
     });
-    initScrollReveal(panel.querySelector('.constellation-scroll'));
+    const egoScroll = panel.querySelector('.constellation-scroll');
+    egoScroll.classList.add('cx-map-bg');
+    initScrollReveal(egoScroll);
+    bindDragPan(egoScroll);
   }
 }
 
@@ -678,6 +681,54 @@ function initScrollReveal(container) {
 }
 
 /* ego-network kronologis: menggantikan isi tab "Koneksi" di profil penulis */
+/* avatar node: foto asli (clip lingkaran) dgn fallback warna kategori + inisial */
+let cxClipSeq = 0;
+function nodeAvatarHTML(x, y, r, photoUrl, fallbackFill, initial) {
+  const fx = x.toFixed(1), fy = y.toFixed(1);
+  if (!photoUrl) {
+    return '<circle cx="' + fx + '" cy="' + fy + '" r="' + r + '" fill="' + fallbackFill + '"></circle>' +
+      (initial ? '<text class="cx-node-initial" x="' + fx + '" y="' + (y + r * 0.35).toFixed(1) + '" text-anchor="middle">' + escHTML(initial) + '</text>' : '');
+  }
+  const id = 'cxclip' + (cxClipSeq++);
+  return (
+    '<defs><clipPath id="' + id + '"><circle cx="' + fx + '" cy="' + fy + '" r="' + r + '"/></clipPath></defs>' +
+    '<circle cx="' + fx + '" cy="' + fy + '" r="' + r + '" fill="' + fallbackFill + '"></circle>' +
+    '<image class="cx-node-photo" href="' + escHTML(photoUrl) + '" x="' + (x - r).toFixed(1) + '" y="' + (y - r).toFixed(1) +
+      '" width="' + (r * 2) + '" height="' + (r * 2) + '" clip-path="url(#' + id + ')" preserveAspectRatio="xMidYMid slice"></image>' +
+    '<circle cx="' + fx + '" cy="' + fy + '" r="' + r + '" fill="none" class="cx-node-ring"></circle>'
+  );
+}
+
+/* drag-to-pan: geser peta dgn mouse/jari, bukan scrollbar */
+function bindDragPan(el) {
+  if (!el || el.dataset.dragBound) return;
+  el.dataset.dragBound = '1';
+  let down = false, moved = false, startX = 0, startScroll = 0;
+  el.addEventListener('pointerdown', (e) => {
+    down = true; moved = false;
+    startX = e.clientX; startScroll = el.scrollLeft;
+    el.classList.add('dragging');
+  });
+  el.addEventListener('pointermove', (e) => {
+    if (!down) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) moved = true;
+    el.scrollLeft = startScroll - dx;
+  });
+  const end = (e) => {
+    if (!down) return;
+    down = false;
+    el.classList.remove('dragging');
+    if (moved) {
+      const suppress = (ev) => { ev.stopPropagation(); el.removeEventListener('click', suppress, true); };
+      el.addEventListener('click', suppress, true);
+    }
+  };
+  el.addEventListener('pointerup', end);
+  el.addEventListener('pointerleave', end);
+  el.addEventListener('pointercancel', end);
+}
+
 function renderConstellationEgo(name, info, books) {
   const conns = (info.connections && info.connections.length) ? info.connections : deriveFromLegacy(info, name);
   if (!conns || !conns.length) {
@@ -733,8 +784,9 @@ function renderConstellationEgo(name, info, books) {
 
   let nodesHTML = '';
   others.forEach(n => {
-    const r = 18;
+    const r = 22;
     const fill = n.inCatalog && n.cat ? 'var(--c-' + n.cat + '-2)' : 'var(--line)';
+    const photo = n.inCatalog && AUTHORS[n.to] ? AUTHORS[n.to].photo : null;
     const dimmed = n.inCatalog ? '' : ' cx-node-dim';
     const label = n.to.length > 14 ? n.to.slice(0, 13) + '…' : n.to;
     const yearLabel = n.year != null ? formatYearLabel(n.year) : '';
@@ -744,19 +796,20 @@ function renderConstellationEgo(name, info, books) {
     nodesHTML +=
       '<g class="cx-node' + dimmed + '" tabindex="0" role="button" aria-label="' + escHTML(n.to) + '"' + attrs + '>' +
         '<title>' + escHTML(n.to + (n.note ? ' — ' + n.note : '')) + '</title>' +
-        '<rect class="cx-node-hit" x="' + (n.x - 46).toFixed(1) + '" y="' + (n.y - 24).toFixed(1) + '" width="92" height="76" fill="transparent"></rect>' +
-        '<circle cx="' + n.x.toFixed(1) + '" cy="' + n.y.toFixed(1) + '" r="' + r + '" fill="' + fill + '"></circle>' +
+        '<rect class="cx-node-hit" x="' + (n.x - 46).toFixed(1) + '" y="' + (n.y - 28).toFixed(1) + '" width="92" height="80" fill="transparent"></rect>' +
+        nodeAvatarHTML(n.x, n.y, r, photo, fill, n.to[0]) +
         '<text class="cx-node-label" x="' + n.x.toFixed(1) + '" y="' + (n.y + r + 13).toFixed(1) + '" text-anchor="middle">' + escHTML(label) + '</text>' +
         (yearLabel ? '<text class="cx-node-year" x="' + n.x.toFixed(1) + '" y="' + (n.y + r + 25).toFixed(1) + '" text-anchor="middle">' + escHTML(yearLabel) + '</text>' : '') +
       '</g>';
   });
 
   const centerLabel = name.length > 16 ? name.slice(0, 15) + '…' : name;
+  const centerPhoto = info.photo || null;
   const centerHTML =
     '<g class="cx-node cx-node-center" aria-hidden="true">' +
-      '<circle class="cx-center-ring" cx="' + centerNode.x.toFixed(1) + '" cy="' + centerY.toFixed(1) + '" r="30" fill="none"></circle>' +
-      '<circle cx="' + centerNode.x.toFixed(1) + '" cy="' + centerY.toFixed(1) + '" r="26" fill="' + (centerCat ? 'var(--c-' + centerCat + '-2)' : 'var(--accent)') + '"></circle>' +
-      '<text class="cx-node-label cx-node-label-center" x="' + centerNode.x.toFixed(1) + '" y="' + (centerY + 26 + 15).toFixed(1) + '" text-anchor="middle">' + escHTML(centerLabel) + '</text>' +
+      '<circle class="cx-center-ring" cx="' + centerNode.x.toFixed(1) + '" cy="' + centerY.toFixed(1) + '" r="34" fill="none"></circle>' +
+      nodeAvatarHTML(centerNode.x, centerY, 30, centerPhoto, (centerCat ? 'var(--c-' + centerCat + '-2)' : 'var(--accent)'), name[0]) +
+      '<text class="cx-node-label cx-node-label-center" x="' + centerNode.x.toFixed(1) + '" y="' + (centerY + 30 + 15).toFixed(1) + '" text-anchor="middle">' + escHTML(centerLabel) + '</text>' +
     '</g>';
 
   const svg =
@@ -766,7 +819,7 @@ function renderConstellationEgo(name, info, books) {
       axisHTML + edgesHTML + nodesHTML + centerHTML +
     '</svg>';
 
-  return legendHTML + '<div class="constellation-scroll">' + svg + '</div>';
+  return legendHTML + '<div class="constellation-scroll cx-map-bg">' + svg + '</div>';
 }
 
 /* peta besar #/konstelasi: 77 pemikir pada satu sumbu waktu, tanpa edge global */
@@ -795,14 +848,16 @@ function renderConstellationMap() {
 
   let nodesHTML = '';
   nodes.forEach(n => {
+    const r = 15;
     const fill = n.cat ? 'var(--c-' + n.cat + '-2)' : 'var(--ink-soft)';
+    const photo = AUTHORS[n.to] ? AUTHORS[n.to].photo : null;
     const label = n.to.length > 12 ? n.to.slice(0, 11) + '…' : n.to;
     nodesHTML +=
       '<g class="cx-node cx-map-node" tabindex="0" role="button" aria-label="' + escHTML(n.to) + '" data-goto="' + escHTML(n.to) + '">' +
         '<title>' + escHTML(n.to + (n.year != null ? ' (' + formatYearLabel(n.year) + ')' : '')) + '</title>' +
-        '<rect class="cx-node-hit" x="' + (n.x - 40).toFixed(1) + '" y="' + (n.y - 30).toFixed(1) + '" width="80" height="46" fill="transparent"></rect>' +
-        '<circle cx="' + n.x.toFixed(1) + '" cy="' + n.y.toFixed(1) + '" r="9" fill="' + fill + '"></circle>' +
-        '<text class="cx-map-label" x="' + n.x.toFixed(1) + '" y="' + (n.y - 13).toFixed(1) + '" text-anchor="middle">' + escHTML(label) + '</text>' +
+        '<rect class="cx-node-hit" x="' + (n.x - 40).toFixed(1) + '" y="' + (n.y - 34).toFixed(1) + '" width="80" height="54" fill="transparent"></rect>' +
+        nodeAvatarHTML(n.x, n.y, r, photo, fill, n.to[0]) +
+        '<text class="cx-map-label" x="' + n.x.toFixed(1) + '" y="' + (n.y - r - 5).toFixed(1) + '" text-anchor="middle">' + escHTML(label) + '</text>' +
       '</g>';
   });
 
@@ -822,7 +877,7 @@ function renderConstellationMap() {
     '<h2 class="cx-map-title">Konstelasi Pengetahuan</h2>' +
     '<p class="cx-map-sub">' + names.length + ' pemikir sepanjang &plusmn;2.500 tahun</p>' +
     legendHTML +
-    '<div class="constellation-scroll">' + svg + '</div>';
+    '<div class="constellation-scroll cx-map-bg">' + svg + '</div>';
 
   body.querySelectorAll('[data-goto]').forEach(el => {
     el.onclick = () => { location.hash = '#/penulis/' + slugAuthor(el.dataset.goto); };
@@ -830,7 +885,9 @@ function renderConstellationMap() {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = '#/penulis/' + slugAuthor(el.dataset.goto); }
     });
   });
-  initScrollReveal(body.querySelector('.constellation-scroll'));
+  const mapScroll = body.querySelector('.constellation-scroll');
+  initScrollReveal(mapScroll);
+  bindDragPan(mapScroll);
 }
 
 /* ---------- detail buku ---------- */
