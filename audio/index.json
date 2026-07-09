@@ -1,0 +1,437 @@
+{
+  "meditations": {
+    "voice": "en-US-AndrewMultilingualNeural",
+    "episodes": [
+      {
+        "ch": 0,
+        "title": "Pengantar",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-00.mp3",
+        "seconds": 2066,
+        "bytes": 12396333
+      },
+      {
+        "ch": 1,
+        "title": "Buku I",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-01.mp3",
+        "seconds": 1419,
+        "bytes": 8511789
+      },
+      {
+        "ch": 2,
+        "title": "Buku II",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-02.mp3",
+        "seconds": 828,
+        "bytes": 4970253
+      },
+      {
+        "ch": 3,
+        "title": "Buku III",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-03.mp3",
+        "seconds": 1282,
+        "bytes": 7691565
+      },
+      {
+        "ch": 4,
+        "title": "Buku IV",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-04.mp3",
+        "seconds": 2051,
+        "bytes": 12307917
+      },
+      {
+        "ch": 5,
+        "title": "Buku V",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-05.mp3",
+        "seconds": 2100,
+        "bytes": 12598797
+      },
+      {
+        "ch": 6,
+        "title": "Buku VI",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-06.mp3",
+        "seconds": 2137,
+        "bytes": 12819117
+      },
+      {
+        "ch": 7,
+        "title": "Buku VII",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-07.mp3",
+        "seconds": 2289,
+        "bytes": 13732221
+      },
+      {
+        "ch": 8,
+        "title": "Buku VIII",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-08.mp3",
+        "seconds": 2299,
+        "bytes": 13791981
+      },
+      {
+        "ch": 9,
+        "title": "Buku IX",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-09.mp3",
+        "seconds": 2031,
+        "bytes": 12187389
+      },
+      {
+        "ch": 10,
+        "title": "Buku X",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-10.mp3",
+        "seconds": 2349,
+        "bytes": 14095677
+      },
+      {
+        "ch": 11,
+        "title": "Buku XI",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-11.mp3",
+        "seconds": 1716,
+        "bytes": 10297389
+      },
+      {
+        "ch": 12,
+        "title": "Buku XII",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-12.mp3",
+        "seconds": 2266,
+        "bytes": 13598157
+      },
+      {
+        "ch": 13,
+        "title": "Buku XII (lanjutan 1)",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-13.mp3",
+        "seconds": 1567,
+        "bytes": 9403581
+      },
+      {
+        "ch": 14,
+        "title": "Catatan",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/meditations-14.mp3",
+        "seconds": 1444,
+        "bytes": 8664141
+      }
+    ]
+  },
+  "the-prince": {
+    "voice": "en-US-AndrewMultilingualNeural",
+    "episodes": [
+      {
+        "ch": 0,
+        "title": "Pengantar Penerjemah",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-00.mp3",
+        "seconds": 1601,
+        "bytes": 9604173
+      },
+      {
+        "ch": 1,
+        "title": "Persembahan",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-01.mp3",
+        "seconds": 167,
+        "bytes": 999309
+      },
+      {
+        "ch": 2,
+        "title": "Bab I: How Many Kinds of Principalities There Are, and by What Means They are Acquired",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-02.mp3",
+        "seconds": 53,
+        "bytes": 318909
+      },
+      {
+        "ch": 3,
+        "title": "Bab II: Concerning Hereditary Principalities",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-03.mp3",
+        "seconds": 99,
+        "bytes": 594237
+      },
+      {
+        "ch": 4,
+        "title": "Bab III: Concerning Mixed Principalities",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-04.mp3",
+        "seconds": 1090,
+        "bytes": 6537693
+      },
+      {
+        "ch": 5,
+        "title": "Bab IV: Why the Kingdom of Darius, Conquered by Alexander, Did Not Rebel Against the Successors of Alexander at His Death",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-05.mp3",
+        "seconds": 335,
+        "bytes": 2011629
+      },
+      {
+        "ch": 6,
+        "title": "Bab V: Concerning the Way to Govern Cities or Principalities Which Lived Under Their Own Laws Before They Were Annexed",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-06.mp3",
+        "seconds": 166,
+        "bytes": 996717
+      },
+      {
+        "ch": 7,
+        "title": "Bab VI: Concerning New Principalities Which are Acquired by One’s Own Arms and Ability",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-07.mp3",
+        "seconds": 452,
+        "bytes": 2712765
+      },
+      {
+        "ch": 8,
+        "title": "Bab VII: Concerning New Principalities Which are Acquired Either by the Arms of Others or by Good Fortune",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-08.mp3",
+        "seconds": 1015,
+        "bytes": 6088845
+      },
+      {
+        "ch": 9,
+        "title": "Bab VIII: Concerning Those Who Have Obtained a Principality by Wickedness",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-09.mp3",
+        "seconds": 581,
+        "bytes": 3485901
+      },
+      {
+        "ch": 10,
+        "title": "Bab IX: Concerning a Civil Principality",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-10.mp3",
+        "seconds": 475,
+        "bytes": 2849853
+      },
+      {
+        "ch": 11,
+        "title": "Bab X: Concerning the Way in Which the Strength of All Principalities Ought to Be Measured",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-11.mp3",
+        "seconds": 246,
+        "bytes": 1475661
+      },
+      {
+        "ch": 12,
+        "title": "Bab XI: Concerning Ecclesiastical Principalities",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-12.mp3",
+        "seconds": 335,
+        "bytes": 2011917
+      },
+      {
+        "ch": 13,
+        "title": "Bab XII: How Many Kinds of Soldiery There Are, and Concerning Mercenaries",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-13.mp3",
+        "seconds": 751,
+        "bytes": 4503837
+      },
+      {
+        "ch": 14,
+        "title": "Bab XIII: Concerning Auxiliaries, Mixed Soldiery, and One’s Own",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-14.mp3",
+        "seconds": 544,
+        "bytes": 3266589
+      },
+      {
+        "ch": 15,
+        "title": "Bab XIV: That Which Concerns a Prince on the Subject of the Art of War",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-15.mp3",
+        "seconds": 324,
+        "bytes": 1941789
+      },
+      {
+        "ch": 16,
+        "title": "Bab XV: Concerning Things for Which Men, and Especially Princes, are Praised or Blamed",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-16.mp3",
+        "seconds": 197,
+        "bytes": 1180605
+      },
+      {
+        "ch": 17,
+        "title": "Bab XVI: Concerning Liberality and Meanness",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-17.mp3",
+        "seconds": 299,
+        "bytes": 1796781
+      },
+      {
+        "ch": 18,
+        "title": "Bab XVII: Concerning Cruelty and Clemency, and Whether It is Better to Be Loved than Feared",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-18.mp3",
+        "seconds": 418,
+        "bytes": 2506701
+      },
+      {
+        "ch": 19,
+        "title": "Bab XVIII: Concerning the Way in Which Princes Should Keep Faith",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-19.mp3",
+        "seconds": 491,
+        "bytes": 2945613
+      },
+      {
+        "ch": 20,
+        "title": "Bab XIX: That One Should Avoid Being Despised and Hated",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-20.mp3",
+        "seconds": 1290,
+        "bytes": 7737501
+      },
+      {
+        "ch": 21,
+        "title": "Bab XX: Are Fortresses, and Many Other Things to Which Princes Often Resort, Advantageous or Hurtful?",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-21.mp3",
+        "seconds": 585,
+        "bytes": 3512253
+      },
+      {
+        "ch": 22,
+        "title": "Bab XXI: How a Prince Should Conduct Himself So as to Gain Renown",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-22.mp3",
+        "seconds": 554,
+        "bytes": 3322605
+      },
+      {
+        "ch": 23,
+        "title": "Bab XXII: Concerning the Secretaries of Princes",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-23.mp3",
+        "seconds": 165,
+        "bytes": 988221
+      },
+      {
+        "ch": 24,
+        "title": "Bab XXIII: How Flatterers Should Be Avoided",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-24.mp3",
+        "seconds": 263,
+        "bytes": 1579197
+      },
+      {
+        "ch": 25,
+        "title": "Bab XXIV: Why the Princes of Italy Have Lost Their States",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-25.mp3",
+        "seconds": 181,
+        "bytes": 1084989
+      },
+      {
+        "ch": 26,
+        "title": "Bab XXV: What Fortune Can Effect in Human Affairs and How to Withstand Her",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-26.mp3",
+        "seconds": 443,
+        "bytes": 2659053
+      },
+      {
+        "ch": 27,
+        "title": "Bab XXVI: An Exhortation to Liberate Italy from the Barbarians",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/the-prince-27.mp3",
+        "seconds": 539,
+        "bytes": 3236925
+      }
+    ]
+  },
+  "art-of-war": {
+    "voice": "en-US-AndrewMultilingualNeural",
+    "episodes": [
+      {
+        "ch": 0,
+        "title": "Pengantar Penerjemah",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-00.mp3",
+        "seconds": 2318,
+        "bytes": 13908477
+      },
+      {
+        "ch": 1,
+        "title": "Pengantar Penerjemah (lanjutan 1)",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-01.mp3",
+        "seconds": 2410,
+        "bytes": 14462301
+      },
+      {
+        "ch": 2,
+        "title": "Pengantar Penerjemah (lanjutan 2)",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-02.mp3",
+        "seconds": 876,
+        "bytes": 5258541
+      },
+      {
+        "ch": 3,
+        "title": "Bab I: Laying Plans",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-03.mp3",
+        "seconds": 631,
+        "bytes": 3786429
+      },
+      {
+        "ch": 4,
+        "title": "Bab II: Waging War",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-04.mp3",
+        "seconds": 623,
+        "bytes": 3735741
+      },
+      {
+        "ch": 5,
+        "title": "Bab III: Attack by Stratagem",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-05.mp3",
+        "seconds": 875,
+        "bytes": 5251629
+      },
+      {
+        "ch": 6,
+        "title": "Bab IV: Tactical Dispositions",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-06.mp3",
+        "seconds": 602,
+        "bytes": 3613485
+      },
+      {
+        "ch": 7,
+        "title": "Bab V: Energy",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-07.mp3",
+        "seconds": 994,
+        "bytes": 5960973
+      },
+      {
+        "ch": 8,
+        "title": "Bab VI: Weak Points and Strong",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-08.mp3",
+        "seconds": 1042,
+        "bytes": 6253149
+      },
+      {
+        "ch": 9,
+        "title": "Bab VII: Manœuvering",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-09.mp3",
+        "seconds": 1374,
+        "bytes": 8245821
+      },
+      {
+        "ch": 10,
+        "title": "Bab VIII: Variation of Tactics",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-10.mp3",
+        "seconds": 950,
+        "bytes": 5702205
+      },
+      {
+        "ch": 11,
+        "title": "Bab IX: The Army on the March",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-11.mp3",
+        "seconds": 1651,
+        "bytes": 9906573
+      },
+      {
+        "ch": 12,
+        "title": "Bab X: Terrain",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-12.mp3",
+        "seconds": 1118,
+        "bytes": 6708045
+      },
+      {
+        "ch": 13,
+        "title": "Bab XI: The Nine Situations",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-13.mp3",
+        "seconds": 2329,
+        "bytes": 13970973
+      },
+      {
+        "ch": 14,
+        "title": "Bab XI: The Nine Situations (lanjutan 1)",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-14.mp3",
+        "seconds": 1430,
+        "bytes": 8581341
+      },
+      {
+        "ch": 15,
+        "title": "Bab XII: The Attack by Fire",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-15.mp3",
+        "seconds": 931,
+        "bytes": 5588445
+      },
+      {
+        "ch": 16,
+        "title": "Bab XIII: The Use of Spies",
+        "url": "https://github.com/juanadidarmas12-sketch/pustaka/releases/download/audio-v1/art-of-war-16.mp3",
+        "seconds": 1469,
+        "bytes": 8812605
+      }
+    ]
+  }
+}
