@@ -1,5 +1,5 @@
 /* Pustaka service worker — app shell cache-first, buku di-cache saat pertama dibaca */
-const CACHE = 'pustaka-v7';
+const CACHE = 'pustaka-v8';
 const SHELL = [
   './',
   './index.html',

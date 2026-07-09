@@ -542,6 +542,80 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 #voice-list button.voice-active { color: var(--accent); font-weight: 700; }
 
+/* ============ Profil Penulis (interaktif) ============ */
+.author-view { background: var(--bg); min-height: 100vh; }
+.author-hero {
+  position: relative; margin: 0 -20px 0; padding: 0;
+  height: 280px; overflow: hidden; background: var(--bg-soft);
+}
+.author-hero img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+  display: block; filter: saturate(.92);
+}
+.author-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.78) 100%),
+              linear-gradient(180deg, var(--bg) 0%, transparent 8%);
+}
+.author-hero-text {
+  position: absolute; left: 20px; right: 20px; bottom: 16px; color: #fff;
+}
+.author-hero-name { font-family: var(--serif); font-size: 26px; line-height: 1.15; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,.4); }
+.author-hero-meta { font-size: 13px; opacity: .92; margin: 4px 0 0; text-shadow: 0 1px 4px rgba(0,0,0,.4); }
+
+.author-tabs {
+  display: flex; gap: 4px; padding: 12px 20px; overflow-x: auto;
+  scrollbar-width: none; border-bottom: 1px solid var(--line);
+}
+.author-tabs::-webkit-scrollbar { display: none; }
+.at-btn {
+  flex: none; padding: 8px 15px; border-radius: 999px; font-size: 13.5px; font-weight: 600;
+  color: var(--ink-soft); background: var(--bg-soft); border: 1px solid var(--line);
+}
+.at-btn.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.author-panel { padding: 18px 20px 40px; max-width: 600px; margin: 0 auto; }
+
+/* Ringkasan */
+.author-quote {
+  margin: 0 0 20px; padding: 16px 18px; border-left: 3px solid var(--accent);
+  background: var(--bg-soft); border-radius: 0 12px 12px 0;
+}
+.author-quote p { font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.5; margin: 0 0 6px; }
+.author-quote cite { font-size: 12px; color: var(--ink-soft); font-style: normal; }
+.author-summary-bio { font-size: 14.5px; line-height: 1.65; }
+.author-stat-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
+
+/* Kisah Hidup — timeline */
+.life-timeline { position: relative; padding-left: 26px; }
+.life-timeline::before {
+  content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px;
+  background: var(--line);
+}
+.life-step { position: relative; margin-bottom: 26px; }
+.life-step:last-child { margin-bottom: 0; }
+.life-step::before {
+  content: ""; position: absolute; left: -26px; top: 3px; width: 13px; height: 13px;
+  border-radius: 50%; background: var(--accent); border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.life-step h3 { font-size: 14.5px; margin: 0 0 6px; color: var(--accent); }
+.life-step p { font-size: 14px; line-height: 1.6; margin: 0; }
+
+/* Pengaruh */
+.influence-block { margin-bottom: 22px; }
+.influence-block h3 { font-size: 12.5px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); margin: 0 0 10px; }
+.influence-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.inf-chip {
+  padding: 8px 14px; border-radius: 999px; font-size: 13.5px;
+  background: var(--bg-soft); border: 1px solid var(--line); color: var(--ink);
+}
+.inf-chip.linked { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 600; }
+.influence-empty { font-size: 13.5px; color: var(--ink-soft); }
+
+/* Karya (books grid reuses .shelf/.book-card via inline class) */
+.author-panel .shelf { padding: 0; }
+
 /* layar sempit */
 @media (max-width: 380px) {
   .shelf { grid-template-columns: repeat(2, 1fr); }

@@ -90,11 +90,14 @@ function router() {
   $('#view-detail').hidden = true;
   $('#view-reader').hidden = true;
   $('#view-listen').hidden = true;
+  $('#view-author').hidden = true;
   if (parts[0] !== 'dengar') stopListening();
   document.body.style.overflow = '';
 
   if (parts[0] === 'buku' && parts[1]) {
     renderDetail(parts[1]);
+  } else if (parts[0] === 'penulis' && parts[1]) {
+    renderAuthorProfile(decodeURIComponent(parts[1]));
   } else if (parts[0] === 'baca' && parts[1]) {
     openReader(parts[1], parseInt(parts[2] || '0', 10) || 0);
   } else if (parts[0] === 'dengar' && parts[1]) {
@@ -291,10 +294,112 @@ function authorCardHTML(name) {
         '<div class="author-card-meta">' + (info.years ? escHTML(info.years) : '') +
           (info.nationality ? ' · ' + escHTML(info.nationality) : '') + '</div>' +
         '<div class="author-card-bio">' + escHTML(info.bio || '') + '</div>' +
-        '<button class="author-card-more" data-author="' + escHTML(name) + '">Lihat buku lain &#8250;</button>' +
+        '<a class="author-card-more" href="#/penulis/' + slugAuthor(name) + '">Lihat Profil Lengkap &#8250;</a>' +
       '</div>' +
     '</div>'
   );
+}
+
+/* ---------- profil penulis (interaktif) ---------- */
+let authorTab = 'ringkasan';
+
+function slugAuthor(name) { return encodeURIComponent(name); }
+
+function renderAuthorProfile(name) {
+  const info = AUTHORS[name];
+  $('#view-author').hidden = false;
+  window.scrollTo(0, 0);
+  authorTab = 'ringkasan';
+
+  if (!info) {
+    $('#author-body').innerHTML = '<p style="padding:20px">Data penulis tidak ditemukan.</p>';
+    return;
+  }
+  const books = INDEX.filter(b => b.author === name);
+  const photo = info.photo
+    ? '<div class="author-hero"><img src="' + escHTML(info.photo) + '" alt="' + escHTML(name) + '" loading="lazy">' +
+      '<div class="author-hero-overlay"></div><div class="author-hero-text">' +
+      '<h1 class="author-hero-name">' + escHTML(name) + '</h1>' +
+      '<p class="author-hero-meta">' + (info.years ? escHTML(info.years) : '') +
+      (info.nationality ? ' · ' + escHTML(info.nationality) : '') + '</p></div></div>'
+    : '<div class="author-hero" style="background:' + avatarColor(name) + ';display:flex;align-items:center;justify-content:center">' +
+      '<span style="font-family:var(--serif);font-size:64px;color:#fff;opacity:.5">' + escHTML(name[0]) + '</span>' +
+      '<div class="author-hero-overlay"></div><div class="author-hero-text">' +
+      '<h1 class="author-hero-name">' + escHTML(name) + '</h1>' +
+      '<p class="author-hero-meta">' + (info.years ? escHTML(info.years) : '') +
+      (info.nationality ? ' · ' + escHTML(info.nationality) : '') + '</p></div></div>';
+
+  const hasLifeStory = info.lifeStory && info.lifeStory.length;
+  const tabs = [
+    ['ringkasan', 'Ringkasan'],
+    hasLifeStory ? ['kisah', 'Kisah Hidup'] : null,
+    (info.influencedBy || info.influenced) ? ['pengaruh', 'Pengaruh'] : null,
+    ['karya', 'Karya (' + books.length + ')']
+  ].filter(Boolean);
+
+  $('#author-body').innerHTML =
+    photo +
+    '<nav class="author-tabs" id="author-tabs">' +
+      tabs.map(t => '<button class="at-btn' + (t[0] === authorTab ? ' active' : '') + '" data-tab="' + t[0] + '">' + t[1] + '</button>').join('') +
+    '</nav>' +
+    '<div class="author-panel" id="author-panel"></div>';
+
+  $('#author-tabs').querySelectorAll('.at-btn').forEach(btn => {
+    btn.onclick = () => {
+      authorTab = btn.dataset.tab;
+      $('#author-tabs').querySelectorAll('.at-btn').forEach(b => b.classList.toggle('active', b === btn));
+      renderAuthorPanel(name, info, books);
+    };
+  });
+
+  renderAuthorPanel(name, info, books);
+}
+
+function renderAuthorPanel(name, info, books) {
+  const panel = $('#author-panel');
+  if (authorTab === 'kisah' && info.lifeStory) {
+    panel.innerHTML = '<div class="life-timeline">' + info.lifeStory.map(step =>
+      '<div class="life-step"><h3>' + escHTML(step.heading) + '</h3><p>' + escHTML(step.text) + '</p></div>'
+    ).join('') + '</div>';
+  } else if (authorTab === 'pengaruh') {
+    const block = (title, list) => {
+      if (!list || !list.length) return '';
+      return '<div class="influence-block"><h3>' + title + '</h3><div class="influence-chips">' +
+        list.map(n => {
+          const linked = AUTHORS[n] ? true : false;
+          return '<button class="inf-chip' + (linked ? ' linked' : '') + '"' +
+            (linked ? ' data-goto="' + escHTML(n) + '"' : ' disabled') + '>' + escHTML(n) + '</button>';
+        }).join('') + '</div></div>';
+    };
+    const html = block('Dipengaruhi oleh', info.influencedBy) + block('Mempengaruhi', info.influenced);
+    panel.innerHTML = html || '<p class="influence-empty">Belum ada data pengaruh untuk penulis ini.</p>';
+    panel.querySelectorAll('[data-goto]').forEach(btn => {
+      btn.onclick = () => { location.hash = '#/penulis/' + slugAuthor(btn.dataset.goto); };
+    });
+  } else if (authorTab === 'karya') {
+    if (!books.length) { panel.innerHTML = '<p class="influence-empty">Belum ada buku.</p>'; return; }
+    panel.innerHTML = '<div class="shelf">' + books.map(meta => {
+      const pct = bookPercent(meta);
+      const cover = coverHTML(meta).replace('%%PROGRESS%%',
+        pct > 0 ? '<div class="cv-progress"><div style="width:' + pct + '%"></div></div>' : '');
+      return '<button class="book-card" data-id="' + meta.id + '">' + cover +
+        '<div class="book-meta"><p class="bm-title">' + escHTML(meta.title) + '</p>' +
+        '<p class="bm-sub">' + estMinutes(meta.words) + (pct > 0 ? ' · ' + pct + '%' : '') + '</p></div></button>';
+    }).join('') + '</div>';
+    panel.querySelectorAll('.book-card').forEach(btn => {
+      btn.onclick = () => { location.hash = '#/buku/' + btn.dataset.id; };
+    });
+  } else { // ringkasan
+    panel.innerHTML =
+      (info.quote ? '<div class="author-quote"><p>&#8220;' + escHTML(info.quote.text) + '&#8221;</p>' +
+        '<cite>— ' + escHTML(info.quote.bookTitle || name) + '</cite></div>' : '') +
+      '<div class="author-stat-row">' +
+        '<span class="stat-pill">' + books.length + ' buku di Pustaka</span>' +
+        (info.years ? '<span class="stat-pill">' + escHTML(info.years) + '</span>' : '') +
+        (info.nationality ? '<span class="stat-pill">' + escHTML(info.nationality) + '</span>' : '') +
+      '</div>' +
+      '<p class="author-summary-bio">' + escHTML(info.bio || '') + '</p>';
+  }
 }
 
 /* ---------- detail buku ---------- */
@@ -334,11 +439,6 @@ async function renderDetail(id) {
   $('#btn-listen').onclick = () => {
     const ap = getListenPos()[id];
     location.hash = '#/dengar/' + id + '/' + (ap ? ap.ch : (p ? p.ch : 0));
-  };
-  const moreBtn = $('#detail-body .author-card-more');
-  if (moreBtn) moreBtn.onclick = () => {
-    groupMode = 'author'; activeAuthor = moreBtn.dataset.author; searchQuery = '';
-    location.hash = '#/';
   };
 
   try {
