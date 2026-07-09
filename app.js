@@ -377,6 +377,9 @@ function makeOverlay(pageIndex, extraClass) {
   const shade = document.createElement('div');
   shade.className = 'flip-shade';
   wrap.appendChild(shade);
+  const highlight = document.createElement('div');
+  highlight.className = 'flip-highlight';
+  wrap.appendChild(highlight);
   pager.appendChild(wrap);
   flipNodes.push(wrap);
   return wrap;
@@ -388,9 +391,25 @@ function clearFlips() {
 }
 
 function setFlipAngle(el, deg) {
-  el.style.transform = 'rotateY(' + deg + 'deg)';
+  const t = Math.max(0, Math.min(1, Math.abs(deg) / 88));
+  const bulge = Math.sin(t * Math.PI); // 0 di ujung, puncak di tengah lipatan
+  const bulgePx = (bulge * 70).toFixed(1);
+  el.style.transform = 'rotateY(' + deg + 'deg) translateZ(' + bulgePx + 'px)';
+
   const shade = el.querySelector('.flip-shade');
-  if (shade) shade.style.opacity = (Math.abs(deg) / 88 * 0.5).toFixed(3);
+  if (shade) shade.style.opacity = (t * 0.5).toFixed(3);
+
+  // tepi terdepan menggulung: lekuk ke dalam di tengah tinggi halaman
+  const dent = bulge * 5.5;
+  const d1 = (dent * 0.6).toFixed(2), d2 = dent.toFixed(2);
+  el.style.clipPath = 'polygon(0% 0%, 100% 0%, ' + (100 - d1) + '% 25%, ' +
+    (100 - d2) + '% 50%, ' + (100 - d1) + '% 75%, 100% 100%, 0% 100%)';
+
+  const hl = el.querySelector('.flip-highlight');
+  if (hl) {
+    hl.style.opacity = (bulge * 0.32).toFixed(3);
+    hl.style.transform = 'translateX(' + (bulge * 46 - 24).toFixed(1) + '%)';
+  }
 }
 
 function animateFlip(el, fromDeg, toDeg, done) {
