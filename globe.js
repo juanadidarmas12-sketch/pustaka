@@ -169,15 +169,45 @@ export async function initGlobe(root, ctx) {
         lng = lng + 0.9 * Math.sin(angle) / Math.cos(lat * Math.PI / 180);
       }
       const cat = catOf && catOf[name];
+      const info = AUTHORS[name] || {};
       markers.push({
         name, lat, lng,
         born: g.born, died: g.died,
         baseDir: latLngToVec3(lat, lng, 1),
         color: (cat && CAT_COLORS[cat] != null) ? CAT_COLORS[cat] : FALLBACK_COLOR,
-        currentScale: 0, targetScale: 0
+        photo: info.photo || null,
+        currentScale: 0, targetScale: 0,
+        el: null, elVisible: false
       });
     });
   });
+
+  /* ---------- foto marker (overlay HTML, mengikuti proyeksi 3D tiap frame) ---------- */
+  const markerLayer = document.createElement('div');
+  markerLayer.className = 'globe-marker-layer';
+  markers.forEach((m) => {
+    const colorHex = '#' + m.color.toString(16).padStart(6, '0');
+    const pin = document.createElement('div');
+    pin.className = 'globe-marker-pin';
+    pin.style.borderColor = colorHex;
+    const fallback = document.createElement('span');
+    fallback.className = 'globe-marker-fallback';
+    fallback.style.background = colorHex;
+    fallback.textContent = m.name[0];
+    pin.appendChild(fallback);
+    if (m.photo) {
+      const img = document.createElement('img');
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.alt = '';
+      img.src = m.photo;
+      img.onerror = () => { img.style.display = 'none'; };
+      pin.appendChild(img);
+    }
+    markerLayer.appendChild(pin);
+    m.el = pin;
+  });
+  stage.insertBefore(markerLayer, popupEl);
 
   const markerGeo = new THREE.SphereGeometry(0.014, 12, 12);
   const markerMat = new THREE.MeshBasicMaterial();
@@ -231,6 +261,9 @@ export async function initGlobe(root, ctx) {
   function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
   function onPointerDown(e) {
+    // tap di kartu popup (mis. "Lihat Profil") jangan dianggap gestur drag/tap globe —
+    // biarkan event click native pada popupEl yang menangani navigasi
+    if (popupEl.contains(e.target)) return;
     dragging = true;
     totalMove = 0;
     lastX = downX = e.clientX;
@@ -405,26 +438,51 @@ export async function initGlobe(root, ctx) {
   }
   updateMarkers(true); // posisi awal langsung tanpa animasi masuk
 
-  function updatePopup() {
+  function updatePopup(rect, quat) {
     if (!popupMarker) return;
-    const rect = renderer.domElement.getBoundingClientRect();
-    tmpEuler.copy(group.rotation);
-    tmpQuat.setFromEuler(tmpEuler);
-    const p = projectMarker(popupMarker, tmpQuat, rect);
+    const p = projectMarker(popupMarker, quat, rect);
     if (!p) { popupEl.style.display = 'none'; return; }
     popupEl.style.display = '';
     popupEl.style.left = p.x + 'px';
     popupEl.style.top = p.y + 'px';
   }
 
+  function updateMarkerDom(rect, quat) {
+    markers.forEach((m) => {
+      if (m.currentScale < 0.05) {
+        if (m.elVisible) { m.el.style.display = 'none'; m.elVisible = false; }
+        return;
+      }
+      const p = projectMarker(m, quat, rect);
+      if (!p) {
+        if (m.elVisible) { m.el.style.display = 'none'; m.elVisible = false; }
+        return;
+      }
+      if (!m.elVisible) { m.el.style.display = ''; m.elVisible = true; }
+      m.el.style.transform =
+        'translate3d(' + p.x.toFixed(1) + 'px,' + p.y.toFixed(1) + 'px,0) translate(-50%,-50%) scale(' + m.currentScale.toFixed(3) + ')';
+    });
+  }
+
+  let __dbgFrame = 0;
   function animate() {
     if (destroyed) return;
     rafId = requestAnimationFrame(animate);
     const dt = Math.min(clock.getDelta(), 0.1);
     updateRotation(dt);
     updateMarkers(false);
-    updatePopup();
+    const rect = renderer.domElement.getBoundingClientRect();
+    tmpEuler.copy(group.rotation);
+    tmpQuat.setFromEuler(tmpEuler);
+    updatePopup(rect, tmpQuat);
+    updateMarkerDom(rect, tmpQuat);
     renderer.render(scene, camera);
+    __dbgFrame++;
+    if (__dbgFrame % 30 === 0) {
+      const vis = markers.filter(m => m.elVisible).length;
+      const scaleUp = markers.filter(m => m.currentScale > 0.05).length;
+      document.title = 'DBG f' + __dbgFrame + ' vis=' + vis + ' scaleUp=' + scaleUp + ' rectW=' + Math.round(rect.width);
+    }
   }
 
   setYear(YEAR_DEFAULT);

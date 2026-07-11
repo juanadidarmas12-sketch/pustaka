@@ -960,6 +960,28 @@ html[data-vt="tab-back"]::view-transition-new(author-panel) { animation: vt-in-l
 .globe-hud-bottom .constellation-legend { justify-content: center; padding: 4px 0 0; gap: 6px 12px; }
 .globe-hud-bottom .cx-legend-item { color: rgba(233,223,198,.7); font-size: 11px; }
 
+.globe-marker-layer {
+  position: absolute; inset: 0; z-index: 3;
+  pointer-events: none; /* tap ditangani lewat raycast canvas, bukan elemen ini */
+}
+.globe-marker-pin {
+  position: absolute; top: 0; left: 0;
+  display: none; /* diaktifkan JS saat marker terlihat */
+  width: 24px; height: 24px; border-radius: 50%;
+  border: 2px solid #9a8d7a; box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0,0,0,.45), 0 0 0 1px rgba(0,0,0,.25);
+  overflow: hidden; will-change: transform;
+}
+.globe-marker-pin img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top center;
+  position: relative; z-index: 1;
+}
+.globe-marker-fallback {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font: 700 11px var(--serif);
+}
+
 .globe-popup {
   position: absolute;
   z-index: 5;
