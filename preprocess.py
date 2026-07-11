@@ -239,6 +239,17 @@ def split_long_chapter(title, paragraphs, max_words=9000, target_words=6000):
 
 
 def fallback_split_bagian(all_paragraphs, per_words=4000):
+    # Adaptive floor: for very short texts (total < 3*per_words), the fixed
+    # per_words would yield <3 parts and fail validate_book()'s ">=3
+    # chapters" rule. Shrink per_words so at least 3 "Bagian N" parts come
+    # out, as long as there are enough paragraphs to split into 3 pieces.
+    # None of the original 108 books ever hit this branch (they only reach
+    # fallback_split_bagian when already >=3x per_words), so this is purely
+    # additive for the short catalog-expansion-phase-2 texts (e.g. Crito,
+    # The Right to Ignore the State).
+    total_words = paragraphs_word_count(all_paragraphs)
+    if total_words < 3 * per_words and len(all_paragraphs) >= 3:
+        per_words = max(1, total_words // 3)
     parts = []
     current = []
     current_words = 0
@@ -1780,6 +1791,217 @@ BOOKS = [
          author="Henry Adams", year="1907", category="sosial",
          extractor=generic_extract,
          description="Adams menulis 'otobiografi' yang aneh: ditulis dalam sudut pandang orang ketiga, dan lebih banyak bicara soal kegagalan pendidikannya menghadapi dunia modern yang berubah begitu cepat lewat sains dan teknologi. Refleksi melankolis seorang keturunan presiden Amerika yang merasa dunia lama yang dia pahami sudah tak ada lagi."),
+
+    # ------------------------------------------------------------------
+    # Catalog-expansion PHASE 2: 51 new books appended after the 108
+    # (22 fixed + 86 phase-1 expansion) above. Same generic_extract
+    # pattern reused throughout; see NEW_BOOKS_ORDER_2 below for the
+    # no-3-consecutive-category ordering.
+    # ------------------------------------------------------------------
+    dict(id="democracy-and-education", raw="pg852.txt", gid=852, title="Democracy and Education",
+         author="John Dewey", year="1916", category="filsafat",
+         extractor=generic_extract,
+         description="Dewey berargumen sekolah bukan tempat menghafal fakta, tapi laboratorium demokrasi tempat anak belajar berpikir lewat pengalaman dan pemecahan masalah nyata. Salah satu buku filsafat pendidikan paling berpengaruh abad ke-20, masih dirujuk tiap kali orang mendebat kurikulum sekolah."),
+    dict(id="life-of-reason", raw="pg15000.txt", gid=15000, title="The Life of Reason",
+         author="George Santayana", year="1905", category="filsafat",
+         extractor=generic_extract,
+         description="Santayana mencoba memetakan bagaimana akal budi manusia berkembang lewat akal sehat, masyarakat, agama, seni, hingga sains, tanpa terjebak idealisme maupun materialisme kaku. Karya besar filsafat Amerika yang menyatukan naturalisme dengan penghargaan terhadap imajinasi dan nilai-nilai manusiawi."),
+    dict(id="political-obligation-green", raw="pg61889.txt", gid=61889, title="Lectures on the Principles of Political Obligation",
+         author="Thomas Hill Green", year="1895", category="politik",
+         extractor=generic_extract,
+         description="Green mempertanyakan dari mana sebenarnya kewajiban warga negara untuk taat pada hukum berasal, dan menjawabnya lewat gagasan bahwa negara ada untuk memungkinkan kebebasan sejati, bukan sekadar membatasinya. Fondasi penting liberalisme baru Inggris yang lebih menerima peran negara ketimbang liberalisme klasik sebelumnya."),
+    dict(id="general-view-of-positivism", raw="pg53799.txt", gid=53799, title="A General View of Positivism",
+         author="Auguste Comte", year="1848", category="filsafat",
+         extractor=generic_extract,
+         description="Comte, pencipta istilah 'sosiologi', merangkum visinya tentang tahap akhir perkembangan pemikiran manusia: meninggalkan teologi dan metafisika demi ilmu pengetahuan positif yang bisa diverifikasi. Ringkasan paling ringkas dari sistem filsafat yang ambisinya tak kurang dari menata ulang seluruh peradaban."),
+    dict(id="methods-of-ethics", raw="pg46743.txt", gid=46743, title="The Methods of Ethics",
+         author="Henry Sidgwick", year="1874", category="filsafat",
+         extractor=generic_extract,
+         description="Sidgwick membedah dengan sangat cermat tiga cara utama manusia menilai benar-salah, intuisi, egoisme, dan utilitarianisme, lalu jujur mengakui ketiganya sulit didamaikan sepenuhnya. Dianggap salah satu karya etika paling ketat dan berpengaruh dalam filsafat berbahasa Inggris."),
+    dict(id="history-of-rome-mommsen-1", raw="pg10701.txt", gid=10701, title="The History of Rome, Book I",
+         author="Theodor Mommsen", year="1854", category="sejarah",
+         extractor=generic_extract,
+         description="Mommsen menulis ulang sejarah Roma awal dengan ketelitian filologis yang belum pernah ada sebelumnya, sekaligus gaya bercerita yang membuatnya memenangkan Hadiah Nobel Sastra. Buku I ini mengupas era sebelum runtuhnya monarki, fondasi bagi salah satu karya sejarah Romawi paling berpengaruh yang pernah ditulis."),
+    dict(id="human-nature-in-politics", raw="pg11634.txt", gid=11634, title="Human Nature in Politics",
+         author="Graham Wallas", year="1908", category="politik",
+         extractor=generic_extract,
+         description="Wallas menantang asumsi bahwa manusia berpolitik secara rasional, dan berargumen kebiasaan, emosi, serta prasangka jauh lebih menentukan pilihan politik ketimbang argumen logis semata. Salah satu buku pertama yang menerapkan psikologi modern untuk memahami perilaku pemilih dan politisi."),
+    dict(id="sources-of-religious-insight", raw="pg33677.txt", gid=33677, title="The Sources of Religious Insight",
+         author="Josiah Royce", year="1912", category="filsafat",
+         extractor=generic_extract,
+         description="Royce, filsuf idealis Amerika, mencari dari mana wawasan religius sejati sebenarnya berasal, pengalaman pribadi, alam, akal, atau komunitas, dan berargumen loyalitas pada komunitas adalah kunci yang sering terlewat. Ditulis oleh salah satu pemikir paling dihormati di generasi filsuf Harvard bersama William James."),
+    dict(id="oregon-trail", raw="pg1015.txt", gid=1015, title="The Oregon Trail",
+         author="Francis Parkman", year="1849", category="sejarah",
+         extractor=generic_extract,
+         description="Parkman menempuh jalur pionir ke barat Amerika saat masih muda dan sedang sakit-sakitan, lalu menuliskan pengalamannya bertemu suku asli, pemburu bulu, dan pedagang di padang rumput yang belum banyak disentuh orang kulit putih. Catatan perjalanan yang jadi jendela langsung ke Amerika Barat sebelum benar-benar berubah oleh ekspansi rel kereta."),
+    dict(id="socialism-social-movement", raw="pg35210.txt", gid=35210, title="Socialism and the Social Movement in the 19th Century",
+         author="Werner Sombart", year="1909", category="ekonomi",
+         extractor=generic_extract,
+         description="Sombart, ekonom Jerman yang dekat dengan gerakan buruh, memetakan sejarah gagasan sosialisme dari utopis awal sampai Marxisme yang jadi kekuatan politik nyata di Eropa. Salah satu tinjauan paling jernih tentang bagaimana kritik terhadap kapitalisme berkembang jadi gerakan massa terorganisir."),
+    dict(id="no-treason", raw="pg36145.txt", gid=36145, title="No Treason",
+         author="Lysander Spooner", year="1867", category="politik",
+         extractor=generic_extract,
+         description="Spooner berargumen Konstitusi Amerika tidak bisa mengikat siapa pun yang tidak pernah benar-benar menandatanganinya secara sukarela, sehingga negara tidak punya otoritas moral sejati atas warganya. Salah satu argumen anarkis-individualis paling tajam yang pernah ditulis dari dalam tradisi hukum Amerika sendiri."),
+    dict(id="essence-of-christianity", raw="pg47025.txt", gid=47025, title="The Essence of Christianity",
+         author="Ludwig Feuerbach", year="1841", category="filsafat",
+         extractor=generic_extract,
+         description="Feuerbach berargumen Tuhan sebenarnya adalah proyeksi dari sifat-sifat terbaik manusia sendiri yang dilemparkan ke langit dan disembah seolah-olah asing. Buku yang mengguncang teologi Jerman abad ke-19 ini kelak jadi salah satu fondasi yang dibalik Marx untuk membangun materialisme historisnya sendiri."),
+    dict(id="norman-conquest-freeman", raw="pg68963.txt", gid=68963, title="A Short History of the Norman Conquest of England",
+         author="Edward A. Freeman", year="1880", category="sejarah",
+         extractor=generic_extract,
+         description="Freeman meringkas penaklukan Norman atas Inggris tahun 1066, peristiwa yang mengubah total bahasa, hukum, dan kelas penguasa Inggris dalam semalam. Versi ringkas dari karya multi-jilidnya yang jauh lebih tebal, ditulis untuk pembaca yang ingin memahami inti ceritanya tanpa tenggelam dalam detail teknis."),
+    dict(id="society-in-america", raw="pg52621.txt", gid=52621, title="Society in America (Vol. 1)",
+         author="Harriet Martineau", year="1837", category="sosial",
+         extractor=generic_extract,
+         description="Martineau, penulis Inggris yang tuli sejak muda, berkelana ke seluruh Amerika dan menulis pengamatan tajam tentang perbudakan, posisi perempuan, dan institusi demokrasi negara muda itu. Analisisnya kerap dibandingkan dengan Tocqueville, tapi lebih berani menyerang kemunafikan Amerika soal kesetaraan."),
+    dict(id="economic-interpretation-constitution", raw="pg70677.txt", gid=70677, title="An Economic Interpretation of the Constitution of the United States",
+         author="Charles A. Beard", year="1913", category="ekonomi",
+         extractor=generic_extract,
+         description="Beard mengejutkan Amerika dengan berargumen para pendiri bangsa yang merancang Konstitusi punya kepentingan ekonomi pribadi yang jelas, pemilik obligasi, tanah, budak, bukan cuma idealisme murni tanpa pamrih. Analisis kontroversial yang memaksa orang Amerika melihat dokumen paling sucinya dengan mata yang jauh lebih kritis."),
+    dict(id="republic-of-cicero", raw="pg54161.txt", gid=54161, title="The Republic of Cicero",
+         author="Cicero", year="±51 SM", category="politik",
+         extractor=generic_extract,
+         description="Cicero merancang dialog tentang negara ideal ala Romawi, memadukan pemikiran Yunani dengan pengalaman politik nyatanya sendiri sebagai negarawan Republik Roma yang sedang di ambang keruntuhan. Naskahnya sempat hilang berabad-abad dan baru ditemukan kembali di abad ke-19 tertimpa naskah lain di perpustakaan Vatikan."),
+    dict(id="lives-eminent-philosophers", raw="pg57342.txt", gid=57342, title="The Lives and Opinions of Eminent Philosophers",
+         author="Diogenes Laertius", year="±225 M", category="filsafat",
+         extractor=generic_extract,
+         description="Diogenes Laertius mengumpulkan gosip, anekdot, dan ajaran hampir semua filsuf Yunani penting, dari Thales sampai Epicurus, jadi satu koleksi biografi yang jadi sumber utama sejarawan filsafat berabad-abad kemudian. Kadang tidak akurat, tapi tanpa buku ini banyak detail hidup para filsuf kuno akan hilang total."),
+    dict(id="history-of-england-ranke-1", raw="pg28546.txt", gid=28546, title="A History of England, Principally in the Seventeenth Century (Vol. 1)",
+         author="Leopold von Ranke", year="1875", category="sejarah",
+         extractor=generic_extract,
+         description="Ranke, bapak sejarah modern yang bersikeras menulis 'sejarah sebagaimana sebenarnya terjadi', membedah Inggris abad ke-17 yang penuh gejolak perang saudara dan pergantian rezim. Volume pertama ini menunjukkan metode sumber primernya yang ketat, standar yang mengubah cara sejarawan bekerja di seluruh dunia."),
+    dict(id="southern-horrors", raw="pg14975.txt", gid=14975, title="Southern Horrors: Lynch Law in All Its Phases",
+         author="Ida B. Wells", year="1892", category="sosial",
+         extractor=generic_extract,
+         description="Wells membongkar dengan data dan nama-nama korban, bahwa tuduhan yang biasa dipakai untuk membenarkan pembunuhan massal (lynching) terhadap orang kulit hitam Amerika sebagian besar cuma kedok untuk kontrol ekonomi dan rasial. Pamflet berani yang membuat percetakan korannya dihancurkan massa dan dirinya diancam bunuh."),
+    dict(id="accumulation-of-capital", raw="pg41405.txt", gid=41405, title="The Accumulation of Capital",
+         author="Rosa Luxemburg", year="1913", category="ekonomi",
+         extractor=generic_extract,
+         description="Luxemburg berargumen kapitalisme tidak bisa bertahan hanya dengan mengeksploitasi kelas pekerjanya sendiri, dan karena itu selalu butuh menaklukkan pasar-pasar baru di luar sistemnya, penjelasan ekonomi di balik imperialisme. Karya teoretis paling ambisius dari salah satu pemikir Marxis perempuan paling berpengaruh, ditulis tak lama sebelum dia dibunuh milisi sayap kanan."),
+    dict(id="news-from-nowhere", raw="pg3261.txt", gid=3261, title="News from Nowhere",
+         author="William Morris", year="1890", category="politik",
+         extractor=generic_extract,
+         description="Morris membayangkan Inggris masa depan setelah revolusi sosialis, tempat pabrik-pabrik kotor diganti kerajinan tangan yang indah dan kerja jadi sumber kegembiraan, bukan keterpaksaan. Utopia romantis yang menolak industrialisasi modern demi visi masyarakat yang lebih manusiawi dan estetis."),
+    dict(id="hegel-history-of-philosophy-1", raw="pg51635.txt", gid=51635, title="Hegel's Lectures on the History of Philosophy (Vol. 1)",
+         author="G. W. F. Hegel", year="1892", category="filsafat",
+         extractor=generic_extract,
+         description="Hegel menelusuri sejarah filsafat sebagai proses akal budi yang perlahan-lahan menyadari dirinya sendiri lewat tesis, antitesis, dan sintesis dari satu pemikir ke pemikir berikutnya. Volume pertama ini dimulai dari para filsuf Yunani awal, ditulis dengan gaya sistematis khas Hegel yang terkenal berat tapi berpengaruh luas."),
+    dict(id="critical-period-american-history", raw="pg27430.txt", gid=27430, title="The Critical Period of American History",
+         author="John Fiske", year="1888", category="sejarah",
+         extractor=generic_extract,
+         description="Fiske menyoroti tahun-tahun genting antara kemenangan Revolusi Amerika dan pengesahan Konstitusi, masa ketika negara baru itu nyaris bubar karena utang, pemberontakan, dan pemerintah pusat yang terlalu lemah. Narasi populer yang menjelaskan mengapa para pendiri bangsa akhirnya sepakat butuh pemerintahan federal yang jauh lebih kuat."),
+    dict(id="culture-and-anarchy", raw="pg4212.txt", gid=4212, title="Culture and Anarchy",
+         author="Matthew Arnold", year="1869", category="sosial",
+         extractor=generic_extract,
+         description="Arnold mengkritik masyarakat Inggris Victorian yang menurutnya terlalu sibuk mengejar uang dan kebebasan individual tanpa arah, dan menyerukan 'kebudayaan', pengejaran kesempurnaan lewat yang terbaik dari pemikiran dan seni, sebagai penyeimbangnya. Salah satu kritik budaya paling berpengaruh abad ke-19 yang istilahnya masih dipakai sampai sekarang."),
+    dict(id="political-economy-jevons", raw="pg33219.txt", gid=33219, title="Political Economy",
+         author="William Stanley Jevons", year="1878", category="ekonomi",
+         extractor=generic_extract,
+         description="Jevons, salah satu bapak revolusi marjinalis dalam ekonomi, merangkum dalam buku pengantar singkat bagaimana nilai suatu barang sebenarnya ditentukan oleh kepuasan tambahan yang diberikan unit terakhirnya, bukan sekadar biaya produksi. Pengantar populer dari pemikiran yang mengubah total arah teori ekonomi di akhir abad ke-19."),
+    dict(id="looking-backward", raw="pg624.txt", gid=624, title="Looking Backward, 2000 to 1887",
+         author="Edward Bellamy", year="1888", category="politik",
+         extractor=generic_extract,
+         description="Bellamy membuat seorang pria Boston tertidur tahun 1887 dan bangun tahun 2000 di Amerika yang telah berubah jadi masyarakat sosialis tanpa kemiskinan atau persaingan kejam. Novel utopis yang begitu populer sampai memicu gerakan politik nyata bernama 'Nationalism' di seluruh Amerika."),
+    dict(id="crito", raw="pg1657.txt", gid=1657, title="Crito",
+         author="Plato", year="±399 SM", category="filsafat",
+         extractor=generic_extract,
+         description="Sahabat Socrates, Crito, menawarkan rencana pelarian dari penjara sebelum eksekusi, tapi Socrates menolak dengan argumen bahwa melarikan diri berarti mengkhianati kontrak sosialnya sendiri dengan hukum kota yang membesarkannya. Dialog pendek tentang kenapa kadang taat pada hukum yang tidak adil tetap lebih bermartabat daripada melanggarnya diam-diam."),
+    dict(id="history-of-civil-society", raw="pg8646.txt", gid=8646, title="An Essay on the History of Civil Society",
+         author="Adam Ferguson", year="1767", category="sejarah",
+         extractor=generic_extract,
+         description="Ferguson, salah satu tokoh Pencerahan Skotlandia, mengamati bagaimana masyarakat manusia bergerak dari kesukuan menuju peradaban lewat tahapan yang bisa dipelajari seperti ilmu alam. Salah satu cikal bakal sosiologi modern, ditulis jauh sebelum istilah itu sendiri ada."),
+    dict(id="voice-from-the-south", raw="pg61741.txt", gid=61741, title="A Voice from the South",
+         author="Anna Julia Cooper", year="1892", category="sosial",
+         extractor=generic_extract,
+         description="Cooper, salah satu perempuan kulit hitam Amerika pertama yang meraih gelar doktor, berargumen kemajuan sejati ras dan bangsa hanya mungkin kalau perempuan kulit hitam juga diberi pendidikan dan suara penuh. Salah satu teks feminisme kulit hitam paling awal, mendahului istilah 'intersectionality' hampir seabad."),
+    dict(id="political-oeconomy-steuart-1", raw="pg60411.txt", gid=60411, title="An Inquiry into the Principles of Political Oeconomy (Vol. 1)",
+         author="James Steuart", year="1767", category="ekonomi",
+         extractor=generic_extract,
+         description="Steuart menulis risalah sistematis pertama berbahasa Inggris tentang ekonomi politik, hampir sepuluh tahun sebelum 'The Wealth of Nations' karya Adam Smith yang kelak menenggelamkan namanya. Volume pertama ini menunjukkan pemikiran ekonomi yang jauh lebih percaya pada campur tangan negara ketimbang Smith yang menyusul setelahnya."),
+    dict(id="right-to-ignore-the-state", raw="pg34649.txt", gid=34649, title="The Right to Ignore the State",
+         author="Herbert Spencer", year="1851", category="politik",
+         extractor=generic_extract,
+         description="Spencer, sebelum jadi filsuf evolusi sosial yang lebih dikenal, sempat berargumen individu punya hak moral untuk menolak tunduk pada negara yang dianggapnya tidak sah. Esai awal yang kelak dia coba jauhi sendiri karena dianggap terlalu radikal dibanding pemikirannya di kemudian hari."),
+    dict(id="critique-practical-reason", raw="pg5683.txt", gid=5683, title="The Critique of Practical Reason",
+         author="Immanuel Kant", year="1788", category="filsafat",
+         extractor=generic_extract,
+         description="Kant melanjutkan proyek besarnya dengan bertanya bukan apa yang bisa kita ketahui, tapi apa yang seharusnya kita lakukan, dan menjawabnya lewat kehendak bebas serta hukum moral yang berlaku universal. Pelengkap penting 'Critique of Pure Reason', kali ini fokus penuh pada etika."),
+    dict(id="civilisation-renaissance-italy", raw="pg2074.txt", gid=2074, title="The Civilisation of the Renaissance in Italy",
+         author="Jacob Burckhardt", year="1860", category="sejarah",
+         extractor=generic_extract,
+         description="Burckhardt-lah yang pertama kali membingkai Renaissance Italia sebagai kelahiran kembali individualisme modern, era ketika manusia mulai melihat dirinya sebagai pribadi unik, bukan sekadar anggota kelompok atau kelas. Buku yang menciptakan cara orang memahami dan menyebut periode itu sampai sekarang."),
+    dict(id="eighty-years-and-more", raw="pg11982.txt", gid=11982, title="Eighty Years and More",
+         author="Elizabeth Cady Stanton", year="1898", category="sosial",
+         extractor=generic_extract,
+         description="Stanton menceritakan delapan dekade hidupnya sebagai salah satu penggerak utama gerakan hak pilih perempuan Amerika, dari konvensi Seneca Falls yang dia gagas sampai perjuangan panjang yang belum sepenuhnya dia lihat berhasil. Memoar penuh energi dari sosok yang menyulut gerakan feminis Amerika modern."),
+    dict(id="what-is-property", raw="pg360.txt", gid=360, title="What is Property?",
+         author="Pierre-Joseph Proudhon", year="1840", category="ekonomi",
+         extractor=generic_extract,
+         description="Proudhon menjawab pertanyaan judulnya sendiri dengan kalimat yang jadi terkenal: 'Properti adalah pencurian.' Argumen provokatif yang menuduh kepemilikan pribadi atas tanah dan modal sebagai bentuk eksploitasi terselubung, fondasi penting bagi tradisi pemikiran anarkis yang menyusul setelahnya."),
+    dict(id="plato-laws", raw="pg1750.txt", gid=1750, title="Laws",
+         author="Plato", year="±348 SM", category="politik",
+         extractor=generic_extract,
+         description="Karya terakhir dan terpanjang Plato ini meninggalkan raja-filsuf dari 'Republic' demi rancangan negara yang lebih realistis, diatur lewat hukum tertulis yang rinci ketimbang kebijaksanaan satu penguasa ideal. Plato yang lebih tua dan lebih pragmatis, menerima bahwa manusia biasa butuh aturan konkret, bukan cuma visi abstrak keadilan."),
+    dict(id="dialogues-natural-religion", raw="pg4583.txt", gid=4583, title="Dialogues Concerning Natural Religion",
+         author="David Hume", year="1779", category="filsafat",
+         extractor=generic_extract,
+         description="Diterbitkan setelah Hume wafat karena isinya dianggap terlalu berbahaya semasa hidupnya, tiga tokoh berdebat lewat dialog apakah keteraturan alam semesta benar-benar membuktikan keberadaan Tuhan yang bijaksana. Salah satu kritik paling elegan terhadap argumen desain yang pernah ditulis."),
+    dict(id="history-of-rome-livy-1", raw="pg19725.txt", gid=19725, title="The History of Rome, Books 1 to 8",
+         author="Livy", year="±25 SM", category="sejarah",
+         extractor=generic_extract,
+         description="Livy menulis ulang legenda pendirian Roma, dari Romulus dan Remus sampai perjuangan republik awal melawan tetangga-tetangganya, dengan gaya yang lebih mementingkan keteladanan moral ketimbang akurasi sejarah semata. Buku 1 sampai 8 ini salah satu sumber paling berpengaruh tentang bagaimana orang Romawi sendiri ingin mengingat asal-usul mereka."),
+    dict(id="narrative-of-sojourner-truth", raw="pg1674.txt", gid=1674, title="The Narrative of Sojourner Truth",
+         author="Sojourner Truth", year="1850", category="sosial",
+         extractor=generic_extract,
+         description="Sojourner Truth, yang tak pernah belajar membaca-menulis, mendiktekan kisah hidupnya sebagai budak yang lahir di negara bagian utara sebelum akhirnya bebas dan jadi penceramah keliling menentang perbudakan dan memperjuangkan hak perempuan. Kesaksian langsung yang jarang tandingannya soal perpotongan ras dan gender di Amerika abad ke-19."),
+    dict(id="great-illusion", raw="pg38535.txt", gid=38535, title="The Great Illusion",
+         author="Norman Angell", year="1910", category="ekonomi",
+         extractor=generic_extract,
+         description="Angell berargumen perang antarnegara industri modern secara ekonomi tidak masuk akal, karena penaklukan tidak lagi mendatangkan keuntungan sepadan di dunia yang saling terhubung lewat perdagangan dan keuangan. Diterbitkan hanya beberapa tahun sebelum Perang Dunia I meletus, ironi yang membuatnya jadi bahan perdebatan berabad-abad."),
+    dict(id="eighteenth-brumaire", raw="pg1346.txt", gid=1346, title="The Eighteenth Brumaire of Louis Napoleon",
+         author="Karl Marx", year="1852", category="politik",
+         extractor=generic_extract,
+         description="Marx menganalisis bagaimana Louis Napoleon bisa merebut kekuasaan lewat kudeta yang menurutnya lebih mirip lelucon ketimbang tragedi, mengulang gaya pamannya Napoleon Bonaparte tapi dalam skala yang jauh lebih murahan. Sumber kutipan terkenal 'sejarah berulang, pertama sebagai tragedi, lalu sebagai lelucon'."),
+    dict(id="emile", raw="pg5427.txt", gid=5427, title="Emile",
+         author="Jean-Jacques Rousseau", year="1762", category="filsafat",
+         extractor=generic_extract,
+         description="Rousseau merancang pendidikan ideal lewat kisah seorang anak fiktif bernama Emile, yang dibiarkan belajar dari pengalaman langsung dan alam ketimbang dijejali buku dan disiplin kaku sejak dini. Buku yang mengubah total cara Eropa memikirkan pendidikan anak, meski penulisnya sendiri menitipkan semua anaknya ke panti asuhan."),
+    dict(id="history-of-england-macaulay-1", raw="pg1468.txt", gid=1468, title="The History of England, from the Accession of James II (Vol. 1)",
+         author="Thomas Babington Macaulay", year="1848", category="sejarah",
+         extractor=generic_extract,
+         description="Macaulay menulis sejarah Inggris dengan gaya prosa begitu memikat sampai jadi buku terlaris di zamannya, dimulai dari naik takhtanya James II yang berujung pada Revolusi Agung. Volume pertama ini menunjukkan mengapa Macaulay dianggap salah satu penulis sejarah naratif paling enak dibaca dalam bahasa Inggris."),
+    dict(id="my-own-story-pankhurst", raw="pg34856.txt", gid=34856, title="My Own Story",
+         author="Emmeline Pankhurst", year="1914", category="sosial",
+         extractor=generic_extract,
+         description="Pankhurst menceritakan bagaimana dia dan gerakan suffragette Inggris beralih dari petisi sopan ke aksi militan, mogok makan, pemboman properti, penjara berulang kali, demi memaksa negara memberi perempuan hak suara. Memoar yang menunjukkan sisi paling radikal dan berani dari perjuangan hak pilih perempuan."),
+    dict(id="unsettled-questions-political-economy", raw="pg12004.txt", gid=12004, title="Essays on Some Unsettled Questions of Political Economy",
+         author="John Stuart Mill", year="1844", category="ekonomi",
+         extractor=generic_extract,
+         description="Mill menggarap sejumlah soal teknis yang belum tuntas dijawab ekonom-ekonom sebelumnya, dari perdagangan internasional sampai definisi produktif tidaknya kerja tertentu. Karya awal yang menunjukkan Mill sedang mengasah kemampuannya sebelum menulis karya-karya besarnya yang lebih terkenal."),
+    dict(id="the-law-bastiat", raw="pg44800.txt", gid=44800, title="The Law",
+         author="Frédéric Bastiat", year="1850", category="politik",
+         extractor=generic_extract,
+         description="Bastiat berargumen hukum seharusnya hanya melindungi hak-hak alami manusia, hidup, kebebasan, properti, dan berubah jadi alat perampokan terselubung begitu dipakai untuk mengambil dari satu kelompok demi menguntungkan kelompok lain. Esai pendek dan tajam yang masih jadi rujukan utama argumen pasar bebas melawan campur tangan negara."),
+    dict(id="sartor-resartus", raw="pg1051.txt", gid=1051, title="Sartor Resartus",
+         author="Thomas Carlyle", year="1836", category="filsafat",
+         extractor=generic_extract,
+         description="Carlyle menciptakan seorang filsuf Jerman fiktif yang berargumen segala institusi masyarakat, pakaian, agama, negara, cuma 'pakaian' simbolis yang membungkus kebenaran spiritual di baliknya. Ditulis dengan gaya eksentrik dan setengah bercanda, tapi jadi salah satu karya paling berpengaruh yang menjembatani Romantisisme Jerman ke sastra Inggris."),
+    dict(id="my-bondage-my-freedom", raw="pg202.txt", gid=202, title="My Bondage and My Freedom",
+         author="Frederick Douglass", year="1855", category="sejarah",
+         extractor=generic_extract,
+         description="Sepuluh tahun setelah 'Narrative' pertamanya, Douglass menulis ulang kisah hidupnya jauh lebih panjang dan tajam, kini sebagai orang bebas yang tak lagi perlu menahan diri demi keselamatan. Versi yang lebih matang dan lebih berani menyerang langsung institusi perbudakan serta kemunafikan yang menopangnya."),
+    dict(id="autobiography-mill", raw="pg10378.txt", gid=10378, title="Autobiography",
+         author="John Stuart Mill", year="1873", category="sosial",
+         extractor=generic_extract,
+         description="Mill menceritakan pendidikan ekstremnya sejak kecil, krisis mental yang nyaris menghancurkannya di usia dua puluhan, dan bagaimana dia menemukan kembali makna hidup lewat puisi dan cinta pada Harriet Taylor. Memoar intelektual yang jujur tentang harga yang harus dibayar seorang jenius didikan yang terlalu sempurna."),
+    dict(id="fields-factories-workshops", raw="pg64353.txt", gid=64353, title="Fields, Factories and Workshops",
+         author="Peter Kropotkin", year="1899", category="ekonomi",
+         extractor=generic_extract,
+         description="Kropotkin membayangkan masa depan tempat pertanian, industri, dan kerja intelektual digabung dalam komunitas kecil yang mandiri, alih-alih dipisah jauh seperti dalam kapitalisme industrial. Visi desentralisasi ekonomi yang optimis, ditulis oleh seorang pangeran Rusia yang memilih jadi anarkis."),
+    dict(id="cyropaedia", raw="pg2085.txt", gid=2085, title="Cyropaedia",
+         author="Xenophon", year="±370 SM", category="politik",
+         extractor=generic_extract,
+         description="Xenophon menulis semi-biografi Cyrus Agung, pendiri Kekaisaran Persia, sebagai model bagaimana seorang pemimpin ideal seharusnya dididik dan memerintah. Separuh sejarah separuh fiksi didaktik, buku ini jadi salah satu 'cermin bagi pangeran' paling awal yang memengaruhi pemikiran kepemimpinan berabad-abad kemudian."),
 ]
 
 INDEX_ORDER = [
@@ -1796,6 +2018,15 @@ INDEX_ORDER = [
 # order_new_books.py in the scratch dir for the scheduling algorithm.
 NEW_BOOKS_ORDER = [
     "apology", "symposium", "up-from-slavery", "phaedo", "gorgias", "darkwater", "nicomachean-ethics", "poetics", "plutarchs-lives-1", "enchiridion", "discourses-epictetus", "hull-house", "on-the-nature-of-things", "consolation-of-philosophy", "gallic-war", "discourse-on-method", "ethics-spinoza", "how-other-half-lives", "enquiry-human-understanding", "treatise-human-nature", "annals-tacitus", "metaphysic-of-morals", "thus-spake-zarathustra", "women-and-economics", "genealogy-of-morals", "politics-aristotle", "germany-and-agricola", "subjection-of-women", "twilight-of-the-idols", "federalist-papers", "anabasis", "the-crowd", "the-antichrist", "social-contract", "twelve-caesars", "dream-psychology", "studies-in-pessimism", "rights-of-man", "french-revolution-carlyle", "critique-political-economy", "mutual-aid", "utilitarianism", "conciliation-with-america", "short-history-of-world", "principle-of-population", "woman-and-labour", "essays-bacon", "representative-government", "autobiography-franklin", "progress-and-poverty", "self-help", "essay-humane-understanding", "discourses-on-livy", "narrative-frederick-douglass", "economic-consequences-peace", "kingdom-of-god-within-you", "human-knowledge-berkeley", "anarchism-and-other-essays", "travels-marco-polo-1", "theory-of-moral-sentiments", "what-is-art", "pragmatism", "english-constitution", "histories-of-polybius-1", "lombard-street", "democracy-social-ethics", "problems-of-philosophy", "god-and-the-state", "herodotus-2", "scientific-management", "varieties-religious-experience", "essays-first-series", "conquest-of-bread", "decline-and-fall-2", "unto-this-last", "instinct-of-workmanship", "analects-confucius", "democracy-in-america-2", "life-of-charlemagne", "essentials-economic-theory", "folkways", "pensees", "discourse-on-inequality", "wars-of-the-jews", "sophisms-protectionists", "education-of-henry-adams"
+]
+
+# The 51 new catalog-expansion-phase-2 books, appended AFTER the 108
+# above (22 fixed + 86 phase-1). Order precomputed (round-robin by
+# category, largest-remaining-first) so no 3 consecutive books share a
+# category across the FULL final index, including the boundary with the
+# phase-1 tail above (which ends in "sosial").
+NEW_BOOKS_ORDER_2 = [
+    "democracy-and-education", "life-of-reason", "political-obligation-green", "general-view-of-positivism", "methods-of-ethics", "history-of-rome-mommsen-1", "human-nature-in-politics", "sources-of-religious-insight", "oregon-trail", "socialism-social-movement", "no-treason", "essence-of-christianity", "norman-conquest-freeman", "society-in-america", "economic-interpretation-constitution", "republic-of-cicero", "lives-eminent-philosophers", "history-of-england-ranke-1", "southern-horrors", "accumulation-of-capital", "news-from-nowhere", "hegel-history-of-philosophy-1", "critical-period-american-history", "culture-and-anarchy", "political-economy-jevons", "looking-backward", "crito", "history-of-civil-society", "voice-from-the-south", "political-oeconomy-steuart-1", "right-to-ignore-the-state", "critique-practical-reason", "civilisation-renaissance-italy", "eighty-years-and-more", "what-is-property", "plato-laws", "dialogues-natural-religion", "history-of-rome-livy-1", "narrative-of-sojourner-truth", "great-illusion", "eighteenth-brumaire", "emile", "history-of-england-macaulay-1", "my-own-story-pankhurst", "unsettled-questions-political-economy", "the-law-bastiat", "sartor-resartus", "my-bondage-my-freedom", "autobiography-mill", "fields-factories-workshops", "cyropaedia"
 ]
 
 
@@ -1899,7 +2130,7 @@ def main():
         summary_rows.append((book_id, len(chapters_json), total_words, size_kb))
 
     index_by_id = {e["id"]: e for e in index_entries}
-    full_order = INDEX_ORDER + NEW_BOOKS_ORDER
+    full_order = INDEX_ORDER + NEW_BOOKS_ORDER + NEW_BOOKS_ORDER_2
     missing_order = set(index_by_id) - set(full_order)
     missing_entries = set(full_order) - set(index_by_id)
     if missing_order or missing_entries:
@@ -1938,7 +2169,10 @@ def main():
     else:
         print("Fallback splitter: not needed for any book.")
 
-    low_threshold_ids = {"communist-manifesto": 5000, "tao-te-ching": 4000, "common-sense": 4000}
+    low_threshold_ids = {
+        "communist-manifesto": 5000, "tao-te-ching": 4000, "common-sense": 4000,
+        "right-to-ignore-the-state": 5000, "crito": 8000,
+    }
     min_words_map = {b["id"]: low_threshold_ids.get(b["id"], 10000) for b in BOOKS}
     print("")
     print("Word-count threshold check:")

@@ -1,7 +1,7 @@
 // Manually curated raw connection edges per author, derived from influencedBy/influenced
 // in books/authors.json (see DESIGN_CONNECTIONS.md §2.5). Each entry: [to, type, note?].
 // `type` default when omitted downstream = 'pengaruh'. `to` uses exact catalog spelling
-// when the target is one of the 77 authors; otherwise free-text (person, movement, or event).
+// when the target is one of the 115 authors; otherwise free-text (person, movement, or event).
 // This is a scratch/build-time data file consumed by build_connections.js — not shipped to the app.
 
 module.exports = {
@@ -623,5 +623,218 @@ module.exports = {
     ["Perang Saudara Amerika", "pengaruh", "via ayahnya"],
     ["Historiografi Amerika modern", "pengaruh"],
     ["Sastra otobiografi intelektual Amerika", "pengaruh"]
+  ],
+  "John Dewey": [
+    ["William James", "pengaruh"],
+    ["G. W. F. Hegel", "pengaruh", "idealisme Hegelian di awal kariernya"],
+    ["Jane Addams", "kolaborator", "sesama penggerak Hull House & pragmatisme sosial"],
+    ["Josiah Royce", "sezaman"],
+    ["Pragmatisme Amerika", "pengaruh"],
+    ["Gerakan pendidikan progresif", "pengaruh"]
+  ],
+  "George Santayana": [
+    ["William James", "murid", "gurunya di Harvard"],
+    ["Josiah Royce", "murid", "gurunya di Harvard"],
+    ["John Dewey", "sezaman"],
+    ["Naturalisme filosofis Amerika", "pengaruh"]
+  ],
+  "Thomas Hill Green": [
+    ["G. W. F. Hegel", "pengaruh"],
+    ["Immanuel Kant", "pengaruh"],
+    ["Herbert Spencer", "menentang", "menentang individualisme laissez-faire Spencer"],
+    ["John Stuart Mill", "pengaruh", "merevisi tradisi liberal Mill"]
+  ],
+  "Auguste Comte": [
+    ["Harriet Martineau", "pengaruh", "menerjemahkan & meringkas karyanya ke bahasa Inggris"],
+    ["John Stuart Mill", "pengaruh", "korespondensi panjang, lalu berjarak"],
+    ["Positivisme sebagai gerakan filsafat", "pengaruh"],
+    ["Sosiologi modern", "pengaruh"]
+  ],
+  "Henry Sidgwick": [
+    ["John Stuart Mill", "pengaruh"],
+    ["Jeremy Bentham", "pengaruh"],
+    ["G. E. Moore", "guru", "muridnya di Cambridge"]
+  ],
+  "Theodor Mommsen": [
+    ["Livy", "pengaruh", "sumber sekaligus objek kritik dalam historiografinya"],
+    ["Cicero", "pengaruh", "sumber primer surat & pidato"],
+    ["Leopold von Ranke", "pengaruh", "metode kritik sumber"],
+    ["Julius Caesar", "pengaruh", "tokoh yang sangat dikaguminya dalam narasinya"]
+  ],
+  "Graham Wallas": [
+    ["Walter Bagehot", "pengaruh", "meneruskan tradisi analisis psikologis politik"],
+    ["Fabian Society", "kolaborator"],
+    ["Walter Lippmann", "pengaruh", "muridnya di Harvard"]
+  ],
+  "Josiah Royce": [
+    ["William James", "sezaman", "sahabat & rival filosofis di Harvard"],
+    ["George Santayana", "guru", "dibimbingnya di Harvard"],
+    ["G. W. F. Hegel", "pengaruh"],
+    ["John Dewey", "sezaman"]
+  ],
+  "Francis Parkman": [
+    ["Edward Gibbon", "pengaruh", "model gaya narasi sejarah megahnya"],
+    ["Theodore Roosevelt", "pengaruh", "mengaguminya, meneruskan gaya narasi frontier"],
+    ["John Fiske", "sezaman"]
+  ],
+  "Werner Sombart": [
+    ["Karl Marx", "pengaruh", "simpati awal pada analisis Marxis"],
+    ["Max Weber", "sezaman", "kolega dekat, sama-sama meneliti asal kapitalisme"],
+    ["Thorstein Veblen", "sezaman", "kritikus paralel kapitalisme & konsumerisme"]
+  ],
+  "Lysander Spooner": [
+    ["Pierre-Joseph Proudhon", "sezaman", "sama-sama perintis pemikiran anarkis abad 19"],
+    ["Thomas Paine", "pengaruh"],
+    ["Frederick Douglass", "sezaman", "sesama abolisionis, jalur argumen berbeda"],
+    ["Benjamin Tucker", "murid", "penerbit & penerus pemikirannya"]
+  ],
+  "Ludwig Feuerbach": [
+    ["G. W. F. Hegel", "murid", "belajar langsung di bawahnya di Berlin"],
+    ["Karl Marx", "pengaruh"],
+    ["Karl Marx & Friedrich Engels", "pengaruh"],
+    ["David Strauss", "sezaman", "sesama Young Hegelian pengkritik agama"]
+  ],
+  "Edward A. Freeman": [
+    ["Leopold von Ranke", "pengaruh", "metode kritik sumber"],
+    ["Thomas Babington Macaulay", "sezaman"],
+    ["Edward Gibbon", "pengaruh"],
+    ["Arthur Evans", "guru", "dibimbingnya di Oxford"]
+  ],
+  "Harriet Martineau": [
+    ["Auguste Comte", "pengaruh", "menerjemahkan & meringkas karyanya"],
+    ["Charlotte Perkins Gilman", "pengaruh"],
+    ["Elizabeth Cady Stanton", "sezaman", "jejaring intelektual feminis transatlantik"]
+  ],
+  "Charles A. Beard": [
+    ["Karl Marx", "pengaruh", "metode analisis ekonomi-materialis"],
+    ["Alexander Hamilton, James Madison & John Jay", "menentang", "reinterpretasi kritis atas motif para penyusun Konstitusi"],
+    ["Frederick Jackson Turner", "sezaman", "sesama sejarawan Era Progresif"]
+  ],
+  "Cicero": [
+    ["Plato", "pengaruh"],
+    ["Julius Caesar", "menentang", "oposisi politik terhadap kediktatorannya"],
+    ["Livy", "pengaruh", "gaya prosa & sumber inspirasi"],
+    ["Niccolò Machiavelli", "pengaruh"],
+    ["Polybius", "pengaruh"]
+  ],
+  "Diogenes Laertius": [
+    ["Plato", "pengaruh", "subjek biografinya"],
+    ["Aristotle", "pengaruh", "subjek biografinya"],
+    ["Epictetus", "pengaruh", "mendokumentasikan ajaran Stoa"],
+    ["Xenophon", "pengaruh", "subjek biografinya"]
+  ],
+  "Leopold von Ranke": [
+    ["Theodor Mommsen", "pengaruh", "metode kritik sumber"],
+    ["Edward A. Freeman", "pengaruh", "metode kritik sumber"],
+    ["Thomas Babington Macaulay", "menentang", "menolak historiografi Whig yang moralistik"],
+    ["G. W. F. Hegel", "menentang", "menolak filsafat sejarah teleologisnya"]
+  ],
+  "Ida B. Wells": [
+    ["Frederick Douglass", "kolaborator", "menulis pamflet bersama merespons Pameran Dunia Chicago"],
+    ["W. E. B. Du Bois", "kolaborator", "sesama pendiri NAACP"],
+    ["Booker T. Washington", "menentang", "mengkritik pendekatan akomodasionisnya"],
+    ["Elizabeth Cady Stanton", "sezaman"]
+  ],
+  "Rosa Luxemburg": [
+    ["Karl Marx", "pengaruh"],
+    ["Karl Marx & Friedrich Engels", "pengaruh"],
+    ["Vladimir Lenin", "menentang", "perdebatan soal organisasi partai revolusioner"],
+    ["Revolusi Jerman 1918-1919", "pengaruh"]
+  ],
+  "William Morris": [
+    ["John Ruskin", "murid", "mentor pemikirannya soal seni & industrialisasi"],
+    ["Karl Marx", "pengaruh"],
+    ["Edward Bellamy", "menentang", "'News from Nowhere' ditulis sebagai sanggahan atas 'Looking Backward'"]
+  ],
+  "G. W. F. Hegel": [
+    ["Immanuel Kant", "pengaruh"],
+    ["Karl Marx", "pengaruh"],
+    ["Karl Marx & Friedrich Engels", "pengaruh"],
+    ["Baruch Spinoza", "pengaruh"],
+    ["Mikhail Bakunin", "pengaruh"],
+    ["Ludwig Feuerbach", "guru"]
+  ],
+  "John Fiske": [
+    ["Herbert Spencer", "pengaruh", "penerjemah utama gagasannya bagi publik Amerika"],
+    ["Francis Parkman", "sezaman"],
+    ["Charles Darwin", "pengaruh"]
+  ],
+  "Matthew Arnold": [
+    ["Marcus Aurelius", "pengaruh", "menulis esai kekaguman tentangnya"],
+    ["Thomas Carlyle", "pengaruh"],
+    ["John Stuart Mill", "menentang", "mengkritik individualisme liberalnya"],
+    ["Thomas Arnold", "guru", "ayahnya, kepala sekolah Rugby"]
+  ],
+  "William Stanley Jevons": [
+    ["John Stuart Mill", "menentang", "menolak metode ekonomi klasiknya"],
+    ["David Ricardo", "menentang", "menolak teori nilai kerjanya"],
+    ["John Bates Clark", "sezaman", "sesama tokoh revolusi marjinalis"]
+  ],
+  "Edward Bellamy": [
+    ["William Morris", "menentang", "dikritik Morris sebagai utopia yang terlalu terpusat & birokratis"],
+    ["Karl Marx", "pengaruh"],
+    ["Gerakan Nationalist Clubs", "pengaruh"]
+  ],
+  "Adam Ferguson": [
+    ["Adam Smith", "sezaman", "sesama tokoh Pencerahan Skotlandia"],
+    ["David Hume", "sezaman", "sesama tokoh Pencerahan Skotlandia"],
+    ["Karl Marx", "pengaruh", "konsep masyarakat sipil"],
+    ["G. W. F. Hegel", "pengaruh", "konsep 'bürgerliche Gesellschaft'"]
+  ],
+  "Anna Julia Cooper": [
+    ["W. E. B. Du Bois", "sezaman"],
+    ["Ida B. Wells", "sezaman", "sesama intelektual perempuan kulit hitam era itu"],
+    ["Booker T. Washington", "menentang", "berbeda pandangan soal pendidikan klasik vs vokasional"],
+    ["Frederick Douglass", "pengaruh"]
+  ],
+  "James Steuart": [
+    ["Adam Smith", "menentang", "pendekatan merkantilisnya kemudian dilampaui Smith"],
+    ["Adam Ferguson", "sezaman", "sesama tokoh Pencerahan Skotlandia"]
+  ],
+  "Herbert Spencer": [
+    ["Charles Darwin", "pengaruh"],
+    ["John Fiske", "pengaruh", "murid tak langsung, penyebar gagasannya di Amerika"],
+    ["Auguste Comte", "menentang", "menolak diasosiasikan dengan positivisme Comte"]
+  ],
+  "Jacob Burckhardt": [
+    ["Friedrich Nietzsche", "sezaman", "kolega dekat di Basel, saling mengagumi"],
+    ["Leopold von Ranke", "murid", "belajar di bawahnya di Berlin, lalu menempuh jalur berbeda"],
+    ["Niccolò Machiavelli", "pengaruh", "dibahas sebagai contoh pemikir politik Renaisans"]
+  ],
+  "Elizabeth Cady Stanton": [
+    ["Mary Wollstonecraft", "pengaruh"],
+    ["Frederick Douglass", "kolaborator", "mendukung Konvensi Seneca Falls"],
+    ["Sojourner Truth", "sezaman"],
+    ["Emmeline Pankhurst", "pengaruh", "gerakan Amerika mendahului & memengaruhi gerakan Inggris"]
+  ],
+  "Pierre-Joseph Proudhon": [
+    ["Mikhail Bakunin", "pengaruh"],
+    ["Karl Marx", "menentang", "perseteruan terkenal, dibalas Marx lewat 'The Poverty of Philosophy'"],
+    ["Peter Kropotkin", "pengaruh"]
+  ],
+  "Livy": [
+    ["Cicero", "pengaruh", "gaya prosa & sumber inspirasi"],
+    ["Augustus", "pengaruh", "sahabat dekat, sponsor tak langsung karyanya"],
+    ["Niccolò Machiavelli", "pengaruh"],
+    ["Edward Gibbon", "pengaruh"]
+  ],
+  "Sojourner Truth": [
+    ["Frederick Douglass", "sezaman"],
+    ["William Lloyd Garrison", "kolaborator", "bekerja dalam lingkaran abolisionis Garrisonian"],
+    ["Elizabeth Cady Stanton", "sezaman"]
+  ],
+  "Norman Angell": [
+    ["Frédéric Bastiat", "pengaruh"],
+    ["John Maynard Keynes", "sezaman", "sama-sama menganalisis dampak ekonomi Perang Dunia Pertama"],
+    ["Richard Cobden", "pengaruh"]
+  ],
+  "Thomas Babington Macaulay": [
+    ["Edward Gibbon", "pengaruh"],
+    ["Thomas Carlyle", "menentang", "rival gaya historiografi Victoria"]
+  ],
+  "Emmeline Pankhurst": [
+    ["Charlotte Perkins Gilman", "sezaman"],
+    ["Elizabeth Cady Stanton", "pengaruh", "gerakan Amerika mendahului & memengaruhinya"],
+    ["Christabel Pankhurst", "kolaborator", "putrinya, memimpin WSPU bersama"]
   ]
 };

@@ -42,13 +42,13 @@
    {
     "to": "Livy",
     "type": "pengaruh",
-    "inCatalog": false,
+    "inCatalog": true,
     "note": "sejarawan Romawi favoritnya"
    },
    {
     "to": "Cicero",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Xenophon",
@@ -77,6 +77,11 @@
    },
    {
     "to": "Polybius",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Jacob Burckhardt",
     "type": "pengaruh",
     "inCatalog": true
    }
@@ -150,7 +155,7 @@
    {
     "to": "Matthew Arnold",
     "type": "pengaruh",
-    "inCatalog": false,
+    "inCatalog": true,
     "note": "penyair Victorian yang mengaguminya"
    },
    {
@@ -262,7 +267,7 @@
    {
     "to": "Ludwig Feuerbach",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Adam Smith",
@@ -307,6 +312,16 @@
     "type": "kolaborator",
     "inCatalog": true,
     "note": "penulis solo di katalog ini"
+   },
+   {
+    "to": "Rosa Luxemburg",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "G. W. F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -411,6 +426,16 @@
     "to": "Plutarch",
     "type": "pengaruh",
     "inCatalog": true
+   },
+   {
+    "to": "Cicero",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Diogenes Laertius",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -462,7 +487,7 @@
    {
     "to": "Livy",
     "type": "pengaruh",
-    "inCatalog": false,
+    "inCatalog": true,
     "note": "sejarawan klasik"
    },
    {
@@ -485,6 +510,21 @@
     "to": "Diskursus kejatuhan imperium modern",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Francis Parkman",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Edward A. Freeman",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Babington Macaulay",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -567,6 +607,11 @@
    {
     "to": "Walter Bagehot",
     "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "William Stanley Jevons",
+    "type": "menentang",
     "inCatalog": true
    }
   ]
@@ -741,6 +786,31 @@
     "to": "Henry George",
     "type": "pengaruh",
     "inCatalog": true
+   },
+   {
+    "to": "Thomas Hill Green",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Auguste Comte",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Henry Sidgwick",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Matthew Arnold",
+    "type": "menentang",
+    "inCatalog": true
+   },
+   {
+    "to": "William Stanley Jevons",
+    "type": "menentang",
+    "inCatalog": true
    }
   ]
  },
@@ -825,6 +895,11 @@
    {
     "to": "Ralph Waldo Emerson",
     "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Jacob Burckhardt",
+    "type": "sezaman",
     "inCatalog": true
    }
   ]
@@ -962,6 +1037,11 @@
     "to": "Ekonomi kelembagaan (institutional economics)",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Werner Sombart",
+    "type": "sezaman",
+    "inCatalog": true
    }
   ]
  },
@@ -1029,6 +1109,16 @@
    {
     "to": "Frederick Douglass",
     "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Ida B. Wells",
+    "type": "kolaborator",
+    "inCatalog": true
+   },
+   {
+    "to": "Anna Julia Cooper",
+    "type": "sezaman",
     "inCatalog": true
    }
   ]
@@ -1381,6 +1471,11 @@
     "to": "Gerakan republikanisme demokratis",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Lysander Spooner",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -1589,6 +1684,11 @@
     "to": "Feminisme gelombang pertama dan kedua",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Elizabeth Cady Stanton",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -1753,6 +1853,11 @@
     "to": "Polybius",
     "type": "pengaruh",
     "inCatalog": true
+   },
+   {
+    "to": "Diogenes Laertius",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -1824,6 +1929,11 @@
     "to": "Gerakan Stoisisme modern",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Diogenes Laertius",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -2131,6 +2241,11 @@
     "to": "G.W.F. Hegel",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "G. W. F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -2207,6 +2322,11 @@
    {
     "to": "Edmund Burke",
     "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Adam Ferguson",
+    "type": "sezaman",
     "inCatalog": true
    }
   ]
@@ -2293,6 +2413,16 @@
    },
    {
     "to": "Ralph Waldo Emerson",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Hill Green",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "G. W. F. Hegel",
     "type": "pengaruh",
     "inCatalog": true
    }
@@ -2592,7 +2722,7 @@
    {
     "to": "John Dewey",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Pragmatisme Amerika",
@@ -2607,6 +2737,16 @@
    {
     "to": "W. E. B. Du Bois",
     "type": "murid",
+    "inCatalog": true
+   },
+   {
+    "to": "George Santayana",
+    "type": "guru",
+    "inCatalog": true
+   },
+   {
+    "to": "Josiah Royce",
+    "type": "sezaman",
     "inCatalog": true
    }
   ]
@@ -2984,6 +3124,11 @@
     "to": "Teori checks and balances",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Charles A. Beard",
+    "type": "menentang",
+    "inCatalog": true
    }
   ]
  },
@@ -3135,7 +3280,7 @@
    {
     "to": "Cicero",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Konservatisme modern",
@@ -3300,6 +3445,11 @@
     "to": "Studi konstitusi perbandingan",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Graham Wallas",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -3351,7 +3501,7 @@
    {
     "to": "Pierre-Joseph Proudhon",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Pemberontakan Eropa 1848",
@@ -3381,6 +3531,11 @@
    {
     "to": "Karl Marx",
     "type": "menentang",
+    "inCatalog": true
+   },
+   {
+    "to": "G. W. F. Hegel",
+    "type": "pengaruh",
     "inCatalog": true
    }
   ]
@@ -3454,6 +3609,11 @@
     "to": "Gerakan koperasi",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Pierre-Joseph Proudhon",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -3597,6 +3757,16 @@
     "to": "Konsep kepemimpinan otokratis Barat",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Theodor Mommsen",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Cicero",
+    "type": "menentang",
+    "inCatalog": true
    }
   ]
  },
@@ -3734,6 +3904,11 @@
    },
    {
     "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Diogenes Laertius",
     "type": "pengaruh",
     "inCatalog": true
    }
@@ -3878,6 +4053,16 @@
    {
     "to": "Ralph Waldo Emerson",
     "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Matthew Arnold",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Babington Macaulay",
+    "type": "menentang",
     "inCatalog": true
    }
   ]
@@ -4100,6 +4285,31 @@
     "to": "Gerakan hak sipil Amerika",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Lysander Spooner",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Ida B. Wells",
+    "type": "kolaborator",
+    "inCatalog": true
+   },
+   {
+    "to": "Anna Julia Cooper",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Elizabeth Cady Stanton",
+    "type": "kolaborator",
+    "inCatalog": true
+   },
+   {
+    "to": "Sojourner Truth",
+    "type": "sezaman",
+    "inCatalog": true
    }
   ]
  },
@@ -4232,7 +4442,7 @@
    {
     "to": "Cicero",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Niccolò Machiavelli",
@@ -4425,7 +4635,7 @@
    {
     "to": "Ludwig Feuerbach",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Karl Marx & Friedrich Engels",
@@ -4468,6 +4678,46 @@
    {
     "to": "Thorstein Veblen",
     "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Werner Sombart",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Charles A. Beard",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Rosa Luxemburg",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "William Morris",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "G. W. F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Edward Bellamy",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Adam Ferguson",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Pierre-Joseph Proudhon",
+    "type": "menentang",
     "inCatalog": true
    }
   ]
@@ -4696,6 +4946,11 @@
     "to": "Walter Bagehot",
     "type": "pengaruh",
     "inCatalog": true
+   },
+   {
+    "to": "Norman Angell",
+    "type": "sezaman",
+    "inCatalog": true
    }
   ]
  },
@@ -4800,6 +5055,16 @@
    {
     "to": "William Graham Sumner",
     "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Adam Ferguson",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "James Steuart",
+    "type": "menentang",
     "inCatalog": true
    }
   ]
@@ -4932,6 +5197,11 @@
     "to": "Sosialisme demokratik Inggris",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "William Morris",
+    "type": "guru",
+    "inCatalog": true
    }
   ]
  },
@@ -4997,6 +5267,11 @@
     "to": "Teori distribusi pendapatan modern",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "William Stanley Jevons",
+    "type": "sezaman",
+    "inCatalog": true
    }
   ]
  },
@@ -5063,6 +5338,11 @@
     "to": "Henry Hazlitt",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Norman Angell",
+    "type": "pengaruh",
+    "inCatalog": true
    }
   ]
  },
@@ -5135,6 +5415,16 @@
     "to": "Gerakan pendidikan vokasional Afrika-Amerika",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Ida B. Wells",
+    "type": "menentang",
+    "inCatalog": true
+   },
+   {
+    "to": "Anna Julia Cooper",
+    "type": "menentang",
+    "inCatalog": true
    }
   ]
  },
@@ -5190,8 +5480,8 @@
    },
    {
     "to": "John Dewey",
-    "type": "pengaruh",
-    "inCatalog": false,
+    "type": "kolaborator",
+    "inCatalog": true,
     "note": "pragmatisme Amerika"
    },
    {
@@ -5324,7 +5614,7 @@
    {
     "to": "Herbert Spencer",
     "type": "menentang",
-    "inCatalog": false,
+    "inCatalog": true,
     "note": "via kritik"
    },
    {
@@ -5341,6 +5631,16 @@
     "to": "Kritik terhadap kesehatan mental perempuan",
     "type": "pengaruh",
     "inCatalog": false
+   },
+   {
+    "to": "Harriet Martineau",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Emmeline Pankhurst",
+    "type": "sezaman",
+    "inCatalog": true
    }
   ]
  },
@@ -5548,7 +5848,7 @@
    {
     "to": "Herbert Spencer",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Gerakan hak pilih perempuan Inggris",
@@ -5747,7 +6047,7 @@
    {
     "to": "Herbert Spencer",
     "type": "pengaruh",
-    "inCatalog": false
+    "inCatalog": true
    },
    {
     "to": "Charles Darwin",
@@ -5839,6 +6139,2395 @@
     "to": "Sastra otobiografi intelektual Amerika",
     "type": "pengaruh",
     "inCatalog": false
+   }
+  ]
+ },
+ "John Dewey": {
+  "years": "1859-1952",
+  "nationality": "Amerika Serikat",
+  "bio": "Filsuf dan pendidik yang menghabiskan lebih dari tujuh dekade menulis tentang bagaimana seharusnya anak-anak belajar, jauh sebelum istilah 'pendidikan progresif' menjadi jargon populer. Ia percaya sekolah bukan tempat menghafal fakta, melainkan laboratorium kecil bagi demokrasi itu sendiri.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/John_Dewey_cph.3a51565.jpg/330px-John_Dewey_cph.3a51565.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Dewey lahir 1859 di Burlington, Vermont, dari keluarga pedagang kelas menengah yang taat pada tradisi Puritan Kongregasionalis Amerika. Ia kuliah di University of Vermont lalu meneruskan doktor filsafat di Johns Hopkins, tempat pemikiran Hegelian sedang digandrungi kalangan akademik muda Amerika."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Di masa mudanya Dewey sempat terpikat idealisme Hegel, tapi perlahan bergeser ke pragmatisme setelah bergaul dengan William James dan kalangan filsuf Chicago yang lebih tertarik pada akibat praktis sebuah gagasan ketimbang sistem metafisika yang megah. Keterlibatannya di Hull House bersama Jane Addams membuatnya menyaksikan langsung bagaimana pendidikan bisa jadi alat pemberdayaan sosial, bukan sekadar hafalan di ruang kelas kaku."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dewey menolak model pendidikan yang menjejalkan informasi pasif ke kepala murid; baginya belajar sejati terjadi lewat pengalaman langsung dan pemecahan masalah nyata. Sekolah, menurutnya, harus jadi miniatur masyarakat demokratis tempat anak berlatih berpikir kritis dan bekerja sama, bukan sekadar patuh pada otoritas guru."
+   },
+   {
+    "heading": "Warisan",
+    "text": "'Democracy and Education' jadi salah satu buku paling berpengaruh dalam sejarah pendidikan modern, menginspirasi gerakan sekolah progresif di seluruh dunia. Gagasannya tentang belajar-sambil-berbuat (learning by doing) masih jadi rujukan utama reformasi kurikulum hingga hari ini."
+   }
+  ],
+  "influencedBy": [
+   "William James",
+   "G. W. F. Hegel (awal karier)",
+   "Charles Sanders Peirce"
+  ],
+  "influenced": [
+   "Gerakan pendidikan progresif",
+   "Jane Addams dan Hull House",
+   "Teori demokrasi partisipatif modern"
+  ],
+  "quote": {
+   "text": "Education, in its broadest sense, is the means of this social continuity of life.",
+   "bookTitle": "Democracy and Education"
+  },
+  "connections": [
+   {
+    "to": "William James",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "G. W. F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "idealisme Hegelian di awal kariernya"
+   },
+   {
+    "to": "Jane Addams",
+    "type": "kolaborator",
+    "inCatalog": true,
+    "note": "sesama penggerak Hull House & pragmatisme sosial"
+   },
+   {
+    "to": "Josiah Royce",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Pragmatisme Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Gerakan pendidikan progresif",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "George Santayana",
+    "type": "sezaman",
+    "inCatalog": true
+   }
+  ]
+ },
+ "George Santayana": {
+  "years": "1863-1952",
+  "nationality": "Spanyol-Amerika",
+  "bio": "Filsuf kelahiran Madrid yang dibesarkan dan berkarier di Amerika, dikenal karena gaya menulis puitis yang jarang dimiliki filsuf akademis lain serta ucapannya yang sering dikutip: siapa yang tidak belajar dari sejarah dihukum mengulanginya. Ia meninggalkan jabatan profesor mapan di Harvard demi hidup sebagai penulis bebas di Eropa hingga akhir hayatnya.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Photogravure_portrait_of_George_Santayana_%281931%29.jpg/330px-Photogravure_portrait_of_George_Santayana_%281931%29.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Santayana lahir 1863 di Madrid, lalu pindah ke Boston bersama ibunya pada usia delapan tahun mengikuti keluarga dari pernikahan pertama sang ibu. Ia tumbuh sebagai orang luar ganda: orang Spanyol Katolik di tengah masyarakat Boston Protestan, sekaligus anak miskin di antara teman-teman sekelas Harvard yang kaya raya."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Di Harvard ia belajar langsung di bawah William James dan Josiah Royce, dua raksasa filsafat Amerika yang gaya berpikirnya sangat berbeda, dan Santayana diam-diam menolak memihak penuh pada salah satunya. Rasa keterasingannya sebagai imigran membuatnya memandang budaya Amerika dengan jarak seorang pengamat, bukan penganut setia, sikap yang mewarnai seluruh tulisannya kelak."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Santayana mengembangkan naturalisme filosofis yang memandang akal, seni, dan agama sebagai produk alami kehidupan manusia, bukan kebenaran transenden yang terpisah dari materi. Baginya, akal budi (reason) bukan lawan dari naluri, melainkan naluri yang telah menemukan cara mengatur dirinya sendiri secara harmonis."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Setelah mengundurkan diri dari Harvard tahun 1912, ia menghabiskan sisa hidupnya menulis di Eropa, jauh dari birokrasi akademik yang menurutnya mengekang kebebasan berpikir. Ucapannya tentang sejarah dan ingatan terus dikutip lintas generasi, menjadikannya salah satu filsuf Amerika yang paling banyak diingat justru lewat kalimat-kalimat pendeknya, bukan sistem filsafatnya yang besar."
+   }
+  ],
+  "influencedBy": [
+   "William James",
+   "Josiah Royce",
+   "Filsafat naturalisme Yunani klasik"
+  ],
+  "influenced": [
+   "Realisme kritis Amerika",
+   "Kritik sastra dan estetika filosofis abad ke-20"
+  ],
+  "quote": {
+   "text": "The Life of Reason is the happy marriage of two elements—impulse and ideation—which if wholly divorced would reduce man to a brute or to a maniac.",
+   "bookTitle": "The Life of Reason"
+  },
+  "connections": [
+   {
+    "to": "William James",
+    "type": "murid",
+    "inCatalog": true,
+    "note": "gurunya di Harvard"
+   },
+   {
+    "to": "Josiah Royce",
+    "type": "murid",
+    "inCatalog": true,
+    "note": "gurunya di Harvard"
+   },
+   {
+    "to": "John Dewey",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Naturalisme filosofis Amerika",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
+ },
+ "Thomas Hill Green": {
+  "years": "1836-1882",
+  "nationality": "Inggris",
+  "bio": "Filsuf Oxford yang jarang dikenal publik luas tapi diam-diam mengubah arah liberalisme Inggris, dari sekadar 'jangan campuri urusan orang' menjadi tanggung jawab bersama menciptakan kondisi agar semua orang benar-benar bisa bebas. Ia juga aktivis gerakan temperansi yang percaya reformasi moral dan reformasi sosial harus berjalan beriringan.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/T.H._Green.png/330px-T.H._Green.png",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Green lahir 1836 di Yorkshire, anak seorang pendeta, dan dibesarkan dengan disiplin religius Anglikan yang ketat sebelum melanjutkan studi ke Balliol College, Oxford, tempat ia kelak menghabiskan hampir seluruh kariernya sebagai pengajar."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Di Oxford, Green mendalami filsafat idealis Jerman, terutama Kant dan Hegel, di tengah budaya akademik Inggris yang saat itu masih didominasi empirisme dan utilitarianisme ala Mill. Keprihatinannya pada kemiskinan perkotaan dan kecanduan alkohol di Inggris industri membuatnya yakin kebebasan sejati butuh lebih dari sekadar tak adanya campur tangan negara."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Green membedakan 'kebebasan negatif' (bebas dari campur tangan) dan 'kebebasan positif' (kemampuan sungguh-sungguh mewujudkan potensi diri), dan berargumen negara berhak campur tangan lewat pendidikan, kesehatan, dan regulasi perumahan demi menciptakan kondisi kebebasan positif itu. Pemikiran ini jadi fondasi filosofis apa yang kelak disebut liberalisme sosial atau new liberalism."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Gagasannya memengaruhi generasi politisi dan reformis Inggris yang membangun negara kesejahteraan awal, jauh sebelum istilah itu populer. Ia dianggap salah satu jembatan penting antara liberalisme klasik abad ke-19 dan liberalisme sosial abad ke-20."
+   }
+  ],
+  "influencedBy": [
+   "Immanuel Kant",
+   "G. W. F. Hegel",
+   "Kondisi sosial Inggris industri"
+  ],
+  "influenced": [
+   "Liberalisme sosial (new liberalism)",
+   "Reformasi negara kesejahteraan Inggris awal"
+  ],
+  "quote": {
+   "text": "In truth the state has regard in punishing, not primarily to the individuals concerned, but to the future prevention of the crime by associating terror with it in the general imagination",
+   "bookTitle": "Lectures on the Principles of Political Obligation"
+  },
+  "connections": [
+   {
+    "to": "G. W. F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Immanuel Kant",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Herbert Spencer",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "menentang individualisme laissez-faire Spencer"
+   },
+   {
+    "to": "John Stuart Mill",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "merevisi tradisi liberal Mill"
+   }
+  ]
+ },
+ "Auguste Comte": {
+  "years": "1798-1857",
+  "nationality": "Prancis",
+  "bio": "Matematikawan yang beralih jadi filsuf dan menciptakan kata 'sosiologi', yakin masyarakat manusia bisa dipelajari dengan metode ilmiah seketat ilmu fisika. Ia sempat mengalami gangguan jiwa berat di usia muda, lalu bangkit menulis sistem filsafat besar yang berusaha menyatukan seluruh pengetahuan manusia dalam satu hierarki ilmu.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Auguste_Comte.jpg/330px-Auguste_Comte.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Comte lahir 1798 di Montpellier dari keluarga Katolik royalis, tapi sejak remaja ia menolak keras agama dan monarki, memilih jadi republikan dan skeptis. Ia diterima di École Polytechnique Paris yang elite, namun dikeluarkan setelah ikut protes mahasiswa terhadap otoritas sekolah."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Comte muda menjadi sekretaris pribadi Henri de Saint-Simon, pemikir sosialis utopis yang menanamkan gagasan awal tentang tatanan sosial baru pasca-Revolusi Prancis, meski keduanya kemudian berpisah dengan pahit karena perbedaan klaim kepengarangan. Comte lalu mengalami episode gangguan jiwa serius yang memaksanya dirawat, tapi ia bangkit dan mencurahkan sisa hidupnya menyusun sistem filsafat positivisme secara sistematis."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Comte berargumen pengetahuan manusia berkembang melalui tiga tahap: teologis, metafisik, dan akhirnya positif atau ilmiah, di mana penjelasan supernatural dan abstrak digantikan observasi dan hukum alam yang bisa diverifikasi. Ia menempatkan sosiologi sebagai mahkota hierarki ilmu, karena mempelajari fenomena manusia yang paling kompleks."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Meski sistem 'Agama Kemanusiaan' yang ia rancang di akhir hidupnya dianggap eksentrik oleh banyak pengikutnya sendiri, istilah dan metode positivisme yang ia rintis membentuk fondasi ilmu sosial modern. Ia diakui secara luas sebagai salah satu pendiri sosiologi sebagai disiplin ilmu tersendiri."
+   }
+  ],
+  "influencedBy": [
+   "Henri de Saint-Simon",
+   "Revolusi Prancis dan kekacauan pascanya"
+  ],
+  "influenced": [
+   "Sosiologi modern",
+   "Harriet Martineau (penerjemah karyanya)",
+   "John Stuart Mill (awal kariernya)"
+  ],
+  "quote": {
+   "text": "In the second or positive phase, which is at last beginning, a basis for the new social state has to be constructed.",
+   "bookTitle": "A General View of Positivism"
+  },
+  "connections": [
+   {
+    "to": "Harriet Martineau",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "menerjemahkan & meringkas karyanya ke bahasa Inggris"
+   },
+   {
+    "to": "John Stuart Mill",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "korespondensi panjang, lalu berjarak"
+   },
+   {
+    "to": "Positivisme sebagai gerakan filsafat",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Sosiologi modern",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "Herbert Spencer",
+    "type": "menentang",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Henry Sidgwick": {
+  "years": "1838-1900",
+  "nationality": "Inggris",
+  "bio": "Filsuf Cambridge yang begitu jujur secara intelektual sampai rela mengundurkan diri dari jabatan akademiknya sendiri karena tak lagi yakin pada sumpah keagamaan yang disyaratkan almamaternya. 'The Methods of Ethics' karyanya dianggap salah satu analisis etika paling ketat dan berimbang yang pernah ditulis filsuf Inggris.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Henry_Sidgwick_Elliott_%26_Fry_1890s_%28cropped%29.jpg/330px-Henry_Sidgwick_Elliott_%26_Fry_1890s_%28cropped%29.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Sidgwick lahir 1838 di Yorkshire, dan setelah ayahnya wafat saat ia masih kecil, ia dibesarkan ibunya dengan dukungan pendidikan yang kuat, hingga akhirnya diterima di Trinity College, Cambridge, tempat ia menghabiskan hampir seluruh hidupnya."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Sidgwick mendalami utilitarianisme warisan Bentham dan Mill, tapi mendekatinya dengan kejujuran filosofis yang jarang: ia mengakui secara terbuka ketegangan yang belum terpecahkan antara kepentingan diri sendiri dan kebaikan bersama dalam etika utilitarian. Krisis keyakinan religiusnya sendiri membuatnya mengundurkan diri dari posisi fellow di Cambridge tahun 1869 karena tak sanggup lagi menandatangani pernyataan iman Anglikan yang disyaratkan, sebuah tindakan langka yang menunjukkan integritas intelektualnya."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'The Methods of Ethics', Sidgwick membandingkan tiga metode penalaran moral utama — egoisme, intuisionisme, dan utilitarianisme — dan menunjukkan dengan jujur bahwa ketiganya sulit didamaikan sepenuhnya, sebuah kesimpulan yang ia sebut 'dualisme praktis akal budi'. Ia menolak menyederhanakan masalah demi sistem yang rapi."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Karyanya dianggap salah satu puncak analisis etika Inggris abad ke-19, dipelajari serius oleh filsuf moral modern termasuk G. E. Moore yang pernah jadi muridnya. Ia juga aktif memperjuangkan pendidikan tinggi bagi perempuan, ikut mendirikan Newnham College di Cambridge."
+   }
+  ],
+  "influencedBy": [
+   "Jeremy Bentham",
+   "John Stuart Mill"
+  ],
+  "influenced": [
+   "G. E. Moore",
+   "Etika akademik analitik abad ke-20",
+   "Newnham College dan pendidikan tinggi perempuan"
+  ],
+  "quote": {
+   "text": "Let us assume that the process of human history is a progress of mankind towards ever greater happiness.",
+   "bookTitle": "The Methods of Ethics"
+  },
+  "connections": [
+   {
+    "to": "John Stuart Mill",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Jeremy Bentham",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "G. E. Moore",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "muridnya di Cambridge"
+   }
+  ]
+ },
+ "Theodor Mommsen": {
+  "years": "1817-1903",
+  "nationality": "Jerman",
+  "bio": "Sejarawan dan ahli hukum Romawi peraih Nobel Sastra yang karyanya tentang sejarah Roma begitu hidup dan penuh semangat sampai dituduh sebagian kritikus terlalu memihak sang tokoh utama, Julius Caesar. Selain akademisi, ia juga politisi aktif di parlemen Jerman yang berani mengkritik kebijakan Bismarck.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Theodor_Mommsen_2.jpg/330px-Theodor_Mommsen_2.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Mommsen lahir 1817 di Garding, wilayah Schleswig, anak seorang pendeta Lutheran miskin, dan sejak muda menunjukkan bakat luar biasa dalam bahasa klasik dan hukum Romawi kuno."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia mendalami hukum Romawi dan epigrafi (studi prasasti kuno) di Kiel dan Italia, mengumpulkan ribuan prasasti Latin yang jadi dasar proyek monumental Corpus Inscriptionum Latinarum. Metode kritik sumber yang dirintis Leopold von Ranke sangat membentuk pendekatannya: sejarah harus dibangun dari bukti dokumenter yang diperiksa ketat, bukan legenda yang diwariskan turun-temurun."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'The History of Rome', Mommsen menyajikan sejarah Romawi sebagai narasi yang hidup dan penuh drama politik, dengan interpretasi yang sangat mengagumi Julius Caesar sebagai negarawan jenius yang menyelamatkan Roma dari kebusukan oligarki republik yang korup. Pendekatan ini kontroversial karena dianggap terlalu memihak, tapi tetap diakui sebagai karya ilmiah yang luar biasa mendalam."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Ia menerima Hadiah Nobel Sastra tahun 1902 atas karya sejarahnya, capaian langka bagi seorang sejarawan akademik. Proyek katalog prasasti Latin yang ia rintis masih jadi rujukan wajib studi Romawi kuno hingga hari ini, dan gaya penulisan sejarahnya yang naratif mempengaruhi generasi sejarawan klasik sesudahnya."
+   }
+  ],
+  "influencedBy": [
+   "Leopold von Ranke",
+   "Studi epigrafi dan hukum Romawi klasik"
+  ],
+  "influenced": [
+   "Studi klasik dan epigrafi modern",
+   "Historiografi Romawi abad ke-20"
+  ],
+  "quote": {
+   "text": "The home of the Indo-Germanic stock lay in the western portion of central Asia; from this it spread partly in a south-eastern direction over India, partly in a northwestern over Europe.",
+   "bookTitle": "The History of Rome, Book I"
+  },
+  "connections": [
+   {
+    "to": "Livy",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "sumber sekaligus objek kritik dalam historiografinya"
+   },
+   {
+    "to": "Cicero",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "sumber primer surat & pidato"
+   },
+   {
+    "to": "Leopold von Ranke",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "metode kritik sumber"
+   },
+   {
+    "to": "Julius Caesar",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "tokoh yang sangat dikaguminya dalam narasinya"
+   }
+  ]
+ },
+ "Graham Wallas": {
+  "years": "1858-1932",
+  "nationality": "Inggris",
+  "bio": "Sosialis Fabian dan salah satu pendiri London School of Economics yang berani mengkritik asumsi favorit kalangan reformis sendiri: bahwa pemilih rasional akan memilih kebijakan terbaik jika diberi informasi yang cukup. 'Human Nature in Politics' karyanya justru menunjukkan betapa besar peran kebiasaan dan emosi dalam politik, jauh sebelum psikologi politik jadi bidang studi tersendiri.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/7/70/Graham_Wallas.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Wallas lahir 1858 di Sunderland, anak seorang pendeta Injili, dan dibesarkan dalam lingkungan religius ketat yang kelak ia tinggalkan demi pandangan sosialis sekuler saat kuliah di Oxford."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Bersama Sidney dan Beatrice Webb serta George Bernard Shaw, Wallas jadi salah satu tokoh inti Fabian Society yang memperjuangkan sosialisme lewat reformasi bertahap, bukan revolusi. Namun ia perlahan berjarak dari optimisme Fabian tentang rasionalitas pemilih, terutama setelah mengamati bagaimana emosi dan simbol lebih menentukan hasil pemilu ketimbang argumen kebijakan yang matang."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'Human Nature in Politics', Wallas berargumen manusia dalam politik jauh lebih digerakkan oleh insting, kebiasaan, dan asosiasi emosional ketimbang kalkulasi rasional murni seperti diasumsikan teori politik klasik. Ia mendesak agar ilmu politik memasukkan temuan psikologi modern ke dalam analisisnya."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Ia ikut mendirikan London School of Economics tahun 1895 bersama para Fabian lainnya, institusi yang kelak jadi pusat penting ilmu sosial dunia. Karyanya membuka jalan bagi bidang psikologi politik modern, dan pernah mengajar langsung Walter Lippmann muda yang kelak jadi salah satu komentator politik paling berpengaruh Amerika."
+   }
+  ],
+  "influencedBy": [
+   "Sidney dan Beatrice Webb",
+   "Fabian Society",
+   "Walter Bagehot"
+  ],
+  "influenced": [
+   "Walter Lippmann",
+   "Psikologi politik modern",
+   "London School of Economics"
+  ],
+  "quote": {
+   "text": "Impulse, it is now agreed, has an evolutionary history of its own earlier than the history of those intellectual processes by which it is often directed and modified.",
+   "bookTitle": "Human Nature in Politics"
+  },
+  "connections": [
+   {
+    "to": "Walter Bagehot",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "meneruskan tradisi analisis psikologis politik"
+   },
+   {
+    "to": "Fabian Society",
+    "type": "kolaborator",
+    "inCatalog": false
+   },
+   {
+    "to": "Walter Lippmann",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "muridnya di Harvard"
+   }
+  ]
+ },
+ "Josiah Royce": {
+  "years": "1855-1916",
+  "nationality": "Amerika Serikat",
+  "bio": "Filsuf idealis yang jadi sahabat sekaligus lawan diskusi tetap William James di Harvard, dua orang dengan pandangan filsafat nyaris berlawanan yang tetap saling menghormati sepanjang karier mereka. Royce percaya kesetiaan (loyalty) pada suatu tujuan bersama adalah fondasi kehidupan moral yang bermakna.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Josiah_Royce.jpeg/330px-Josiah_Royce.jpeg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Royce lahir 1855 di kamp pertambangan California saat demam emas, anak keluarga pionir yang berjuang keras di garis depan ekspansi Barat Amerika, pengalaman yang kelak membentuk minatnya pada komunitas dan kesetiaan bersama."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia belajar filsafat di Jerman, menyerap idealisme Hegelian, sebelum kembali ke Amerika dan mengajar di Harvard berdampingan dengan William James. Keduanya sering berdebat sengit di depan mahasiswa — Royce membela idealisme absolut, James membela pluralisme dan pragmatisme — tapi persahabatan mereka tak pernah retak, saling menghormati sebagai lawan tanding intelektual terbaik yang mereka miliki."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Royce mengembangkan 'idealisme absolut' versi Amerika yang menyatakan realitas pada dasarnya adalah satu Pikiran atau Kehendak menyeluruh yang mencakup semua pengalaman individu. Dalam etikanya, ia menekankan kesetiaan pada tujuan bersama sebagai jalan manusia menemukan makna hidup, bahkan menyebutnya 'filosofi kesetiaan'."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Meski idealisme absolutnya kalah pamor dibanding pragmatisme James dan Dewey yang lebih populer, kontribusinya pada logika dan filsafat agama Amerika tetap dihormati. Ia jadi mentor penting bagi George Santayana dan tokoh filsafat Amerika generasi berikutnya di Harvard."
+   }
+  ],
+  "influencedBy": [
+   "G. W. F. Hegel",
+   "Pengalaman masa kecil di kamp pertambangan California"
+  ],
+  "influenced": [
+   "George Santayana",
+   "Filsafat agama Amerika",
+   "Logika modern (lewat muridnya)"
+  ],
+  "quote": {
+   "text": "Without ceasing to be personal and intimate, our experience must in some way come into direct touch with the very nature of reality.",
+   "bookTitle": "The Sources of Religious Insight"
+  },
+  "connections": [
+   {
+    "to": "William James",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sahabat & rival filosofis di Harvard"
+   },
+   {
+    "to": "George Santayana",
+    "type": "guru",
+    "inCatalog": true,
+    "note": "dibimbingnya di Harvard"
+   },
+   {
+    "to": "G. W. F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "John Dewey",
+    "type": "sezaman",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Francis Parkman": {
+  "years": "1823-1893",
+  "nationality": "Amerika Serikat",
+  "bio": "Sejarawan yang menantang kesehatannya sendiri yang rapuh dengan menempuh perjalanan berbahaya ke padang rumput Amerika Barat, pengalaman yang ia tuangkan jadi 'The Oregon Trail' sebelum kemudian menulis riwayat epik tujuh jilid perjuangan Prancis dan Inggris memperebutkan Amerika Utara.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/F._Parkman.jpg/330px-F._Parkman.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Parkman lahir 1823 di Boston dari keluarga Brahmin terpandang New England, dan sejak muda terobsesi pada sejarah dan alam liar Amerika, sebuah kecintaan yang tumbuh dari masa kecilnya menjelajahi hutan dekat rumah kakeknya."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Meski menderita gangguan penglihatan dan saraf parah sepanjang hidupnya, ia bertekad menyaksikan langsung dunia suku asli Amerika sebelum lenyap tergerus ekspansi Barat, dan pada 1846 menempuh perjalanan berbahaya ke Oregon Trail bersama suku Sioux, pengalaman yang nyaris menghancurkan kesehatannya tapi memberinya bahan otentik untuk seumur hidup menulis."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Parkman menulis sejarah sebagai narasi epik yang hidup, menggabungkan riset arsip yang cermat dengan gaya sastra yang memikat, menceritakan perebutan benua Amerika Utara antara kekuatan kolonial Prancis dan Inggris serta suku-suku asli sebagai drama besar peradaban yang bertabrakan."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Karya tujuh jilidnya 'France and England in North America' dianggap salah satu pencapaian sejarah naratif terbesar Amerika abad ke-19, menginspirasi generasi penulis sejarah populer sesudahnya termasuk Theodore Roosevelt yang mengaguminya."
+   }
+  ],
+  "influencedBy": [
+   "Edward Gibbon",
+   "Pengalaman langsungnya di padang rumput Amerika Barat"
+  ],
+  "influenced": [
+   "Theodore Roosevelt",
+   "Historiografi naratif Amerika",
+   "Studi sejarah kolonial Amerika Utara"
+  ],
+  "quote": {
+   "text": "When I returned to the camp I found Shaw and an old Indian seated on the ground in close conference, passing the pipe between them.",
+   "bookTitle": "The Oregon Trail"
+  },
+  "connections": [
+   {
+    "to": "Edward Gibbon",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "model gaya narasi sejarah megahnya"
+   },
+   {
+    "to": "Theodore Roosevelt",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "mengaguminya, meneruskan gaya narasi frontier"
+   },
+   {
+    "to": "John Fiske",
+    "type": "sezaman",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Werner Sombart": {
+  "years": "1863-1941",
+  "nationality": "Jerman",
+  "bio": "Ekonom dan sosiolog yang di masa mudanya begitu simpatik pada Marxisme sampai dijuluki 'profesor sosialis', sebelum kemudian bergeser jauh ke kanan di usia tuanya. Dialah yang menciptakan istilah 'kapitalisme akhir' dan konsep 'destruksi kreatif' yang kelak dipopulerkan ekonom lain atas namanya sendiri.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Werner_sombart.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Sombart lahir 1863 di Ermsleben, Jerman, anak seorang pengusaha kaya, dan mengenyam pendidikan ekonomi di tengah kejayaan Mazhab Historis Jerman yang menekankan kajian empiris-historis ketimbang teori abstrak."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Sebagai kolega dekat Max Weber, Sombart terlibat dalam lingkaran akademik yang sama-sama menganalisis asal-usul kapitalisme modern, meski keduanya berbeda pendekatan. Simpatinya yang kuat pada analisis Marx tentang kapitalisme di masa muda membuatnya dijuluki akademisi sosialis, sebelum ia kemudian menempuh jalur nasionalis konservatif di kemudian hari."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'Socialism and the Social Movement', Sombart membedah gerakan sosialis Eropa sebagai fenomena sosial-historis dengan karakter berbeda di tiap negara — Inggris, Prancis, dan Jerman — bukan gerakan tunggal yang seragam. Ia menekankan pentingnya memahami akar historis konkret setiap gerakan, bukan menerapkan teori abstrak secara mentah."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Istilah-istilah yang ia ciptakan, terutama 'kapitalisme akhir' dan gagasan destruksi kreatif, terus dipakai ekonom hingga sekarang meski sering tanpa menyebut asal-usulnya. Kariernya di kemudian hari yang condong ke nasionalisme membuatnya jadi sosok kontroversial dalam sejarah pemikiran ekonomi Jerman."
+   }
+  ],
+  "influencedBy": [
+   "Karl Marx",
+   "Max Weber",
+   "Mazhab Historis Jerman"
+  ],
+  "influenced": [
+   "Sosiologi ekonomi abad ke-20",
+   "Konsep 'destruksi kreatif' dalam ekonomi modern"
+  ],
+  "quote": {
+   "text": "What characterises the antecedent history of the social movement everywhere is, as I have already said, its invariable similarity.",
+   "bookTitle": "Socialism and the Social Movement in the 19th Century"
+  },
+  "connections": [
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "simpati awal pada analisis Marxis"
+   },
+   {
+    "to": "Max Weber",
+    "type": "sezaman",
+    "inCatalog": false,
+    "note": "kolega dekat, sama-sama meneliti asal kapitalisme"
+   },
+   {
+    "to": "Thorstein Veblen",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "kritikus paralel kapitalisme & konsumerisme"
+   }
+  ]
+ },
+ "Lysander Spooner": {
+  "years": "1808-1887",
+  "nationality": "Amerika Serikat",
+  "bio": "Pengacara nyentrik yang menantang negara di berbagai lini sekaligus: dari mendirikan layanan pos swasta yang lebih murah dari kantor pos resmi Amerika, sampai berargumen Konstitusi tak pernah benar-benar mengikat siapa pun yang tidak menandatanganinya sendiri.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Lysander_Spooner_by_Hardy.jpg/330px-Lysander_Spooner_by_Hardy.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Spooner lahir 1808 di sebuah peternakan Massachusetts, dan meski tak pernah menyelesaikan pendidikan hukum formal secara lengkap, ia berhasil berpraktik sebagai pengacara setelah melawan aturan negara bagian yang mensyaratkan gelar sarjana untuk itu."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia aktif dalam gerakan abolisionis, tapi mengambil jalur berbeda dari abolisionis lain dengan berargumen lewat teori hukum alam bahwa perbudakan sebenarnya sudah inkonstitusional sejak awal, bukan sekadar tidak bermoral. Pengalamannya mendirikan American Letter Mail Company yang bersaing sukses dengan kantor pos pemerintah federal — sampai akhirnya ditutup paksa oleh Kongres — makin meneguhkan keyakinannya bahwa negara sering kali sekadar monopoli yang memaksa, bukan pelayan rakyat."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'No Treason', Spooner berargumen radikal bahwa Konstitusi Amerika tidak punya otoritas mengikat generasi yang tidak pernah menandatanganinya secara langsung, sehingga tak seorang pun benar-benar wajib tunduk padanya hanya karena warisan sejarah. Ini jadi salah satu argumen paling tajam melawan legitimasi negara dalam tradisi anarkisme individualis Amerika."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Pemikirannya jadi salah satu pilar penting anarko-kapitalisme dan libertarianisme Amerika abad ke-20, dipopulerkan kembali oleh penerbit seperti Benjamin Tucker dan terus dikutip gerakan libertarian kontemporer."
+   }
+  ],
+  "influencedBy": [
+   "Thomas Paine",
+   "Tradisi hukum alam Lockean",
+   "Pengalamannya melawan monopoli pos federal"
+  ],
+  "influenced": [
+   "Benjamin Tucker",
+   "Anarkisme individualis Amerika",
+   "Libertarianisme kontemporer"
+  ],
+  "quote": {
+   "text": "The Constitution has no inherent authority or obligation.",
+   "bookTitle": "No Treason"
+  },
+  "connections": [
+   {
+    "to": "Pierre-Joseph Proudhon",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sama-sama perintis pemikiran anarkis abad 19"
+   },
+   {
+    "to": "Thomas Paine",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Frederick Douglass",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sesama abolisionis, jalur argumen berbeda"
+   },
+   {
+    "to": "Benjamin Tucker",
+    "type": "murid",
+    "inCatalog": false,
+    "note": "penerbit & penerus pemikirannya"
+   }
+  ]
+ },
+ "Ludwig Feuerbach": {
+  "years": "1804-1872",
+  "nationality": "Jerman",
+  "bio": "Filsuf Young Hegelian yang mengguncang teologi Kristen Eropa dengan argumen sederhana namun radikal: Tuhan bukan pencipta manusia, melainkan proyeksi dari harapan dan sifat terbaik manusia sendiri. Karyanya jadi jembatan penting yang menghubungkan idealisme Hegel dengan materialisme Marx.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg/330px-Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Feuerbach lahir 1804 di Landshut, Bavaria, dari keluarga ahli hukum terkemuka, dan awalnya belajar teologi sebelum berpindah jalur ke filsafat setelah merasa tak puas dengan jawaban-jawaban dogmatis yang ia terima."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia pindah ke Berlin untuk belajar langsung di bawah Hegel, dan sempat terpukau idealisme gurunya, sebelum perlahan menolaknya demi pendekatan yang lebih materialis dan berpusat pada manusia sebagai makhluk jasmani, bukan roh abstrak. Penerbitan 'The Essence of Christianity' tahun 1841 membuatnya dijauhi harapan karier akademik formal karena dianggap terlalu radikal bagi otoritas gereja dan negara Prusia."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Feuerbach berargumen bahwa konsep-konsep ketuhanan sebenarnya adalah proyeksi dari sifat-sifat terbaik manusia — kasih, kebijaksanaan, keadilan — yang diproyeksikan keluar dan disembah seolah berasal dari luar diri manusia. Agama, baginya, adalah antropologi yang belum disadari sebagai antropologi."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Karyanya sangat memengaruhi Karl Marx muda, yang mengambil metode 'membalik' Feuerbach untuk menerapkannya bukan hanya pada agama tapi pada seluruh filsafat Hegel, meski Marx kemudian mengkritiknya lewat 'Tesis tentang Feuerbach' karena dianggap masih terlalu abstrak dan kurang memperhatikan praktik sosial nyata."
+   }
+  ],
+  "influencedBy": [
+   "G. W. F. Hegel",
+   "Ketidakpuasan pada teologi dogmatis"
+  ],
+  "influenced": [
+   "Karl Marx",
+   "Young Hegelians",
+   "Kritik agama modern"
+  ],
+  "quote": {
+   "text": "I do not generate the object from the thought, but the thought from the object; and I hold that alone to be an object which has an existence beyond one's own brain.",
+   "bookTitle": "The Essence of Christianity"
+  },
+  "connections": [
+   {
+    "to": "G. W. F. Hegel",
+    "type": "murid",
+    "inCatalog": true,
+    "note": "belajar langsung di bawahnya di Berlin"
+   },
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Karl Marx & Friedrich Engels",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "David Strauss",
+    "type": "sezaman",
+    "inCatalog": false,
+    "note": "sesama Young Hegelian pengkritik agama"
+   }
+  ]
+ },
+ "Edward A. Freeman": {
+  "years": "1823-1892",
+  "nationality": "Inggris",
+  "bio": "Sejarawan Oxford yang menghabiskan puluhan tahun menulis riwayat detail penaklukan Norman atas Inggris, sekaligus aktivis politik yang turun langsung membela pemberontakan Bosnia-Herzegovina melawan Kekaisaran Ottoman.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Edward_Augustus_Freeman.jpg/330px-Edward_Augustus_Freeman.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Freeman lahir 1823 di Harborne, dan menjadi yatim piatu di usia muda, dibesarkan neneknya dengan pendidikan klasik yang kuat sebelum melanjutkan ke Trinity College, Oxford."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia sangat terpengaruh metode kritik sumber ala Leopold von Ranke yang menekankan riset dokumenter ketat, dan menerapkannya pada sejarah Inggris awal dengan detail luar biasa. Sebagai profesor Regius Sejarah Modern di Oxford, ia membimbing langsung arkeolog muda Arthur Evans, yang kelak menemukan reruntuhan Knossos di Kreta, dan bersamanya aktif membela pemberontakan Bosnia-Herzegovina melawan Ottoman."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'The Norman Conquest of England', Freeman menyajikan penaklukan 1066 bukan sebagai keruntuhan total budaya Anglo-Saxon, melainkan proses transformasi kompleks yang tetap mempertahankan banyak institusi Inggris lama di bawah kekuasaan baru Norman. Ia menekankan pentingnya kontinuitas kelembagaan dalam sejarah, bukan sekadar narasi penaklukan dan kekalahan."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Meski gaya penulisannya kadang dianggap terlalu detail dan pedantik oleh sejarawan kemudian, karyanya jadi rujukan penting studi periode Anglo-Saxon dan Norman. Keterlibatannya dalam isu Balkan juga menunjukkan bagaimana sejarawan era Victoria kerap terjun langsung ke politik kontemporer yang mereka anggap relevan dengan kajian sejarah mereka."
+   }
+  ],
+  "influencedBy": [
+   "Leopold von Ranke",
+   "Thomas Babington Macaulay"
+  ],
+  "influenced": [
+   "Arthur Evans",
+   "Studi sejarah Anglo-Saxon dan Norman modern"
+  ],
+  "quote": {
+   "text": "At that time all England was united into one kingdom under the kings of the house of the West-Saxons.",
+   "bookTitle": "A Short History of the Norman Conquest of England"
+  },
+  "connections": [
+   {
+    "to": "Leopold von Ranke",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "metode kritik sumber"
+   },
+   {
+    "to": "Thomas Babington Macaulay",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Edward Gibbon",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Arthur Evans",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "dibimbingnya di Oxford"
+   }
+  ]
+ },
+ "Harriet Martineau": {
+  "years": "1802-1876",
+  "nationality": "Inggris",
+  "bio": "Penulis yang nyaris tuli sejak muda tapi tetap jadi salah satu intelektual publik paling produktif zamannya, menerjemahkan filsafat positivisme Comte ke bahasa Inggris dengan ringkasan yang bahkan lebih dipuji si penulis asli sendiri ketimbang teks aslinya.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Harriet_Martineau_by_Richard_Evans.jpg/330px-Harriet_Martineau_by_Richard_Evans.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Martineau lahir 1802 di Norwich dari keluarga Unitarian keturunan Huguenot, dan sejak kecil mengalami gangguan pendengaran serta indera perasa dan penciuman yang makin memburuk seiring usia, kondisi yang memaksanya mengembangkan disiplin menulis yang sangat mandiri."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Setelah krisis finansial keluarga memaksanya mencari nafkah sendiri lewat tulisan — langka bagi perempuan zamannya — ia melakukan perjalanan panjang ke Amerika Serikat tahun 1834-36 untuk mengamati langsung eksperimen demokrasi muda itu, termasuk kontradiksi mendalamnya soal perbudakan dan hak perempuan. Ia kemudian menerjemahkan sekaligus meringkas karya besar Auguste Comte ke bahasa Inggris, pekerjaan monumental yang bahkan dipuji Comte sendiri lebih jelas dari versi aslinya."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'Society in America', Martineau menerapkan metode sosiologis yang sistematis untuk menganalisis masyarakat Amerika, membandingkan cita-cita kesetaraan yang dideklarasikan negara itu dengan realitas perbudakan dan subordinasi perempuan yang masih berlaku. Ia dianggap salah satu perintis metode observasi sosiologis empiris, mendahului banyak sosiolog pria yang lebih dikenal."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Ia diakui sebagai salah satu sosiolog perempuan pertama dan jurnalis publik paling berpengaruh di Inggris Victoria, menulis lebih dari 35 buku sepanjang hidupnya sambil tetap membiayai dirinya sendiri secara mandiri, capaian langka bagi perempuan di zamannya."
+   }
+  ],
+  "influencedBy": [
+   "Auguste Comte",
+   "Unitarianisme dan tradisi dissenter Inggris"
+  ],
+  "influenced": [
+   "Sosiologi empiris awal",
+   "Charlotte Perkins Gilman",
+   "Elizabeth Cady Stanton (jejaring feminis transatlantik)"
+  ],
+  "quote": {
+   "text": "It is absolutely necessary, to secure permanence to the recognition of those principles, that there should be liberty to change the form which contains them.",
+   "bookTitle": "Society in America (Vol. 1)"
+  },
+  "connections": [
+   {
+    "to": "Auguste Comte",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "menerjemahkan & meringkas karyanya"
+   },
+   {
+    "to": "Charlotte Perkins Gilman",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Elizabeth Cady Stanton",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "jejaring intelektual feminis transatlantik"
+   }
+  ]
+ },
+ "Charles A. Beard": {
+  "years": "1874-1948",
+  "nationality": "Amerika Serikat",
+  "bio": "Sejarawan Columbia yang mengguncang mitos suci Amerika tentang para founding fathers dengan argumen kontroversial: Konstitusi 1787 ditulis bukan murni demi prinsip filosofis luhur, tapi juga demi melindungi kepentingan ekonomi kelas pemilik properti yang menyusunnya.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Charles_A._Beard%2C_half-length_portrait_LCCN2005690097.jpg/330px-Charles_A._Beard%2C_half-length_portrait_LCCN2005690097.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Beard lahir 1874 di Indiana dari keluarga petani kaya beraliran Quaker, dan sejak muda tertarik pada isu keadilan sosial serta gerakan buruh yang sedang menguat di Amerika era industrialisasi."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia belajar di Oxford dan terpapar gerakan reformasi sosial Inggris sebelum kembali mengajar sejarah dan ilmu politik di Columbia University. Era Progresif Amerika, dengan semangat mengungkap kepentingan tersembunyi di balik institusi yang dianggap suci, sangat membentuk pendekatan analisisnya yang skeptis terhadap narasi resmi sejarah Amerika."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'An Economic Interpretation of the Constitution', Beard menelusuri latar belakang finansial para penyusun Konstitusi Amerika dan menunjukkan banyak dari mereka memiliki kepentingan langsung — obligasi pemerintah, properti, perdagangan — yang diuntungkan oleh pemerintahan federal yang kuat, argumen yang menantang gambaran para pendiri bangsa sebagai negarawan murni tanpa pamrih."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Bukunya memicu kontroversi besar dan tetap diperdebatkan historiografi Amerika hingga kini, meski metodenya dikritik keras oleh sejarawan generasi berikutnya. Ia tetap diakui sebagai perintis penting pendekatan sejarah ekonomi-materialis dalam kajian sejarah Amerika."
+   }
+  ],
+  "influencedBy": [
+   "Karl Marx (metode analisis ekonomi)",
+   "Era Progresif Amerika",
+   "Frederick Jackson Turner"
+  ],
+  "influenced": [
+   "Historiografi revisionis Amerika",
+   "Sejarah ekonomi sebagai disiplin"
+  ],
+  "quote": {
+   "text": "It will be admitted without controversy that the Constitution was the creation of a certain number of men, and it was opposed by a certain number of men.",
+   "bookTitle": "An Economic Interpretation of the Constitution of the United States"
+  },
+  "connections": [
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "metode analisis ekonomi-materialis"
+   },
+   {
+    "to": "Alexander Hamilton, James Madison & John Jay",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "reinterpretasi kritis atas motif para penyusun Konstitusi"
+   },
+   {
+    "to": "Frederick Jackson Turner",
+    "type": "sezaman",
+    "inCatalog": false,
+    "note": "sesama sejarawan Era Progresif"
+   }
+  ]
+ },
+ "Cicero": {
+  "years": "106-43 SM",
+  "nationality": "Romawi",
+  "bio": "Negarawan, pengacara, dan orator yang berusaha mati-matian menyelamatkan Republik Romawi dari keruntuhan di tangan para diktator, sebelum akhirnya dieksekusi atas perintah Mark Antony karena pidato-pidatonya sendiri yang terlalu tajam. Gaya prosanya begitu berpengaruh sampai jadi standar bahasa Latin klasik selama berabad-abad setelahnya.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bust_of_Cicero_%281st-cent._BC%29_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg/330px-Bust_of_Cicero_%281st-cent._BC%29_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Cicero lahir 106 SM di Arpinum, dari keluarga kelas equites yang terhormat tapi bukan bangsawan patrician, sehingga ia dijuluki 'novus homo' atau orang baru ketika berhasil menembus elite politik Roma murni lewat kemampuan pidato dan hukumnya."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia belajar retorika dan filsafat langsung dari tradisi Akademi Plato serta Stoisisme di Athena dan Rhodes, perpaduan yang membentuk gaya berpikirnya yang eklektik — mengambil yang terbaik dari berbagai aliran filsafat Yunani lalu menuliskannya ulang dalam bahasa Latin yang elegan. Karier politiknya mencapai puncak sebagai konsul tahun 63 SM, tapi kemudian diwarnai konflik panjang dengan Julius Caesar dan faksi-faksi yang mengancam runtuhnya republik yang ia cintai."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'The Republic of Cicero', ia membayangkan bentuk pemerintahan ideal sebagai campuran seimbang antara monarki, aristokrasi, dan demokrasi, dengan hukum alam (natural law) sebagai fondasi keadilan yang berlaku universal melampaui hukum buatan manusia mana pun. Ia percaya akal budi manusia, jika dijalankan dengan benar, mampu mengendalikan hawa nafsu demi kebaikan bersama."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Prosa Latinnya jadi model gaya bahasa klasik yang dipelajari siswa Eropa selama berabad-abad, dan gagasannya tentang hukum alam serta republikanisme memengaruhi para pendiri republik modern, termasuk generasi revolusioner Amerika dan Prancis."
+   }
+  ],
+  "influencedBy": [
+   "Plato",
+   "Stoisisme Yunani",
+   "Akademi Skeptis"
+  ],
+  "influenced": [
+   "Niccolò Machiavelli",
+   "Edmund Burke",
+   "Republikanisme modern"
+  ],
+  "quote": {
+   "text": "For that is the best part of the mind, and where its authority prevails, there is no room for sensuality, for anger, or for rashness.",
+   "bookTitle": "The Republic of Cicero"
+  },
+  "connections": [
+   {
+    "to": "Plato",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Julius Caesar",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "oposisi politik terhadap kediktatorannya"
+   },
+   {
+    "to": "Livy",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "gaya prosa & sumber inspirasi"
+   },
+   {
+    "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Polybius",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Edmund Burke",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Theodor Mommsen",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Diogenes Laertius": {
+  "years": "abad ke-3 M",
+  "nationality": "Yunani-Romawi",
+  "bio": "Sosok misterius yang nyaris tak diketahui riwayat hidupnya sendiri, tapi tanpa sengaja menjadi penyelamat sejarah filsafat Yunani lewat satu buku kompilasi biografi yang ia susun dari ratusan sumber yang kini sudah hilang.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Diogenes_Laertius.jpg/330px-Diogenes_Laertius.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Nyaris tidak ada yang pasti diketahui tentang kehidupan pribadi Diogenes Laertius sendiri, termasuk kapan dan di mana ia lahir; para sejarawan hanya bisa menaksir ia hidup sekitar awal abad ke-3 Masehi berdasarkan tokoh-tokoh terakhir yang ia bahas dalam karyanya."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia tampaknya membaca dan mengumpulkan kutipan dari ratusan karya lebih tua tentang para filsuf Yunani, banyak di antaranya kini telah hilang sepenuhnya, menjadikan kompilasinya satu-satunya jendela yang tersisa ke sumber-sumber tersebut. Berbeda dari sejarawan filsafat lain yang gemar menafsir ulang ajaran, ia lebih memilih melaporkan apa adanya, sikap yang kelak dianggap kelemahan sekaligus kekuatan karyanya."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "'Lives and Opinions of Eminent Philosophers' menyusun riwayat hidup, anekdot, dan ajaran singkat hampir semua filsuf Yunani penting, dari Thales hingga generasi Stoa dan Epikurean, sering dibumbui gosip dan cerita lucu yang membuat para filsuf terasa manusiawi, bukan sekadar nama dalam buku teks."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Karena begitu banyak sumber primer filsafat Yunani kuno telah musnah dimakan waktu, karyanya jadi salah satu sumber tunggal terpenting yang tersisa bagi sejarawan filsafat modern untuk merekonstruksi kehidupan dan ajaran para filsuf pra-Socrates hingga Helenistik."
+   }
+  ],
+  "influencedBy": [
+   "Tradisi doksografi dan biografi Yunani-Romawi"
+  ],
+  "influenced": [
+   "Sejarah filsafat modern sebagai disiplin",
+   "Studi biografi filsuf kuno"
+  ],
+  "quote": {
+   "text": "The following is the account that authors give of the philosophy of the Egyptians, as bearing on the gods and on justice.",
+   "bookTitle": "The Lives and Opinions of Eminent Philosophers"
+  },
+  "connections": [
+   {
+    "to": "Plato",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "subjek biografinya"
+   },
+   {
+    "to": "Aristotle",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "subjek biografinya"
+   },
+   {
+    "to": "Epictetus",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "mendokumentasikan ajaran Stoa"
+   },
+   {
+    "to": "Xenophon",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "subjek biografinya"
+   }
+  ]
+ },
+ "Leopold von Ranke": {
+  "years": "1795-1886",
+  "nationality": "Jerman",
+  "bio": "Sejarawan yang menciptakan gagasan bahwa sejarah harus ditulis 'sebagaimana ia sesungguhnya terjadi' (wie es eigentlich gewesen), bukan untuk mengagungkan bangsa sendiri atau menghakimi masa lalu dari sudut pandang masa kini. Ia mempelopori metode seminar berbasis arsip yang membentuk cara sejarawan bekerja hingga hari ini.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jebens%2C_Adolf_-_Leopold_von_Ranke_%28detail%29_-_1875.jpg/330px-Jebens%2C_Adolf_-_Leopold_von_Ranke_%28detail%29_-_1875.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Ranke lahir 1795 di Wiehe, Thuringia, dari keluarga pendeta Lutheran, dan mendapat pendidikan klasik yang ketat sebelum mengajar sejarah di Universitas Berlin, tempat ia menghabiskan hampir seluruh kariernya."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ranke merasa gelisah dengan sejarah naratif romantis yang cenderung menghakimi masa lalu berdasarkan nilai masa kini, dan bertekad membangun metode yang lebih objektif berbasis dokumen arsip asli, bukan legenda atau narasi moralistik. Ia menolak filsafat sejarah teleologis ala Hegel yang menganggap sejarah bergerak menuju tujuan akhir tertentu, memilih pendekatan empiris yang lebih rendah hati terhadap kompleksitas peristiwa masa lalu."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Ranke mempelopori metode seminar sejarah berbasis kritik sumber primer yang ketat, menuntut mahasiswa memeriksa langsung dokumen arsip asli, bukan sekadar mengutip sejarawan lain. Ia menekankan pentingnya politik luar negeri (Außenpolitik) sebagai penggerak utama sejarah antarbangsa."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Metode seminarnya membentuk fondasi profesionalisasi ilmu sejarah modern di seluruh dunia, melahirkan generasi sejarawan yang menganggap dirinya ilmuwan, bukan sekadar pujangga. Ia dijuluki 'bapak historiografi ilmiah modern' dan dianugerahi gelar bangsawan 'von' atas jasanya."
+   }
+  ],
+  "influencedBy": [
+   "Kritik terhadap historiografi Romantis dan Whig",
+   "Filologi klasik Jerman"
+  ],
+  "influenced": [
+   "Theodor Mommsen",
+   "Edward A. Freeman",
+   "Historiografi ilmiah modern"
+  ],
+  "quote": {
+   "text": "We must be content in this department, as well as in others, if we can but approximate to the ideal we set up.",
+   "bookTitle": "A History of England, Principally in the Seventeenth Century (Vol. 1)"
+  },
+  "connections": [
+   {
+    "to": "Theodor Mommsen",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "metode kritik sumber"
+   },
+   {
+    "to": "Edward A. Freeman",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "metode kritik sumber"
+   },
+   {
+    "to": "Thomas Babington Macaulay",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "menolak historiografi Whig yang moralistik"
+   },
+   {
+    "to": "G. W. F. Hegel",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "menolak filsafat sejarah teleologisnya"
+   },
+   {
+    "to": "Jacob Burckhardt",
+    "type": "guru",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Ida B. Wells": {
+  "years": "1862-1931",
+  "nationality": "Amerika Serikat",
+  "bio": "Jurnalis investigatif kelahiran budak yang mempertaruhkan nyawanya sendiri untuk membongkar kebohongan di balik pembenaran lynching terhadap orang kulit hitam Amerika, sampai kantor korannya dihancurkan massa dan ia terpaksa mengungsi demi keselamatannya.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_-_restoration_crop.jpg/330px-Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_-_restoration_crop.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Wells lahir 1862 di Mississippi saat perbudakan masih berlaku, dan menjadi yatim piatu di usia enam belas tahun setelah wabah demam kuning merenggut kedua orangtuanya, memaksanya membesarkan adik-adiknya sendiri sambil bekerja sebagai guru."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Setelah tiga sahabatnya di Memphis dibunuh massa lynching hanya karena toko mereka bersaing sukses dengan pengusaha kulit putih, Wells memutuskan menyelidiki sendiri kasus-kasus lynching di seluruh Selatan Amerika dan menemukan sebagian besar tuduhan yang dijadikan alasan pembenaran ternyata palsu atau dibuat-buat. Investigasinya membuat kantor korannya dihancurkan massa marah, memaksanya mengungsi ke Utara demi keselamatan nyawanya sendiri."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'Southern Horrors', Wells membongkar dengan data statistik yang cermat bahwa lynching bukan hukuman spontan atas kejahatan seperti diklaim, melainkan alat teror terorganisir untuk menjaga dominasi ekonomi dan sosial kulit putih atas komunitas kulit hitam yang mulai maju."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Ia jadi salah satu pendiri NAACP dan tokoh kunci gerakan anti-lynching serta hak pilih perempuan kulit hitam, meski sering diremehkan sesama aktivis kulit putih karena isu ras. Metodenya menggabungkan jurnalisme investigatif dengan data statistik jadi model penting advokasi berbasis bukti."
+   }
+  ],
+  "influencedBy": [
+   "Frederick Douglass",
+   "Pengalaman langsungnya menyaksikan kekerasan rasial"
+  ],
+  "influenced": [
+   "W. E. B. Du Bois dan NAACP",
+   "Gerakan hak sipil Amerika",
+   "Jurnalisme investigatif berbasis data"
+  ],
+  "quote": {
+   "text": "It is with no pleasure I have dipped my hands in the corruption here exposed.",
+   "bookTitle": "Southern Horrors: Lynch Law in All Its Phases"
+  },
+  "connections": [
+   {
+    "to": "Frederick Douglass",
+    "type": "kolaborator",
+    "inCatalog": true,
+    "note": "menulis pamflet bersama merespons Pameran Dunia Chicago"
+   },
+   {
+    "to": "W. E. B. Du Bois",
+    "type": "kolaborator",
+    "inCatalog": true,
+    "note": "sesama pendiri NAACP"
+   },
+   {
+    "to": "Booker T. Washington",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "mengkritik pendekatan akomodasionisnya"
+   },
+   {
+    "to": "Elizabeth Cady Stanton",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Anna Julia Cooper",
+    "type": "sezaman",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Rosa Luxemburg": {
+  "years": "1871-1919",
+  "nationality": "Polandia-Jerman",
+  "bio": "Teoretisi Marxis kelahiran Polandia yang naik jadi salah satu pemimpin intelektual paling tajam gerakan buruh Eropa, sekaligus lawan debat berani Lenin soal bagaimana revolusi seharusnya diorganisir. Ia dibunuh milisi sayap kanan tak lama setelah revolusi Jerman 1918 yang ia perjuangkan gagal terwujud sepenuhnya.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Rosa_Luxemburg_%28cropped%29.jpg/330px-Rosa_Luxemburg_%28cropped%29.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Luxemburg lahir 1871 di Zamość, Polandia yang saat itu berada di bawah kekuasaan Rusia, dari keluarga Yahudi kelas menengah, dan sejak remaja aktif dalam gerakan sosialis bawah tanah yang membuatnya harus melarikan diri ke Swiss demi menghindari penangkapan polisi Rusia."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Di Zurich ia menyelesaikan doktor ekonomi dan hukum, lalu pindah ke Jerman lewat pernikahan formal demi memperoleh kewarganegaraan, dan segera menjadi salah satu pemimpin sayap kiri Partai Sosial Demokrat Jerman (SPD). Perdebatannya yang tajam dengan Lenin soal sentralisme partai revolusioner versus spontanitas massa buruh menunjukkan independensi pemikirannya, tak sekadar mengekor otoritas manapun dalam gerakan sosialis internasional."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'The Accumulation of Capital', ia memperluas teori ekonomi Marx dengan menjelaskan mengapa kapitalisme butuh terus-menerus mengekspansi ke wilayah non-kapitalis (kolonialisme) untuk menyerap kelebihan produksinya, sebuah analisis awal penting tentang hubungan kapitalisme dan imperialisme."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Ia ikut mendirikan Liga Spartakus yang kelak jadi Partai Komunis Jerman, tapi dibunuh brutal oleh milisi Freikorps sayap kanan pada 1919 tak lama setelah pemberontakan yang ia ikut pimpin gagal. Namanya kini jadi simbol penting sosialisme demokratik yang menolak otoritarianisme, dihormati lintas spektrum kiri karena keberaniannya berbeda pendapat bahkan dengan sesama revolusioner."
+   }
+  ],
+  "influencedBy": [
+   "Karl Marx",
+   "Pengalaman gerakan sosialis bawah tanah Polandia-Rusia"
+  ],
+  "influenced": [
+   "Sosialisme demokratik abad ke-20",
+   "Teori imperialisme Marxis"
+  ],
+  "quote": {
+   "text": "It is socially necessary labour which creates value.",
+   "bookTitle": "The Accumulation of Capital"
+  },
+  "connections": [
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Karl Marx & Friedrich Engels",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Vladimir Lenin",
+    "type": "menentang",
+    "inCatalog": false,
+    "note": "perdebatan soal organisasi partai revolusioner"
+   },
+   {
+    "to": "Revolusi Jerman 1918-1919",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
+ },
+ "William Morris": {
+  "years": "1834-1896",
+  "nationality": "Inggris",
+  "bio": "Desainer tekstil, penyair, dan sosialis yang begitu benci pada barang-barang murahan hasil produksi massal industri sampai mendirikan perusahaan sendiri untuk membuktikan kerajinan tangan yang indah masih bisa hidup di zaman mesin. 'News from Nowhere' adalah visinya tentang masa depan sosialis tanpa pabrik kotor maupun birokrasi negara yang mengekang.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/William_Morris_age_53.jpg/330px-William_Morris_age_53.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Morris lahir 1834 dari keluarga kaya di pinggiran London, dan sejak kecil terpesona pada arsitektur abad pertengahan serta cerita-cerita ksatria, minat yang terus terbawa sepanjang hidupnya sebagai seniman dan penulis."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia sangat terpengaruh kritik John Ruskin terhadap industrialisasi yang menurutnya merampas kegembiraan kerja manusia, dan mendirikan perusahaan desain sendiri untuk membuktikan produk buatan tangan yang indah masih relevan di tengah dominasi pabrik. Semakin ia menyaksikan kondisi buruk buruh industri Inggris, semakin ia yakin hanya perubahan sosial radikal — sosialisme — yang bisa menyelamatkan baik pekerja maupun keindahan seni dari kehancuran kapitalisme industri."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'News from Nowhere', Morris membayangkan Inggris masa depan yang telah menjalani revolusi sosialis, di mana kerja menjadi sumber kegembiraan bukan penderitaan, kota-kota hijau menggantikan pabrik kotor, dan tak ada lagi negara sentral yang mengatur kehidupan orang secara ketat — visi yang sengaja ia tulis sebagai sanggahan terhadap utopia yang lebih birokratis dan terpusat seperti 'Looking Backward' karya Edward Bellamy."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Gerakan Arts and Crafts yang ia rintis memengaruhi desain modern di seluruh dunia, sementara visi sosialismenya yang menekankan keindahan, kerja bermakna, dan harmoni dengan alam terus menginspirasi pemikiran ekologis dan anti-konsumerisme hingga kini."
+   }
+  ],
+  "influencedBy": [
+   "John Ruskin",
+   "Kondisi buruh industri Inggris"
+  ],
+  "influenced": [
+   "Gerakan Arts and Crafts",
+   "Sosialisme utopis Inggris",
+   "Gerakan ekologis dan anti-konsumerisme modern"
+  ],
+  "quote": {
+   "text": "It was a beautiful night of early winter, the air just sharp enough to be refreshing after the hot room and the stinking railway carriage.",
+   "bookTitle": "News from Nowhere"
+  },
+  "connections": [
+   {
+    "to": "John Ruskin",
+    "type": "murid",
+    "inCatalog": true,
+    "note": "mentor pemikirannya soal seni & industrialisasi"
+   },
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Edward Bellamy",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "'News from Nowhere' ditulis sebagai sanggahan atas 'Looking Backward'"
+   }
+  ]
+ },
+ "G. W. F. Hegel": {
+  "years": "1770-1831",
+  "nationality": "Jerman",
+  "bio": "Filsuf yang membangun sistem pemikiran paling ambisius dalam sejarah filsafat Barat, mencoba menjelaskan seluruh sejarah manusia, seni, agama, dan negara sebagai satu proses rasional yang terus bergerak menuju kesadaran diri yang lebih penuh (Geist). Gaya tulisannya yang rumit membuatnya salah satu filsuf paling dikagumi sekaligus paling ditakuti mahasiswa filsafat.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Jakob_Schlesinger_-_Hegel_1831.jpg/330px-Jakob_Schlesinger_-_Hegel_1831.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Hegel lahir 1770 di Stuttgart, dari keluarga birokrat Protestan kelas menengah, dan menempuh pendidikan teologi di seminari Tübingen berbarengan dengan Friedrich Hölderlin dan Friedrich Schelling, dua tokoh yang kelak juga jadi nama besar sastra dan filsafat Jerman."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia mengembangkan pemikirannya di tengah gejolak Revolusi Prancis dan penaklukan Napoleon atas negara-negara Jerman, peristiwa yang meyakinkannya bahwa sejarah bukan rangkaian kebetulan melainkan proses rasional yang bergerak menuju kebebasan yang makin sempurna. Ia sempat mengajar di Jena tepat ketika pasukan Napoleon menyerbu kota itu, sebuah momen yang menurutnya menyaksikan 'Roh Dunia menunggang kuda'."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Hegel mengajukan metode dialektika: setiap gagasan (tesis) memunculkan penyangkalnya (antitesis), lalu keduanya berdamai dalam pemahaman baru yang lebih tinggi (sintesis) — proses yang menurutnya juga menggerakkan sejarah, negara, dan kesadaran manusia menuju kebebasan yang makin utuh. Negara, baginya, adalah wujud tertinggi kebebasan rasional yang terorganisir, bukan sekadar alat penindas."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Pengaruhnya begitu luas hingga melahirkan aliran-aliran yang saling bertentangan: Young Hegelians seperti Feuerbach dan Marx membalik sistemnya jadi materialisme, sementara idealis Inggris seperti T. H. Green mengadaptasinya jadi liberalisme sosial. Sedikit filsuf lain yang pengaruhnya terbelah sekaligus seluas Hegel."
+   }
+  ],
+  "influencedBy": [
+   "Immanuel Kant",
+   "Revolusi Prancis dan penaklukan Napoleon"
+  ],
+  "influenced": [
+   "Ludwig Feuerbach",
+   "Karl Marx",
+   "Thomas Hill Green",
+   "Josiah Royce"
+  ],
+  "quote": {
+   "text": "But there is the further fact, that neither in Religion nor in Philosophy does this external form remain, nor can it so remain.",
+   "bookTitle": "Hegel's Lectures on the History of Philosophy (Vol. 1)"
+  },
+  "connections": [
+   {
+    "to": "Immanuel Kant",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Karl Marx & Friedrich Engels",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Baruch Spinoza",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Mikhail Bakunin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Ludwig Feuerbach",
+    "type": "guru",
+    "inCatalog": true
+   },
+   {
+    "to": "John Dewey",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Hill Green",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Josiah Royce",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Leopold von Ranke",
+    "type": "menentang",
+    "inCatalog": true
+   },
+   {
+    "to": "Adam Ferguson",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
+ },
+ "John Fiske": {
+  "years": "1842-1901",
+  "nationality": "Amerika Serikat",
+  "bio": "Filsuf dan sejarawan populer yang menjadikan diri sendiri penerjemah utama gagasan evolusi Herbert Spencer bagi publik Amerika, lewat kuliah-kuliah kelilingnya yang selalu ramai penonton meski topiknya berat.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Picture_of_John_Fiske.jpg/330px-Picture_of_John_Fiske.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Fiske lahir 1842 di Hartford, Connecticut, anak yang dikabarkan sudah membaca dalam beberapa bahasa asing sebelum remaja, dan menyelesaikan pendidikan di Harvard dengan minat luas mencakup filsafat, sejarah, dan biologi evolusi."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia sangat terpengaruh teori evolusi Charles Darwin dan terutama filsafat sintesis Herbert Spencer yang mencoba menerapkan evolusi ke seluruh alam semesta dan masyarakat manusia. Karena gaya menulis akademiknya yang terlalu berat membuat ia sulit mendapat posisi profesor tetap, Fiske beralih jadi dosen keliling dan penulis populer yang menerjemahkan gagasan besar semacam ini untuk publik luas Amerika."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Fiske menerapkan kerangka evolusi Spencer pada sejarah Amerika, berargumen perkembangan institusi demokratis Amerika adalah hasil proses evolusi sosial bertahap, bukan rancangan sempurna sejak awal, dan mengkritik perbandingan naif antara republik Amerika dengan republik Romawi kuno karena mengabaikan perbedaan mendasar keduanya."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Meski reputasinya sebagai filsuf orisinal kalah dibanding Spencer yang ia populerkan, kontribusinya menyebarluaskan gagasan evolusi ke kalangan awam Amerika sangat besar, menjadikannya salah satu penjembatan penting antara sains evolusi dan kesadaran publik Amerika akhir abad ke-19."
+   }
+  ],
+  "influencedBy": [
+   "Herbert Spencer",
+   "Charles Darwin"
+  ],
+  "influenced": [
+   "Popularisasi teori evolusi di Amerika",
+   "Historiografi evolusioner Amerika"
+  ],
+  "quote": {
+   "text": "It was essentially fallacious, therefore, to liken the case of the United States to that of ancient Rome.",
+   "bookTitle": "The Critical Period of American History"
+  },
+  "connections": [
+   {
+    "to": "Herbert Spencer",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "penerjemah utama gagasannya bagi publik Amerika"
+   },
+   {
+    "to": "Francis Parkman",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
+ },
+ "Matthew Arnold": {
+  "years": "1822-1888",
+  "nationality": "Inggris",
+  "bio": "Penyair yang beralih jadi kritikus budaya paling tajam era Victoria, menghabiskan puluhan tahun sebagai inspektur sekolah keliling sambil menulis esai yang mencela apa yang ia sebut 'filistinisme' — kepuasan diri kelas menengah Inggris yang mengabaikan keindahan dan kedalaman pikiran demi kesuksesan material semata.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Matthew_Arnold.jpg/330px-Matthew_Arnold.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Arnold lahir 1822, putra Thomas Arnold, kepala sekolah legendaris Rugby School yang reformasinya mengubah wajah pendidikan elite Inggris, sebuah warisan besar yang membentuk standar tinggi yang harus dijalani putranya sejak kecil."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Setelah kuliah di Oxford, Arnold bekerja lebih dari tiga puluh lima tahun sebagai inspektur sekolah keliling Inggris, pekerjaan yang membuatnya menyaksikan langsung dangkalnya pendidikan kelas menengah industrial dan kepuasan diri budaya yang ia sebut filistinisme. Bacaannya yang luas terhadap Stoisisme klasik, terutama Marcus Aurelius, memberinya kerangka moral untuk mengkritik masyarakat industrial yang menurutnya kehilangan arah spiritual."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'Culture and Anarchy', Arnold berargumen 'kultur' — pengejaran kesempurnaan lewat mengenal yang terbaik dari pemikiran dan tulisan dunia — adalah penawar penting bagi anarki sosial yang mengancam masyarakat industrial yang makin materialistis dan terpecah oleh kelas. Ia menekankan pentingnya 'sweetness and light', keindahan dan kejernihan pikiran, sebagai tujuan kultur sejati."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Kritik budayanya jadi rujukan penting studi budaya modern, dan istilah-istilah yang ia ciptakan seperti 'filistinisme' dan 'sweetness and light' masih dipakai luas dalam wacana budaya Inggris. Esainya tentang Marcus Aurelius ikut memperkenalkan kembali Stoisisme kuno pada publik Victoria yang tengah mencari fondasi moral baru."
+   }
+  ],
+  "influencedBy": [
+   "Thomas Arnold (ayahnya)",
+   "Marcus Aurelius dan Stoisisme klasik"
+  ],
+  "influenced": [
+   "Studi budaya (cultural studies) modern",
+   "Kritik sastra Inggris abad ke-20"
+  ],
+  "quote": {
+   "text": "Culture looks beyond machinery, culture hates hatred; culture has but one great passion, the passion for sweetness and light.",
+   "bookTitle": "Culture and Anarchy"
+  },
+  "connections": [
+   {
+    "to": "Marcus Aurelius",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "menulis esai kekaguman tentangnya"
+   },
+   {
+    "to": "Thomas Carlyle",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "John Stuart Mill",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "mengkritik individualisme liberalnya"
+   },
+   {
+    "to": "Thomas Arnold",
+    "type": "guru",
+    "inCatalog": false,
+    "note": "ayahnya, kepala sekolah Rugby"
+   }
+  ]
+ },
+ "William Stanley Jevons": {
+  "years": "1835-1882",
+  "nationality": "Inggris",
+  "bio": "Ekonom dan logikawan yang memicu 'revolusi marjinalis' dengan menerapkan matematika kalkulus pada teori nilai ekonomi, menggeser fondasi ilmu ekonomi dari teori nilai kerja klasik menuju teori utilitas marjinal yang mendominasi ekonomi modern hingga sekarang.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/William_Stanley_Jevons_portrait_extract.jpg/330px-William_Stanley_Jevons_portrait_extract.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Jevons lahir 1835 di Liverpool dari keluarga pedagang besi yang bangkrut saat ia masih muda, memaksanya bekerja sebagai penguji logam di Australia sebelum bisa kembali menyelesaikan pendidikan formalnya di Inggris."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Pengalamannya di Australia mengasah ketertarikannya pada statistik dan data empiris, sementara latar belakang matematikanya yang kuat membuatnya tak puas dengan teori nilai kerja klasik ala Ricardo dan Mill yang menurutnya terlalu kasar untuk menjelaskan bagaimana harga sebenarnya terbentuk. Ia secara terbuka menyatakan niatnya menggulingkan ortodoksi ekonomi klasik yang telah mapan sejak Adam Smith dan Ricardo."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Jevons berargumen nilai suatu barang ditentukan oleh utilitas marjinal — kepuasan tambahan dari satu unit terakhir yang dikonsumsi — bukan oleh jumlah tenaga kerja yang digunakan untuk memproduksinya, sebuah pergeseran fondasi yang disebut revolusi marjinalis dan terjadi hampir bersamaan di Inggris, Austria, dan Prancis."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Revolusi marjinalis yang ia pelopori jadi fondasi ekonomi neoklasik modern yang masih diajarkan di hampir semua sekolah ekonomi dunia saat ini. Buku pengantarnya yang ringkas dan mudah dipahami juga membantu menyebarluaskan ilmu ekonomi ke kalangan pelajar yang lebih luas."
+   }
+  ],
+  "influencedBy": [
+   "Matematika kalkulus diterapkan pada ekonomi",
+   "Data statistik empiris"
+  ],
+  "influenced": [
+   "Revolusi marjinalis",
+   "Ekonomi neoklasik modern"
+  ],
+  "quote": {
+   "text": "It is a misfortune both for himself and for other people if he is obliged to undertake work which he cannot do so well.",
+   "bookTitle": "Political Economy"
+  },
+  "connections": [
+   {
+    "to": "John Stuart Mill",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "menolak metode ekonomi klasiknya"
+   },
+   {
+    "to": "David Ricardo",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "menolak teori nilai kerjanya"
+   },
+   {
+    "to": "John Bates Clark",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sesama tokoh revolusi marjinalis"
+   }
+  ]
+ },
+ "Edward Bellamy": {
+  "years": "1850-1898",
+  "nationality": "Amerika Serikat",
+  "bio": "Penulis dan jurnalis yang novelnya tentang Amerika di tahun 2000 begitu populer sampai memicu ratusan 'Klub Nasionalis' bermunculan di seluruh negeri, para pembaca yang begitu terinspirasi hingga ingin mewujudkan visi utopianya secara nyata.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Edward_Bellamy_-_photograph_c.1889.jpg/330px-Edward_Bellamy_-_photograph_c.1889.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Bellamy lahir 1850 di Chicopee Falls, Massachusetts, anak seorang pendeta Baptis, dan sejak muda tertarik pada isu ketimpangan sosial yang makin tajam di tengah industrialisasi Amerika pasca Perang Saudara."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Sebagai jurnalis, ia menyaksikan langsung kesenjangan ekstrem antara pengusaha kaya raya dan buruh miskin era Gilded Age, kondisi yang mendorongnya membayangkan alternatif tatanan ekonomi yang lebih adil lewat fiksi, bukan risalah politik kering. Ia sengaja menghindari istilah 'sosialisme' yang dianggap terlalu asing dan menakutkan bagi pembaca Amerika, memilih menyebut visinya 'Nasionalisme'."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'Looking Backward', tokoh utama tertidur di 1887 dan bangun di tahun 2000 untuk mendapati Amerika telah bertransformasi jadi masyarakat sosialis-teknokratis yang damai, di mana industri dinasionalisasi dan setiap warga bekerja untuk 'tentara industri' bersama tanpa kompetisi maupun kemiskinan."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Novel ini jadi salah satu buku Amerika terlaris abad ke-19, memicu gerakan 'Nationalist Clubs' yang menyebar ke seluruh Amerika, meski visinya yang sangat terpusat dan birokratis kelak dikritik keras oleh sosialis lain seperti William Morris yang menganggapnya terlalu kaku dan tak manusiawi."
+   }
+  ],
+  "influencedBy": [
+   "Ketimpangan ekonomi era Gilded Age Amerika",
+   "Sosialisme Eropa (secara tidak langsung)"
+  ],
+  "influenced": [
+   "Gerakan Nationalist Clubs",
+   "Sosialisme utopis Amerika",
+   "Kebijakan kesejahteraan Progresif Amerika"
+  ],
+  "quote": {
+   "text": "How strange and wellnigh incredible does it seem that so prodigious a moral and material transformation as has taken place since then could have been accomplished in so brief an interval!",
+   "bookTitle": "Looking Backward, 2000 to 1887"
+  },
+  "connections": [
+   {
+    "to": "William Morris",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "dikritik Morris sebagai utopia yang terlalu terpusat & birokratis"
+   },
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Gerakan Nationalist Clubs",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
+ },
+ "Adam Ferguson": {
+  "years": "1723-1816",
+  "nationality": "Skotlandia",
+  "bio": "Pendeta yang beralih jadi filsuf sejarah, salah satu tokoh utama Pencerahan Skotlandia yang mula-mula mempopulerkan istilah 'masyarakat sipil' (civil society), gagasan yang kelak diambil alih dan dikembangkan lebih jauh oleh Hegel dan Marx sendiri.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/ProfAdamFerguson.jpg/330px-ProfAdamFerguson.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Ferguson lahir 1723 di Perthshire, Skotlandia, anak seorang pendeta, dan sempat menjadi pendeta militer untuk resimen Highland sebelum beralih ke karier akademik di Universitas Edinburgh."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia menjadi bagian inti lingkaran Pencerahan Skotlandia bersama David Hume dan Adam Smith, bergaul dan berdebat rutin di kedai kopi serta klub intelektual Edinburgh yang saat itu jadi salah satu pusat pemikiran paling maju di Eropa. Pengalamannya sebagai pendeta militer memberinya perspektif langsung tentang bagaimana masyarakat berkembang dari kondisi kasar menuju peradaban terorganisir."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'An Essay on the History of Civil Society', Ferguson menjelaskan perkembangan masyarakat manusia melalui tahapan dari kesederhanaan menuju kompleksitas peradaban, sambil memperingatkan bahwa pembagian kerja yang makin sempit dalam masyarakat modern berisiko mengikis semangat kewargaan dan keberanian sipil warganya."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Konsep 'masyarakat sipil' yang ia kembangkan diambil dan diperluas oleh Hegel dalam filsafat politiknya, lalu diadaptasi lebih jauh oleh Marx sebagai kritik ekonomi-politik, menjadikan Ferguson salah satu mata rantai penting namun sering terlupakan dalam sejarah pemikiran politik modern."
+   }
+  ],
+  "influencedBy": [
+   "Pencerahan Skotlandia",
+   "Pengalamannya sebagai pendeta militer Highland"
+  ],
+  "influenced": [
+   "G. W. F. Hegel",
+   "Karl Marx",
+   "Sosiologi modern (konsep masyarakat sipil)"
+  ],
+  "quote": {
+   "text": "He is, in short, a man in every condition; and we can learn nothing of his nature from the analogy of other animals.",
+   "bookTitle": "An Essay on the History of Civil Society"
+  },
+  "connections": [
+   {
+    "to": "Adam Smith",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sesama tokoh Pencerahan Skotlandia"
+   },
+   {
+    "to": "David Hume",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sesama tokoh Pencerahan Skotlandia"
+   },
+   {
+    "to": "Karl Marx",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "konsep masyarakat sipil"
+   },
+   {
+    "to": "G. W. F. Hegel",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "konsep 'bürgerliche Gesellschaft'"
+   },
+   {
+    "to": "James Steuart",
+    "type": "sezaman",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Anna Julia Cooper": {
+  "years": "1858-1964",
+  "nationality": "Amerika Serikat",
+  "bio": "Lahir dalam perbudakan, ia hidup hampir sampai usia 106 tahun dan di usia 66 menjadi perempuan Afrika-Amerika keempat yang meraih gelar doktor, membela pendidikan klasik penuh bagi perempuan kulit hitam di saat banyak pihak justru menganggap itu tak perlu.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/A_J_Cooper.jpg/330px-A_J_Cooper.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Cooper lahir 1858 di North Carolina dalam status budak, anak dari perempuan budak dan diduga kuat majikannya sendiri, dan menunjukkan kecerdasan luar biasa sejak dini hingga mendapat beasiswa ke Oberlin College, salah satu kampus pertama yang menerima perempuan dan orang kulit hitam."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Di Oberlin, Cooper harus berjuang menuntut agar diizinkan mengambil jalur akademik penuh setara laki-laki, bukan jalur 'ladies course' yang dianggap cukup bagi perempuan, sebuah perjuangan awal yang membentuk pandangannya seumur hidup soal pendidikan sebagai hak, bukan hadiah. Kariernya sebagai pendidik di M Street School Washington D.C. membuatnya terlibat perdebatan langsung dengan tokoh sezamannya soal arah pendidikan terbaik bagi kaum kulit hitam Amerika."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'A Voice from the South', Cooper berargumen kemajuan ras kulit hitam Amerika tak bisa dipisahkan dari kemajuan perempuan kulit hitam, dan bahwa suara perempuan kulit hitam sering diabaikan baik oleh gerakan hak sipil yang didominasi laki-laki maupun gerakan feminis yang didominasi perempuan kulit putih."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Di usia 66 tahun, ia menyelesaikan gelar doktor di Universitas Sorbonne Paris, menjadikannya perempuan Afrika-Amerika keempat yang meraih gelar doktor. Karyanya kini dianggap fondasi penting feminisme kulit hitam (Black feminism) dan teori interseksionalitas modern."
+   }
+  ],
+  "influencedBy": [
+   "Frederick Douglass",
+   "Pengalaman langsungnya lahir dalam perbudakan"
+  ],
+  "influenced": [
+   "Feminisme kulit hitam (Black feminism)",
+   "Teori interseksionalitas modern"
+  ],
+  "quote": {
+   "text": "In the clash and clatter of our American Conflict, it has been said that the South remains Silent.",
+   "bookTitle": "A Voice from the South"
+  },
+  "connections": [
+   {
+    "to": "W. E. B. Du Bois",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Ida B. Wells",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sesama intelektual perempuan kulit hitam era itu"
+   },
+   {
+    "to": "Booker T. Washington",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "berbeda pandangan soal pendidikan klasik vs vokasional"
+   },
+   {
+    "to": "Frederick Douglass",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
+ },
+ "James Steuart": {
+  "years": "1712-1780",
+  "nationality": "Skotlandia",
+  "bio": "Bangsawan Jacobite yang terpaksa mengasingkan diri ke Eropa daratan selama hampir dua dekade setelah ikut pemberontakan gagal 1745, dan justru dari pengasingan itulah ia menulis buku sistematis pertama berbahasa Inggris yang secara eksplisit memakai istilah 'ekonomi politik' dalam judulnya — mendahului Adam Smith.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Domenico_Dupr%C3%A0_%281689-1770%29_%28attributed_to%29_-_Sir_James_Steuart_Denham_%281713%E2%80%931780%29_-_PG_2853_-_National_Galleries_of_Scotland.jpg/330px-Domenico_Dupr%C3%A0_%281689-1770%29_%28attributed_to%29_-_Sir_James_Steuart_Denham_%281713%E2%80%931780%29_-_PG_2853_-_National_Galleries_of_Scotland.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Steuart lahir 1712 dari keluarga bangsawan Skotlandia terkemuka, dan mengenyam pendidikan hukum di Edinburgh sebelum terjun ke dunia politik yang penuh gejolak faksi Jacobite yang ingin mengembalikan tahta ke wangsa Stuart."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Keterlibatannya dalam pemberontakan Jacobite 1745 yang gagal total memaksanya melarikan diri dan hidup dalam pengasingan panjang di berbagai kota Eropa daratan selama hampir delapan belas tahun, masa yang justru ia manfaatkan untuk mengamati langsung beragam sistem ekonomi dan kebijakan negara di seluruh benua. Pengasingan inilah yang memberinya perspektif komparatif luas yang jarang dimiliki ekonom Inggris sezamannya."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'An Inquiry into the Principles of Political Oeconomy', Steuart menekankan peran aktif negara dalam mengelola ekonomi dan populasi, pandangan yang lebih dekat ke tradisi merkantilis dibanding pendekatan pasar bebas yang kelak dipopulerkan Adam Smith tak lama setelahnya."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Meski segera dibayangi kepopuleran 'The Wealth of Nations' karya Adam Smith yang terbit tak lama setelahnya, karya Steuart diakui sebagai risalah ekonomi politik sistematis pertama dalam bahasa Inggris, dan belakangan mendapat perhatian baru dari sejarawan pemikiran ekonomi yang menelusuri akar disiplin ini."
+   }
+  ],
+  "influencedBy": [
+   "Pengasingan panjangnya di Eropa daratan",
+   "Merkantilisme akhir"
+  ],
+  "influenced": [
+   "Ekonomi politik sebagai disiplin",
+   "Adam Smith (sebagai pendahulu yang dilampaui)"
+  ],
+  "quote": {
+   "text": "The killing the wethers of a flock of sheep does not diminish the brood of lambs next year; the killing of old pigeons makes a pigeon-house thrive.",
+   "bookTitle": "An Inquiry into the Principles of Political Oeconomy (Vol. 1)"
+  },
+  "connections": [
+   {
+    "to": "Adam Smith",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "pendekatan merkantilisnya kemudian dilampaui Smith"
+   },
+   {
+    "to": "Adam Ferguson",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sesama tokoh Pencerahan Skotlandia"
+   }
+  ]
+ },
+ "Herbert Spencer": {
+  "years": "1820-1903",
+  "nationality": "Inggris",
+  "bio": "Polymath otodidak yang menciptakan istilah 'survival of the fittest' setelah membaca Darwin, lalu menerapkan gagasan evolusi ke hampir semua bidang — biologi, psikologi, etika, sosiologi — dalam sistem filsafat sintetik paling ambisius era Victoria.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Portrait_of_Herbert_Spencer_%281820-1903%29%2C_Physicist_and_Biologist_%282552868551%29.jpg/330px-Portrait_of_Herbert_Spencer_%281820-1903%29%2C_Physicist_and_Biologist_%282552868551%29.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Spencer lahir 1820 di Derby, Inggris, dari keluarga nonkonformis yang skeptis terhadap otoritas gereja dan sekolah formal, sehingga ia lebih banyak dididik sendiri di rumah oleh ayah dan pamannya ketimbang mengenyam pendidikan universitas."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Bekerja sebagai insinyur kereta api sebelum beralih total ke penulisan filsafat, Spencer mengembangkan gagasan evolusi sosial bahkan sebelum Charles Darwin menerbitkan 'On the Origin of Species', lalu setelah membaca karya Darwin ia menciptakan sendiri istilah 'survival of the fittest' yang kelak justru lebih diasosiasikan dengan Darwin. Ia dengan tegas menolak dianggap pengikut Auguste Comte, meski keduanya sama-sama membangun sistem filsafat besar yang mencoba menyatukan seluruh ilmu pengetahuan."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Spencer menerapkan prinsip evolusi — dari yang sederhana dan homogen menuju yang kompleks dan terdiferensiasi — ke hampir semua bidang kajian, dan dalam politik ia jadi pendukung radikal individualisme laissez-faire, bahkan sampai mempertanyakan legitimasi negara itu sendiri lewat esai 'The Right to Ignore the State'."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Gagasannya sangat populer di masa hidupnya, terutama di Amerika Serikat, tapi pengaruhnya menyusut drastis di abad ke-20 seiring bangkitnya kritik terhadap 'social Darwinism' yang dianggap membenarkan ketimpangan sosial secara ilmiah semu. Ia tetap diakui sebagai salah satu tokoh paling berpengaruh — sekaligus paling diperdebatkan — dalam sejarah pemikiran sosial abad ke-19."
+   }
+  ],
+  "influencedBy": [
+   "Charles Darwin",
+   "Penolakannya terhadap positivisme Comte"
+  ],
+  "influenced": [
+   "John Fiske",
+   "Social Darwinism",
+   "William Graham Sumner"
+  ],
+  "quote": {
+   "text": "The State employs evil weapons to subjugate evil, and is alike contaminated by the objects with which it deals and the means by which it works.",
+   "bookTitle": "The Right to Ignore the State"
+  },
+  "connections": [
+   {
+    "to": "Charles Darwin",
+    "type": "pengaruh",
+    "inCatalog": false
+   },
+   {
+    "to": "John Fiske",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "murid tak langsung, penyebar gagasannya di Amerika"
+   },
+   {
+    "to": "Auguste Comte",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "menolak diasosiasikan dengan positivisme Comte"
+   },
+   {
+    "to": "Charlotte Perkins Gilman",
+    "type": "menentang",
+    "inCatalog": true
+   },
+   {
+    "to": "Olive Schreiner",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "William Graham Sumner",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Hill Green",
+    "type": "menentang",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Jacob Burckhardt": {
+  "years": "1818-1897",
+  "nationality": "Swiss",
+  "bio": "Sejarawan yang menciptakan gambaran Renaisans Italia sebagai kelahiran kembali individualisme modern, gagasan yang begitu berpengaruh sampai jadi cara standar orang memahami era itu selama lebih dari satu abad, meski ia sendiri hidup sederhana dan menolak jabatan bergengsi demi tetap mengajar di kampung halamannya, Basel.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ETH-BIB-Burckhardt%2C_Jakob_%281818-1897%29-Portrait-Portr_00053.tif/lossy-page1-330px-ETH-BIB-Burckhardt%2C_Jakob_%281818-1897%29-Portrait-Portr_00053.tif.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Burckhardt lahir 1818 di Basel, Swiss, dari keluarga pendeta Protestan terkemuka, dan awalnya belajar teologi sebelum beralih ke sejarah dan sejarah seni setelah kehilangan keyakinan religius ortodoksnya."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia belajar sejarah di Berlin langsung di bawah Leopold von Ranke, menyerap metode kritik sumbernya yang ketat, tapi kemudian memilih jalur berbeda dengan lebih tertarik pada sejarah kebudayaan dan seni ketimbang sejarah politik dan diplomasi yang jadi fokus Ranke. Di Basel, ia menjalin persahabatan erat dengan Friedrich Nietzsche muda yang mengaguminya sebagai kolega sekaligus figur bapak intelektual."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'The Civilisation of the Renaissance in Italy', Burckhardt menggambarkan Renaisans sebagai titik kelahiran individualisme modern, ketika manusia Eropa mulai memandang dirinya sebagai pribadi unik yang mengejar keunggulan personal, bukan sekadar anggota kelompok atau kelas sosial seperti di Abad Pertengahan."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Gambaran Renaisans yang ia rumuskan begitu berpengaruh sampai jadi kerangka standar yang dipelajari dan diperdebatkan sejarawan seni dan budaya selama lebih dari satu abad setelahnya. Ia dianggap salah satu pelopor penting sejarah kebudayaan sebagai bidang tersendiri, terpisah dari sejarah politik dan militer konvensional."
+   }
+  ],
+  "influencedBy": [
+   "Leopold von Ranke",
+   "Seni dan arsitektur Renaisans Italia"
+  ],
+  "influenced": [
+   "Friedrich Nietzsche",
+   "Sejarah kebudayaan (cultural history) modern",
+   "Studi Renaisans Italia"
+  ],
+  "quote": {
+   "text": "The struggle between the Popes and the Hohenstaufen left Italy in a political condition which differed essentially from that of other countries of the West.",
+   "bookTitle": "The Civilisation of the Renaissance in Italy"
+  },
+  "connections": [
+   {
+    "to": "Friedrich Nietzsche",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "kolega dekat di Basel, saling mengagumi"
+   },
+   {
+    "to": "Leopold von Ranke",
+    "type": "murid",
+    "inCatalog": true,
+    "note": "belajar di bawahnya di Berlin, lalu menempuh jalur berbeda"
+   },
+   {
+    "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "dibahas sebagai contoh pemikir politik Renaisans"
+   }
+  ]
+ },
+ "Elizabeth Cady Stanton": {
+  "years": "1815-1902",
+  "nationality": "Amerika Serikat",
+  "bio": "Penggerak utama Konvensi Seneca Falls 1848, konvensi hak perempuan pertama di Amerika, yang menuliskan sendiri Deklarasi Sentimen yang menuntut hak pilih perempuan — tuntutan yang bahkan dianggap terlalu radikal oleh sebagian sesama aktivis perempuan saat itu.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/d/da/Elizabeth_Stanton.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Stanton lahir 1815 di New York dari keluarga hakim terpandang, dan sejak kecil merasa kecewa menyaksikan ayahnya berulang kali menyesali dirinya bukan lahir sebagai laki-laki, pengalaman yang menanamkan kesadaran dini tentang ketimpangan gender dalam hukum warisan dan properti."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Keterlibatannya dalam gerakan abolisionis mempertemukannya dengan Lucretia Mott, dan penolakan delegasi perempuan di Konvensi Anti-Perbudakan Dunia London 1840 justru menyalakan tekadnya memperjuangkan hak perempuan secara terbuka. Persahabatan dan kemitraan kerja panjangnya dengan Susan B. Anthony sejak 1851 jadi salah satu kolaborasi paling produktif dalam sejarah gerakan sosial Amerika."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Sebagai penulis utama Deklarasi Sentimen di Konvensi Seneca Falls 1848, Stanton mengadaptasi format Deklarasi Kemerdekaan Amerika untuk menuntut kesetaraan penuh perempuan, termasuk hak pilih — tuntutan paling kontroversial dalam konvensi itu sendiri yang bahkan diragukan sebagian pendukung hak perempuan lainnya."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Perjuangannya membentuk fondasi gerakan hak pilih perempuan Amerika yang akhirnya berbuah Amandemen ke-19 tahun 1920, meski ia sendiri wafat delapan belas tahun sebelum hak itu benar-benar diraih. Memoarnya 'Eighty Years and More' jadi catatan penting sejarah gerakan feminis Amerika abad ke-19 dari sudut pandang salah satu arsiteknya sendiri."
+   }
+  ],
+  "influencedBy": [
+   "Mary Wollstonecraft",
+   "Lucretia Mott",
+   "Gerakan abolisionis Amerika"
+  ],
+  "influenced": [
+   "Susan B. Anthony",
+   "Gerakan hak pilih perempuan Amerika",
+   "Amandemen ke-19 Konstitusi AS"
+  ],
+  "quote": {
+   "text": "We assert that man cannot hold property in man, and reject the whole code of laws that conflicts with the self-evident truth of the assertion.",
+   "bookTitle": "Eighty Years and More"
+  },
+  "connections": [
+   {
+    "to": "Mary Wollstonecraft",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Frederick Douglass",
+    "type": "kolaborator",
+    "inCatalog": true,
+    "note": "mendukung Konvensi Seneca Falls"
+   },
+   {
+    "to": "Sojourner Truth",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Emmeline Pankhurst",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "gerakan Amerika mendahului & memengaruhi gerakan Inggris"
+   },
+   {
+    "to": "Harriet Martineau",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Ida B. Wells",
+    "type": "sezaman",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Pierre-Joseph Proudhon": {
+  "years": "1809-1865",
+  "nationality": "Prancis",
+  "bio": "Pekerja cetak miskin yang jadi orang pertama menyebut dirinya 'anarkis' dengan bangga, terkenal lewat pernyataan provokatif 'properti adalah pencurian' yang mengguncang pembaca Prancis pertengahan abad ke-19 sekaligus memicu kemarahan Karl Marx yang kelak jadi rivalnya.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Portrait_of_Pierre_Joseph_Proudhon_1865.jpg/330px-Portrait_of_Pierre_Joseph_Proudhon_1865.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Proudhon lahir 1809 di Besançon dari keluarga petani-pengrajin miskin, dan bekerja sebagai pekerja cetak sejak muda, pengalaman kelas pekerja langsung yang membentuk seluruh pandangan ekonomi-politiknya kelak, berbeda dari kebanyakan pemikir sosialis lain yang berlatar belakang kelas menengah terdidik."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia memenangkan beasiswa akademik yang memungkinkannya menulis 'What is Property?' tahun 1840, buku yang membuatnya mendadak terkenal sekaligus dicurigai otoritas Prancis. Perseteruannya dengan Karl Marx dimulai setelah Marx menulis 'The Poverty of Philosophy' sebagai serangan balik atas kritik Proudhon terhadap ekonomi politik, perpecahan yang kelak mewarnai perpecahan gerakan sosialis Eropa antara jalur otoriter dan libertarian."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Proudhon terkenal lewat pernyataan provokatif 'properti adalah pencurian', bukan menolak kepemilikan pribadi sepenuhnya, melainkan mengkritik keras properti yang menghasilkan keuntungan tanpa kerja (seperti sewa dan bunga). Ia mengembangkan 'mutualisme', sistem ekonomi berbasis koperasi kredit dan pertukaran adil antar produsen kecil tanpa negara sentral maupun kapital besar yang mendominasi."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Ia dianggap sebagai 'bapak anarkisme' karena menjadi orang pertama yang menyebut dirinya sendiri anarkis secara bangga, dan gagasan mutualismenya jadi salah satu cabang penting tradisi anarkis yang memengaruhi Mikhail Bakunin dan gerakan koperasi buruh Eropa."
+   }
+  ],
+  "influencedBy": [
+   "Pengalaman kelas pekerjanya sendiri",
+   "Adam Smith dan ekonomi klasik (sebagai bahan kritik)"
+  ],
+  "influenced": [
+   "Mikhail Bakunin",
+   "Peter Kropotkin",
+   "Gerakan koperasi dan mutualisme Eropa"
+  ],
+  "quote": {
+   "text": "PROPERTY IS ROBBERY! That is the war-cry of '93! That is the signal of revolutions!",
+   "bookTitle": "What is Property?"
+  },
+  "connections": [
+   {
+    "to": "Mikhail Bakunin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Karl Marx",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "perseteruan terkenal, dibalas Marx lewat 'The Poverty of Philosophy'"
+   },
+   {
+    "to": "Peter Kropotkin",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Lysander Spooner",
+    "type": "sezaman",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Livy": {
+  "years": "59 SM - 17 M",
+  "nationality": "Romawi",
+  "bio": "Sejarawan yang menghabiskan lebih dari empat dekade menulis riwayat Roma dari pendirian legendarisnya sampai zamannya sendiri, sebuah proyek begitu masif sehingga dari 142 jilid aslinya, hanya sekitar seperempat yang bertahan hingga hari ini.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Titus-Livius-Austrian-Parliament-Building.jpg/330px-Titus-Livius-Austrian-Parliament-Building.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Livy lahir sekitar 59 SM di Patavium (kini Padua), Italia utara, dari keluarga kelas menengah terpandang, dan tumbuh di masa transisi berdarah dari Republik Romawi menuju Kekaisaran di bawah Augustus."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Berbeda dari banyak sejarawan Romawi lain, Livy tidak pernah menjabat posisi politik atau militer tinggi, memilih fokus penuh menulis sejarah dari perpustakaan dan sumber tertulis yang tersedia baginya di Roma. Ia berteman dekat dengan Kaisar Augustus sendiri meski diam-diam tetap menyimpan simpati pada nilai-nilai republik lama, bahkan dikabarkan mendorong cucu-keponakan Augustus, calon Kaisar Claudius, untuk menekuni penulisan sejarah."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'Ab Urbe Condita' ('Sejak Berdirinya Kota'), Livy menulis riwayat Roma sebagai kisah moral besar, menekankan bagaimana kebajikan (virtus) leluhur Romawi membangun kejayaan, dan bagaimana kemewahan serta kemerosotan moral belakangan mengancam merusaknya — pesan yang cocok dengan agenda restorasi moral Augustus sendiri."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Meski hanya sekitar 35 dari 142 jilid aslinya yang bertahan hingga kini, karyanya jadi sumber utama pengetahuan modern tentang sejarah awal Roma, dan gaya naratifnya yang dramatis menginspirasi sejarawan serta penulis dari Machiavelli sampai Gibbon berabad-abad kemudian."
+   }
+  ],
+  "influencedBy": [
+   "Cicero",
+   "Tradisi historiografi Romawi awal"
+  ],
+  "influenced": [
+   "Niccolò Machiavelli",
+   "Edward Gibbon",
+   "Theodor Mommsen"
+  ],
+  "quote": {
+   "text": "The Rutulians, a nation very wealthy, considering the country and age they lived in, were at that time in possession of Ardea.",
+   "bookTitle": "The History of Rome, Books 1 to 8"
+  },
+  "connections": [
+   {
+    "to": "Cicero",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "gaya prosa & sumber inspirasi"
+   },
+   {
+    "to": "Augustus",
+    "type": "pengaruh",
+    "inCatalog": false,
+    "note": "sahabat dekat, sponsor tak langsung karyanya"
+   },
+   {
+    "to": "Niccolò Machiavelli",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Edward Gibbon",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Theodor Mommsen",
+    "type": "pengaruh",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Sojourner Truth": {
+  "years": "c.1797-1883",
+  "nationality": "Amerika Serikat",
+  "bio": "Perempuan yang lahir sebagai budak dan tak pernah belajar membaca atau menulis, tapi kemampuan orasinya yang luar biasa membuat kisah hidupnya, didiktekan langsung olehnya kepada seorang sahabat, jadi salah satu narasi perbudakan paling berpengaruh yang pernah diterbitkan.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sojourner_Truth%2C_1870_%28cropped%2C_restored%29.jpg/330px-Sojourner_Truth%2C_1870_%28cropped%2C_restored%29.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Truth lahir sekitar 1797 dengan nama Isabella Baumfree di New York, diperbudak sejak lahir dan dijual berkali-kali dari satu majikan ke majikan lain sepanjang masa kecilnya, termasuk dipisahkan paksa dari orangtua dan sebagian besar saudaranya."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia melarikan diri membawa anak bungsunya pada 1826, tak lama sebelum perbudakan resmi dihapus di New York, dan setahun kemudian memenangkan gugatan hukum untuk merebut kembali putranya yang dijual ilegal ke luar negara bagian — kemenangan langka bagi perempuan kulit hitam melawan pria kulit putih pada masanya. Pengalaman religius yang mendalam mendorongnya mengganti nama menjadi Sojourner Truth pada 1843 dan mulai berkelana berkhotbah menentang perbudakan serta memperjuangkan hak perempuan."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Karena tak pernah belajar membaca atau menulis, ia mendiktekan kisah hidupnya kepada sahabatnya Olive Gilbert, yang kemudian diterbitkan sebagai 'The Narrative of Sojourner Truth', sebuah catatan langsung dan jujur tentang kekejaman perbudakan dari sudut pandang seorang perempuan yang mengalaminya sendiri."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Ia jadi salah satu orator paling dikenang gerakan abolisionis dan hak perempuan Amerika, dengan pidato-pidatonya yang tajam dan berani menembus batas ras maupun gender pada masanya. Namanya terus dikenang sebagai simbol keberanian perempuan kulit hitam yang menolak dibungkam oleh perbudakan maupun oleh gerakan hak perempuan yang didominasi kulit putih."
+   }
+  ],
+  "influencedBy": [
+   "Pengalaman langsungnya sebagai budak",
+   "Kebangkitan religius Kristen abad ke-19"
+  ],
+  "influenced": [
+   "Gerakan abolisionis Amerika",
+   "Gerakan hak pilih perempuan Amerika"
+  ],
+  "quote": {
+   "text": "I had thought God would take me first,-Mau-mau was so much smarter than I, and could get about and take care of herself;-and I am so old, and so helpless.",
+   "bookTitle": "The Narrative of Sojourner Truth"
+  },
+  "connections": [
+   {
+    "to": "Frederick Douglass",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "William Lloyd Garrison",
+    "type": "kolaborator",
+    "inCatalog": false,
+    "note": "bekerja dalam lingkaran abolisionis Garrisonian"
+   },
+   {
+    "to": "Elizabeth Cady Stanton",
+    "type": "sezaman",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Norman Angell": {
+  "years": "1872-1967",
+  "nationality": "Inggris",
+  "bio": "Jurnalis dan penulis peraih Nobel Perdamaian yang bukunya berargumen perang antarnegara industri modern tak lagi menguntungkan secara ekonomi bagi siapa pun, tesis yang secara ironis diterbitkan tak lama sebelum Perang Dunia Pertama meletus dan tampak membantah keyakinannya sendiri.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Norman_Angell_01.jpg/330px-Norman_Angell_01.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Angell lahir 1872 di Inggris, sempat merantau ke Amerika bekerja serabutan sebagai koboi dan penambang sebelum kembali ke Eropa dan menekuni karier jurnalistik di Paris, pengalaman lintas benua yang membentuk pandangannya yang internasionalis."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Ia mengamati langsung bagaimana ekonomi negara-negara industri besar Eropa saling terjalin erat lewat perdagangan dan investasi lintas batas, kondisi yang meyakinkannya bahwa perang antar kekuatan besar modern hanya akan merugikan semua pihak, termasuk pemenangnya sendiri. Tradisi ekonomi pasar bebas Cobden dan Bastiat yang meyakini perdagangan bebas membawa perdamaian sangat membentuk argumennya."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'The Great Illusion', Angell berargumen bahwa keyakinan lama bahwa perang dan penaklukan wilayah menguntungkan ekonomi negara pemenang sudah usang di era modern, karena kekayaan negara industri kini bergantung pada kredit, perdagangan, dan kontrak internasional yang justru hancur akibat perang, bukan tanah jajahan yang direbut."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Ironisnya buku ini terbit tak lama sebelum Perang Dunia Pertama meletus, yang tampak seolah membantah tesisnya, meski Angell sendiri berargumen perang itu justru membuktikan maksudnya: perang tetap terjadi karena kesalahpahaman, bukan karena benar-benar menguntungkan secara ekonomi. Ia menerima Hadiah Nobel Perdamaian tahun 1933 atas kerja kerasnya mempromosikan perdamaian lewat pemahaman ekonomi."
+   }
+  ],
+  "influencedBy": [
+   "Richard Cobden",
+   "Frédéric Bastiat"
+  ],
+  "influenced": [
+   "Teori interdependensi ekonomi modern",
+   "Gerakan perdamaian internasional abad ke-20"
+  ],
+  "quote": {
+   "text": "The war thus illustrates the tendency of wars in general to cause spasmodic disturbance in a market so delicately organized as that of London now is.",
+   "bookTitle": "The Great Illusion"
+  },
+  "connections": [
+   {
+    "to": "Frédéric Bastiat",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "John Maynard Keynes",
+    "type": "sezaman",
+    "inCatalog": true,
+    "note": "sama-sama menganalisis dampak ekonomi Perang Dunia Pertama"
+   },
+   {
+    "to": "Richard Cobden",
+    "type": "pengaruh",
+    "inCatalog": false
+   }
+  ]
+ },
+ "Thomas Babington Macaulay": {
+  "years": "1800-1859",
+  "nationality": "Inggris",
+  "bio": "Politisi dan sejarawan yang prosanya begitu memikat sehingga bukunya tentang sejarah Inggris terjual seperti novel populer, meski ia juga dikenang kontroversial karena kebijakan pendidikan kolonialnya di India yang berusaha menggantikan bahasa dan sastra lokal dengan pendidikan gaya Inggris.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Thomas_Babington_Macaulay2.jpg/330px-Thomas_Babington_Macaulay2.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Macaulay lahir 1800 dari keluarga evangelis Inggris yang taat, putra seorang tokoh abolisionis terkemuka, dan menunjukkan bakat luar biasa dalam membaca dan menulis sejak usia sangat muda."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Kariernya sebagai politisi Whig membawanya menjabat posisi penting di pemerintahan kolonial India, tempat ia menulis 'Minute on Indian Education' yang kontroversial, berargumen pendidikan bergaya Inggris harus menggantikan pendidikan tradisional Sanskerta dan Persia di India. Keyakinannya pada kemajuan sejarah yang tak terhindarkan — bahwa Inggris terus membaik lewat reformasi bertahap tanpa revolusi — membentuk seluruh pendekatan historiografinya yang kelak disebut 'sejarah Whig'."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Dalam 'The History of England', Macaulay menulis narasi sejarah yang hidup dan dramatis tentang Revolusi Agung 1688, menceritakannya sebagai puncak kemajuan konstitusional Inggris menuju kebebasan dan stabilitas politik modern, gaya penulisan yang membuat sejarah terasa semenarik novel bagi pembaca awam."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Gaya prosanya yang memukau membuat karyanya jadi buku terlaris pada masanya, jarang dicapai buku sejarah akademik, tapi pendekatan 'sejarah Whig'-nya yang optimistis kemudian dikritik keras sejarawan generasi berikutnya, termasuk Ranke, karena dianggap terlalu menghakimi masa lalu dari sudut pandang kemajuan masa kini."
+   }
+  ],
+  "influencedBy": [
+   "Edward Gibbon",
+   "Tradisi Whig politik Inggris"
+  ],
+  "influenced": [
+   "Historiografi naratif populer",
+   "Kebijakan pendidikan kolonial Inggris di India"
+  ],
+  "quote": {
+   "text": "I shall recount the errors which, in a few months, alienated a loyal gentry and priesthood from the House of Stuart.",
+   "bookTitle": "The History of England, from the Accession of James II (Vol. 1)"
+  },
+  "connections": [
+   {
+    "to": "Edward Gibbon",
+    "type": "pengaruh",
+    "inCatalog": true
+   },
+   {
+    "to": "Thomas Carlyle",
+    "type": "menentang",
+    "inCatalog": true,
+    "note": "rival gaya historiografi Victoria"
+   },
+   {
+    "to": "Edward A. Freeman",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Leopold von Ranke",
+    "type": "menentang",
+    "inCatalog": true
+   }
+  ]
+ },
+ "Emmeline Pankhurst": {
+  "years": "1858-1928",
+  "nationality": "Inggris",
+  "bio": "Pemimpin gerakan suffragette yang beralih dari protes damai ke aksi militan setelah bertahun-tahun petisi sopan diabaikan pemerintah Inggris, rela dipenjara berkali-kali dan menjalani mogok makan demi hak pilih perempuan yang akhirnya terwujud sebagian tak lama sebelum ia wafat.",
+  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Emmeline_Pankhurst%2C_seated_%281913%29.jpg/330px-Emmeline_Pankhurst%2C_seated_%281913%29.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "lifeStory": [
+   {
+    "heading": "Kehidupan Awal",
+    "text": "Pankhurst lahir 1858 di Manchester dari keluarga yang aktif dalam gerakan reformasi politik, dan sejak muda sudah dibawa orangtuanya menghadiri rapat-rapat hak pilih perempuan, menanamkan kesadaran politik sejak usia sangat dini."
+   },
+   {
+    "heading": "Pengaruh & Pembentukan Pemikiran",
+    "text": "Setelah suaminya, seorang pengacara pendukung hak perempuan, wafat dan meninggalkannya dalam kesulitan finansial, Pankhurst mendirikan Women's Social and Political Union (WSPU) tahun 1903 bersama putrinya Christabel, memutuskan taktik lama petisi sopan tak lagi cukup setelah puluhan tahun diabaikan parlemen Inggris. Frustrasinya pada lambannya perubahan mendorongnya mengadopsi taktik militan — memecahkan jendela, membakar kotak pos, mogok makan di penjara — yang membuatnya berulang kali dipenjara dan menjalani pemberian makan paksa yang menyakitkan."
+   },
+   {
+    "heading": "Gagasan Utama",
+    "text": "Pankhurst berargumen bahwa perempuan tak wajib tunduk pada hukum yang dibuat tanpa keterlibatan mereka sama sekali, dan bahwa aksi langsung serta konfrontatif diperlukan ketika jalur konstitusional biasa sudah terbukti gagal membawa perubahan, taktik militan yang kontroversial bahkan di kalangan sesama pejuang suffragette sendiri."
+   },
+   {
+    "heading": "Warisan",
+    "text": "Perjuangannya ikut membuahkan hasil lewat Representation of the People Act 1918 yang memberi hak pilih terbatas bagi sebagian perempuan Inggris, dan hak pilih penuh setara pria akhirnya diraih tahun 1928, hanya beberapa minggu setelah kematiannya. Ia diakui sebagai salah satu tokoh paling berpengaruh abad ke-20 oleh majalah Time."
+   }
+  ],
+  "influencedBy": [
+   "Kegagalan petisi damai hak pilih perempuan",
+   "Gerakan hak pilih perempuan Amerika (Stanton, Anthony)"
+  ],
+  "influenced": [
+   "Christabel Pankhurst",
+   "Gerakan suffragette internasional",
+   "Representation of the People Act 1918"
+  ],
+  "quote": {
+   "text": "The foundation of our policy is opposition to a Government who refuse votes to women.",
+   "bookTitle": "My Own Story"
+  },
+  "connections": [
+   {
+    "to": "Charlotte Perkins Gilman",
+    "type": "sezaman",
+    "inCatalog": true
+   },
+   {
+    "to": "Elizabeth Cady Stanton",
+    "type": "pengaruh",
+    "inCatalog": true,
+    "note": "gerakan Amerika mendahului & memengaruhinya"
+   },
+   {
+    "to": "Christabel Pankhurst",
+    "type": "kolaborator",
+    "inCatalog": false,
+    "note": "putrinya, memimpin WSPU bersama"
    }
   ]
  }
