@@ -896,6 +896,70 @@ html[data-vt="tab-back"]::view-transition-new(author-panel) { animation: vt-in-l
   pointer-events: none;
 }
 
+/* ===== Mode megah: globe fullscreen, HUD melayang ===== */
+.constellation-view.globe-mode {
+  position: fixed; inset: 0; z-index: 10; overflow: hidden;
+  background-color: #0d1220;
+  background-image:
+    radial-gradient(1px 1px at 8% 22%, rgba(255,255,255,.55) 50%, transparent 52%),
+    radial-gradient(1px 1px at 18% 68%, rgba(255,255,255,.4) 50%, transparent 52%),
+    radial-gradient(1.5px 1.5px at 27% 40%, rgba(255,255,255,.6) 50%, transparent 52%),
+    radial-gradient(1px 1px at 38% 15%, rgba(255,255,255,.35) 50%, transparent 52%),
+    radial-gradient(1.5px 1.5px at 47% 78%, rgba(255,255,255,.5) 50%, transparent 52%),
+    radial-gradient(1px 1px at 58% 30%, rgba(255,255,255,.4) 50%, transparent 52%),
+    radial-gradient(1.5px 1.5px at 68% 60%, rgba(255,255,255,.55) 50%, transparent 52%),
+    radial-gradient(1px 1px at 77% 12%, rgba(255,255,255,.35) 50%, transparent 52%),
+    radial-gradient(1.5px 1.5px at 86% 45%, rgba(255,255,255,.5) 50%, transparent 52%),
+    radial-gradient(1px 1px at 94% 72%, rgba(255,255,255,.4) 50%, transparent 52%),
+    radial-gradient(120% 100% at 50% 0%, rgba(90,110,160,.15), transparent 60%);
+  background-size: 220px 140px, 260px 160px, 300px 180px, 240px 150px, 280px 170px,
+    250px 140px, 320px 190px, 230px 160px, 290px 175px, 260px 155px, 100% 100%;
+}
+.globe-mode .detail-topbar {
+  position: absolute; top: max(10px, env(safe-area-inset-top)); left: 10px; z-index: 8;
+  padding: 0;
+}
+.globe-mode .detail-topbar .icon-btn {
+  background: rgba(13,16,28,.55); border-color: rgba(255,255,255,.14); color: #e9dfc6;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.globe-mode #constellation-body { max-width: none; padding: 0; height: 100%; }
+.globe-mode .globe-root { height: 100%; position: relative; color: #e9dfc6; }
+.globe-mode .globe-stage {
+  position: absolute; inset: 0; width: 100% !important; height: 100% !important;
+  margin: 0; border-radius: 0; background: transparent;
+}
+.globe-mode .globe-stage::after { border-radius: 0; }
+.globe-hud-top {
+  position: absolute; top: 0; left: 0; right: 0;
+  padding: max(16px, env(safe-area-inset-top)) 0 34px;
+  text-align: center; z-index: 6; pointer-events: none;
+  background: linear-gradient(180deg, rgba(8,10,18,.72) 0%, rgba(8,10,18,.35) 55%, transparent 100%);
+}
+.globe-hud-top .cx-map-title {
+  color: #f3e9d0; font-size: 24px; margin: 0;
+  text-shadow: 0 2px 14px rgba(0,0,0,.65);
+  letter-spacing: .5px;
+}
+.globe-hud-top .cx-map-sub {
+  color: rgba(233,223,198,.75); margin: 3px 0 0; font-size: 12.5px;
+  text-shadow: 0 1px 8px rgba(0,0,0,.6);
+}
+.globe-hud-bottom {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  bottom: max(14px, env(safe-area-inset-bottom));
+  width: min(560px, 92vw); z-index: 6;
+  padding: 12px 16px 10px; border-radius: 18px;
+  background: rgba(13,16,28,.55); border: 1px solid rgba(255,255,255,.09);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.globe-hud-bottom .globe-year-chip { margin: 0 auto 8px; display: table; }
+.globe-hud-bottom .globe-year-range { width: 100%; display: block; }
+.globe-hud-bottom .globe-era-row { max-width: none; color: rgba(233,223,198,.65); }
+.globe-hud-bottom .globe-counter { color: rgba(233,223,198,.8); margin: 8px 0 2px; }
+.globe-hud-bottom .constellation-legend { justify-content: center; padding: 4px 0 0; gap: 6px 12px; }
+.globe-hud-bottom .cx-legend-item { color: rgba(233,223,198,.7); font-size: 11px; }
+
 .globe-popup {
   position: absolute;
   z-index: 5;

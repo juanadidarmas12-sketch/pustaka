@@ -113,7 +113,11 @@ function router() {
 }
 
 function routerDispatch() {
-  if (currentGlobe) { currentGlobe.destroy(); currentGlobe = null; }
+  if (currentGlobe) {
+    currentGlobe.destroy();
+    currentGlobe = null;
+    $('#view-constellation').classList.remove('globe-mode');
+  }
   const h = location.hash || '#/';
   const parts = h.replace(/^#\//, '').split('/');
   $('#view-library').hidden = true;
@@ -827,6 +831,8 @@ function renderConstellationEgo(name, info, books) {
 /* #/konstelasi: globe 3D (globe.js) dgn fallback ke peta SVG datar jika gagal dimuat */
 async function renderConstellationMap() {
   $('#view-constellation').hidden = false;
+  $('#view-constellation').classList.add('globe-mode');
+  document.body.style.overflow = 'hidden';
   window.scrollTo(0, 0);
   const body = $('#constellation-body');
   body.innerHTML = '<div id="globe-root">Memuat globe...</div>';
@@ -845,6 +851,8 @@ async function renderConstellationMap() {
     });
   } catch (e) {
     console.warn('globe fallback', e);
+    $('#view-constellation').classList.remove('globe-mode');
+    document.body.style.overflow = '';
     renderConstellationMapLegacy();
   }
 }

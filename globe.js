@@ -70,9 +70,6 @@ export async function initGlobe(root, ctx) {
 
   const stage = document.createElement('div');
   stage.className = 'globe-stage';
-  const side = Math.max(220, Math.min(root.clientWidth || window.innerWidth, window.innerHeight * 0.52));
-  stage.style.width = side + 'px';
-  stage.style.height = side + 'px';
 
   const popupEl = document.createElement('div');
   popupEl.className = 'globe-popup';
@@ -105,12 +102,21 @@ export async function initGlobe(root, ctx) {
     '<span class="cx-legend-item"><span class="cx-legend-dot" style="background:var(--c-' + c + '-2)"></span>' + CAT_LABELS[c] + '</span>'
   ).join('');
 
-  root.append(title, subtitle, stage, chip, slider, eraRow, counter, legend);
+  const hudTop = document.createElement('div');
+  hudTop.className = 'globe-hud-top';
+  hudTop.append(title, subtitle);
+
+  const hudBottom = document.createElement('div');
+  hudBottom.className = 'globe-hud-bottom';
+  hudBottom.append(chip, slider, eraRow, counter, legend);
+
+  root.append(stage, hudTop, hudBottom);
 
   /* ---------- three.js setup ---------- */
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  renderer.setSize(side, side);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  let markerBoost = 1; // kompensasi ukuran marker saat kamera menjauh (layar sempit)
   stage.insertBefore(renderer.domElement, popupEl);
 
   const scene = new THREE.Scene();
@@ -327,14 +333,33 @@ export async function initGlobe(root, ctx) {
     closeTimer = setTimeout(() => { popupEl.hidden = true; closeTimer = null; }, 160);
   }
 
-  /* ---------- resize ---------- */
-  function onResize() {
-    const s = Math.max(220, Math.min(root.clientWidth || window.innerWidth, window.innerHeight * 0.52));
-    stage.style.width = s + 'px';
-    stage.style.height = s + 'px';
-    renderer.setSize(s, s);
+  /* ---------- resize / fit fullscreen ---------- */
+  function fitCamera() {
+    const w = stage.clientWidth || window.innerWidth;
+    const h = stage.clientHeight || window.innerHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    // jarak kamera dihitung agar globe mengisi ~90% sisi tersempit viewport
+    const vHalf = (32 / 2) * Math.PI / 180;
+    const hHalf = Math.atan(Math.tan(vHalf) * camera.aspect);
+    const limit = Math.min(vHalf, hHalf);
+    camera.position.z = 1 / Math.sin(limit * 0.86);
+    camera.setViewOffset(w, h, 0, Math.round(h * 0.04), w, h); // globe sedikit naik, memberi ruang HUD bawah
+    camera.updateProjectionMatrix();
+    markerBoost = Math.max(1, camera.position.z / 3.4);
+    markers.forEach((m, i) => {
+      const r = MARKER_R_HIDDEN + (MARKER_R_SHOWN - MARKER_R_HIDDEN) * m.currentScale;
+      tmpPos.copy(m.baseDir).multiplyScalar(r);
+      const s = m.currentScale * markerBoost;
+      tmpScale.set(s, s, s);
+      tmpMatrix.compose(tmpPos, IDENTITY_Q, tmpScale);
+      instMesh.setMatrixAt(i, tmpMatrix);
+    });
+    instMesh.instanceMatrix.needsUpdate = true;
   }
+  function onResize() { fitCamera(); }
   window.addEventListener('resize', onResize);
+  fitCamera();
 
   /* ---------- animation loop ---------- */
   const clock = new THREE.Clock();
@@ -371,7 +396,7 @@ export async function initGlobe(root, ctx) {
       if (!dirty) return;
       const r = MARKER_R_HIDDEN + (MARKER_R_SHOWN - MARKER_R_HIDDEN) * m.currentScale;
       tmpPos.copy(m.baseDir).multiplyScalar(r);
-      tmpScale.set(m.currentScale, m.currentScale, m.currentScale);
+      tmpScale.set(m.currentScale * markerBoost, m.currentScale * markerBoost, m.currentScale * markerBoost);
       tmpMatrix.compose(tmpPos, IDENTITY_Q, tmpScale);
       instMesh.setMatrixAt(i, tmpMatrix);
     });
