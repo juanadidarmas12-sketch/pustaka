@@ -20,6 +20,7 @@ let activeCategory = 'semua';
 let groupMode = 'genre';       // 'genre' | 'author'
 let activeAuthor = null;       // author string ketika drill-down dari daftar penulis
 let searchQuery = '';
+let currentGlobe = null;       // instance globe 3D #/konstelasi (dari globe.js), utk cleanup di routerDispatch
 
 const AVATAR_COLORS = ['#9a5b2e','#6b5fa8','#a8455a','#4f8a5c','#47899a','#b98a3e','#7a4b6d'];
 function avatarColor(name) { return AVATAR_COLORS[hashCode(name) % AVATAR_COLORS.length]; }
@@ -112,6 +113,7 @@ function router() {
 }
 
 function routerDispatch() {
+  if (currentGlobe) { currentGlobe.destroy(); currentGlobe = null; }
   const h = location.hash || '#/';
   const parts = h.replace(/^#\//, '').split('/');
   $('#view-library').hidden = true;
@@ -822,8 +824,33 @@ function renderConstellationEgo(name, info, books) {
   return legendHTML + '<div class="constellation-scroll cx-map-bg">' + svg + '</div>';
 }
 
-/* peta besar #/konstelasi: 77 pemikir pada satu sumbu waktu, tanpa edge global */
-function renderConstellationMap() {
+/* #/konstelasi: globe 3D (globe.js) dgn fallback ke peta SVG datar jika gagal dimuat */
+async function renderConstellationMap() {
+  $('#view-constellation').hidden = false;
+  window.scrollTo(0, 0);
+  const body = $('#constellation-body');
+  body.innerHTML = '<div id="globe-root">Memuat globe...</div>';
+  try {
+    const res = await fetch('books/geo.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const geo = await res.json();
+    const catOf = {};
+    INDEX.forEach(b => { if (!(b.author in catOf)) catOf[b.author] = b.category; });
+    const mod = await import('./globe.js');
+    const rootEl = $('#globe-root');
+    currentGlobe = await mod.initGlobe(rootEl, {
+      geo, AUTHORS, catOf,
+      onNavigate: (n) => { location.hash = '#/penulis/' + encodeURIComponent(n); },
+      reducedMotion: REDUCE_MOTION
+    });
+  } catch (e) {
+    console.warn('globe fallback', e);
+    renderConstellationMapLegacy();
+  }
+}
+
+/* peta besar #/konstelasi (fallback SVG): 115 pemikir pada satu sumbu waktu, tanpa edge global */
+function renderConstellationMapLegacy() {
   $('#view-constellation').hidden = false;
   window.scrollTo(0, 0);
   const body = $('#constellation-body');

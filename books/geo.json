@@ -1,0 +1,922 @@
+{
+ "Niccolò Machiavelli": {
+  "lat": 43.77,
+  "lng": 11.25,
+  "place": "Firenze",
+  "country": "Italia (Renaisans)",
+  "born": 1469,
+  "died": 1527
+ },
+ "Marcus Aurelius": {
+  "lat": 41.9,
+  "lng": 12.5,
+  "place": "Roma",
+  "country": "Italia (Romawi)",
+  "born": 121,
+  "died": 180
+ },
+ "Sun Tzu": {
+  "lat": 37.05,
+  "lng": 118.41,
+  "place": "Guangrao (Negara Qi)",
+  "country": "Tiongkok (Zhou Timur)",
+  "born": -544,
+  "died": -496
+ },
+ "Karl Marx & Friedrich Engels": {
+  "lat": 49.76,
+  "lng": 6.64,
+  "place": "Trier",
+  "country": "Jerman (Prusia)",
+  "born": 1818,
+  "died": 1895
+ },
+ "Plato": {
+  "lat": 37.98,
+  "lng": 23.73,
+  "place": "Athena",
+  "country": "Yunani",
+  "born": -428,
+  "died": -348
+ },
+ "Edward Gibbon": {
+  "lat": 51.46,
+  "lng": -0.22,
+  "place": "Putney (London)",
+  "country": "Inggris",
+  "born": 1737,
+  "died": 1794
+ },
+ "David Ricardo": {
+  "lat": 51.51,
+  "lng": -0.13,
+  "place": "London",
+  "country": "Inggris",
+  "born": 1772,
+  "died": 1823
+ },
+ "Alexis de Tocqueville": {
+  "lat": 48.86,
+  "lng": 2.35,
+  "place": "Paris",
+  "country": "Prancis",
+  "born": 1805,
+  "died": 1859
+ },
+ "John Stuart Mill": {
+  "lat": 51.51,
+  "lng": -0.13,
+  "place": "London",
+  "country": "Inggris",
+  "born": 1806,
+  "died": 1873
+ },
+ "Friedrich Nietzsche": {
+  "lat": 51.25,
+  "lng": 12.05,
+  "place": "Röcken",
+  "country": "Jerman (Prusia)",
+  "born": 1844,
+  "died": 1900
+ },
+ "Herodotus": {
+  "lat": 37.03,
+  "lng": 27.43,
+  "place": "Halikarnasos",
+  "country": "Yunani (Ionia, Asia Kecil)",
+  "born": -484,
+  "died": -425
+ },
+ "Thorstein Veblen": {
+  "lat": 44.06,
+  "lng": -87.97,
+  "place": "Cato, Wisconsin",
+  "country": "Amerika Serikat",
+  "born": 1857,
+  "died": 1929
+ },
+ "W. E. B. Du Bois": {
+  "lat": 42.19,
+  "lng": -73.36,
+  "place": "Great Barrington, Massachusetts",
+  "country": "Amerika Serikat",
+  "born": 1868,
+  "died": 1963
+ },
+ "John Locke": {
+  "lat": 51.34,
+  "lng": -2.72,
+  "place": "Wrington, Somerset",
+  "country": "Inggris",
+  "born": 1632,
+  "died": 1704
+ },
+ "Thomas More": {
+  "lat": 51.51,
+  "lng": -0.13,
+  "place": "London",
+  "country": "Inggris",
+  "born": 1478,
+  "died": 1535
+ },
+ "Henry David Thoreau": {
+  "lat": 42.46,
+  "lng": -71.35,
+  "place": "Concord, Massachusetts",
+  "country": "Amerika Serikat",
+  "born": 1817,
+  "died": 1862
+ },
+ "Thomas Paine": {
+  "lat": 52.41,
+  "lng": 0.75,
+  "place": "Thetford, Norfolk",
+  "country": "Inggris",
+  "born": 1737,
+  "died": 1809
+ },
+ "Laozi": {
+  "lat": 33.86,
+  "lng": 115.47,
+  "place": "Luyi (legendaris)",
+  "country": "Tiongkok (Negara Chu, legendaris)",
+  "born": -604,
+  "died": -531
+ },
+ "Thucydides": {
+  "lat": 37.96,
+  "lng": 23.91,
+  "place": "Alimos (dekat Athena)",
+  "country": "Yunani",
+  "born": -460,
+  "died": -400
+ },
+ "Mary Wollstonecraft": {
+  "lat": 51.52,
+  "lng": -0.07,
+  "place": "Spitalfields, London",
+  "country": "Inggris",
+  "born": 1759,
+  "died": 1797
+ },
+ "Thomas Hobbes": {
+  "lat": 51.58,
+  "lng": -2.11,
+  "place": "Malmesbury, Wiltshire",
+  "country": "Inggris",
+  "born": 1588,
+  "died": 1679
+ },
+ "Aristotle": {
+  "lat": 40.66,
+  "lng": 23.87,
+  "place": "Stageira",
+  "country": "Yunani (Makedonia)",
+  "born": -384,
+  "died": -322
+ },
+ "Epictetus": {
+  "lat": 37.92,
+  "lng": 29.13,
+  "place": "Hierapolis, Frigia",
+  "country": "Romawi (Frigia, Asia Kecil)",
+  "born": 55,
+  "died": 135
+ },
+ "Lucretius": {
+  "lat": 41.9,
+  "lng": 12.5,
+  "place": "Roma (diperkirakan)",
+  "country": "Italia (Romawi)",
+  "born": -99,
+  "died": -55
+ },
+ "Boethius": {
+  "lat": 41.9,
+  "lng": 12.5,
+  "place": "Roma",
+  "country": "Italia (Romawi)",
+  "born": 477,
+  "died": 524
+ },
+ "René Descartes": {
+  "lat": 46.97,
+  "lng": 0.69,
+  "place": "La Haye en Touraine",
+  "country": "Prancis",
+  "born": 1596,
+  "died": 1650
+ },
+ "Baruch Spinoza": {
+  "lat": 52.37,
+  "lng": 4.9,
+  "place": "Amsterdam",
+  "country": "Belanda",
+  "born": 1632,
+  "died": 1677
+ },
+ "David Hume": {
+  "lat": 55.95,
+  "lng": -3.19,
+  "place": "Edinburgh",
+  "country": "Skotlandia",
+  "born": 1711,
+  "died": 1776
+ },
+ "Immanuel Kant": {
+  "lat": 54.71,
+  "lng": 20.51,
+  "place": "Königsberg",
+  "country": "Jerman (Prusia)",
+  "born": 1724,
+  "died": 1804
+ },
+ "Arthur Schopenhauer": {
+  "lat": 54.35,
+  "lng": 18.65,
+  "place": "Danzig",
+  "country": "Jerman (Prusia)",
+  "born": 1788,
+  "died": 1860
+ },
+ "Francis Bacon": {
+  "lat": 51.51,
+  "lng": -0.13,
+  "place": "London",
+  "country": "Inggris",
+  "born": 1561,
+  "died": 1626
+ },
+ "George Berkeley": {
+  "lat": 52.65,
+  "lng": -7.25,
+  "place": "Kilkenny",
+  "country": "Irlandia",
+  "born": 1685,
+  "died": 1753
+ },
+ "William James": {
+  "lat": 40.71,
+  "lng": -74.01,
+  "place": "New York City",
+  "country": "Amerika Serikat",
+  "born": 1842,
+  "died": 1910
+ },
+ "Bertrand Russell": {
+  "lat": 51.74,
+  "lng": -2.76,
+  "place": "Trellech, Monmouthshire",
+  "country": "Inggris (Wales)",
+  "born": 1872,
+  "died": 1970
+ },
+ "Ralph Waldo Emerson": {
+  "lat": 42.36,
+  "lng": -71.06,
+  "place": "Boston, Massachusetts",
+  "country": "Amerika Serikat",
+  "born": 1803,
+  "died": 1882
+ },
+ "Confucius": {
+  "lat": 35.6,
+  "lng": 116.99,
+  "place": "Qufu (Negara Lu)",
+  "country": "Tiongkok (Negara Lu)",
+  "born": -551,
+  "died": -479
+ },
+ "Blaise Pascal": {
+  "lat": 45.78,
+  "lng": 3.09,
+  "place": "Clermont-Ferrand",
+  "country": "Prancis",
+  "born": 1623,
+  "died": 1662
+ },
+ "Alexander Hamilton, James Madison & John Jay": {
+  "lat": 40.71,
+  "lng": -74.01,
+  "place": "New York City",
+  "country": "Amerika Serikat",
+  "born": 1745,
+  "died": 1836
+ },
+ "Jean-Jacques Rousseau": {
+  "lat": 46.2,
+  "lng": 6.15,
+  "place": "Jenewa",
+  "country": "Swiss (Jenewa)",
+  "born": 1712,
+  "died": 1778
+ },
+ "Edmund Burke": {
+  "lat": 53.35,
+  "lng": -6.26,
+  "place": "Dublin",
+  "country": "Irlandia",
+  "born": 1729,
+  "died": 1797
+ },
+ "Emma Goldman": {
+  "lat": 54.9,
+  "lng": 23.9,
+  "place": "Kaunas (Kovno)",
+  "country": "Kekaisaran Rusia (kini Lituania)",
+  "born": 1869,
+  "died": 1940
+ },
+ "Walter Bagehot": {
+  "lat": 51.03,
+  "lng": -2.83,
+  "place": "Langport, Somerset",
+  "country": "Inggris",
+  "born": 1826,
+  "died": 1877
+ },
+ "Mikhail Bakunin": {
+  "lat": 57.03,
+  "lng": 35.02,
+  "place": "Pryamukhino",
+  "country": "Rusia",
+  "born": 1814,
+  "died": 1876
+ },
+ "Peter Kropotkin": {
+  "lat": 55.75,
+  "lng": 37.62,
+  "place": "Moskwa",
+  "country": "Rusia",
+  "born": 1842,
+  "died": 1921
+ },
+ "Plutarch": {
+  "lat": 38.49,
+  "lng": 22.84,
+  "place": "Chaeronea",
+  "country": "Yunani (Romawi)",
+  "born": 46,
+  "died": 120
+ },
+ "Julius Caesar": {
+  "lat": 41.9,
+  "lng": 12.5,
+  "place": "Roma",
+  "country": "Italia (Romawi)",
+  "born": -100,
+  "died": -44
+ },
+ "Tacitus": {
+  "lat": 43.18,
+  "lng": 3,
+  "place": "Narbo (diperkirakan)",
+  "country": "Romawi (Galia Narbonensis, diperkirakan)",
+  "born": 56,
+  "died": 120
+ },
+ "Xenophon": {
+  "lat": 37.96,
+  "lng": 23.91,
+  "place": "Erchia (dekat Athena)",
+  "country": "Yunani",
+  "born": -430,
+  "died": -354
+ },
+ "Suetonius": {
+  "lat": 36.9,
+  "lng": 7.77,
+  "place": "Hippo Regius (diperkirakan)",
+  "country": "Romawi (Afrika Utara, diperkirakan)",
+  "born": 69,
+  "died": 130
+ },
+ "Thomas Carlyle": {
+  "lat": 55.05,
+  "lng": -3.28,
+  "place": "Ecclefechan, Dumfriesshire",
+  "country": "Skotlandia",
+  "born": 1795,
+  "died": 1881
+ },
+ "H. G. Wells": {
+  "lat": 51.4,
+  "lng": 0.02,
+  "place": "Bromley, Kent",
+  "country": "Inggris",
+  "born": 1866,
+  "died": 1946
+ },
+ "Benjamin Franklin": {
+  "lat": 42.36,
+  "lng": -71.06,
+  "place": "Boston, Massachusetts",
+  "country": "Amerika Serikat (Koloni Massachusetts)",
+  "born": 1706,
+  "died": 1790
+ },
+ "Frederick Douglass": {
+  "lat": 38.77,
+  "lng": -75.94,
+  "place": "Tuckahoe, Talbot County (Maryland)",
+  "country": "Amerika Serikat",
+  "born": 1818,
+  "died": 1895
+ },
+ "Marco Polo": {
+  "lat": 45.44,
+  "lng": 12.33,
+  "place": "Venesia",
+  "country": "Italia (Republik Venesia)",
+  "born": 1254,
+  "died": 1324
+ },
+ "Polybius": {
+  "lat": 37.4,
+  "lng": 22.14,
+  "place": "Megalopolis",
+  "country": "Yunani",
+  "born": -200,
+  "died": -118
+ },
+ "Einhard": {
+  "lat": 50.04,
+  "lng": 8.97,
+  "place": "Seligenstadt (Maingau, diperkirakan)",
+  "country": "Kekaisaran Franka (kini Jerman)",
+  "born": 775,
+  "died": 840
+ },
+ "Flavius Josephus": {
+  "lat": 31.77,
+  "lng": 35.21,
+  "place": "Yerusalem",
+  "country": "Yudea (Romawi)",
+  "born": 37,
+  "died": 100
+ },
+ "Karl Marx": {
+  "lat": 49.76,
+  "lng": 6.64,
+  "place": "Trier",
+  "country": "Jerman (Prusia)",
+  "born": 1818,
+  "died": 1883
+ },
+ "Thomas Robert Malthus": {
+  "lat": 51.19,
+  "lng": -0.39,
+  "place": "Wotton, Surrey",
+  "country": "Inggris",
+  "born": 1766,
+  "died": 1834
+ },
+ "Henry George": {
+  "lat": 39.95,
+  "lng": -75.16,
+  "place": "Philadelphia, Pennsylvania",
+  "country": "Amerika Serikat",
+  "born": 1839,
+  "died": 1897
+ },
+ "John Maynard Keynes": {
+  "lat": 52.21,
+  "lng": 0.12,
+  "place": "Cambridge",
+  "country": "Inggris",
+  "born": 1883,
+  "died": 1946
+ },
+ "Adam Smith": {
+  "lat": 56.11,
+  "lng": -3.16,
+  "place": "Kirkcaldy, Fife",
+  "country": "Skotlandia",
+  "born": 1723,
+  "died": 1790
+ },
+ "Frederick Winslow Taylor": {
+  "lat": 40.04,
+  "lng": -75.18,
+  "place": "Germantown, Philadelphia",
+  "country": "Amerika Serikat",
+  "born": 1856,
+  "died": 1915
+ },
+ "John Ruskin": {
+  "lat": 51.51,
+  "lng": -0.13,
+  "place": "London",
+  "country": "Inggris",
+  "born": 1819,
+  "died": 1900
+ },
+ "John Bates Clark": {
+  "lat": 41.82,
+  "lng": -71.41,
+  "place": "Providence, Rhode Island",
+  "country": "Amerika Serikat",
+  "born": 1847,
+  "died": 1938
+ },
+ "Frédéric Bastiat": {
+  "lat": 43.49,
+  "lng": -1.48,
+  "place": "Bayonne",
+  "country": "Prancis",
+  "born": 1801,
+  "died": 1850
+ },
+ "Booker T. Washington": {
+  "lat": 37.1,
+  "lng": -79.67,
+  "place": "Hale's Ford, Virginia",
+  "country": "Amerika Serikat",
+  "born": 1856,
+  "died": 1915
+ },
+ "Jane Addams": {
+  "lat": 42.37,
+  "lng": -89.63,
+  "place": "Cedarville, Illinois",
+  "country": "Amerika Serikat",
+  "born": 1860,
+  "died": 1935
+ },
+ "Jacob Riis": {
+  "lat": 55.33,
+  "lng": 8.77,
+  "place": "Ribe",
+  "country": "Denmark",
+  "born": 1849,
+  "died": 1914
+ },
+ "Charlotte Perkins Gilman": {
+  "lat": 41.77,
+  "lng": -72.67,
+  "place": "Hartford, Connecticut",
+  "country": "Amerika Serikat",
+  "born": 1860,
+  "died": 1935
+ },
+ "Gustave Le Bon": {
+  "lat": 48.32,
+  "lng": 0.83,
+  "place": "Nogent-le-Rotrou",
+  "country": "Prancis",
+  "born": 1841,
+  "died": 1931
+ },
+ "Sigmund Freud": {
+  "lat": 49.64,
+  "lng": 18.15,
+  "place": "Freiberg in Mähren (kini Příbor)",
+  "country": "Austria (kini Ceko)",
+  "born": 1856,
+  "died": 1939
+ },
+ "Olive Schreiner": {
+  "lat": -30.35,
+  "lng": 27.05,
+  "place": "Wittebergen",
+  "country": "Koloni Cape (Afrika Selatan)",
+  "born": 1855,
+  "died": 1920
+ },
+ "Samuel Smiles": {
+  "lat": 55.96,
+  "lng": -2.78,
+  "place": "Haddington",
+  "country": "Skotlandia",
+  "born": 1812,
+  "died": 1904
+ },
+ "Leo Tolstoy": {
+  "lat": 54.08,
+  "lng": 37.54,
+  "place": "Yasnaya Polyana",
+  "country": "Rusia",
+  "born": 1828,
+  "died": 1910
+ },
+ "William Graham Sumner": {
+  "lat": 40.92,
+  "lng": -74.17,
+  "place": "Paterson, New Jersey",
+  "country": "Amerika Serikat",
+  "born": 1840,
+  "died": 1910
+ },
+ "Henry Adams": {
+  "lat": 42.36,
+  "lng": -71.06,
+  "place": "Boston, Massachusetts",
+  "country": "Amerika Serikat",
+  "born": 1838,
+  "died": 1918
+ },
+ "John Dewey": {
+  "lat": 44.48,
+  "lng": -73.21,
+  "place": "Burlington, Vermont",
+  "country": "Amerika Serikat",
+  "born": 1859,
+  "died": 1952
+ },
+ "George Santayana": {
+  "lat": 40.42,
+  "lng": -3.7,
+  "place": "Madrid",
+  "country": "Spanyol",
+  "born": 1863,
+  "died": 1952
+ },
+ "Thomas Hill Green": {
+  "lat": 53.71,
+  "lng": -1.1,
+  "place": "Birkin, Yorkshire",
+  "country": "Inggris",
+  "born": 1836,
+  "died": 1882
+ },
+ "Auguste Comte": {
+  "lat": 43.61,
+  "lng": 3.88,
+  "place": "Montpellier",
+  "country": "Prancis",
+  "born": 1798,
+  "died": 1857
+ },
+ "Henry Sidgwick": {
+  "lat": 53.96,
+  "lng": -2.02,
+  "place": "Skipton, Yorkshire",
+  "country": "Inggris",
+  "born": 1838,
+  "died": 1900
+ },
+ "Theodor Mommsen": {
+  "lat": 54.33,
+  "lng": 8.77,
+  "place": "Garding, Schleswig",
+  "country": "Jerman (Schleswig)",
+  "born": 1817,
+  "died": 1903
+ },
+ "Graham Wallas": {
+  "lat": 54.91,
+  "lng": -1.38,
+  "place": "Sunderland",
+  "country": "Inggris",
+  "born": 1858,
+  "died": 1932
+ },
+ "Josiah Royce": {
+  "lat": 39.22,
+  "lng": -121.06,
+  "place": "Grass Valley, California",
+  "country": "Amerika Serikat",
+  "born": 1855,
+  "died": 1916
+ },
+ "Francis Parkman": {
+  "lat": 42.36,
+  "lng": -71.06,
+  "place": "Boston, Massachusetts",
+  "country": "Amerika Serikat",
+  "born": 1823,
+  "died": 1893
+ },
+ "Werner Sombart": {
+  "lat": 51.68,
+  "lng": 11.15,
+  "place": "Ermsleben",
+  "country": "Jerman",
+  "born": 1863,
+  "died": 1941
+ },
+ "Lysander Spooner": {
+  "lat": 42.6,
+  "lng": -72.23,
+  "place": "Athol, Massachusetts",
+  "country": "Amerika Serikat",
+  "born": 1808,
+  "died": 1887
+ },
+ "Ludwig Feuerbach": {
+  "lat": 48.54,
+  "lng": 12.15,
+  "place": "Landshut, Bavaria",
+  "country": "Jerman (Bavaria)",
+  "born": 1804,
+  "died": 1872
+ },
+ "Edward A. Freeman": {
+  "lat": 52.45,
+  "lng": -1.96,
+  "place": "Harborne, Staffordshire (kini Birmingham)",
+  "country": "Inggris",
+  "born": 1823,
+  "died": 1892
+ },
+ "Harriet Martineau": {
+  "lat": 52.63,
+  "lng": 1.3,
+  "place": "Norwich",
+  "country": "Inggris",
+  "born": 1802,
+  "died": 1876
+ },
+ "Charles A. Beard": {
+  "lat": 39.79,
+  "lng": -85.53,
+  "place": "dekat Knightstown, Indiana",
+  "country": "Amerika Serikat",
+  "born": 1874,
+  "died": 1948
+ },
+ "Cicero": {
+  "lat": 41.65,
+  "lng": 13.61,
+  "place": "Arpinum",
+  "country": "Italia (Romawi)",
+  "born": -106,
+  "died": -43
+ },
+ "Diogenes Laertius": {
+  "lat": 36.27,
+  "lng": 32.45,
+  "place": "Laerte, Kilikia (tidak pasti)",
+  "country": "Yunani-Romawi (tidak pasti)",
+  "born": 180,
+  "died": 240
+ },
+ "Leopold von Ranke": {
+  "lat": 51.29,
+  "lng": 11.28,
+  "place": "Wiehe, Thuringia",
+  "country": "Jerman",
+  "born": 1795,
+  "died": 1886
+ },
+ "Ida B. Wells": {
+  "lat": 34.77,
+  "lng": -89.45,
+  "place": "Holly Springs, Mississippi",
+  "country": "Amerika Serikat",
+  "born": 1862,
+  "died": 1931
+ },
+ "Rosa Luxemburg": {
+  "lat": 50.72,
+  "lng": 23.25,
+  "place": "Zamość",
+  "country": "Polandia (Kekaisaran Rusia)",
+  "born": 1871,
+  "died": 1919
+ },
+ "William Morris": {
+  "lat": 51.59,
+  "lng": -0.02,
+  "place": "Walthamstow, London",
+  "country": "Inggris",
+  "born": 1834,
+  "died": 1896
+ },
+ "G. W. F. Hegel": {
+  "lat": 48.78,
+  "lng": 9.18,
+  "place": "Stuttgart",
+  "country": "Jerman (Württemberg)",
+  "born": 1770,
+  "died": 1831
+ },
+ "John Fiske": {
+  "lat": 41.77,
+  "lng": -72.67,
+  "place": "Hartford, Connecticut",
+  "country": "Amerika Serikat",
+  "born": 1842,
+  "died": 1901
+ },
+ "Matthew Arnold": {
+  "lat": 51.43,
+  "lng": -0.45,
+  "place": "Laleham, Surrey",
+  "country": "Inggris",
+  "born": 1822,
+  "died": 1888
+ },
+ "William Stanley Jevons": {
+  "lat": 53.41,
+  "lng": -2.98,
+  "place": "Liverpool",
+  "country": "Inggris",
+  "born": 1835,
+  "died": 1882
+ },
+ "Edward Bellamy": {
+  "lat": 42.16,
+  "lng": -72.6,
+  "place": "Chicopee Falls, Massachusetts",
+  "country": "Amerika Serikat",
+  "born": 1850,
+  "died": 1898
+ },
+ "Adam Ferguson": {
+  "lat": 56.6,
+  "lng": -3.79,
+  "place": "Logierait, Perthshire",
+  "country": "Skotlandia",
+  "born": 1723,
+  "died": 1816
+ },
+ "Anna Julia Cooper": {
+  "lat": 35.78,
+  "lng": -78.64,
+  "place": "Raleigh, North Carolina",
+  "country": "Amerika Serikat",
+  "born": 1858,
+  "died": 1964
+ },
+ "James Steuart": {
+  "lat": 55.95,
+  "lng": -3.19,
+  "place": "Edinburgh",
+  "country": "Skotlandia",
+  "born": 1712,
+  "died": 1780
+ },
+ "Herbert Spencer": {
+  "lat": 52.92,
+  "lng": -1.48,
+  "place": "Derby",
+  "country": "Inggris",
+  "born": 1820,
+  "died": 1903
+ },
+ "Jacob Burckhardt": {
+  "lat": 47.56,
+  "lng": 7.59,
+  "place": "Basel",
+  "country": "Swiss",
+  "born": 1818,
+  "died": 1897
+ },
+ "Elizabeth Cady Stanton": {
+  "lat": 43,
+  "lng": -74.37,
+  "place": "Johnstown, New York",
+  "country": "Amerika Serikat",
+  "born": 1815,
+  "died": 1902
+ },
+ "Pierre-Joseph Proudhon": {
+  "lat": 47.24,
+  "lng": 6.02,
+  "place": "Besançon",
+  "country": "Prancis",
+  "born": 1809,
+  "died": 1865
+ },
+ "Livy": {
+  "lat": 45.41,
+  "lng": 11.88,
+  "place": "Patavium (kini Padua)",
+  "country": "Italia (Romawi)",
+  "born": -59,
+  "died": 17
+ },
+ "Sojourner Truth": {
+  "lat": 41.75,
+  "lng": -73.99,
+  "place": "Swartekill, Ulster County (New York)",
+  "country": "Amerika Serikat",
+  "born": 1797,
+  "died": 1883
+ },
+ "Norman Angell": {
+  "lat": 52.8,
+  "lng": 0.01,
+  "place": "Holbeach, Lincolnshire",
+  "country": "Inggris",
+  "born": 1872,
+  "died": 1967
+ },
+ "Thomas Babington Macaulay": {
+  "lat": 52.71,
+  "lng": -1.16,
+  "place": "Rothley, Leicestershire",
+  "country": "Inggris",
+  "born": 1800,
+  "died": 1859
+ },
+ "Emmeline Pankhurst": {
+  "lat": 53.48,
+  "lng": -2.24,
+  "place": "Manchester",
+  "country": "Inggris",
+  "born": 1858,
+  "died": 1928
+ }
+}

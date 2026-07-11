@@ -4,12 +4,13 @@
      → saat online selalu dapat versi terbaru; cache hanya cadangan offline. Ini mencegah
        "app nyangkut di versi lama" pada PWA terinstal.
    - Isi buku (books/<id>.json), ikon, foto Wikimedia, audio = CACHE-FIRST (konten stabil/besar). */
-const CACHE = 'pustaka-v13';
+const CACHE = 'pustaka-v14';
 const SHELL = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './globe.js',
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
@@ -46,6 +47,7 @@ function isNetworkFirst(url, req) {
     p.endsWith('/') ||
     p.endsWith('/index.html') ||
     p.endsWith('/app.js') ||
+    p.endsWith('/globe.js') ||
     p.endsWith('/styles.css') ||
     p.endsWith('/manifest.webmanifest') ||
     p.endsWith('/sw.js') ||
