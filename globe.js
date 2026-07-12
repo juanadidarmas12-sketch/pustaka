@@ -27,6 +27,7 @@ const TAP_MAX_MOVE = 8;
 const TAP_HIT_PX = 28;
 const MARKER_R_HIDDEN = 0.985;
 const MARKER_R_SHOWN = 1.005;
+const ZOOM_MIN = 1, ZOOM_MAX = 3;
 
 function hashStr(s) {
   let h = 0;
@@ -110,7 +111,19 @@ export async function initGlobe(root, ctx) {
   hudBottom.className = 'globe-hud-bottom';
   hudBottom.append(chip, slider, eraRow, counter, legend);
 
-  root.append(stage, hudTop, hudBottom);
+  const zoomCtl = document.createElement('div');
+  zoomCtl.className = 'globe-zoom-ctl';
+  const zoomInBtn = document.createElement('button');
+  zoomInBtn.type = 'button';
+  zoomInBtn.textContent = '+';
+  zoomInBtn.setAttribute('aria-label', 'Perbesar');
+  const zoomOutBtn = document.createElement('button');
+  zoomOutBtn.type = 'button';
+  zoomOutBtn.textContent = '−';
+  zoomOutBtn.setAttribute('aria-label', 'Perkecil');
+  zoomCtl.append(zoomInBtn, zoomOutBtn);
+
+  root.append(stage, hudTop, hudBottom, zoomCtl);
 
   /* ---------- three.js setup ---------- */
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -226,6 +239,9 @@ export async function initGlobe(root, ctx) {
   let dragging = false;
   let lastX = 0, lastY = 0, downX = 0, downY = 0, totalMove = 0;
   let velY = 0;
+  let zoom = 1;
+  const pointers = new Map(); // pointerId -> {x,y}; utk deteksi cubit dua jari
+  let pinching = false, pinchDist = 0, pinchZoom0 = 1;
   const HOME_TILT = 0.32; // condong ke utara: mayoritas pemikir di belahan utara
   let tiltX = HOME_TILT;
   let popupMarker = null;
@@ -264,30 +280,74 @@ export async function initGlobe(root, ctx) {
     // tap di kartu popup (mis. "Lihat Profil") jangan dianggap gestur drag/tap globe —
     // biarkan event click native pada popupEl yang menangani navigasi
     if (popupEl.contains(e.target)) return;
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    try { stage.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+    if (pointers.size === 2) {
+      // jari kedua turun → beralih dari drag ke cubit-zoom
+      const [a, b] = [...pointers.values()];
+      pinchDist = Math.hypot(a.x - b.x, a.y - b.y);
+      pinchZoom0 = zoom;
+      pinching = true;
+      dragging = false;
+      stage.classList.remove('dragging');
+      return;
+    }
     dragging = true;
     totalMove = 0;
     lastX = downX = e.clientX;
     lastY = downY = e.clientY;
     velY = 0;
     stage.classList.add('dragging');
-    try { stage.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
   }
   function onPointerMove(e) {
+    const pt = pointers.get(e.pointerId);
+    if (pt) { pt.x = e.clientX; pt.y = e.clientY; }
+    if (pinching) {
+      if (pointers.size === 2 && pinchDist > 0) {
+        const [a, b] = [...pointers.values()];
+        setZoom(pinchZoom0 * Math.hypot(a.x - b.x, a.y - b.y) / pinchDist);
+      }
+      return;
+    }
     if (!dragging) return;
     const dx = e.clientX - lastX, dy = e.clientY - lastY;
     lastX = e.clientX; lastY = e.clientY;
     totalMove += Math.abs(dx) + Math.abs(dy);
-    group.rotation.y += dx * ROTATE_SENS;
-    velY = dx * ROTATE_SENS;
-    tiltX = clamp(tiltX + dy * TILT_SENS, -TILT_CLAMP, TILT_CLAMP);
+    group.rotation.y += dx * ROTATE_SENS / zoom;
+    velY = dx * ROTATE_SENS / zoom;
+    tiltX = clamp(tiltX + dy * TILT_SENS / zoom, -TILT_CLAMP, TILT_CLAMP);
   }
   function onPointerUp(e) {
+    pointers.delete(e.pointerId);
+    if (pinching) {
+      if (pointers.size < 2) pinching = false;
+      return;
+    }
     if (!dragging) return;
     dragging = false;
     stage.classList.remove('dragging');
     const moved = Math.abs(e.clientX - downX) + Math.abs(e.clientY - downY);
     if (moved < TAP_MAX_MOVE) handleTap(e);
   }
+
+  function setZoom(z) {
+    zoom = clamp(z, ZOOM_MIN, ZOOM_MAX);
+    fitCamera();
+  }
+  function onWheel(e) {
+    e.preventDefault();
+    setZoom(zoom * Math.exp(-e.deltaY * 0.0016));
+  }
+  function onDblClick(e) {
+    if (popupEl.contains(e.target)) return;
+    setZoom(zoom > 1.05 ? 1 : 2.2);
+  }
+  stage.addEventListener('wheel', onWheel, { passive: false });
+  stage.addEventListener('dblclick', onDblClick);
+  function onZoomIn() { setZoom(zoom * 1.4); }
+  function onZoomOut() { setZoom(zoom / 1.4); }
+  zoomInBtn.addEventListener('click', onZoomIn);
+  zoomOutBtn.addEventListener('click', onZoomOut);
 
   stage.addEventListener('pointerdown', onPointerDown);
   stage.addEventListener('pointermove', onPointerMove);
@@ -376,7 +436,10 @@ export async function initGlobe(root, ctx) {
     const vHalf = (32 / 2) * Math.PI / 180;
     const hHalf = Math.atan(Math.tan(vHalf) * camera.aspect);
     const limit = Math.min(vHalf, hHalf);
-    camera.position.z = 1 / Math.sin(limit * 0.86);
+    // zoom mendekatkan kamera ke permukaan (radius 1), bukan sekadar memotong jarak total,
+    // supaya 3x zoom terasa proporsional dan tidak menembus bola
+    const baseZ = 1 / Math.sin(limit * 0.86);
+    camera.position.z = 1 + (baseZ - 1) / zoom;
     camera.setViewOffset(w, h, 0, Math.round(h * 0.04), w, h); // globe sedikit naik, memberi ruang HUD bawah
     camera.updateProjectionMatrix();
     markerBoost = Math.max(1, camera.position.z / 3.4);
@@ -405,7 +468,7 @@ export async function initGlobe(root, ctx) {
           velY *= INERTIA_DAMP;
         } else {
           velY = 0;
-          group.rotation.y += AUTO_ROTATE_SPEED * dt;
+          group.rotation.y += AUTO_ROTATE_SPEED * dt / zoom;
         }
       }
       tiltX += (HOME_TILT - tiltX) * 0.05;
@@ -448,6 +511,9 @@ export async function initGlobe(root, ctx) {
   }
 
   function updateMarkerDom(rect, quat) {
+    // pin ikut membesar saat zoom (parsial, bukan linier) agar detail foto terlihat
+    // tanpa membuat klaster padat saling tumpuk berlebihan
+    const pinScale = 1 + (zoom - 1) * 0.35;
     markers.forEach((m) => {
       if (m.currentScale < 0.05) {
         if (m.elVisible) { m.el.style.display = 'none'; m.elVisible = false; }
@@ -462,7 +528,7 @@ export async function initGlobe(root, ctx) {
       // style) akan jatuh balik ke none dan pin tak pernah tampil
       if (!m.elVisible) { m.el.style.display = 'block'; m.elVisible = true; }
       m.el.style.transform =
-        'translate3d(' + p.x.toFixed(1) + 'px,' + p.y.toFixed(1) + 'px,0) translate(-50%,-50%) scale(' + m.currentScale.toFixed(3) + ')';
+        'translate3d(' + p.x.toFixed(1) + 'px,' + p.y.toFixed(1) + 'px,0) translate(-50%,-50%) scale(' + (m.currentScale * pinScale).toFixed(3) + ')';
     });
   }
 
@@ -494,6 +560,10 @@ export async function initGlobe(root, ctx) {
     slider.removeEventListener('input', onSliderInput);
     stage.removeEventListener('pointerdown', onPointerDown);
     stage.removeEventListener('pointermove', onPointerMove);
+    stage.removeEventListener('wheel', onWheel);
+    stage.removeEventListener('dblclick', onDblClick);
+    zoomInBtn.removeEventListener('click', onZoomIn);
+    zoomOutBtn.removeEventListener('click', onZoomOut);
     window.removeEventListener('pointerup', onPointerUp);
     window.removeEventListener('pointercancel', onPointerUp);
     window.removeEventListener('resize', onResize);
