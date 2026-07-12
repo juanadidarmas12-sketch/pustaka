@@ -4,7 +4,7 @@
 const WPM = 200; // kecepatan baca rata-rata utk estimasi
 const LS_SETTINGS = 'pustaka.settings';
 const LS_PROGRESS = 'pustaka.progress';
-const FLIP_MS = 460;
+const FLIP_MS = 560; // durasi flip penuh 180° (selaras default turn.js 600ms)
 
 const CAT_LABELS = {
   filsafat: 'Filsafat', politik: 'Politik', sejarah: 'Sejarah',
@@ -1120,15 +1120,45 @@ function makeOverlay(pageIndex, extraClass) {
   wrap.className = 'flip-page' + (extraClass ? ' ' + extraClass : '');
   wrap.style.left = pageState.padX + 'px';
   wrap.style.width = pageState.pageW + 'px';
-  wrap.appendChild(makePageClone(pageIndex));
-  const shade = document.createElement('div');
-  shade.className = 'flip-shade';
-  wrap.appendChild(shade);
+
+  // dua muka (teknik turn.js): depan = konten halaman, belakang = punggung kertas.
+  // rotasi kini penuh 0..-180° sehingga melewati 90° terlihat sisi baliknya
+  const front = document.createElement('div');
+  front.className = 'flip-face flip-front';
+  front.appendChild(makePageClone(pageIndex));
+  const shadeF = document.createElement('div');
+  shadeF.className = 'flip-shade';
+  front.appendChild(shadeF);
   const highlight = document.createElement('div');
   highlight.className = 'flip-highlight';
-  wrap.appendChild(highlight);
+  front.appendChild(highlight);
+
+  const back = document.createElement('div');
+  back.className = 'flip-face flip-back';
+  const shadeB = document.createElement('div');
+  shadeB.className = 'flip-shade';
+  back.appendChild(shadeB);
+
+  wrap.append(front, back);
+
+  // bayangan yang JATUH ke halaman di bawahnya (bshadow ala turn.js),
+  // paling pekat saat halaman tegak lurus
+  const cast = document.createElement('div');
+  cast.className = 'flip-cast';
+  cast.style.left = pageState.padX + 'px';
+  cast.style.width = pageState.pageW + 'px';
+  pager.appendChild(cast);
+
+  // cache referensi utk setFlipAngle (dipanggil tiap frame rAF/drag)
+  wrap._front = front;
+  wrap._back = back;
+  wrap._shadeF = shadeF;
+  wrap._shadeB = shadeB;
+  wrap._hl = highlight;
+  wrap._cast = cast;
+
   pager.appendChild(wrap);
-  flipNodes.push(wrap);
+  flipNodes.push(wrap, cast);
   return wrap;
 }
 
@@ -1138,47 +1168,53 @@ function clearFlips() {
 }
 
 function setFlipAngle(el, deg) {
-  const t = Math.max(0, Math.min(1, Math.abs(deg) / 88));
-  const bulge = Math.sin(t * Math.PI); // 0 di ujung, puncak di tengah lipatan
-  const bulgePx = (bulge * 70).toFixed(1);
-  el.style.transform = 'rotateY(' + deg + 'deg) translateZ(' + bulgePx + 'px)';
+  const a = Math.abs(deg);
+  const t = Math.max(0, Math.min(1, a / 180));
+  const bulge = Math.sin(t * Math.PI); // 0 di ujung, puncak saat halaman tegak (90°)
+  el.style.transform = 'rotateY(' + deg + 'deg) translateZ(' + (bulge * 26).toFixed(1) + 'px)';
 
-  const shade = el.querySelector('.flip-shade');
-  if (shade) shade.style.opacity = (t * 0.5).toFixed(3);
+  const frontT = Math.min(a, 90) / 90;             // fase depan  (0..90°)
+  const backT = Math.max(0, (a - 90) / 90);        // fase belakang (90..180°)
 
-  // tepi terdepan menggulung: lekuk ke dalam di tengah tinggi halaman
+  if (el._shadeF) el._shadeF.style.opacity = (frontT * 0.5).toFixed(3);
+  if (el._shadeB) el._shadeB.style.opacity = ((1 - backT) * 0.5).toFixed(3);
+
+  // tepi terdepan menggulung: lekuk ke dalam di tengah tinggi halaman.
+  // PENTING: clip-path dipasang di tiap MUKA, bukan wrapper — clip-path pada
+  // wrapper memaksa transform-style flat dan mematikan trik dua muka
   const dent = bulge * 5.5;
   const d1 = (dent * 0.6).toFixed(2), d2 = dent.toFixed(2);
-  el.style.clipPath = 'polygon(0% 0%, 100% 0%, ' + (100 - d1) + '% 25%, ' +
+  const clip = 'polygon(0% 0%, 100% 0%, ' + (100 - d1) + '% 25%, ' +
     (100 - d2) + '% 50%, ' + (100 - d1) + '% 75%, 100% 100%, 0% 100%)';
+  if (el._front) el._front.style.clipPath = clip;
+  if (el._back) el._back.style.clipPath = clip; // koordinat lokal back ikut termirror, tepi lekuk tetap di sisi bergerak
 
-  const hl = el.querySelector('.flip-highlight');
-  if (hl) {
-    hl.style.opacity = (bulge * 0.32).toFixed(3);
-    hl.style.transform = 'translateX(' + (bulge * 46 - 24).toFixed(1) + '%)';
+  if (el._hl) {
+    el._hl.style.opacity = (Math.sin(frontT * Math.PI) * 0.32).toFixed(3);
+    el._hl.style.transform = 'translateX(' + (frontT * 70 - 24).toFixed(1) + '%)';
   }
+  if (el._cast) el._cast.style.opacity = (bulge * 0.4).toFixed(3);
 }
 
+/* animasi via rAF (bukan transisi CSS) supaya SEMUA efek — bayangan depan/belakang,
+   bayangan jatuh, kilau, curl — dihitung ulang tiap frame, konsisten dgn saat drag.
+   Easing easeOutCirc = easing bawaan turn.js */
 function animateFlip(el, fromDeg, toDeg, done) {
   pageState.animating = true;
-  el.style.transition = 'none';
-  const shade = el.querySelector('.flip-shade');
-  if (shade) shade.style.transition = 'none';
+  const span = Math.abs(toDeg - fromDeg);
+  const dur = Math.max(180, FLIP_MS * span / 180); // proporsional sisa sudut (rilis dari drag)
+  const t0 = performance.now();
   setFlipAngle(el, fromDeg);
-  void el.offsetWidth;
-  const ease = 'cubic-bezier(.3,.4,.15,1)';
-  el.style.transition = 'transform ' + FLIP_MS + 'ms ' + ease;
-  if (shade) shade.style.transition = 'opacity ' + FLIP_MS + 'ms ' + ease;
-  setFlipAngle(el, toDeg);
-  let finished = false;
-  const finish = () => {
-    if (finished) return;
-    finished = true;
+  function step(now) {
+    if (!el.isConnected) { pageState.animating = false; return; }
+    const p = Math.min(1, (now - t0) / dur);
+    const e = Math.sqrt(1 - (p - 1) * (p - 1)); // easeOutCirc (turn.js)
+    setFlipAngle(el, fromDeg + (toDeg - fromDeg) * e);
+    if (p < 1) { requestAnimationFrame(step); return; }
     pageState.animating = false;
     if (done) done();
-  };
-  el.addEventListener('transitionend', finish, { once: true });
-  setTimeout(finish, FLIP_MS + 140); // fallback bila transitionend tak terpicu
+  }
+  requestAnimationFrame(step);
 }
 
 /* balik halaman; melewati batas bab berpindah bab otomatis */
@@ -1191,10 +1227,10 @@ function goPage(delta) {
     if (delta > 0) { // halaman ini melipat ke kiri, halaman baru di baliknya
       const ov = makeOverlay(pageState.page);
       setPage(target, false);
-      animateFlip(ov, 0, -88, clearFlips);
+      animateFlip(ov, 0, -180, clearFlips);
     } else {         // halaman sebelumnya melipat masuk dari kiri
       const ov = makeOverlay(target);
-      animateFlip(ov, -88, 0, () => { setPage(target, false); clearFlips(); });
+      animateFlip(ov, -180, 0, () => { setPage(target, false); clearFlips(); });
     }
     return;
   }
@@ -1202,7 +1238,7 @@ function goPage(delta) {
     if (currentChapter < nCh - 1) {
       const ov = makeOverlay(pageState.page); // halaman lama (dari konten lama)
       gotoChapter(currentChapter + 1);        // bab baru dirender di baliknya
-      animateFlip(ov, 0, -88, clearFlips);
+      animateFlip(ov, 0, -180, clearFlips);
     }
     return;
   }
@@ -1211,7 +1247,7 @@ function goPage(delta) {
     pageState.pendingLastPage = true;
     gotoChapter(currentChapter - 1);              // render bab sebelumnya (hal terakhir)
     const ov = makeOverlay(pageState.page);       // halaman tujuan, melipat masuk
-    animateFlip(ov, -88, 0, clearFlips);
+    animateFlip(ov, -180, 0, clearFlips);
   }
 }
 
@@ -1259,7 +1295,7 @@ function bindPagerGestures() {
         } else if (dx > 0 && canBack) {
           pageState.dragMode = 'flip-back';
           pageState.dragOverlay = makeOverlay(pageState.dragFromPage - 1);
-          setFlipAngle(pageState.dragOverlay, -88);
+          setFlipAngle(pageState.dragOverlay, -180);
         } else {
           pageState.dragMode = 'slide'; // di ujung buku/bab: geser dengan resistensi
         }
@@ -1270,10 +1306,10 @@ function bindPagerGestures() {
 
     if (pageState.dragMode === 'flip-fwd') {
       const t = Math.max(-1, Math.min(0, dx / pageState.pageW));
-      setFlipAngle(pageState.dragOverlay, t * 88);
+      setFlipAngle(pageState.dragOverlay, t * 180);
     } else if (pageState.dragMode === 'flip-back') {
       const t = Math.max(0, Math.min(1, dx / pageState.pageW));
-      setFlipAngle(pageState.dragOverlay, -88 + t * 88);
+      setFlipAngle(pageState.dragOverlay, -180 + t * 180);
     } else if (pageState.dragMode === 'slide') {
       const content = $('#reader-content');
       content.style.transition = 'none';
@@ -1292,20 +1328,20 @@ function bindPagerGestures() {
     const ov = pageState.dragOverlay;
 
     if (pageState.dragMode === 'flip-fwd') {
-      const angle = Math.max(-88, Math.min(0, (dx / pageState.pageW) * 88));
-      const commit = angle < -24 || (flick && dx < 0);
+      const angle = Math.max(-180, Math.min(0, (dx / pageState.pageW) * 180));
+      const commit = angle < -50 || (flick && dx < 0);
       if (commit) {
-        animateFlip(ov, angle, -88, clearFlips); // pageState.page sudah di target
+        animateFlip(ov, angle, -180, clearFlips); // pageState.page sudah di target
       } else {
         animateFlip(ov, angle, 0, () => { setPage(pageState.dragFromPage, false); clearFlips(); });
       }
     } else if (pageState.dragMode === 'flip-back') {
-      const angle = -88 + Math.max(0, Math.min(1, dx / pageState.pageW)) * 88;
-      const commit = angle > -64 || (flick && dx > 0);
+      const angle = -180 + Math.max(0, Math.min(1, dx / pageState.pageW)) * 180;
+      const commit = angle > -130 || (flick && dx > 0);
       if (commit) {
         animateFlip(ov, angle, 0, () => { setPage(pageState.dragFromPage - 1, false); clearFlips(); });
       } else {
-        animateFlip(ov, angle, -88, clearFlips);
+        animateFlip(ov, angle, -180, clearFlips);
       }
     } else if (pageState.dragMode === 'slide') {
       const content = $('#reader-content');
@@ -1340,6 +1376,11 @@ function applySettings(relayout) {
   reader.style.setProperty('--reader-font', s.fontSize + 'px');
   document.querySelectorAll('.theme-dot').forEach(d =>
     d.classList.toggle('active', d.dataset.theme === s.theme));
+  const themeBtn = $('#reader-theme-btn');
+  if (themeBtn) {
+    themeBtn.innerHTML = s.theme === 'gelap' ? '&#9788;' : '&#9790;'; // ☼ / ☾
+    themeBtn.setAttribute('aria-label', s.theme === 'gelap' ? 'Ganti ke mode terang' : 'Ganti ke mode gelap');
+  }
   if (relayout && currentBook && !reader.hidden) {
     const ratio = pageState.pages > 1 ? pageState.page / (pageState.pages - 1) : 0;
     layoutPages();
@@ -1370,6 +1411,10 @@ async function boot() {
   };
   $('#reader-settings-btn').onclick = () => {
     $('#reader-settings').hidden = !$('#reader-settings').hidden;
+  };
+  // toggle cepat gelap⇄terang tanpa membuka panel pengaturan (tema sepia tetap di panel)
+  $('#reader-theme-btn').onclick = () => {
+    setSettings({ theme: getSettings().theme === 'gelap' ? 'terang' : 'gelap' });
   };
   $('#font-dec').onclick = () => setSettings({ fontSize: Math.max(15, getSettings().fontSize - 1) });
   $('#font-inc').onclick = () => setSettings({ fontSize: Math.min(24, getSettings().fontSize + 1) });

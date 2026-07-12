@@ -425,18 +425,36 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   z-index: 50; max-width: 88vw; text-align: center;
 }
 
-/* ============ Flip halaman 3D (seperti kertas) ============ */
+/* ============ Flip halaman 3D (seperti kertas, teknik turn.js) ============ */
 .pager { perspective: 2600px; }
 .flip-page {
   position: absolute; top: 14px; bottom: 6px; z-index: 6;
-  overflow: hidden; background: var(--r-bg);
   transform-origin: left center;
-  backface-visibility: hidden;
+  transform-style: preserve-3d;
   will-change: transform;
+  /* tanpa backface-visibility di wrapper: sisi belakang ditangani .flip-back */
+}
+.flip-face {
+  position: absolute; inset: 0; overflow: hidden;
+  background: var(--r-bg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   box-shadow: 2px 4px 18px rgba(0,0,0,.30);
   border-radius: 0 3px 3px 0;
 }
-.flip-underlay { z-index: 5; box-shadow: none; border-radius: 0; }
+.flip-back {
+  transform: rotateY(180deg);
+  border-radius: 3px 0 0 3px;
+  /* punggung kertas: sedikit lebih kusam dari muka + serat halus vertikal */
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.05), rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,.05)),
+    var(--r-bg);
+}
+.flip-back .flip-shade {
+  background: linear-gradient(-90deg, rgba(0,0,0,.50), rgba(0,0,0,.08) 45%, rgba(0,0,0,0) 75%);
+}
+.flip-underlay { z-index: 5; }
+.flip-underlay .flip-face { box-shadow: none; border-radius: 0; }
 .flip-shade {
   position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(90deg, rgba(0,0,0,.50), rgba(0,0,0,.08) 45%, rgba(0,0,0,0) 75%);
@@ -447,7 +465,12 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   background: linear-gradient(100deg, transparent 38%, rgba(255,255,255,.55) 50%, transparent 62%);
   mix-blend-mode: overlay; opacity: 0; will-change: transform, opacity;
 }
-.flip-page { transform-style: preserve-3d; }
+/* bayangan yg dijatuhkan halaman terlipat ke halaman di bawahnya (bshadow turn.js) */
+.flip-cast {
+  position: absolute; top: 14px; bottom: 6px; z-index: 5;
+  pointer-events: none; opacity: 0; will-change: opacity;
+  background: linear-gradient(90deg, rgba(0,0,0,.35), rgba(0,0,0,.12) 30%, rgba(0,0,0,0) 62%);
+}
 .flip-clone { transition: none !important; }
 
 /* ============ Mode imersif: tap tengah menyembunyikan bar ============ */
