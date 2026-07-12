@@ -315,7 +315,10 @@ export async function initGlobe(root, ctx) {
     totalMove += Math.abs(dx) + Math.abs(dy);
     group.rotation.y += dx * ROTATE_SENS / zoom;
     velY = dx * ROTATE_SENS / zoom;
-    tiltX = clamp(tiltX + dy * TILT_SENS / zoom, -TILT_CLAMP, TILT_CLAMP);
+    // saat zoom, izinkan kemiringan lebih jauh supaya lintang tinggi (mis. Eropa Utara)
+    // bisa ditempatkan di tengah layar
+    const tiltMax = zoom > 1.05 ? 1.3 : TILT_CLAMP;
+    tiltX = clamp(tiltX + dy * TILT_SENS / zoom, -tiltMax, tiltMax);
   }
   function onPointerUp(e) {
     pointers.delete(e.pointerId);
@@ -471,7 +474,9 @@ export async function initGlobe(root, ctx) {
           group.rotation.y += AUTO_ROTATE_SPEED * dt / zoom;
         }
       }
-      tiltX += (HOME_TILT - tiltX) * 0.05;
+      // ease-back kemiringan hanya saat tidak zoom — saat zoom, kemiringan pilihan
+      // pengguna dipertahankan agar area yang sedang diamati tidak "lari" sendiri
+      if (zoom <= 1.05) tiltX += (HOME_TILT - tiltX) * 0.05;
     }
     group.rotation.x = tiltX;
   }
