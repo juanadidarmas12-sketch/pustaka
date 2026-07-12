@@ -292,13 +292,37 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 .book-card:active .cover { transform: scale(.97); }
 .cover::before { /* punggung buku */
-  content: ""; position: absolute; inset: 0 auto 0 0; width: 7px;
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 7px; z-index: 5;
   background: linear-gradient(90deg, rgba(0,0,0,.28), rgba(255,255,255,.12));
 }
 .cover::after { /* kilau kertas */
-  content: ""; position: absolute; inset: 0;
+  content: ""; position: absolute; inset: 0; z-index: 2;
   background: radial-gradient(120% 80% at 85% 0%, rgba(255,255,255,.18), transparent 55%);
   pointer-events: none;
+}
+
+/* cover potret + pita (seni penulis, seragam se-katalog) */
+.cover.portrait { padding: 0; background: #14100b;
+  box-shadow: var(--shadow), inset 0 0 0 1px rgba(243,231,210,.14); }
+.cover.portrait .cv-img {
+  position: absolute; inset: 0; z-index: 1;
+  background-size: cover; background-position: top center;
+  filter: contrast(1.03) saturate(1.03);
+}
+.cover.portrait .cv-band {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 3;
+  padding: 22px 12px 11px 15px;
+  background: linear-gradient(180deg, rgba(15,10,5,0), rgba(15,10,5,.5) 34%,
+    rgba(15,10,5,.86) 74%, rgba(15,10,5,.95));
+}
+.cover.portrait .cv-band-title {
+  font-family: var(--serif); font-weight: 700; color: #fbf3e2;
+  font-size: 15.5px; line-height: 1.18; text-wrap: balance;
+  text-shadow: 0 1px 5px rgba(0,0,0,.75);
+}
+.cover.portrait .cv-band-author {
+  font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase;
+  color: rgba(242,220,180,.92); margin-top: 5px;
 }
 .cover .cv-cat {
   font-size: 9.5px; text-transform: uppercase; letter-spacing: 1.6px;
@@ -310,7 +334,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 .cover .cv-author { font-size: 11px; opacity: .85; }
 .cover .cv-progress {
-  position: absolute; left: 7px; right: 0; bottom: 0; height: 4px;
+  position: absolute; left: 7px; right: 0; bottom: 0; height: 4px; z-index: 6;
   background: rgba(0,0,0,.25);
 }
 .cover .cv-progress > div { height: 100%; background: rgba(255,255,255,.9); }
@@ -339,6 +363,9 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .detail-hero { display: flex; gap: 18px; align-items: flex-start; margin-top: 8px; }
 .detail-hero .cover { width: 120px; flex: none; aspect-ratio: 2/3; }
 .detail-hero .cover .cv-title { font-size: 14px; }
+.detail-hero .cover.portrait .cv-band { padding: 16px 9px 9px 12px; }
+.detail-hero .cover.portrait .cv-band-title { font-size: 12.5px; }
+.detail-hero .cover.portrait .cv-band-author { font-size: 8px; }
 .detail-hd h2 { font-family: var(--serif); font-size: 24px; margin: 4px 0 2px; line-height: 1.2; }
 .detail-hd .dt-author { color: var(--ink-soft); font-size: 14px; margin: 0; }
 .detail-stats { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }

@@ -69,10 +69,32 @@ function hashCode(str) {
 }
 
 /* sampul buku: gradien per kategori dgn sudut bervariasi + monogram */
-function coverHTML(meta) {
+/* potret penulis (lokal) sebagai seni cover, jika ada */
+function bookPortrait(meta) {
+  const info = AUTHORS[meta.author];
+  return (info && info.photo && info.photo.indexOf('assets/') === 0) ? info.photo : null;
+}
+
+function coverHTML(meta, vt) {
+  const vtStyle = vt ? 'view-transition-name:book-cover;' : '';
+  const portrait = bookPortrait(meta);
+  if (portrait) {
+    // cover potret + pita judul (seragam se-katalog)
+    return (
+      '<div class="cover portrait cat-' + meta.category + '" style="' + vtStyle + '">' +
+        '<div class="cv-img" style="background-image:url(' + encodeURI(portrait) + ')"></div>' +
+        '<div class="cv-band">' +
+          '<div class="cv-band-title">' + escHTML(meta.title) + '</div>' +
+          '<div class="cv-band-author">' + escHTML(meta.author) + '</div>' +
+        '</div>' +
+        '%%PROGRESS%%' +
+      '</div>'
+    );
+  }
+  // fallback gradien (jika potret tak tersedia)
   const angle = 130 + (hashCode(meta.id) % 55);
   return (
-    '<div class="cover cat-' + meta.category + '" style="background:linear-gradient(' +
+    '<div class="cover cat-' + meta.category + '" style="' + vtStyle + 'background:linear-gradient(' +
       angle + 'deg, var(--c-' + meta.category + '-1), var(--c-' + meta.category + '-2))">' +
       '<div class="cv-cat">' + CAT_LABELS[meta.category] + '</div>' +
       '<div class="cv-title">' + escHTML(meta.title) + '</div>' +
@@ -940,8 +962,7 @@ async function renderDetail(id) {
 
   $('#detail-body').innerHTML =
     '<div class="detail-hero" style="--tint:var(--c-' + meta.category + '-2)">' +
-      coverHTML(meta).replace('%%PROGRESS%%', '').replace('style="background:',
-        'style="view-transition-name:book-cover;background:') +
+      coverHTML(meta, true).replace('%%PROGRESS%%', '') +
       '<div class="detail-hd">' +
         '<h2>' + escHTML(meta.title) + '</h2>' +
         '<p class="dt-author">' + escHTML(meta.author) + ' · ' + escHTML(meta.year) + '</p>' +
@@ -1608,10 +1629,16 @@ async function openListen(id, ch) {
   listen.ch = Math.max(0, Math.min(ch, book.chapters.length - 1));
   const chap = book.chapters[listen.ch];
 
-  const angle = 130 + (hashCode(id) % 55);
   const cover = $('#listen-cover');
-  cover.style.background = 'linear-gradient(' + angle + 'deg, var(--c-' + meta.category + '-1), var(--c-' + meta.category + '-2))';
-  cover.textContent = meta.title[0];
+  const lp = bookPortrait(meta);
+  if (lp) {
+    cover.style.background = 'center top / cover no-repeat url("' + encodeURI(lp) + '")';
+    cover.textContent = '';
+  } else {
+    const angle = 130 + (hashCode(id) % 55);
+    cover.style.background = 'linear-gradient(' + angle + 'deg, var(--c-' + meta.category + '-1), var(--c-' + meta.category + '-2))';
+    cover.textContent = meta.title[0];
+  }
   $('#listen-book').textContent = meta.title;
   $('#listen-chapter').textContent = chap.title + ' · ' + (listen.ch + 1) + '/' + book.chapters.length;
 

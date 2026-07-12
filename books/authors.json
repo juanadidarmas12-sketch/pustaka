@@ -3,7 +3,7 @@
   "years": "1469-1527",
   "nationality": "Italia",
   "bio": "Diplomat dan penulis Florence yang jatuh dari kekuasaan lalu menulis 'The Prince' sambil berharap bisa kembali bekerja untuk penguasa baru kotanya. Namanya sendiri jadi kata sifat, 'Machiavellian', padahal dalam karya lain dia sebenarnya penggemar berat pemerintahan republik.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg/330px-Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg",
+  "photo": "assets/portraits/niccolo-machiavelli.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -85,13 +85,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg/330px-Portrait_of_Niccol%C3%B2_Machiavelli_by_Santi_di_Tito.jpg"
  },
  "Marcus Aurelius": {
   "years": "121-180 M",
   "nationality": "Romawi",
   "bio": "Kaisar Romawi yang menghabiskan sebagian besar masa pemerintahannya di medan perang, tapi tetap menyempatkan diri menulis catatan renungan pribadi yang tidak pernah dia maksudkan untuk dibaca orang lain. Filsafat Stoic baginya bukan teori akademis, tapi cara bertahan waras sambil memimpin kekaisaran terbesar di dunia.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/MSR-ra-61-b-1-DM.jpg/330px-MSR-ra-61-b-1-DM.jpg",
+  "photo": "assets/portraits/marcus-aurelius.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -163,13 +164,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/MSR-ra-61-b-1-DM.jpg/330px-MSR-ra-61-b-1-DM.jpg"
  },
  "Sun Tzu": {
   "years": "±544-496 SM",
   "nationality": "Tiongkok",
   "bio": "Jenderal dan ahli strategi militer dari akhir era Musim Semi dan Gugur, meski identitas historisnya sampai sekarang masih diperdebatkan sejarawan. 'The Art of War' begitu ringkas dan padat sampai kini lebih sering dikutip pebisnis dan pelatih olahraga dibanding jenderal sungguhan.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cf/%E5%90%B4%E5%8F%B8%E9%A9%AC%E5%AD%99%E6%AD%A6.jpg",
+  "photo": "assets/portraits/sun-tzu.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -216,13 +218,14 @@
     "inCatalog": false,
     "note": "strategi perang gerilya"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/c/cf/%E5%90%B4%E5%8F%B8%E9%A9%AC%E5%AD%99%E6%AD%A6.jpg"
  },
  "Karl Marx & Friedrich Engels": {
   "years": "Marx 1818-1883, Engels 1820-1895",
   "nationality": "Jerman",
   "bio": "Marx sang filsuf-ekonom dan Engels sang putra pengusaha tekstil yang mendanai hidupnya, berteman sepanjang hidup dan sama-sama yakin sejarah bergerak lewat pertentangan kelas. 'Communist Manifesto' yang mereka tulis bersama saat masih muda ikut membentuk arah politik dunia selama lebih dari satu abad setelahnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png/330px-Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png",
+  "photo": "assets/portraits/karl-marx-friedrich-engels.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -323,13 +326,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png/330px-Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png"
  },
  "Plato": {
   "years": "±428-348 SM",
   "nationality": "Yunani",
   "bio": "Murid Socrates yang mendirikan Akademia di Athena, salah satu institusi pendidikan tertinggi tertua di dunia Barat. Hampir semua karyanya ditulis dalam bentuk dialog dengan Socrates sebagai tokoh utama, sehingga sulit memisahkan mana pemikiran gurunya dan mana yang murni miliknya sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png/330px-Plato_Silanion_Musei_Capitolini_MC1377.png",
+  "photo": "assets/portraits/plato.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -437,13 +441,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Plato_Silanion_Musei_Capitolini_MC1377.png/330px-Plato_Silanion_Musei_Capitolini_MC1377.png"
  },
  "Edward Gibbon": {
   "years": "1737-1794",
   "nationality": "Inggris",
   "bio": "Sejarawan yang menghabiskan hampir dua puluh tahun menulis 'The Decline and Fall of the Roman Empire', proyek yang katanya terinspirasi saat dia duduk merenung di reruntuhan Kapitolium Roma. Gaya prosanya yang megah dan ironis membuat karyanya tetap enak dibaca meski sudah berusia lebih dari dua abad.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Edward_Emily_Gibbon.jpg/330px-Edward_Emily_Gibbon.jpg",
+  "photo": "assets/portraits/edward-gibbon.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -526,13 +531,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Edward_Emily_Gibbon.jpg/330px-Edward_Emily_Gibbon.jpg"
  },
  "David Ricardo": {
   "years": "1772-1823",
   "nationality": "Inggris",
   "bio": "Mantan pialang saham yang sudah kaya raya sebelum beralih total ke ekonomi teori, terinspirasi setelah membaca 'The Wealth of Nations' karya Adam Smith. Teorinya soal keunggulan komparatif sampai sekarang jadi argumen dasar mengapa negara-negara untung berdagang satu sama lain.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg/330px-Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg",
+  "photo": "assets/portraits/david-ricardo.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -614,13 +620,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg/330px-Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg"
  },
  "Alexis de Tocqueville": {
   "years": "1805-1859",
   "nationality": "Prancis",
   "bio": "Bangsawan muda Prancis yang dikirim pemerintahnya ke Amerika untuk 'meneliti sistem penjara', tapi pulang membawa analisis mendalam tentang demokrasi itu sendiri. Pengamatannya soal bahaya tirani mayoritas dan individualisme masih dikutip tiap kali orang membahas kelemahan-kelemahan demokrasi modern.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Alexis_de_Tocqueville_%28Th%C3%A9odore_Chass%C3%A9riau_-_Versailles%29.jpg/330px-Alexis_de_Tocqueville_%28Th%C3%A9odore_Chass%C3%A9riau_-_Versailles%29.jpg",
+  "photo": "assets/portraits/alexis-de-tocqueville.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -680,13 +687,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Alexis_de_Tocqueville_%28Th%C3%A9odore_Chass%C3%A9riau_-_Versailles%29.jpg/330px-Alexis_de_Tocqueville_%28Th%C3%A9odore_Chass%C3%A9riau_-_Versailles%29.jpg"
  },
  "John Stuart Mill": {
   "years": "1806-1873",
   "nationality": "Inggris",
   "bio": "Anak ajaib yang dididik sangat keras oleh ayahnya sejak usia tiga tahun, sempat mengalami depresi berat di usia dua puluhan sebelum akhirnya menemukan suaranya sendiri sebagai filsuf liberal. Istrinya, Harriet Taylor, ikut memengaruhi banyak pemikirannya soal kebebasan dan kesetaraan perempuan.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg/330px-John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg",
+  "photo": "assets/portraits/john-stuart-mill.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -812,13 +820,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg/330px-John_Stuart_Mill_by_London_Stereoscopic_Company%2C_c1870.jpg"
  },
  "Friedrich Nietzsche": {
   "years": "1844-1900",
   "nationality": "Jerman",
   "bio": "Profesor filologi yang berhenti mengajar karena sakit-sakitan, lalu menghabiskan sisa hidupnya menulis dalam kesendirian sebelum akhirnya mengalami keruntuhan mental total di usia 44 tahun. Karyanya yang menyerang moralitas konvensional sering disalahpahami dan disalahgunakan justru oleh gerakan-gerakan yang paling dia benci.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/330px-Nietzsche187a.jpg",
+  "photo": "assets/portraits/friedrich-nietzsche.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -902,13 +911,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/330px-Nietzsche187a.jpg"
  },
  "Herodotus": {
   "years": "±484-425 SM",
   "nationality": "Yunani",
   "bio": "Disebut Cicero sebagai 'Bapak Sejarah', Herodotus berkelana luas ke Mesir, Persia, dan berbagai negeri lain untuk mengumpulkan cerita sebelum menuliskannya. Sebagian isinya jelas dilebih-lebihkan, tapi dialah orang pertama yang mencoba menulis sejarah sebagai narasi yang bisa dinikmati, bukan sekadar daftar peristiwa.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg/330px-Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg",
+  "photo": "assets/portraits/herodotus.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -970,13 +980,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg/330px-Marble_bust_of_Herodotos_MET_DT11742_%28cropped%29.jpg"
  },
  "Thorstein Veblen": {
   "years": "1857-1929",
   "nationality": "Amerika Serikat",
   "bio": "Anak imigran Norwegia yang jadi ekonom nyentrik, dikenal karena gaya hidupnya yang eksentrik dan kariernya yang penuh kontroversi di berbagai universitas. Istilah 'conspicuous consumption' yang dia ciptakan di 'The Theory of the Leisure Class' masih jadi kosakata standar tiap kali orang membahas gaya hidup pamer.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Veblen3a.jpg/330px-Veblen3a.jpg",
+  "photo": "assets/portraits/thorstein-veblen.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1043,13 +1054,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Veblen3a.jpg/330px-Veblen3a.jpg"
  },
  "W. E. B. Du Bois": {
   "years": "1868-1963",
   "nationality": "Amerika Serikat",
   "bio": "Orang kulit hitam pertama yang meraih gelar doktor dari Harvard, sekaligus salah satu pendiri NAACP yang memperjuangkan hak sipil sepanjang hidupnya. Di usia sembilan puluh lebih, dia pindah ke Ghana dan menjadi warga negara di sana, kecewa dengan rasisme yang tak kunjung usai di negara asalnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/W.E.B._Du_Bois_by_James_E._Purdy%2C_1907_%283x4%29.jpg/330px-W.E.B._Du_Bois_by_James_E._Purdy%2C_1907_%283x4%29.jpg",
+  "photo": "assets/portraits/w-e-b-du-bois.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1121,13 +1133,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/W.E.B._Du_Bois_by_James_E._Purdy%2C_1907_%283x4%29.jpg/330px-W.E.B._Du_Bois_by_James_E._Purdy%2C_1907_%283x4%29.jpg"
  },
  "John Locke": {
   "years": "1632-1704",
   "nationality": "Inggris",
   "bio": "Dokter dan filsuf yang sempat harus melarikan diri ke Belanda karena terlibat urusan politik yang berbahaya di Inggris. Gagasannya soal hak alami dan pemerintahan atas persetujuan rakyat ikut jadi bahan bakar Revolusi Amerika, meski dia sudah lama wafat saat itu terjadi.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg/330px-Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg",
+  "photo": "assets/portraits/john-locke.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1242,13 +1255,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg/330px-Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg"
  },
  "Thomas More": {
   "years": "1478-1535",
   "nationality": "Inggris",
   "bio": "Negarawan dan penasihat dekat Raja Henry VIII yang akhirnya dihukum mati karena menolak mengakui raja sebagai kepala Gereja Inggris. Kata 'utopia' yang dia ciptakan sendiri sebenarnya permainan kata Yunani yang bisa berarti 'tempat baik' atau 'tempat yang tidak ada', dan sampai sekarang tidak ada yang yakin mana maksud sebenarnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg/330px-Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg",
+  "photo": "assets/portraits/thomas-more.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1315,13 +1329,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg/330px-Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg"
  },
  "Henry David Thoreau": {
   "years": "1817-1862",
   "nationality": "Amerika Serikat",
   "bio": "Penulis dan naturalis yang tinggal sendirian di pondok kecil tepi Danau Walden selama dua tahun sebagai eksperimen hidup sederhana, meski faktanya dia sering jalan kaki pulang ke rumah ibunya untuk makan. Esainya soal pembangkangan sipil kelak menginspirasi Gandhi dan Martin Luther King Jr.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Benjamin_D._Maxham_-_Henry_David_Thoreau_-_Restored.jpg/330px-Benjamin_D._Maxham_-_Henry_David_Thoreau_-_Restored.jpg",
+  "photo": "assets/portraits/henry-david-thoreau.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1393,13 +1408,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Benjamin_D._Maxham_-_Henry_David_Thoreau_-_Restored.jpg/330px-Benjamin_D._Maxham_-_Henry_David_Thoreau_-_Restored.jpg"
  },
  "Thomas Paine": {
   "years": "1737-1809",
   "nationality": "Inggris-Amerika",
   "bio": "Anak tukang korset dari Inggris yang gagal di berbagai pekerjaan sebelum pindah ke Amerika dan menemukan panggilannya sebagai penulis pamflet revolusioner. Ironisnya, meski tulisannya ikut memicu dua revolusi besar (Amerika dan Prancis), dia wafat miskin dan nyaris dilupakan di New York.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Laurent_Dabos_%E2%80%93_Thomas_Paine_%E2%80%93_Google_Art_Project.jpg/330px-Laurent_Dabos_%E2%80%93_Thomas_Paine_%E2%80%93_Google_Art_Project.jpg",
+  "photo": "assets/portraits/thomas-paine.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1477,13 +1493,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Laurent_Dabos_%E2%80%93_Thomas_Paine_%E2%80%93_Google_Art_Project.jpg/330px-Laurent_Dabos_%E2%80%93_Thomas_Paine_%E2%80%93_Google_Art_Project.jpg"
  },
  "Laozi": {
   "years": "±abad ke-6 SM (legendaris)",
   "nationality": "Tiongkok",
   "bio": "Tokoh yang menurut legenda adalah pencatat arsip kerajaan yang memutuskan meninggalkan dunia ramai, dan baru menulis Tao Te Ching saat dicegat penjaga gerbang perbatasan yang memintanya berbagi kebijaksanaan dulu. Keberadaan historisnya sampai sekarang diperdebatkan, tapi pengaruh ajarannya terhadap Taoisme tidak terbantahkan.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Laozi_%28Chinese_characters%29.svg/330px-Laozi_%28Chinese_characters%29.svg.png",
+  "photo": "assets/portraits/laozi.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1543,13 +1560,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Laozi_%28Chinese_characters%29.svg/330px-Laozi_%28Chinese_characters%29.svg.png"
  },
  "Thucydides": {
   "years": "±460-400 SM",
   "nationality": "Yunani",
   "bio": "Jenderal Athena yang dibuang dari kotanya sendiri setelah gagal mempertahankan sebuah kota selama Perang Peloponnesos, dan memakai masa pengasingannya untuk menulis sejarah perang itu dengan jarak yang dingin. Berbeda dari Herodotus, dia berusaha keras memisahkan fakta dari mitos, menjadikannya salah satu sejarawan paling 'ilmiah' di zaman kuno.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Thucydides_pushkin01.jpg/330px-Thucydides_pushkin01.jpg",
+  "photo": "assets/portraits/thucydides.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1611,13 +1629,14 @@
     "inCatalog": false,
     "note": "analisis geopolitik kontemporer"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Thucydides_pushkin01.jpg/330px-Thucydides_pushkin01.jpg"
  },
  "Mary Wollstonecraft": {
   "years": "1759-1797",
   "nationality": "Inggris",
   "bio": "Penulis dan pemikir yang membesarkan dirinya sendiri lewat menulis di zaman ketika sangat sedikit perempuan bisa mencari nafkah dengan cara itu. Dia wafat sepuluh hari setelah melahirkan anak keduanya, yang kelak tumbuh menjadi Mary Shelley, penulis novel 'Frankenstein'.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Mary_Wollstonecraft_Portrait.jpg/330px-Mary_Wollstonecraft_Portrait.jpg",
+  "photo": "assets/portraits/mary-wollstonecraft.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1690,13 +1709,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Mary_Wollstonecraft_Portrait.jpg/330px-Mary_Wollstonecraft_Portrait.jpg"
  },
  "Thomas Hobbes": {
   "years": "1588-1679",
   "nationality": "Inggris",
   "bio": "Lahir prematur karena ibunya panik mendengar kabar Armada Spanyol akan menyerang Inggris, yang membuat Hobbes bercanda dirinya 'lahir kembar dengan ketakutan'. Pengalamannya hidup di masa perang saudara Inggris membentuk pandangannya yang suram tentang kodrat manusia dan perlunya negara yang kuat.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Thomas_Hobbes_by_John_Michael_Wright_%28colour%29_%283x4_cropped%29.jpg/330px-Thomas_Hobbes_by_John_Michael_Wright_%28colour%29_%283x4_cropped%29.jpg",
+  "photo": "assets/portraits/thomas-hobbes.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1773,13 +1793,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Thomas_Hobbes_by_John_Michael_Wright_%28colour%29_%283x4_cropped%29.jpg/330px-Thomas_Hobbes_by_John_Michael_Wright_%28colour%29_%283x4_cropped%29.jpg"
  },
  "Aristotle": {
   "years": "384-322 SM",
   "nationality": "Yunani",
   "bio": "Murid Plato yang kemudian jadi guru pribadi Alexander Agung, sebelum mendirikan sekolahnya sendiri, Lyceum, di Athena. Kalau Plato asyik dengan dunia ide abstrak, Aristoteles justru gemar mengamati, mengklasifikasi, dan menyusun sistem, dari biologi sampai etika hingga politik.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/330px-Aristotle_Altemps_Inv8575.jpg",
+  "photo": "assets/portraits/aristotle.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1859,13 +1880,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/330px-Aristotle_Altemps_Inv8575.jpg"
  },
  "Epictetus": {
   "years": "±55-135 M",
   "nationality": "Yunani-Romawi",
   "bio": "Lahir sebagai budak di Asia Kecil, kakinya konon menjadi cacat karena disiksa tuannya sendiri, tapi dia akhirnya dibebaskan dan menjadi salah satu guru Stoic paling dihormati di Roma. Dia tidak pernah menulis apa pun sendiri; semua ajarannya yang bertahan sampai sekarang dicatat oleh muridnya, Arrian.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Epicteti_Enchiridion_Latinis_versibus_adumbratum_%28Oxford_1715%29_frontispiece_%28cropped%29.jpg/330px-Epicteti_Enchiridion_Latinis_versibus_adumbratum_%28Oxford_1715%29_frontispiece_%28cropped%29.jpg",
+  "photo": "assets/portraits/epictetus.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -1935,13 +1957,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Epicteti_Enchiridion_Latinis_versibus_adumbratum_%28Oxford_1715%29_frontispiece_%28cropped%29.jpg/330px-Epicteti_Enchiridion_Latinis_versibus_adumbratum_%28Oxford_1715%29_frontispiece_%28cropped%29.jpg"
  },
  "Lucretius": {
   "years": "±99-55 SM",
   "nationality": "Romawi",
   "bio": "Nyaris tidak ada yang diketahui pasti tentang hidupnya selain bahwa dia mengagumi filsuf Yunani Epicurus dan menuangkan seluruh ajarannya ke dalam satu puisi panjang, 'On the Nature of Things'. Karyanya sempat nyaris hilang sepenuhnya sebelum ditemukan kembali di sebuah biara pada abad ke-15, mengubah arah pemikiran Renaisans.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lucretius_pointing_to_the_casus.jpg/330px-Lucretius_pointing_to_the_casus.jpg",
+  "photo": "assets/portraits/lucretius.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2005,13 +2028,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lucretius_pointing_to_the_casus.jpg/330px-Lucretius_pointing_to_the_casus.jpg"
  },
  "Boethius": {
   "years": "±477-524 M",
   "nationality": "Romawi",
   "bio": "Negarawan dan cendekiawan Romawi yang menjabat posisi tinggi di bawah raja Ostrogoth Theodoric, sebelum dituduh berkhianat dan dipenjara menunggu eksekusi. Dari sel penjara itulah lahir 'The Consolation of Philosophy', ditulis oleh orang yang tahu persis dia akan segera mati saat menulisnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Boethius.jpeg/330px-Boethius.jpeg",
+  "photo": "assets/portraits/boethius.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2076,13 +2100,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Boethius.jpeg/330px-Boethius.jpeg"
  },
  "René Descartes": {
   "years": "1596-1650",
   "nationality": "Prancis",
   "bio": "Dulu tentara bayaran sebelum menetap dan menghabiskan hidupnya di Belanda demi kebebasan berpikir yang lebih longgar dibanding Prancis. Terkenal suka bangun siang dan berpikir sambil berbaring di ranjang, sampai akhirnya wafat karena harus mengajar Ratu Swedia jam lima pagi dalam cuaca dingin yang tidak biasa baginya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/330px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
+  "photo": "assets/portraits/rene-descartes.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2159,13 +2184,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/330px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg"
  },
  "Baruch Spinoza": {
   "years": "1632-1677",
   "nationality": "Belanda",
   "bio": "Keturunan Yahudi Portugis yang dikucilkan dari komunitasnya sendiri karena pandangannya dianggap terlalu radikal, lalu mencari nafkah sebagai penggosok lensa kacamata sambil menulis filsafat di waktu senggang. Dia menolak semua tawaran jabatan akademik demi mempertahankan kebebasan berpikirnya, dan wafat muda diduga karena menghirup debu kaca dari pekerjaannya sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Spinoza.jpg/330px-Spinoza.jpg",
+  "photo": "assets/portraits/baruch-spinoza.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2247,13 +2273,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Spinoza.jpg/330px-Spinoza.jpg"
  },
  "David Hume": {
   "years": "1711-1776",
   "nationality": "Skotlandia",
   "bio": "Filsuf yang begitu skeptis sampai dijuluki 'atheis' oleh lawan-lawannya, meski dia sendiri lebih suka disebut agnostik. Dikenal juga sebagai orang yang riang dan disukai banyak teman, jauh dari citra filsuf skeptis yang suram, bahkan tetap tenang dan bercanda saat menghadapi kematiannya sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/David_Hume_Ramsay.jpg/330px-David_Hume_Ramsay.jpg",
+  "photo": "assets/portraits/david-hume.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2329,13 +2356,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/David_Hume_Ramsay.jpg/330px-David_Hume_Ramsay.jpg"
  },
  "Immanuel Kant": {
   "years": "1724-1804",
   "nationality": "Jerman",
   "bio": "Hidupnya begitu teratur sampai warga kota Königsberg konon bisa menyetel jam mereka berdasarkan jadwal jalan sorenya, yang hanya pernah dia lewatkan sekali seumur hidup. Dari kota kecil itu, tanpa pernah bepergian jauh, dia menghasilkan salah satu sistem filsafat paling berpengaruh dalam sejarah pemikiran Barat.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Immanuel_Kant_-_Gemaelde_1.jpg/330px-Immanuel_Kant_-_Gemaelde_1.jpg",
+  "photo": "assets/portraits/immanuel-kant.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2426,13 +2454,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Immanuel_Kant_-_Gemaelde_1.jpg/330px-Immanuel_Kant_-_Gemaelde_1.jpg"
  },
  "Arthur Schopenhauer": {
   "years": "1788-1860",
   "nationality": "Jerman",
   "bio": "Filsuf yang terkenal pemarah dan sinis, pernah mendorong tetangganya dari tangga karena kesal diganggu saat sedang berpikir, dan harus membayar tunjangan seumur hidup untuk perempuan itu. Pandangan pesimisnya tentang hidup sangat dipengaruhi filsafat Buddha dan Hindu yang saat itu baru mulai dikenal di Eropa.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Arthur_Schopenhauer_by_J_Sch%C3%A4fer%2C_1859b.jpg/330px-Arthur_Schopenhauer_by_J_Sch%C3%A4fer%2C_1859b.jpg",
+  "photo": "assets/portraits/arthur-schopenhauer.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2508,13 +2537,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Arthur_Schopenhauer_by_J_Sch%C3%A4fer%2C_1859b.jpg/330px-Arthur_Schopenhauer_by_J_Sch%C3%A4fer%2C_1859b.jpg"
  },
  "Francis Bacon": {
   "years": "1561-1626",
   "nationality": "Inggris",
   "bio": "Negarawan dan filsuf yang sempat menjabat Lord Chancellor Inggris sebelum jatuh karena tuduhan korupsi. Dia dikenal sebagai bapak metode ilmiah modern, dan menurut legenda populer (meski diperdebatkan) wafat karena masuk angin setelah bereksperimen mengawetkan ayam dengan salju.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Somer_Francis_Bacon.jpg/330px-Somer_Francis_Bacon.jpg",
+  "photo": "assets/portraits/francis-bacon.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2591,13 +2621,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Somer_Francis_Bacon.jpg/330px-Somer_Francis_Bacon.jpg"
  },
  "George Berkeley": {
   "years": "1685-1753",
   "nationality": "Irlandia",
   "bio": "Uskup Anglikan yang juga filsuf, terkenal karena idealismenya yang ekstrem bahwa dunia materi hanya ada dalam persepsi. Dia sempat mencoba mendirikan universitas misionaris di Bermuda dan tinggal bertahun-tahun di Rhode Island menunggu dana yang tak kunjung cair dari pemerintah Inggris.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/John_Smibert_-_Bishop_George_Berkeley_-_Google_Art_Project_%28cropped%29.jpg/330px-John_Smibert_-_Bishop_George_Berkeley_-_Google_Art_Project_%28cropped%29.jpg",
+  "photo": "assets/portraits/george-berkeley.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2662,13 +2693,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/John_Smibert_-_Bishop_George_Berkeley_-_Google_Art_Project_%28cropped%29.jpg/330px-John_Smibert_-_Bishop_George_Berkeley_-_Google_Art_Project_%28cropped%29.jpg"
  },
  "William James": {
   "years": "1842-1910",
   "nationality": "Amerika Serikat",
   "bio": "Dokter yang beralih jadi psikolog lalu filsuf, dan dianggap salah satu pendiri psikologi modern di Amerika. Kakaknya adalah novelis terkenal Henry James, dan keduanya sering saling menyindir soal siapa yang menulis lebih 'seperti novel' dan siapa yang lebih 'seperti filsafat'.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/William_James_b1842c.jpg/330px-William_James_b1842c.jpg",
+  "photo": "assets/portraits/william-james.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2749,13 +2781,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/William_James_b1842c.jpg/330px-William_James_b1842c.jpg"
  },
  "Bertrand Russell": {
   "years": "1872-1970",
   "nationality": "Inggris",
   "bio": "Bangsawan, matematikawan, filsuf, sekaligus aktivis anti-perang yang sempat dipenjara karena menentang Perang Dunia I. Dia hidup sangat panjang, sampai sempat ikut kampanye menentang senjata nuklir di usia sembilan puluhan, dan meraih Hadiah Nobel Sastra di tahun 1950.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Bertrand_Russell_smoking_in_1936.jpg/330px-Bertrand_Russell_smoking_in_1936.jpg",
+  "photo": "assets/portraits/bertrand-russell.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2822,13 +2855,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Bertrand_Russell_smoking_in_1936.jpg/330px-Bertrand_Russell_smoking_in_1936.jpg"
  },
  "Ralph Waldo Emerson": {
   "years": "1803-1882",
   "nationality": "Amerika Serikat",
   "bio": "Mantan pendeta yang berhenti dari gerejanya karena merasa ritual keagamaan formal mengekang, lalu jadi tokoh utama gerakan transendentalisme Amerika. Dia adalah mentor sekaligus tetangga Henry David Thoreau, yang tanahnya di tepi Danau Walden dipinjamkan Emerson untuk eksperimen hidup sederhana muridnya itu.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ralph_Waldo_Emerson_by_Josiah_Johnson_Hawes_1857.jpg/330px-Ralph_Waldo_Emerson_by_Josiah_Johnson_Hawes_1857.jpg",
+  "photo": "assets/portraits/ralph-waldo-emerson.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2911,13 +2945,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ralph_Waldo_Emerson_by_Josiah_Johnson_Hawes_1857.jpg/330px-Ralph_Waldo_Emerson_by_Josiah_Johnson_Hawes_1857.jpg"
  },
  "Confucius": {
   "years": "±551-479 SM",
   "nationality": "Tiongkok",
   "bio": "Guru dan pejabat rendahan yang gagal mendapat posisi tinggi di pemerintahan pada masanya sendiri, tapi ajarannya kemudian jadi fondasi moral dan politik Tiongkok selama lebih dari dua milenium. Dia tidak pernah menulis bukunya sendiri; semua yang kita tahu tentang ajarannya datang dari catatan murid-muridnya setelah dia wafat.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Confucius_Tang_Dynasty.jpg/330px-Confucius_Tang_Dynasty.jpg",
+  "photo": "assets/portraits/confucius.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -2982,13 +3017,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Confucius_Tang_Dynasty.jpg/330px-Confucius_Tang_Dynasty.jpg"
  },
  "Blaise Pascal": {
   "years": "1623-1662",
   "nationality": "Prancis",
   "bio": "Anak ajaib matematika yang menciptakan mesin hitung mekanik di usia sembilan belas tahun, sebelum mengalami pengalaman religius mendalam yang mengubah arah hidupnya menuju perenungan filosofis dan teologis. Dia wafat muda di usia 39 tahun, meninggalkan catatan-catatan Pensees yang tidak sempat dirapikannya sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Blaise_Pascal_Versailles.JPG/330px-Blaise_Pascal_Versailles.JPG",
+  "photo": "assets/portraits/blaise-pascal.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3054,13 +3090,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Blaise_Pascal_Versailles.JPG/330px-Blaise_Pascal_Versailles.JPG"
  },
  "Alexander Hamilton, James Madison & John Jay": {
   "years": "Hamilton 1755-1804, Madison 1751-1836, Jay 1745-1829",
   "nationality": "Amerika Serikat",
   "bio": "Tiga tokoh pendiri Amerika yang menulis 85 esai di bawah nama samaran bersama 'Publius' untuk meyakinkan publik New York menerima Konstitusi yang baru dirancang. Hamilton sendiri wafat dalam duel pistol melawan wakil presiden saat itu, Aaron Burr, salah satu kematian paling terkenal dalam sejarah politik Amerika.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Alexander_Hamilton_%28NPG%29.jpg/330px-Alexander_Hamilton_%28NPG%29.jpg",
+  "photo": "assets/portraits/alexander-hamilton-james-madison-john-jay.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3130,13 +3167,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Alexander_Hamilton_%28NPG%29.jpg/330px-Alexander_Hamilton_%28NPG%29.jpg"
  },
  "Jean-Jacques Rousseau": {
   "years": "1712-1778",
   "nationality": "Swiss-Prancis",
   "bio": "Tumbuh tanpa ibu (wafat saat melahirkannya) dan sempat hidup berpindah-pindah sebagai pekerja serabutan sebelum menemukan namanya lewat tulisan-tulisan filsafat politik yang radikal. Gagasannya soal kebebasan dan kehendak umum begitu berpengaruh sampai ikut membentuk arah Revolusi Prancis, meski dia sendiri wafat sebelas tahun sebelum revolusi itu pecah.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Maurice_Quentin_de_La_Tour_-_Portrait_of_Jean-Jacques_Rousseau_-_adjusted.jpg/330px-Maurice_Quentin_de_La_Tour_-_Portrait_of_Jean-Jacques_Rousseau_-_adjusted.jpg",
+  "photo": "assets/portraits/jean-jacques-rousseau.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3219,13 +3257,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Maurice_Quentin_de_La_Tour_-_Portrait_of_Jean-Jacques_Rousseau_-_adjusted.jpg/330px-Maurice_Quentin_de_La_Tour_-_Portrait_of_Jean-Jacques_Rousseau_-_adjusted.jpg"
  },
  "Edmund Burke": {
   "years": "1729-1797",
   "nationality": "Irlandia-Inggris",
   "bio": "Anggota Parlemen Inggris yang dianggap bapak konservatisme modern, meski dia sendiri juga membela kemerdekaan koloni Amerika dan mengkritik keras penjajahan Inggris di India. Kombinasi sikapnya yang tampak kontradiktif ini sebenarnya konsisten: dia curiga pada perubahan yang dipaksakan lewat kekerasan, dari arah mana pun datangnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sir_Joshua_Reynolds_-_Edmund_Burke%2C_1729_-_1797._Statesman%2C_orator_and_author_-_PG_2362_-_National_Galleries_of_Scotland.jpg/330px-Sir_Joshua_Reynolds_-_Edmund_Burke%2C_1729_-_1797._Statesman%2C_orator_and_author_-_PG_2362_-_National_Galleries_of_Scotland.jpg",
+  "photo": "assets/portraits/edmund-burke.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3302,13 +3341,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sir_Joshua_Reynolds_-_Edmund_Burke%2C_1729_-_1797._Statesman%2C_orator_and_author_-_PG_2362_-_National_Galleries_of_Scotland.jpg/330px-Sir_Joshua_Reynolds_-_Edmund_Burke%2C_1729_-_1797._Statesman%2C_orator_and_author_-_PG_2362_-_National_Galleries_of_Scotland.jpg"
  },
  "Emma Goldman": {
   "years": "1869-1940",
   "nationality": "Rusia-Amerika",
   "bio": "Imigran Yahudi Rusia yang jadi salah satu tokoh anarkis paling vokal di Amerika, berulang kali dipenjara karena aktivismenya sebelum akhirnya dideportasi ke Rusia pada 1919. Dia juga pembela hak reproduksi dan kebebasan seksual perempuan jauh sebelum gagasan itu diterima secara luas.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Emma_Goldman_seated.jpg/330px-Emma_Goldman_seated.jpg",
+  "photo": "assets/portraits/emma-goldman.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3380,13 +3420,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Emma_Goldman_seated.jpg/330px-Emma_Goldman_seated.jpg"
  },
  "Walter Bagehot": {
   "years": "1826-1877",
   "nationality": "Inggris",
   "bio": "Editor majalah The Economist yang juga menulis luas soal politik dan keuangan, dengan gaya yang tajam tapi tetap mudah dipahami orang awam. Prinsip-prinsipnya soal peran bank sentral saat krisis, dikenal sebagai 'Bagehot's Dictum', masih diajarkan di sekolah ekonomi sampai sekarang.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Walter_Bagehot_NPG_cropped.jpg/330px-Walter_Bagehot_NPG_cropped.jpg",
+  "photo": "assets/portraits/walter-bagehot.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3451,13 +3492,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Walter_Bagehot_NPG_cropped.jpg/330px-Walter_Bagehot_NPG_cropped.jpg"
  },
  "Mikhail Bakunin": {
   "years": "1814-1876",
   "nationality": "Rusia",
   "bio": "Bangsawan Rusia yang berubah jadi revolusioner keliling Eropa, terlibat di hampir setiap pemberontakan besar abad ke-19 dan berkali-kali dipenjara serta diasingkan. Perseteruannya dengan Karl Marx soal arah gerakan buruh internasional akhirnya memecah gerakan sosialis jadi dua kubu besar: Marxis dan anarkis.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Mikhail_Bakunin_Nader_%283x4_cropped%29.jpg/330px-Mikhail_Bakunin_Nader_%283x4_cropped%29.jpg",
+  "photo": "assets/portraits/mikhail-bakunin.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3538,13 +3580,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Mikhail_Bakunin_Nader_%283x4_cropped%29.jpg/330px-Mikhail_Bakunin_Nader_%283x4_cropped%29.jpg"
  },
  "Peter Kropotkin": {
   "years": "1842-1921",
   "nationality": "Rusia",
   "bio": "Pangeran Rusia terlatih sebagai ilmuwan geografi yang justru meninggalkan gelar bangsawannya untuk jadi salah satu pemikir anarkis paling dihormati. Penelitian ilmiahnya tentang alam liar Siberia jadi bukti empiris yang dia pakai untuk membela gagasan kerja sama sebagai kekuatan evolusi, bukan cuma persaingan.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Peter_Kropotkin_circa_1900.jpg/330px-Peter_Kropotkin_circa_1900.jpg",
+  "photo": "assets/portraits/peter-kropotkin.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3615,13 +3658,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Peter_Kropotkin_circa_1900.jpg/330px-Peter_Kropotkin_circa_1900.jpg"
  },
  "Plutarch": {
   "years": "±46-120 M",
   "nationality": "Yunani-Romawi",
   "bio": "Pendeta dan penulis Yunani yang menghabiskan hidupnya di kota kecil kelahirannya, Chaeronea, sambil menjabat sebagai pendeta di Kuil Delphi yang terkenal. Karya biografinya jadi jembatan yang membuat pembaca Latin dan Yunani sama-sama mengenal tokoh-tokoh besar dari kedua peradaban itu.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Portrait_of_a_philosopher%2C_maybe_Plutarch%2C_2nd_century_BC%2C_AM_Delphi%2C_0135.jpg/330px-Portrait_of_a_philosopher%2C_maybe_Plutarch%2C_2nd_century_BC%2C_AM_Delphi%2C_0135.jpg",
+  "photo": "assets/portraits/plutarch.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3686,13 +3730,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Portrait_of_a_philosopher%2C_maybe_Plutarch%2C_2nd_century_BC%2C_AM_Delphi%2C_0135.jpg/330px-Portrait_of_a_philosopher%2C_maybe_Plutarch%2C_2nd_century_BC%2C_AM_Delphi%2C_0135.jpg"
  },
  "Julius Caesar": {
   "years": "100-44 SM",
   "nationality": "Romawi",
   "bio": "Jenderal, negarawan, sekaligus penulis yang naskahnya sendiri tentang penaklukan Galia jadi salah satu contoh propaganda politik paling canggih di dunia kuno. Dia dibunuh oleh sekelompok senator, termasuk sahabat dekatnya Brutus, tepat pada Ides of March tahun 44 SM.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg/330px-Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg",
+  "photo": "assets/portraits/julius-caesar.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3768,13 +3813,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg/330px-Retrato_de_Julio_C%C3%A9sar_%2826724093101%29_%28cropped%29.jpg"
  },
  "Tacitus": {
   "years": "±56-120 M",
   "nationality": "Romawi",
   "bio": "Sejarawan dan senator Romawi yang hidup di bawah kaisar-kaisar yang dia kritik keras dalam tulisannya sendiri, sehingga sebagian karyanya baru bisa ditulis lebih bebas setelah kaisar-kaisar itu wafat. Gaya bahasanya yang ringkas dan penuh sindiran membuatnya salah satu penulis Latin paling sulit sekaligus paling dihargai.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Wien-_Parlament-Tacitus.jpg/330px-Wien-_Parlament-Tacitus.jpg",
+  "photo": "assets/portraits/tacitus.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3834,13 +3880,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Wien-_Parlament-Tacitus.jpg/330px-Wien-_Parlament-Tacitus.jpg"
  },
  "Xenophon": {
   "years": "±430-354 SM",
   "nationality": "Yunani",
   "bio": "Murid Socrates yang memilih jalan hidup sebagai tentara bayaran dan petualang, bukan filsuf murni seperti Plato. Pengalamannya memimpin sepuluh ribu tentara Yunani pulang dari jantung Persia jadi bahan 'Anabasis', salah satu kisah bertahan hidup paling awal yang pernah ditulis.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Bust_of_Xenophon.jpg/330px-Bust_of_Xenophon.jpg",
+  "photo": "assets/portraits/xenophon.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3912,13 +3959,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Bust_of_Xenophon.jpg/330px-Bust_of_Xenophon.jpg"
  },
  "Suetonius": {
   "years": "±69-122 M",
   "nationality": "Romawi",
   "bio": "Sekretaris pribadi Kaisar Hadrian yang punya akses ke arsip kekaisaran, sebelum dipecat diduga karena terlalu dekat dengan istri kaisar. Akses istimewa itulah yang membuat biografinya tentang dua belas kaisar pertama penuh detail personal dan gosip yang tidak akan ditemukan di sumber resmi mana pun.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Suetonius_etching_%28cropped%29.jpg/330px-Suetonius_etching_%28cropped%29.jpg",
+  "photo": "assets/portraits/suetonius.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -3984,13 +4032,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Suetonius_etching_%28cropped%29.jpg/330px-Suetonius_etching_%28cropped%29.jpg"
  },
  "Thomas Carlyle": {
   "years": "1795-1881",
   "nationality": "Skotlandia",
   "bio": "Penulis dan sejarawan yang gaya prosanya begitu bertenaga dan dramatis sampai dijuluki 'Sage of Chelsea' oleh publik Victoria. Kisah terkenal tentang naskah pertama 'The French Revolution' yang tak sengaja dibakar jadi abu oleh pembantu temannya membuatnya harus menulis ulang seluruh buku itu dari nol.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Thomas_Carlyle._Photograph_by_Elliott_%26_Fry._Wellcome_V0027634_%28Cropped%29.jpg/330px-Thomas_Carlyle._Photograph_by_Elliott_%26_Fry._Wellcome_V0027634_%28Cropped%29.jpg",
+  "photo": "assets/portraits/thomas-carlyle.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4065,13 +4114,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Thomas_Carlyle._Photograph_by_Elliott_%26_Fry._Wellcome_V0027634_%28Cropped%29.jpg/330px-Thomas_Carlyle._Photograph_by_Elliott_%26_Fry._Wellcome_V0027634_%28Cropped%29.jpg"
  },
  "H. G. Wells": {
   "years": "1866-1946",
   "nationality": "Inggris",
   "bio": "Lebih dikenal sebagai bapak fiksi ilmiah lewat 'The War of the Worlds' dan 'The Time Machine', Wells juga punya ambisi besar menuliskan sejarah dan masa depan umat manusia secara utuh. Dia percaya sejarah dunia perlu dipahami sebagai satu kesatuan agar manusia berhenti saling berperang.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/H.G._Wells_by_Beresford.jpg/330px-H.G._Wells_by_Beresford.jpg",
+  "photo": "assets/portraits/h-g-wells.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4138,13 +4188,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/H.G._Wells_by_Beresford.jpg/330px-H.G._Wells_by_Beresford.jpg"
  },
  "Benjamin Franklin": {
   "years": "1706-1790",
   "nationality": "Amerika Serikat",
   "bio": "Tukang cetak yang jadi ilmuwan, diplomat, sekaligus salah satu Bapak Pendiri Amerika Serikat, dikenal luas lewat eksperimen layang-layangnya soal listrik. Otobiografinya yang tidak pernah dia selesaikan sendiri ini ternyata jadi salah satu memoar paling berpengaruh dalam sastra Amerika.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg/330px-Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg",
+  "photo": "assets/portraits/benjamin-franklin.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4214,13 +4265,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg/330px-Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg"
  },
  "Frederick Douglass": {
   "years": "±1818-1895",
   "nationality": "Amerika Serikat",
   "bio": "Lahir sebagai budak dan tidak pernah tahu pasti tanggal lahirnya sendiri, Douglass melarikan diri di usia dua puluhan dan menjadi salah satu orator serta penulis anti-perbudakan paling berpengaruh di Amerika. Dia kelak juga jadi penasihat presiden dan diplomat, perjalanan hidup yang nyaris mustahil untuk ukuran zamannya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Frederick_Douglass_%28circa_1879%29_%28cropped%29.jpg/330px-Frederick_Douglass_%28circa_1879%29_%28cropped%29.jpg",
+  "photo": "assets/portraits/frederick-douglass.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4311,13 +4363,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Frederick_Douglass_%28circa_1879%29_%28cropped%29.jpg/330px-Frederick_Douglass_%28circa_1879%29_%28cropped%29.jpg"
  },
  "Marco Polo": {
   "years": "1254-1324",
   "nationality": "Italia",
   "bio": "Pedagang Venesia yang menghabiskan hampir dua puluh empat tahun berkelana di Asia, termasuk lama tinggal di istana Kubilai Khan. Catatan perjalanannya didiktekan dari dalam penjara di Genoa, tempat dia ditawan setelah kalah dalam pertempuran laut, kepada penulis cerita fiksi bernama Rustichello.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Frontispice_%C3%A9dition_de_Nuremberg_1477_%28cropped%29.png/330px-Frontispice_%C3%A9dition_de_Nuremberg_1477_%28cropped%29.png",
+  "photo": "assets/portraits/marco-polo.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4383,13 +4436,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Frontispice_%C3%A9dition_de_Nuremberg_1477_%28cropped%29.png/330px-Frontispice_%C3%A9dition_de_Nuremberg_1477_%28cropped%29.png"
  },
  "Polybius": {
   "years": "±200-118 SM",
   "nationality": "Yunani",
   "bio": "Perwira Yunani yang dibawa sebagai tawanan politik ke Roma, di mana dia justru berteman dekat dengan elite Romawi dan mendapat akses istimewa untuk mempelajari bagaimana kekuasaan mereka bekerja. Posisinya sebagai orang luar yang diterima orang dalam membuat analisisnya soal kebangkitan Roma sangat berharga.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Stele_des_Polybios.jpg",
+  "photo": "assets/portraits/polybius.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4454,13 +4508,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Stele_des_Polybios.jpg"
  },
  "Einhard": {
   "years": "±775-840 M",
   "nationality": "Frank (Jerman-Prancis)",
   "bio": "Cendekiawan istana yang tumbuh dan mengabdi langsung di lingkungan Charlemagne, sehingga biografinya ditulis dari pengamatan pribadi, bukan sekadar riset dari jauh. Gayanya jelas-jelas mencontoh biografi Suetonius tentang para kaisar Romawi, model yang dia anggap paling pas untuk pemimpin sebesar Charlemagne.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/%C3%89ginhard_Vita_Caroli_magni_imperatoris-Lettrine_V_histori%C3%A9e_Charlemagne_assis.jpg/330px-%C3%89ginhard_Vita_Caroli_magni_imperatoris-Lettrine_V_histori%C3%A9e_Charlemagne_assis.jpg",
+  "photo": "assets/portraits/einhard.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4519,13 +4574,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/%C3%89ginhard_Vita_Caroli_magni_imperatoris-Lettrine_V_histori%C3%A9e_Charlemagne_assis.jpg/330px-%C3%89ginhard_Vita_Caroli_magni_imperatoris-Lettrine_V_histori%C3%A9e_Charlemagne_assis.jpg"
  },
  "Flavius Josephus": {
   "years": "±37-100 M",
   "nationality": "Yahudi-Romawi",
   "bio": "Jenderal Yahudi yang menyerah kepada Romawi saat pemberontakan besar, lalu berubah posisi jadi penasihat dan sejarawan di pihak penakluknya sendiri. Posisinya yang kontroversial ini membuatnya dicap pengkhianat oleh sebagian orang Yahudi, tapi juga menjadikannya saksi mata langka dari kedua sisi konflik itu.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg/330px-Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg",
+  "photo": "assets/portraits/flavius-josephus.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4584,13 +4640,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg/330px-Joseph%2C_son_of_Gorian%2C_called_Flavius_Josephus_%28cropped%29.jpg"
  },
  "Karl Marx": {
   "years": "1818-1883",
   "nationality": "Jerman",
   "bio": "Filsuf dan ekonom yang menghabiskan sebagian besar hidup dewasanya dalam pengasingan di London, sering dalam kemiskinan, ditopang bantuan finansial sahabatnya Friedrich Engels. Analisisnya tentang kapitalisme dan perjuangan kelas mengubah arah politik dunia jauh melampaui apa yang dia bayangkan sendiri saat menulisnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png/330px-Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png",
+  "photo": "assets/portraits/karl-marx.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4720,13 +4777,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png/330px-Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png"
  },
  "Thomas Robert Malthus": {
   "years": "1766-1834",
   "nationality": "Inggris",
   "bio": "Pendeta Anglikan yang juga ekonom, dikenal karena ramalan suramnya soal pertumbuhan populasi yang akan selalu melampaui pasokan pangan. Meski ramalannya banyak meleset karena revolusi teknologi pertanian, istilah 'Malthusian' tetap jadi rujukan standar tiap kali orang bicara soal batas daya dukung bumi.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg/330px-Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg",
+  "photo": "assets/portraits/thomas-robert-malthus.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4799,13 +4857,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg/330px-Thomas_Robert_Malthus_Wellcome_L0069037_-crop.jpg"
  },
  "Henry George": {
   "years": "1839-1897",
   "nationality": "Amerika Serikat",
   "bio": "Wartawan otodidak tanpa pendidikan formal tinggi yang menulis salah satu buku ekonomi terlaris di zamannya, terinspirasi oleh ketimpangan yang dia saksikan langsung di California saat demam emas. Gagasan pajak tunggal atas tanahnya sempat jadi gerakan politik besar, bahkan dia nyaris terpilih jadi wali kota New York.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Henry_George_c1885_retouched.jpg/330px-Henry_George_c1885_retouched.jpg",
+  "photo": "assets/portraits/henry-george.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4870,13 +4929,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Henry_George_c1885_retouched.jpg/330px-Henry_George_c1885_retouched.jpg"
  },
  "John Maynard Keynes": {
   "years": "1883-1946",
   "nationality": "Inggris",
   "bio": "Ekonom brilian yang juga terlibat aktif sebagai negosiator pemerintah Inggris, termasuk hadir di perundingan damai Versailles yang dia kritik keras lewat bukunya sendiri. Gagasannya soal peran aktif pemerintah dalam mengelola ekonomi membentuk kebijakan ekonomi dunia sepanjang sebagian besar abad ke-20.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/John_Maynard_Keynes_%281929%29.jpg/330px-John_Maynard_Keynes_%281929%29.jpg",
+  "photo": "assets/portraits/john-maynard-keynes.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -4952,13 +5012,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/John_Maynard_Keynes_%281929%29.jpg/330px-John_Maynard_Keynes_%281929%29.jpg"
  },
  "Adam Smith": {
   "years": "1723-1790",
   "nationality": "Skotlandia",
   "bio": "Profesor filsafat moral yang dikenal pelupa dan ceroboh dalam kehidupan sehari-hari, konon pernah berjalan dalam gaun tidur sejauh belasan kilometer sambil melamun soal filsafat. Sebelum jadi 'bapak ekonomi modern' lewat 'The Wealth of Nations', dia lebih dulu menulis soal moralitas dan simpati manusia.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adam_Smith_The_Muir_portrait.jpg/330px-Adam_Smith_The_Muir_portrait.jpg",
+  "photo": "assets/portraits/adam-smith.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5067,13 +5128,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adam_Smith_The_Muir_portrait.jpg/330px-Adam_Smith_The_Muir_portrait.jpg"
  },
  "Frederick Winslow Taylor": {
   "years": "1856-1915",
   "nationality": "Amerika Serikat",
   "bio": "Insinyur yang mulai kariernya sebagai pekerja pabrik biasa sebelum naik jadi konsultan yang mengubah cara dunia industri berpikir soal efisiensi kerja. Metodenya yang mengukur setiap gerakan pekerja dengan stopwatch sangat berpengaruh, tapi juga jadi simbol kritik terhadap perlakuan pekerja seperti mesin.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Fredrick_Winslow_Taylor_c1907_retouched.png/330px-Fredrick_Winslow_Taylor_c1907_retouched.png",
+  "photo": "assets/portraits/frederick-winslow-taylor.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5127,13 +5189,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Fredrick_Winslow_Taylor_c1907_retouched.png/330px-Fredrick_Winslow_Taylor_c1907_retouched.png"
  },
  "John Ruskin": {
   "years": "1819-1900",
   "nationality": "Inggris",
   "bio": "Awalnya dikenal sebagai kritikus seni paling berpengaruh di Inggris Victoria, sebelum beralih menulis kritik sosial dan ekonomi yang jauh lebih radikal dari yang diharapkan publiknya. Gaya hidup dan pandangannya yang tidak biasa membuatnya sering jadi bahan gunjingan, tapi pengaruh pemikirannya jauh melampaui dunia seni.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/John_Ruskin_1863.jpg/330px-John_Ruskin_1863.jpg",
+  "photo": "assets/portraits/john-ruskin.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5203,13 +5266,14 @@
     "type": "guru",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/John_Ruskin_1863.jpg/330px-John_Ruskin_1863.jpg"
  },
  "John Bates Clark": {
   "years": "1847-1938",
   "nationality": "Amerika Serikat",
   "bio": "Salah satu ekonom Amerika paling berpengaruh di masanya, dikenal lewat teori produktivitas marjinal yang jadi jawaban arus utama terhadap kritik ekonom sosialis. Hadiah bergengsi untuk ekonom muda terbaik Amerika, John Bates Clark Medal, dinamai untuk menghormatinya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/John_Bates_Clark.jpg/330px-John_Bates_Clark.jpg",
+  "photo": "assets/portraits/john-bates-clark.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5273,13 +5337,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/John_Bates_Clark.jpg/330px-John_Bates_Clark.jpg"
  },
  "Frédéric Bastiat": {
   "years": "1801-1850",
   "nationality": "Prancis",
   "bio": "Petani anggur yang jadi ekonom otodidak dengan bakat satire yang tajam, memakai humor untuk membongkar argumen-argumen proteksionisme yang menurutnya masuk akal di permukaan tapi keliru secara logika. Dia wafat muda karena tuberkulosis, tapi gaya menulisnya yang tajam dan lucu tetap dikagumi para ekonom pasar bebas sampai sekarang.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bastiat.jpg/330px-Bastiat.jpg",
+  "photo": "assets/portraits/frederic-bastiat.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5344,13 +5409,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bastiat.jpg/330px-Bastiat.jpg"
  },
  "Booker T. Washington": {
   "years": "1856-1915",
   "nationality": "Amerika Serikat",
   "bio": "Lahir sebagai budak dan belajar membaca secara mandiri, Washington kelak mendirikan Tuskegee Institute dan menjadi salah satu pemimpin kulit hitam Amerika paling berpengaruh pasca-perbudakan. Pendekatannya yang menekankan pendidikan vokasional dan akomodasi politik sempat memicu perdebatan sengit dengan aktivis lain seperti W. E. B. Du Bois.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Booker_T_Washington_retouched_flattened-crop.jpg/330px-Booker_T_Washington_retouched_flattened-crop.jpg",
+  "photo": "assets/portraits/booker-t-washington.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5426,13 +5492,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Booker_T_Washington_retouched_flattened-crop.jpg/330px-Booker_T_Washington_retouched_flattened-crop.jpg"
  },
  "Jane Addams": {
   "years": "1860-1935",
   "nationality": "Amerika Serikat",
   "bio": "Salah satu pendiri gerakan 'settlement house' di Amerika lewat Hull House di Chicago, tempat dia bekerja langsung membantu komunitas imigran miskin. Dia meraih Hadiah Nobel Perdamaian pada 1931, salah satu perempuan pertama yang mendapat penghargaan itu.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Jane_Addams_-_Bain_News_Service.jpg/330px-Jane_Addams_-_Bain_News_Service.jpg",
+  "photo": "assets/portraits/jane-addams.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5499,13 +5566,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Jane_Addams_-_Bain_News_Service.jpg/330px-Jane_Addams_-_Bain_News_Service.jpg"
  },
  "Jacob Riis": {
   "years": "1849-1914",
   "nationality": "Denmark-Amerika",
   "bio": "Imigran Denmark yang sempat hidup sebagai gelandangan di New York sebelum jadi wartawan foto yang mengekspos kondisi permukiman kumuh kota itu. Karyanya jadi salah satu contoh paling awal jurnalisme foto yang benar-benar mengubah kebijakan publik, termasuk menarik perhatian Theodore Roosevelt.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Jacob_Riis_2.jpg/330px-Jacob_Riis_2.jpg",
+  "photo": "assets/portraits/jacob-riis.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5565,13 +5633,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Jacob_Riis_2.jpg/330px-Jacob_Riis_2.jpg"
  },
  "Charlotte Perkins Gilman": {
   "years": "1860-1935",
   "nationality": "Amerika Serikat",
   "bio": "Penulis dan aktivis feminis yang juga menulis fiksi terkenal 'The Yellow Wallpaper', terinspirasi dari pengalamannya sendiri diperlakukan lewat terapi istirahat total yang justru memperparah depresinya. Dia jadi salah satu suara paling awal yang menghubungkan feminisme langsung dengan analisis ekonomi.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Charlotte_Perkins_Gilman_c._1900.jpg/330px-Charlotte_Perkins_Gilman_c._1900.jpg",
+  "photo": "assets/portraits/charlotte-perkins-gilman.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5642,13 +5711,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Charlotte_Perkins_Gilman_c._1900.jpg/330px-Charlotte_Perkins_Gilman_c._1900.jpg"
  },
  "Gustave Le Bon": {
   "years": "1841-1931",
   "nationality": "Prancis",
   "bio": "Dokter dan polimatik Prancis yang tertarik pada berbagai bidang, dari antropologi sampai fisika, sebelum menulis karya paling terkenalnya tentang psikologi massa. Analisisnya soal kerumunan diam-diam dibaca dan dipelajari oleh sejumlah tokoh politik abad ke-20 yang kemudian menyalahgunakannya untuk memanipulasi opini publik.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Gustave_Le_Bon_circa_1900_%283x4_cropped%29.jpg/330px-Gustave_Le_Bon_circa_1900_%283x4_cropped%29.jpg",
+  "photo": "assets/portraits/gustave-le-bon.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5714,13 +5784,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Gustave_Le_Bon_circa_1900_%283x4_cropped%29.jpg/330px-Gustave_Le_Bon_circa_1900_%283x4_cropped%29.jpg"
  },
  "Sigmund Freud": {
   "years": "1856-1939",
   "nationality": "Austria",
   "bio": "Neurolog Wina yang jadi bapak psikoanalisis, mengubah cara dunia memahami pikiran bawah sadar, mimpi, dan represi. Dia terpaksa melarikan diri ke London di akhir hidupnya untuk menghindari penganiayaan Nazi, dan wafat tak lama setelahnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg/330px-Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg",
+  "photo": "assets/portraits/sigmund-freud.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5805,13 +5876,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg/330px-Sigmund_Freud%2C_by_Max_Halberstadt_%28cropped%29.jpg"
  },
  "Olive Schreiner": {
   "years": "1855-1920",
   "nationality": "Afrika Selatan",
   "bio": "Penulis dan aktivis kelahiran Afrika Selatan yang novelnya 'The Story of an African Farm' membuatnya terkenal di Inggris sebelum dia fokus menulis nonfiksi feminis. Dia juga vokal menentang kebijakan rasial di negaranya sendiri, jauh sebelum sistem apartheid resmi terbentuk.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Olive_Schreiner.jpg/330px-Olive_Schreiner.jpg",
+  "photo": "assets/portraits/olive-schreiner.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5860,13 +5932,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Olive_Schreiner.jpg/330px-Olive_Schreiner.jpg"
  },
  "Samuel Smiles": {
   "years": "1812-1904",
   "nationality": "Skotlandia",
   "bio": "Dokter yang beralih jadi penulis setelah kecewa dengan dunia politik reformasi, dan menemukan panggilannya lewat kisah-kisah inspiratif orang biasa yang berhasil lewat kerja keras. 'Self-Help' jadi buku laris luar biasa di era Victoria dan menjadikannya bapak spiritual seluruh genre motivasi diri modern.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Samuel_Smiles_by_Sir_George_Reid.jpg/330px-Samuel_Smiles_by_Sir_George_Reid.jpg",
+  "photo": "assets/portraits/samuel-smiles.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -5931,13 +6004,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Samuel_Smiles_by_Sir_George_Reid.jpg/330px-Samuel_Smiles_by_Sir_George_Reid.jpg"
  },
  "Leo Tolstoy": {
   "years": "1828-1910",
   "nationality": "Rusia",
   "bio": "Bangsawan Rusia yang menulis novel-novel epik seperti 'War and Peace' sebelum mengalami krisis spiritual mendalam di usia lima puluhan yang mengubahnya jadi pertapa religius dan pasifis radikal. Dia bahkan menolak sebagian karya besarnya sendiri sebagai 'seni yang tidak bermoral' setelah pertobatannya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Leo_Tolstoy_1908_Portrait_%283x4_cropped%29.jpg/330px-Leo_Tolstoy_1908_Portrait_%283x4_cropped%29.jpg",
+  "photo": "assets/portraits/leo-tolstoy.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6003,13 +6077,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Leo_Tolstoy_1908_Portrait_%283x4_cropped%29.jpg/330px-Leo_Tolstoy_1908_Portrait_%283x4_cropped%29.jpg"
  },
  "William Graham Sumner": {
   "years": "1840-1910",
   "nationality": "Amerika Serikat",
   "bio": "Pendeta yang beralih jadi salah satu sosiolog dan ekonom akademis pertama di Amerika, mengajar di Yale selama puluhan tahun. Dia dikenal sebagai pendukung gigih laissez-faire dan penentang keras campur tangan pemerintah dalam urusan ekonomi maupun sosial.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/William_Graham_Sumner.png/330px-William_Graham_Sumner.png",
+  "photo": "assets/portraits/william-graham-sumner.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6074,13 +6149,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/William_Graham_Sumner.png/330px-William_Graham_Sumner.png"
  },
  "Henry Adams": {
   "years": "1838-1918",
   "nationality": "Amerika Serikat",
   "bio": "Cicit presiden John Adams dan cucu presiden John Quincy Adams, tumbuh dengan beban warisan keluarga yang begitu berat sampai dia merasa dunia modern tidak lagi punya tempat untuknya. Otobiografinya yang ditulis dalam sudut pandang orang ketiga baru diterbitkan secara luas setelah dia wafat.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/William_Notman_-_Henry_Brooks_Adams%2C_1885_%28transparent%29.png/330px-William_Notman_-_Henry_Brooks_Adams%2C_1885_%28transparent%29.png",
+  "photo": "assets/portraits/henry-adams.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6140,13 +6216,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/William_Notman_-_Henry_Brooks_Adams%2C_1885_%28transparent%29.png/330px-William_Notman_-_Henry_Brooks_Adams%2C_1885_%28transparent%29.png"
  },
  "John Dewey": {
   "years": "1859-1952",
   "nationality": "Amerika Serikat",
   "bio": "Filsuf dan pendidik yang menghabiskan lebih dari tujuh dekade menulis tentang bagaimana seharusnya anak-anak belajar, jauh sebelum istilah 'pendidikan progresif' menjadi jargon populer. Ia percaya sekolah bukan tempat menghafal fakta, melainkan laboratorium kecil bagi demokrasi itu sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/John_Dewey_cph.3a51565.jpg/330px-John_Dewey_cph.3a51565.jpg",
+  "photo": "assets/portraits/john-dewey.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6218,13 +6295,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/John_Dewey_cph.3a51565.jpg/330px-John_Dewey_cph.3a51565.jpg"
  },
  "George Santayana": {
   "years": "1863-1952",
   "nationality": "Spanyol-Amerika",
   "bio": "Filsuf kelahiran Madrid yang dibesarkan dan berkarier di Amerika, dikenal karena gaya menulis puitis yang jarang dimiliki filsuf akademis lain serta ucapannya yang sering dikutip: siapa yang tidak belajar dari sejarah dihukum mengulanginya. Ia meninggalkan jabatan profesor mapan di Harvard demi hidup sebagai penulis bebas di Eropa hingga akhir hayatnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Photogravure_portrait_of_George_Santayana_%281931%29.jpg/330px-Photogravure_portrait_of_George_Santayana_%281931%29.jpg",
+  "photo": "assets/portraits/george-santayana.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6280,13 +6358,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Photogravure_portrait_of_George_Santayana_%281931%29.jpg/330px-Photogravure_portrait_of_George_Santayana_%281931%29.jpg"
  },
  "Thomas Hill Green": {
   "years": "1836-1882",
   "nationality": "Inggris",
   "bio": "Filsuf Oxford yang jarang dikenal publik luas tapi diam-diam mengubah arah liberalisme Inggris, dari sekadar 'jangan campuri urusan orang' menjadi tanggung jawab bersama menciptakan kondisi agar semua orang benar-benar bisa bebas. Ia juga aktivis gerakan temperansi yang percaya reformasi moral dan reformasi sosial harus berjalan beriringan.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/T.H._Green.png/330px-T.H._Green.png",
+  "photo": "assets/portraits/thomas-hill-green.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6342,13 +6421,14 @@
     "inCatalog": true,
     "note": "merevisi tradisi liberal Mill"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/T.H._Green.png/330px-T.H._Green.png"
  },
  "Auguste Comte": {
   "years": "1798-1857",
   "nationality": "Prancis",
   "bio": "Matematikawan yang beralih jadi filsuf dan menciptakan kata 'sosiologi', yakin masyarakat manusia bisa dipelajari dengan metode ilmiah seketat ilmu fisika. Ia sempat mengalami gangguan jiwa berat di usia muda, lalu bangkit menulis sistem filsafat besar yang berusaha menyatukan seluruh pengetahuan manusia dalam satu hierarki ilmu.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Auguste_Comte.jpg/330px-Auguste_Comte.jpg",
+  "photo": "assets/portraits/auguste-comte.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6409,13 +6489,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Auguste_Comte.jpg/330px-Auguste_Comte.jpg"
  },
  "Henry Sidgwick": {
   "years": "1838-1900",
   "nationality": "Inggris",
   "bio": "Filsuf Cambridge yang begitu jujur secara intelektual sampai rela mengundurkan diri dari jabatan akademiknya sendiri karena tak lagi yakin pada sumpah keagamaan yang disyaratkan almamaternya. 'The Methods of Ethics' karyanya dianggap salah satu analisis etika paling ketat dan berimbang yang pernah ditulis filsuf Inggris.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Henry_Sidgwick_Elliott_%26_Fry_1890s_%28cropped%29.jpg/330px-Henry_Sidgwick_Elliott_%26_Fry_1890s_%28cropped%29.jpg",
+  "photo": "assets/portraits/henry-sidgwick.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6465,13 +6546,14 @@
     "inCatalog": false,
     "note": "muridnya di Cambridge"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Henry_Sidgwick_Elliott_%26_Fry_1890s_%28cropped%29.jpg/330px-Henry_Sidgwick_Elliott_%26_Fry_1890s_%28cropped%29.jpg"
  },
  "Theodor Mommsen": {
   "years": "1817-1903",
   "nationality": "Jerman",
   "bio": "Sejarawan dan ahli hukum Romawi peraih Nobel Sastra yang karyanya tentang sejarah Roma begitu hidup dan penuh semangat sampai dituduh sebagian kritikus terlalu memihak sang tokoh utama, Julius Caesar. Selain akademisi, ia juga politisi aktif di parlemen Jerman yang berani mengkritik kebijakan Bismarck.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Theodor_Mommsen_2.jpg/330px-Theodor_Mommsen_2.jpg",
+  "photo": "assets/portraits/theodor-mommsen.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6528,13 +6610,14 @@
     "inCatalog": true,
     "note": "tokoh yang sangat dikaguminya dalam narasinya"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Theodor_Mommsen_2.jpg/330px-Theodor_Mommsen_2.jpg"
  },
  "Graham Wallas": {
   "years": "1858-1932",
   "nationality": "Inggris",
   "bio": "Sosialis Fabian dan salah satu pendiri London School of Economics yang berani mengkritik asumsi favorit kalangan reformis sendiri: bahwa pemilih rasional akan memilih kebijakan terbaik jika diberi informasi yang cukup. 'Human Nature in Politics' karyanya justru menunjukkan betapa besar peran kebiasaan dan emosi dalam politik, jauh sebelum psikologi politik jadi bidang studi tersendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/7/70/Graham_Wallas.jpg",
+  "photo": "assets/portraits/graham-wallas.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6586,13 +6669,14 @@
     "inCatalog": false,
     "note": "muridnya di Harvard"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/7/70/Graham_Wallas.jpg"
  },
  "Josiah Royce": {
   "years": "1855-1916",
   "nationality": "Amerika Serikat",
   "bio": "Filsuf idealis yang jadi sahabat sekaligus lawan diskusi tetap William James di Harvard, dua orang dengan pandangan filsafat nyaris berlawanan yang tetap saling menghormati sepanjang karier mereka. Royce percaya kesetiaan (loyalty) pada suatu tujuan bersama adalah fondasi kehidupan moral yang bermakna.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Josiah_Royce.jpeg/330px-Josiah_Royce.jpeg",
+  "photo": "assets/portraits/josiah-royce.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6648,13 +6732,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Josiah_Royce.jpeg/330px-Josiah_Royce.jpeg"
  },
  "Francis Parkman": {
   "years": "1823-1893",
   "nationality": "Amerika Serikat",
   "bio": "Sejarawan yang menantang kesehatannya sendiri yang rapuh dengan menempuh perjalanan berbahaya ke padang rumput Amerika Barat, pengalaman yang ia tuangkan jadi 'The Oregon Trail' sebelum kemudian menulis riwayat epik tujuh jilid perjuangan Prancis dan Inggris memperebutkan Amerika Utara.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/F._Parkman.jpg/330px-F._Parkman.jpg",
+  "photo": "assets/portraits/francis-parkman.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6705,13 +6790,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/F._Parkman.jpg/330px-F._Parkman.jpg"
  },
  "Werner Sombart": {
   "years": "1863-1941",
   "nationality": "Jerman",
   "bio": "Ekonom dan sosiolog yang di masa mudanya begitu simpatik pada Marxisme sampai dijuluki 'profesor sosialis', sebelum kemudian bergeser jauh ke kanan di usia tuanya. Dialah yang menciptakan istilah 'kapitalisme akhir' dan konsep 'destruksi kreatif' yang kelak dipopulerkan ekonom lain atas namanya sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Werner_sombart.jpg",
+  "photo": "assets/portraits/werner-sombart.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6763,13 +6849,14 @@
     "inCatalog": true,
     "note": "kritikus paralel kapitalisme & konsumerisme"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Werner_sombart.jpg"
  },
  "Lysander Spooner": {
   "years": "1808-1887",
   "nationality": "Amerika Serikat",
   "bio": "Pengacara nyentrik yang menantang negara di berbagai lini sekaligus: dari mendirikan layanan pos swasta yang lebih murah dari kantor pos resmi Amerika, sampai berargumen Konstitusi tak pernah benar-benar mengikat siapa pun yang tidak menandatanganinya sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Lysander_Spooner_by_Hardy.jpg/330px-Lysander_Spooner_by_Hardy.jpg",
+  "photo": "assets/portraits/lysander-spooner.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6827,13 +6914,14 @@
     "inCatalog": false,
     "note": "penerbit & penerus pemikirannya"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Lysander_Spooner_by_Hardy.jpg/330px-Lysander_Spooner_by_Hardy.jpg"
  },
  "Ludwig Feuerbach": {
   "years": "1804-1872",
   "nationality": "Jerman",
   "bio": "Filsuf Young Hegelian yang mengguncang teologi Kristen Eropa dengan argumen sederhana namun radikal: Tuhan bukan pencipta manusia, melainkan proyeksi dari harapan dan sifat terbaik manusia sendiri. Karyanya jadi jembatan penting yang menghubungkan idealisme Hegel dengan materialisme Marx.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg/330px-Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg",
+  "photo": "assets/portraits/ludwig-feuerbach.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6889,13 +6977,14 @@
     "inCatalog": false,
     "note": "sesama Young Hegelian pengkritik agama"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg/330px-Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg"
  },
  "Edward A. Freeman": {
   "years": "1823-1892",
   "nationality": "Inggris",
   "bio": "Sejarawan Oxford yang menghabiskan puluhan tahun menulis riwayat detail penaklukan Norman atas Inggris, sekaligus aktivis politik yang turun langsung membela pemberontakan Bosnia-Herzegovina melawan Kekaisaran Ottoman.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Edward_Augustus_Freeman.jpg/330px-Edward_Augustus_Freeman.jpg",
+  "photo": "assets/portraits/edward-a-freeman.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -6950,13 +7039,14 @@
     "inCatalog": false,
     "note": "dibimbingnya di Oxford"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Edward_Augustus_Freeman.jpg/330px-Edward_Augustus_Freeman.jpg"
  },
  "Harriet Martineau": {
   "years": "1802-1876",
   "nationality": "Inggris",
   "bio": "Penulis yang nyaris tuli sejak muda tapi tetap jadi salah satu intelektual publik paling produktif zamannya, menerjemahkan filsafat positivisme Comte ke bahasa Inggris dengan ringkasan yang bahkan lebih dipuji si penulis asli sendiri ketimbang teks aslinya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Harriet_Martineau_by_Richard_Evans.jpg/330px-Harriet_Martineau_by_Richard_Evans.jpg",
+  "photo": "assets/portraits/harriet-martineau.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7007,13 +7097,14 @@
     "inCatalog": true,
     "note": "jejaring intelektual feminis transatlantik"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Harriet_Martineau_by_Richard_Evans.jpg/330px-Harriet_Martineau_by_Richard_Evans.jpg"
  },
  "Charles A. Beard": {
   "years": "1874-1948",
   "nationality": "Amerika Serikat",
   "bio": "Sejarawan Columbia yang mengguncang mitos suci Amerika tentang para founding fathers dengan argumen kontroversial: Konstitusi 1787 ditulis bukan murni demi prinsip filosofis luhur, tapi juga demi melindungi kepentingan ekonomi kelas pemilik properti yang menyusunnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Charles_A._Beard%2C_half-length_portrait_LCCN2005690097.jpg/330px-Charles_A._Beard%2C_half-length_portrait_LCCN2005690097.jpg",
+  "photo": "assets/portraits/charles-a-beard.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7065,13 +7156,14 @@
     "inCatalog": false,
     "note": "sesama sejarawan Era Progresif"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Charles_A._Beard%2C_half-length_portrait_LCCN2005690097.jpg/330px-Charles_A._Beard%2C_half-length_portrait_LCCN2005690097.jpg"
  },
  "Cicero": {
   "years": "106-43 SM",
   "nationality": "Romawi",
   "bio": "Negarawan, pengacara, dan orator yang berusaha mati-matian menyelamatkan Republik Romawi dari keruntuhan di tangan para diktator, sebelum akhirnya dieksekusi atas perintah Mark Antony karena pidato-pidatonya sendiri yang terlalu tajam. Gaya prosanya begitu berpengaruh sampai jadi standar bahasa Latin klasik selama berabad-abad setelahnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bust_of_Cicero_%281st-cent._BC%29_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg/330px-Bust_of_Cicero_%281st-cent._BC%29_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg",
+  "photo": "assets/portraits/cicero.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7143,13 +7235,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bust_of_Cicero_%281st-cent._BC%29_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg/330px-Bust_of_Cicero_%281st-cent._BC%29_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"
  },
  "Diogenes Laertius": {
   "years": "abad ke-3 M",
   "nationality": "Yunani-Romawi",
   "bio": "Sosok misterius yang nyaris tak diketahui riwayat hidupnya sendiri, tapi tanpa sengaja menjadi penyelamat sejarah filsafat Yunani lewat satu buku kompilasi biografi yang ia susun dari ratusan sumber yang kini sudah hilang.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Diogenes_Laertius.jpg/330px-Diogenes_Laertius.jpg",
+  "photo": "assets/portraits/diogenes-laertius.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7205,13 +7298,14 @@
     "inCatalog": true,
     "note": "subjek biografinya"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Diogenes_Laertius.jpg/330px-Diogenes_Laertius.jpg"
  },
  "Leopold von Ranke": {
   "years": "1795-1886",
   "nationality": "Jerman",
   "bio": "Sejarawan yang menciptakan gagasan bahwa sejarah harus ditulis 'sebagaimana ia sesungguhnya terjadi' (wie es eigentlich gewesen), bukan untuk mengagungkan bangsa sendiri atau menghakimi masa lalu dari sudut pandang masa kini. Ia mempelopori metode seminar berbasis arsip yang membentuk cara sejarawan bekerja hingga hari ini.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jebens%2C_Adolf_-_Leopold_von_Ranke_%28detail%29_-_1875.jpg/330px-Jebens%2C_Adolf_-_Leopold_von_Ranke_%28detail%29_-_1875.jpg",
+  "photo": "assets/portraits/leopold-von-ranke.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7274,13 +7368,14 @@
     "type": "guru",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jebens%2C_Adolf_-_Leopold_von_Ranke_%28detail%29_-_1875.jpg/330px-Jebens%2C_Adolf_-_Leopold_von_Ranke_%28detail%29_-_1875.jpg"
  },
  "Ida B. Wells": {
   "years": "1862-1931",
   "nationality": "Amerika Serikat",
   "bio": "Jurnalis investigatif kelahiran budak yang mempertaruhkan nyawanya sendiri untuk membongkar kebohongan di balik pembenaran lynching terhadap orang kulit hitam Amerika, sampai kantor korannya dihancurkan massa dan ia terpaksa mengungsi demi keselamatannya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_-_restoration_crop.jpg/330px-Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_-_restoration_crop.jpg",
+  "photo": "assets/portraits/ida-b-wells.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7342,13 +7437,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_-_restoration_crop.jpg/330px-Mary_Garrity_-_Ida_B._Wells-Barnett_-_Google_Art_Project_-_restoration_crop.jpg"
  },
  "Rosa Luxemburg": {
   "years": "1871-1919",
   "nationality": "Polandia-Jerman",
   "bio": "Teoretisi Marxis kelahiran Polandia yang naik jadi salah satu pemimpin intelektual paling tajam gerakan buruh Eropa, sekaligus lawan debat berani Lenin soal bagaimana revolusi seharusnya diorganisir. Ia dibunuh milisi sayap kanan tak lama setelah revolusi Jerman 1918 yang ia perjuangkan gagal terwujud sepenuhnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Rosa_Luxemburg_%28cropped%29.jpg/330px-Rosa_Luxemburg_%28cropped%29.jpg",
+  "photo": "assets/portraits/rosa-luxemburg.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7402,13 +7498,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Rosa_Luxemburg_%28cropped%29.jpg/330px-Rosa_Luxemburg_%28cropped%29.jpg"
  },
  "William Morris": {
   "years": "1834-1896",
   "nationality": "Inggris",
   "bio": "Desainer tekstil, penyair, dan sosialis yang begitu benci pada barang-barang murahan hasil produksi massal industri sampai mendirikan perusahaan sendiri untuk membuktikan kerajinan tangan yang indah masih bisa hidup di zaman mesin. 'News from Nowhere' adalah visinya tentang masa depan sosialis tanpa pabrik kotor maupun birokrasi negara yang mengekang.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/William_Morris_age_53.jpg/330px-William_Morris_age_53.jpg",
+  "photo": "assets/portraits/william-morris.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7459,13 +7556,14 @@
     "inCatalog": true,
     "note": "'News from Nowhere' ditulis sebagai sanggahan atas 'Looking Backward'"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/William_Morris_age_53.jpg/330px-William_Morris_age_53.jpg"
  },
  "G. W. F. Hegel": {
   "years": "1770-1831",
   "nationality": "Jerman",
   "bio": "Filsuf yang membangun sistem pemikiran paling ambisius dalam sejarah filsafat Barat, mencoba menjelaskan seluruh sejarah manusia, seni, agama, dan negara sebagai satu proses rasional yang terus bergerak menuju kesadaran diri yang lebih penuh (Geist). Gaya tulisannya yang rumit membuatnya salah satu filsuf paling dikagumi sekaligus paling ditakuti mahasiswa filsafat.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Jakob_Schlesinger_-_Hegel_1831.jpg/330px-Jakob_Schlesinger_-_Hegel_1831.jpg",
+  "photo": "assets/portraits/g-w-f-hegel.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7555,13 +7653,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Jakob_Schlesinger_-_Hegel_1831.jpg/330px-Jakob_Schlesinger_-_Hegel_1831.jpg"
  },
  "John Fiske": {
   "years": "1842-1901",
   "nationality": "Amerika Serikat",
   "bio": "Filsuf dan sejarawan populer yang menjadikan diri sendiri penerjemah utama gagasan evolusi Herbert Spencer bagi publik Amerika, lewat kuliah-kuliah kelilingnya yang selalu ramai penonton meski topiknya berat.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Picture_of_John_Fiske.jpg/330px-Picture_of_John_Fiske.jpg",
+  "photo": "assets/portraits/john-fiske.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7610,13 +7709,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Picture_of_John_Fiske.jpg/330px-Picture_of_John_Fiske.jpg"
  },
  "Matthew Arnold": {
   "years": "1822-1888",
   "nationality": "Inggris",
   "bio": "Penyair yang beralih jadi kritikus budaya paling tajam era Victoria, menghabiskan puluhan tahun sebagai inspektur sekolah keliling sambil menulis esai yang mencela apa yang ia sebut 'filistinisme' — kepuasan diri kelas menengah Inggris yang mengabaikan keindahan dan kedalaman pikiran demi kesuksesan material semata.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Matthew_Arnold.jpg/330px-Matthew_Arnold.jpg",
+  "photo": "assets/portraits/matthew-arnold.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7672,13 +7772,14 @@
     "inCatalog": false,
     "note": "ayahnya, kepala sekolah Rugby"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Matthew_Arnold.jpg/330px-Matthew_Arnold.jpg"
  },
  "William Stanley Jevons": {
   "years": "1835-1882",
   "nationality": "Inggris",
   "bio": "Ekonom dan logikawan yang memicu 'revolusi marjinalis' dengan menerapkan matematika kalkulus pada teori nilai ekonomi, menggeser fondasi ilmu ekonomi dari teori nilai kerja klasik menuju teori utilitas marjinal yang mendominasi ekonomi modern hingga sekarang.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/William_Stanley_Jevons_portrait_extract.jpg/330px-William_Stanley_Jevons_portrait_extract.jpg",
+  "photo": "assets/portraits/william-stanley-jevons.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7729,13 +7830,14 @@
     "inCatalog": true,
     "note": "sesama tokoh revolusi marjinalis"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/William_Stanley_Jevons_portrait_extract.jpg/330px-William_Stanley_Jevons_portrait_extract.jpg"
  },
  "Edward Bellamy": {
   "years": "1850-1898",
   "nationality": "Amerika Serikat",
   "bio": "Penulis dan jurnalis yang novelnya tentang Amerika di tahun 2000 begitu populer sampai memicu ratusan 'Klub Nasionalis' bermunculan di seluruh negeri, para pembaca yang begitu terinspirasi hingga ingin mewujudkan visi utopianya secara nyata.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Edward_Bellamy_-_photograph_c.1889.jpg/330px-Edward_Bellamy_-_photograph_c.1889.jpg",
+  "photo": "assets/portraits/edward-bellamy.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7785,13 +7887,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Edward_Bellamy_-_photograph_c.1889.jpg/330px-Edward_Bellamy_-_photograph_c.1889.jpg"
  },
  "Adam Ferguson": {
   "years": "1723-1816",
   "nationality": "Skotlandia",
   "bio": "Pendeta yang beralih jadi filsuf sejarah, salah satu tokoh utama Pencerahan Skotlandia yang mula-mula mempopulerkan istilah 'masyarakat sipil' (civil society), gagasan yang kelak diambil alih dan dikembangkan lebih jauh oleh Hegel dan Marx sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/ProfAdamFerguson.jpg/330px-ProfAdamFerguson.jpg",
+  "photo": "assets/portraits/adam-ferguson.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7854,13 +7957,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/ProfAdamFerguson.jpg/330px-ProfAdamFerguson.jpg"
  },
  "Anna Julia Cooper": {
   "years": "1858-1964",
   "nationality": "Amerika Serikat",
   "bio": "Lahir dalam perbudakan, ia hidup hampir sampai usia 106 tahun dan di usia 66 menjadi perempuan Afrika-Amerika keempat yang meraih gelar doktor, membela pendidikan klasik penuh bagi perempuan kulit hitam di saat banyak pihak justru menganggap itu tak perlu.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/A_J_Cooper.jpg/330px-A_J_Cooper.jpg",
+  "photo": "assets/portraits/anna-julia-cooper.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7915,13 +8019,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/A_J_Cooper.jpg/330px-A_J_Cooper.jpg"
  },
  "James Steuart": {
   "years": "1712-1780",
   "nationality": "Skotlandia",
   "bio": "Bangsawan Jacobite yang terpaksa mengasingkan diri ke Eropa daratan selama hampir dua dekade setelah ikut pemberontakan gagal 1745, dan justru dari pengasingan itulah ia menulis buku sistematis pertama berbahasa Inggris yang secara eksplisit memakai istilah 'ekonomi politik' dalam judulnya — mendahului Adam Smith.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Domenico_Dupr%C3%A0_%281689-1770%29_%28attributed_to%29_-_Sir_James_Steuart_Denham_%281713%E2%80%931780%29_-_PG_2853_-_National_Galleries_of_Scotland.jpg/330px-Domenico_Dupr%C3%A0_%281689-1770%29_%28attributed_to%29_-_Sir_James_Steuart_Denham_%281713%E2%80%931780%29_-_PG_2853_-_National_Galleries_of_Scotland.jpg",
+  "photo": "assets/portraits/james-steuart.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -7966,13 +8071,14 @@
     "inCatalog": true,
     "note": "sesama tokoh Pencerahan Skotlandia"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Domenico_Dupr%C3%A0_%281689-1770%29_%28attributed_to%29_-_Sir_James_Steuart_Denham_%281713%E2%80%931780%29_-_PG_2853_-_National_Galleries_of_Scotland.jpg/330px-Domenico_Dupr%C3%A0_%281689-1770%29_%28attributed_to%29_-_Sir_James_Steuart_Denham_%281713%E2%80%931780%29_-_PG_2853_-_National_Galleries_of_Scotland.jpg"
  },
  "Herbert Spencer": {
   "years": "1820-1903",
   "nationality": "Inggris",
   "bio": "Polymath otodidak yang menciptakan istilah 'survival of the fittest' setelah membaca Darwin, lalu menerapkan gagasan evolusi ke hampir semua bidang — biologi, psikologi, etika, sosiologi — dalam sistem filsafat sintetik paling ambisius era Victoria.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Portrait_of_Herbert_Spencer_%281820-1903%29%2C_Physicist_and_Biologist_%282552868551%29.jpg/330px-Portrait_of_Herbert_Spencer_%281820-1903%29%2C_Physicist_and_Biologist_%282552868551%29.jpg",
+  "photo": "assets/portraits/herbert-spencer.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8043,13 +8149,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Portrait_of_Herbert_Spencer_%281820-1903%29%2C_Physicist_and_Biologist_%282552868551%29.jpg/330px-Portrait_of_Herbert_Spencer_%281820-1903%29%2C_Physicist_and_Biologist_%282552868551%29.jpg"
  },
  "Jacob Burckhardt": {
   "years": "1818-1897",
   "nationality": "Swiss",
   "bio": "Sejarawan yang menciptakan gambaran Renaisans Italia sebagai kelahiran kembali individualisme modern, gagasan yang begitu berpengaruh sampai jadi cara standar orang memahami era itu selama lebih dari satu abad, meski ia sendiri hidup sederhana dan menolak jabatan bergengsi demi tetap mengajar di kampung halamannya, Basel.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ETH-BIB-Burckhardt%2C_Jakob_%281818-1897%29-Portrait-Portr_00053.tif/lossy-page1-330px-ETH-BIB-Burckhardt%2C_Jakob_%281818-1897%29-Portrait-Portr_00053.tif.jpg",
+  "photo": "assets/portraits/jacob-burckhardt.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8101,13 +8208,14 @@
     "inCatalog": true,
     "note": "dibahas sebagai contoh pemikir politik Renaisans"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/ETH-BIB-Burckhardt%2C_Jakob_%281818-1897%29-Portrait-Portr_00053.tif/lossy-page1-330px-ETH-BIB-Burckhardt%2C_Jakob_%281818-1897%29-Portrait-Portr_00053.tif.jpg"
  },
  "Elizabeth Cady Stanton": {
   "years": "1815-1902",
   "nationality": "Amerika Serikat",
   "bio": "Penggerak utama Konvensi Seneca Falls 1848, konvensi hak perempuan pertama di Amerika, yang menuliskan sendiri Deklarasi Sentimen yang menuntut hak pilih perempuan — tuntutan yang bahkan dianggap terlalu radikal oleh sebagian sesama aktivis perempuan saat itu.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/d/da/Elizabeth_Stanton.jpg",
+  "photo": "assets/portraits/elizabeth-cady-stanton.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8174,13 +8282,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/d/da/Elizabeth_Stanton.jpg"
  },
  "Pierre-Joseph Proudhon": {
   "years": "1809-1865",
   "nationality": "Prancis",
   "bio": "Pekerja cetak miskin yang jadi orang pertama menyebut dirinya 'anarkis' dengan bangga, terkenal lewat pernyataan provokatif 'properti adalah pencurian' yang mengguncang pembaca Prancis pertengahan abad ke-19 sekaligus memicu kemarahan Karl Marx yang kelak jadi rivalnya.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Portrait_of_Pierre_Joseph_Proudhon_1865.jpg/330px-Portrait_of_Pierre_Joseph_Proudhon_1865.jpg",
+  "photo": "assets/portraits/pierre-joseph-proudhon.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8235,13 +8344,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Portrait_of_Pierre_Joseph_Proudhon_1865.jpg/330px-Portrait_of_Pierre_Joseph_Proudhon_1865.jpg"
  },
  "Livy": {
   "years": "59 SM - 17 M",
   "nationality": "Romawi",
   "bio": "Sejarawan yang menghabiskan lebih dari empat dekade menulis riwayat Roma dari pendirian legendarisnya sampai zamannya sendiri, sebuah proyek begitu masif sehingga dari 142 jilid aslinya, hanya sekitar seperempat yang bertahan hingga hari ini.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Titus-Livius-Austrian-Parliament-Building.jpg/330px-Titus-Livius-Austrian-Parliament-Building.jpg",
+  "photo": "assets/portraits/livy.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8302,13 +8412,14 @@
     "type": "pengaruh",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Titus-Livius-Austrian-Parliament-Building.jpg/330px-Titus-Livius-Austrian-Parliament-Building.jpg"
  },
  "Sojourner Truth": {
   "years": "c.1797-1883",
   "nationality": "Amerika Serikat",
   "bio": "Perempuan yang lahir sebagai budak dan tak pernah belajar membaca atau menulis, tapi kemampuan orasinya yang luar biasa membuat kisah hidupnya, didiktekan langsung olehnya kepada seorang sahabat, jadi salah satu narasi perbudakan paling berpengaruh yang pernah diterbitkan.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sojourner_Truth%2C_1870_%28cropped%2C_restored%29.jpg/330px-Sojourner_Truth%2C_1870_%28cropped%2C_restored%29.jpg",
+  "photo": "assets/portraits/sojourner-truth.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8357,13 +8468,14 @@
     "type": "sezaman",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sojourner_Truth%2C_1870_%28cropped%2C_restored%29.jpg/330px-Sojourner_Truth%2C_1870_%28cropped%2C_restored%29.jpg"
  },
  "Norman Angell": {
   "years": "1872-1967",
   "nationality": "Inggris",
   "bio": "Jurnalis dan penulis peraih Nobel Perdamaian yang bukunya berargumen perang antarnegara industri modern tak lagi menguntungkan secara ekonomi bagi siapa pun, tesis yang secara ironis diterbitkan tak lama sebelum Perang Dunia Pertama meletus dan tampak membantah keyakinannya sendiri.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Norman_Angell_01.jpg/330px-Norman_Angell_01.jpg",
+  "photo": "assets/portraits/norman-angell.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8412,13 +8524,14 @@
     "type": "pengaruh",
     "inCatalog": false
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Norman_Angell_01.jpg/330px-Norman_Angell_01.jpg"
  },
  "Thomas Babington Macaulay": {
   "years": "1800-1859",
   "nationality": "Inggris",
   "bio": "Politisi dan sejarawan yang prosanya begitu memikat sehingga bukunya tentang sejarah Inggris terjual seperti novel populer, meski ia juga dikenang kontroversial karena kebijakan pendidikan kolonialnya di India yang berusaha menggantikan bahasa dan sastra lokal dengan pendidikan gaya Inggris.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Thomas_Babington_Macaulay2.jpg/330px-Thomas_Babington_Macaulay2.jpg",
+  "photo": "assets/portraits/thomas-babington-macaulay.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8472,13 +8585,14 @@
     "type": "menentang",
     "inCatalog": true
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Thomas_Babington_Macaulay2.jpg/330px-Thomas_Babington_Macaulay2.jpg"
  },
  "Emmeline Pankhurst": {
   "years": "1858-1928",
   "nationality": "Inggris",
   "bio": "Pemimpin gerakan suffragette yang beralih dari protes damai ke aksi militan setelah bertahun-tahun petisi sopan diabaikan pemerintah Inggris, rela dipenjara berkali-kali dan menjalani mogok makan demi hak pilih perempuan yang akhirnya terwujud sebagian tak lama sebelum ia wafat.",
-  "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Emmeline_Pankhurst%2C_seated_%281913%29.jpg/330px-Emmeline_Pankhurst%2C_seated_%281913%29.jpg",
+  "photo": "assets/portraits/emmeline-pankhurst.jpg",
   "photoSource": "Wikimedia Commons (via Wikipedia)",
   "lifeStory": [
    {
@@ -8529,6 +8643,7 @@
     "inCatalog": false,
     "note": "putrinya, memimpin WSPU bersama"
    }
-  ]
+  ],
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Emmeline_Pankhurst%2C_seated_%281913%29.jpg/330px-Emmeline_Pankhurst%2C_seated_%281913%29.jpg"
  }
 }
