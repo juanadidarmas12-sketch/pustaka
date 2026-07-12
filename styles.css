@@ -866,6 +866,15 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .cover .cv-title { font-size: 15px; }
 }
 
+/* ---- Penyesuaian kenyamanan layar HP ---- */
+@media (max-width: 460px) {
+  /* tombol hero: full-width bertumpuk, target sentuh nyaman utk ibu jari */
+  .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero-btn { width: 100%; justify-content: center; padding: 15px 20px; }
+  /* chip kategori: tinggi sentuh sedikit dinaikkan */
+  .chip { padding: 9px 15px; }
+}
+
 /* ============ Transisi Site-Wide (View Transitions API) ============ */
 /* durasi & easing global */
 ::view-transition-group(root) { animation-duration: .34s; }
