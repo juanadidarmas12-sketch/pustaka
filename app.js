@@ -1103,6 +1103,8 @@ function updateReaderChrome() {
 
 /* ---------- mesin flip 3D ---------- */
 let flipNodes = [];
+const FLIP_SLICES = 8; // halaman dipotong jadi pita vertikal berantai supaya bisa menekuk
+const FLIP_BEND = 24;  // total derajat lengkung saat halaman tegak (0 di kedua ujung)
 
 function makePageClone(pageIndex) {
   const content = $('#reader-content');
@@ -1121,25 +1123,45 @@ function makeOverlay(pageIndex, extraClass) {
   wrap.style.left = pageState.padX + 'px';
   wrap.style.width = pageState.pageW + 'px';
 
-  // dua muka (teknik turn.js): depan = konten halaman, belakang = punggung kertas.
-  // rotasi kini penuh 0..-180° sehingga melewati 90° terlihat sisi baliknya
-  const front = document.createElement('div');
-  front.className = 'flip-face flip-front';
-  front.appendChild(makePageClone(pageIndex));
-  const shadeF = document.createElement('div');
-  shadeF.className = 'flip-shade';
-  front.appendChild(shadeF);
-  const highlight = document.createElement('div');
-  highlight.className = 'flip-highlight';
-  front.appendChild(highlight);
+  // Lembaran dibangun dari pita vertikal BERANTAI (tiap pita anak dari pita
+  // sebelumnya). setFlipAngle memberi rotasi kecil di tiap sambungan sehingga
+  // halaman menekuk membusur seperti kertas sungguhan (efek curl ala turn.js),
+  // bukan papan datar. Tiap pita punya muka depan (konten) + punggung kertas.
+  const sliceW = pageState.pageW / FLIP_SLICES;
+  const joints = [], shadesF = [], dimsB = [];
+  let parent = wrap;
+  for (let i = 0; i < FLIP_SLICES; i++) {
+    const seg = document.createElement('div');
+    seg.className = 'flip-seg';
+    seg.style.width = (sliceW + 0.6) + 'px'; // tumpang tindih tipis menutup celah antar pita
+    seg.style.left = (i === 0 ? 0 : sliceW) + 'px';
+    if (i > 0) joints.push(seg);
 
-  const back = document.createElement('div');
-  back.className = 'flip-face flip-back';
-  const shadeB = document.createElement('div');
-  shadeB.className = 'flip-shade';
-  back.appendChild(shadeB);
+    const front = document.createElement('div');
+    front.className = 'flip-seg-face';
+    const holder = document.createElement('div');
+    holder.style.cssText = 'position:absolute;top:0;bottom:0;left:' + (-i * sliceW) +
+      'px;width:' + pageState.pageW + 'px;';
+    holder.appendChild(makePageClone(pageIndex));
+    front.appendChild(holder);
+    const shade = document.createElement('div'); // potongan gradien global, digeser per pita
+    shade.className = 'flip-shade';
+    shade.style.left = (-i * sliceW) + 'px';
+    shade.style.width = pageState.pageW + 'px';
+    front.appendChild(shade);
+    shadesF.push(shade);
 
-  wrap.append(front, back);
+    const back = document.createElement('div');
+    back.className = 'flip-seg-face flip-seg-back';
+    const dim = document.createElement('div');
+    dim.className = 'flip-dim';
+    back.appendChild(dim);
+    dimsB.push(dim);
+
+    seg.append(front, back);
+    parent.appendChild(seg);
+    parent = seg;
+  }
 
   // bayangan yang JATUH ke halaman di bawahnya (bshadow ala turn.js),
   // paling pekat saat halaman tegak lurus
@@ -1150,11 +1172,9 @@ function makeOverlay(pageIndex, extraClass) {
   pager.appendChild(cast);
 
   // cache referensi utk setFlipAngle (dipanggil tiap frame rAF/drag)
-  wrap._front = front;
-  wrap._back = back;
-  wrap._shadeF = shadeF;
-  wrap._shadeB = shadeB;
-  wrap._hl = highlight;
+  wrap._joints = joints;
+  wrap._shadesF = shadesF;
+  wrap._dimsB = dimsB;
   wrap._cast = cast;
 
   pager.appendChild(wrap);
@@ -1170,29 +1190,23 @@ function clearFlips() {
 function setFlipAngle(el, deg) {
   const a = Math.abs(deg);
   const t = Math.max(0, Math.min(1, a / 180));
-  const bulge = Math.sin(t * Math.PI); // 0 di ujung, puncak saat halaman tegak (90°)
-  el.style.transform = 'rotateY(' + deg + 'deg) translateZ(' + (bulge * 26).toFixed(1) + 'px)';
+  const bulge = Math.sin(t * Math.PI); // 0 di kedua ujung, puncak saat halaman tegak (90°)
+  el.style.transform = 'rotateY(' + deg + 'deg)';
+
+  // lengkungan: tiap sambungan pita menyumbang sebagian kecil dari total lengkung.
+  // Ujung halaman "tertinggal" dari pangkalnya — persis kertas yang ditekuk
+  const joints = el._joints || [];
+  if (joints.length) {
+    const per = 'rotateY(' + (bulge * FLIP_BEND / joints.length).toFixed(3) + 'deg)';
+    for (let i = 0; i < joints.length; i++) joints[i].style.transform = per;
+  }
 
   const frontT = Math.min(a, 90) / 90;             // fase depan  (0..90°)
   const backT = Math.max(0, (a - 90) / 90);        // fase belakang (90..180°)
-
-  if (el._shadeF) el._shadeF.style.opacity = (frontT * 0.5).toFixed(3);
-  if (el._shadeB) el._shadeB.style.opacity = ((1 - backT) * 0.5).toFixed(3);
-
-  // tepi terdepan menggulung: lekuk ke dalam di tengah tinggi halaman.
-  // PENTING: clip-path dipasang di tiap MUKA, bukan wrapper — clip-path pada
-  // wrapper memaksa transform-style flat dan mematikan trik dua muka
-  const dent = bulge * 5.5;
-  const d1 = (dent * 0.6).toFixed(2), d2 = dent.toFixed(2);
-  const clip = 'polygon(0% 0%, 100% 0%, ' + (100 - d1) + '% 25%, ' +
-    (100 - d2) + '% 50%, ' + (100 - d1) + '% 75%, 100% 100%, 0% 100%)';
-  if (el._front) el._front.style.clipPath = clip;
-  if (el._back) el._back.style.clipPath = clip; // koordinat lokal back ikut termirror, tepi lekuk tetap di sisi bergerak
-
-  if (el._hl) {
-    el._hl.style.opacity = (Math.sin(frontT * Math.PI) * 0.32).toFixed(3);
-    el._hl.style.transform = 'translateX(' + (frontT * 70 - 24).toFixed(1) + '%)';
-  }
+  const oF = (frontT * 0.45).toFixed(3);
+  const oB = ((1 - backT) * 0.4).toFixed(3);
+  (el._shadesF || []).forEach(s => { s.style.opacity = oF; });
+  (el._dimsB || []).forEach(s => { s.style.opacity = oB; });
   if (el._cast) el._cast.style.opacity = (bulge * 0.4).toFixed(3);
 }
 
