@@ -2002,6 +2002,28 @@ BOOKS = [
          author="Xenophon", year="±370 SM", category="politik",
          extractor=generic_extract,
          description="Xenophon menulis semi-biografi Cyrus Agung, pendiri Kekaisaran Persia, sebagai model bagaimana seorang pemimpin ideal seharusnya dididik dan memerintah. Separuh sejarah separuh fiksi didaktik, buku ini jadi salah satu 'cermin bagi pangeran' paling awal yang memengaruhi pemikiran kepemimpinan berabad-abad kemudian."),
+
+    # --- Tambahan anarkisme (politik & sosial) ---
+    dict(id="anarchy", raw="pg40365.txt", gid=40365, title="Anarchy",
+         author="Errico Malatesta", year="1891", category="politik",
+         extractor=generic_extract,
+         description="Pengantar anarkisme paling ringkas dan jernih yang pernah ditulis: Malatesta membongkar anggapan bahwa masyarakat mustahil hidup tanpa pemerintah, lalu menjelaskan bagaimana kerja sama sukarela bisa menggantikan paksaan negara. Ditulis untuk buruh biasa, bukan akademisi."),
+    dict(id="ego-and-his-own", raw="pg34580.txt", gid=34580, title="The Ego and His Own",
+         author="Max Stirner", year="1844", category="politik",
+         extractor=generic_extract,
+         description="Serangan filosofis radikal terhadap segala 'hantu' yang menuntut kepatuhan individu—negara, Tuhan, moralitas, bahkan kemanusiaan itu sendiri. Stirner menempatkan diri yang berdaulat di atas semua abstraksi, menjadikan buku ini fondasi anarkisme individualis dan mimpi buruk bagi setiap ideologi."),
+    dict(id="prison-memoirs-anarchist", raw="pg34406.txt", gid=34406, title="Prison Memoirs of an Anarchist",
+         author="Alexander Berkman", year="1912", category="sosial",
+         extractor=generic_extract,
+         description="Memoar mentah dari empat belas tahun di penjara Pennsylvania setelah upaya pembunuhan politik yang gagal. Berkman menuliskan kekerasan, persahabatan, dan perlahan runtuhnya keyakinannya pada kekerasan itu sendiri—salah satu kesaksian penjara paling jujur dalam literatur anarkis."),
+    dict(id="civil-disobedience", raw="pg71.txt", gid=71, title="On the Duty of Civil Disobedience",
+         author="Henry David Thoreau", year="1849", category="sosial",
+         extractor=generic_extract,
+         description="Esai singkat yang lahir dari semalam Thoreau di penjara karena menolak membayar pajak untuk perang dan perbudakan. Argumennya—bahwa hati nurani individu berdiri di atas hukum negara—kelak mengilhami Gandhi dan Martin Luther King, dan jadi teks wajib bagi setiap gerakan pembangkangan sipil."),
+    dict(id="my-disillusionment-russia", raw="pg60315.txt", gid=60315, title="My Disillusionment in Russia",
+         author="Emma Goldman", year="1923", category="sosial",
+         extractor=generic_extract,
+         description="Goldman menyambut Revolusi Rusia dengan penuh harap, lalu menyaksikan langsung bagaimana negara Bolshevik menindas kebebasan yang dijanjikannya. Catatan kekecewaan ini membuatnya dikucilkan kiri, tapi terbukti tajam meramalkan ke mana kekuasaan terpusat akan bermuara."),
 ]
 
 INDEX_ORDER = [
@@ -2026,7 +2048,7 @@ NEW_BOOKS_ORDER = [
 # category across the FULL final index, including the boundary with the
 # phase-1 tail above (which ends in "sosial").
 NEW_BOOKS_ORDER_2 = [
-    "democracy-and-education", "life-of-reason", "political-obligation-green", "general-view-of-positivism", "methods-of-ethics", "history-of-rome-mommsen-1", "human-nature-in-politics", "sources-of-religious-insight", "oregon-trail", "socialism-social-movement", "no-treason", "essence-of-christianity", "norman-conquest-freeman", "society-in-america", "economic-interpretation-constitution", "republic-of-cicero", "lives-eminent-philosophers", "history-of-england-ranke-1", "southern-horrors", "accumulation-of-capital", "news-from-nowhere", "hegel-history-of-philosophy-1", "critical-period-american-history", "culture-and-anarchy", "political-economy-jevons", "looking-backward", "crito", "history-of-civil-society", "voice-from-the-south", "political-oeconomy-steuart-1", "right-to-ignore-the-state", "critique-practical-reason", "civilisation-renaissance-italy", "eighty-years-and-more", "what-is-property", "plato-laws", "dialogues-natural-religion", "history-of-rome-livy-1", "narrative-of-sojourner-truth", "great-illusion", "eighteenth-brumaire", "emile", "history-of-england-macaulay-1", "my-own-story-pankhurst", "unsettled-questions-political-economy", "the-law-bastiat", "sartor-resartus", "my-bondage-my-freedom", "autobiography-mill", "fields-factories-workshops", "cyropaedia"
+    "democracy-and-education", "life-of-reason", "political-obligation-green", "general-view-of-positivism", "methods-of-ethics", "history-of-rome-mommsen-1", "human-nature-in-politics", "sources-of-religious-insight", "oregon-trail", "socialism-social-movement", "no-treason", "essence-of-christianity", "norman-conquest-freeman", "society-in-america", "economic-interpretation-constitution", "republic-of-cicero", "lives-eminent-philosophers", "history-of-england-ranke-1", "southern-horrors", "accumulation-of-capital", "news-from-nowhere", "hegel-history-of-philosophy-1", "critical-period-american-history", "culture-and-anarchy", "political-economy-jevons", "looking-backward", "crito", "history-of-civil-society", "voice-from-the-south", "political-oeconomy-steuart-1", "right-to-ignore-the-state", "critique-practical-reason", "civilisation-renaissance-italy", "eighty-years-and-more", "what-is-property", "plato-laws", "dialogues-natural-religion", "history-of-rome-livy-1", "narrative-of-sojourner-truth", "great-illusion", "eighteenth-brumaire", "emile", "history-of-england-macaulay-1", "my-own-story-pankhurst", "unsettled-questions-political-economy", "the-law-bastiat", "sartor-resartus", "my-bondage-my-freedom", "autobiography-mill", "fields-factories-workshops", "cyropaedia", "prison-memoirs-anarchist", "anarchy", "civil-disobedience", "ego-and-his-own", "my-disillusionment-russia"
 ]
 
 
@@ -2172,6 +2194,7 @@ def main():
     low_threshold_ids = {
         "communist-manifesto": 5000, "tao-te-ching": 4000, "common-sense": 4000,
         "right-to-ignore-the-state": 5000, "crito": 8000,
+        "civil-disobedience": 8000,  # esai pendek Thoreau (~9.4rb kata), sengaja disertakan
     }
     min_words_map = {b["id"]: low_threshold_ids.get(b["id"], 10000) for b in BOOKS}
     print("")

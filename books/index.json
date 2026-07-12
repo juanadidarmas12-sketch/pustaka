@@ -1906,5 +1906,65 @@
     "chapterCount": 23,
     "file": "books/cyropaedia.json",
     "source": "Project Gutenberg #2085 (domain publik)"
+  },
+  {
+    "id": "prison-memoirs-anarchist",
+    "title": "Prison Memoirs of an Anarchist",
+    "author": "Alexander Berkman",
+    "year": "1912",
+    "category": "sosial",
+    "description": "Memoar mentah dari empat belas tahun di penjara Pennsylvania setelah upaya pembunuhan politik yang gagal. Berkman menuliskan kekerasan, persahabatan, dan perlahan runtuhnya keyakinannya pada kekerasan itu sendiri—salah satu kesaksian penjara paling jujur dalam literatur anarkis.",
+    "words": 143703,
+    "chapterCount": 61,
+    "file": "books/prison-memoirs-anarchist.json",
+    "source": "Project Gutenberg #34406 (domain publik)"
+  },
+  {
+    "id": "anarchy",
+    "title": "Anarchy",
+    "author": "Errico Malatesta",
+    "year": "1891",
+    "category": "politik",
+    "description": "Pengantar anarkisme paling ringkas dan jernih yang pernah ditulis: Malatesta membongkar anggapan bahwa masyarakat mustahil hidup tanpa pemerintah, lalu menjelaskan bagaimana kerja sama sukarela bisa menggantikan paksaan negara. Ditulis untuk buruh biasa, bukan akademisi.",
+    "words": 15903,
+    "chapterCount": 3,
+    "file": "books/anarchy.json",
+    "source": "Project Gutenberg #40365 (domain publik)"
+  },
+  {
+    "id": "civil-disobedience",
+    "title": "On the Duty of Civil Disobedience",
+    "author": "Henry David Thoreau",
+    "year": "1849",
+    "category": "sosial",
+    "description": "Esai singkat yang lahir dari semalam Thoreau di penjara karena menolak membayar pajak untuk perang dan perbudakan. Argumennya—bahwa hati nurani individu berdiri di atas hukum negara—kelak mengilhami Gandhi dan Martin Luther King, dan jadi teks wajib bagi setiap gerakan pembangkangan sipil.",
+    "words": 9354,
+    "chapterCount": 4,
+    "file": "books/civil-disobedience.json",
+    "source": "Project Gutenberg #71 (domain publik)"
+  },
+  {
+    "id": "ego-and-his-own",
+    "title": "The Ego and His Own",
+    "author": "Max Stirner",
+    "year": "1844",
+    "category": "politik",
+    "description": "Serangan filosofis radikal terhadap segala 'hantu' yang menuntut kepatuhan individu—negara, Tuhan, moralitas, bahkan kemanusiaan itu sendiri. Stirner menempatkan diri yang berdaulat di atas semua abstraksi, menjadikan buku ini fondasi anarkisme individualis dan mimpi buruk bagi setiap ideologi.",
+    "words": 146982,
+    "chapterCount": 28,
+    "file": "books/ego-and-his-own.json",
+    "source": "Project Gutenberg #34580 (domain publik)"
+  },
+  {
+    "id": "my-disillusionment-russia",
+    "title": "My Disillusionment in Russia",
+    "author": "Emma Goldman",
+    "year": "1923",
+    "category": "sosial",
+    "description": "Goldman menyambut Revolusi Rusia dengan penuh harap, lalu menyaksikan langsung bagaimana negara Bolshevik menindas kebebasan yang dijanjikannya. Catatan kekecewaan ini membuatnya dikucilkan kiri, tapi terbukti tajam meramalkan ke mana kekuasaan terpusat akan bermuara.",
+    "words": 50223,
+    "chapterCount": 22,
+    "file": "books/my-disillusionment-russia.json",
+    "source": "Project Gutenberg #60315 (domain publik)"
   }
 ]

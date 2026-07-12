@@ -8645,5 +8645,29 @@
    }
   ],
   "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Emmeline_Pankhurst%2C_seated_%281913%29.jpg/330px-Emmeline_Pankhurst%2C_seated_%281913%29.jpg"
+ },
+ "Errico Malatesta": {
+  "years": "1853-1932",
+  "nationality": "Italia",
+  "bio": "Insinyur yang meninggalkan karier demi menjadi salah satu penggerak anarkisme paling gigih di Italia, menghabiskan lebih dari sepuluh tahun di penjara dan puluhan tahun dalam pengasingan. Tulisannya menekankan anarkisme sebagai gerakan praktis rakyat biasa, bukan sekadar teori akademis.",
+  "photo": "assets/portraits/errico-malatesta.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Malatesta_1891.png"
+ },
+ "Max Stirner": {
+  "years": "1806-1856",
+  "nationality": "Jerman",
+  "bio": "Guru di sebuah sekolah perempuan Berlin yang menulis satu buku besar, 'The Ego and His Own', lalu menghilang dari sorotan dan mati miskin. Gagasannya tentang individu yang menolak tunduk pada negara, agama, maupun moralitas abstrak menjadi fondasi anarkisme individualis dan masih memantik perdebatan hingga kini.",
+  "photo": "assets/portraits/max-stirner.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Friedrich_Engels_-_Die_Freien_%281842%29-1.1_V01-1.2_raw_RGASPI_%28Stirner_cropped%29.jpg"
+ },
+ "Alexander Berkman": {
+  "years": "1870-1936",
+  "nationality": "Rusia-Amerika",
+  "bio": "Anarkis kelahiran Rusia yang dipenjara empat belas tahun setelah mencoba membunuh seorang industrialis dalam pemogokan berdarah 1892, lalu menuliskan pengalamannya dalam memoar penjara yang memilukan. Rekan seperjuangan—dan sesekali kekasih—Emma Goldman, ia dideportasi bersamanya ke Rusia pada 1919.",
+  "photo": "assets/portraits/alexander-berkman.jpg",
+  "photoSource": "Wikimedia Commons (via Wikipedia)",
+  "photoSrc": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Alex._Berkman_LCCN2014680765_Crop.jpg"
  }
 }
