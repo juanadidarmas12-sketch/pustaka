@@ -21,6 +21,7 @@ let groupMode = 'genre';       // 'genre' | 'author'
 let activeAuthor = null;       // author string ketika drill-down dari daftar penulis
 let searchQuery = '';
 let currentGlobe = null;       // instance globe 3D #/konstelasi (dari globe.js), utk cleanup di routerDispatch
+let hasInAppNav = false;       // true setelah navigasi hash pertama in-app; deep-link murni = false
 
 const AVATAR_COLORS = ['#9a5b2e','#6b5fa8','#a8455a','#4f8a5c','#47899a','#b98a3e','#7a4b6d'];
 function avatarColor(name) { return AVATAR_COLORS[hashCode(name) % AVATAR_COLORS.length]; }
@@ -1357,11 +1358,11 @@ async function boot() {
   $('#detail-back').onclick = () => { location.hash = '#/'; };
   $('#constellation-back').onclick = () => { location.hash = '#/'; };
   // profil penulis bisa dicapai dari globe, daftar penulis, atau profil lain (tab Koneksi) —
-  // kembali ke halaman asal via history; fallback ke beranda utk deep-link tanpa riwayat
+  // kembali ke halaman asal via history. Deep-link (belum ada navigasi in-app) jangan pakai
+  // history.back(): itu bisa melempar keluar aplikasi (mis. balik ke tab kosong/situs lain)
   $('#author-back').onclick = () => {
-    const before = location.href;
-    history.back();
-    setTimeout(() => { if (location.href === before) location.hash = '#/'; }, 250);
+    if (hasInAppNav) history.back();
+    else location.hash = '#/';
   };
   $('#reader-back').onclick = () => {
     if (currentBook) location.hash = '#/buku/' + currentBook.meta.id;
@@ -1432,6 +1433,7 @@ async function boot() {
     setPage(Math.round(ratio * (pageState.pages - 1)), false);
   });
 
+  window.addEventListener('hashchange', () => { hasInAppNav = true; });
   window.addEventListener('hashchange', router);
 
   // service worker (jangan crash di file://; skip di localhost supaya dev tidak kena cache basi)
