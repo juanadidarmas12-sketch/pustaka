@@ -1432,6 +1432,26 @@ async function boot() {
   $('#reader-theme-btn').onclick = () => {
     setSettings({ theme: getSettings().theme === 'gelap' ? 'terang' : 'gelap' });
   };
+
+  /* hero landing: tombol jelajah + hemat daya video background */
+  $('#hero-explore').onclick = () => {
+    $('#search-input').closest('.search-row').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  const heroVideo = $('#hero-video');
+  if (heroVideo) {
+    if (REDUCE_MOTION) {
+      heroVideo.removeAttribute('autoplay'); // poster saja utk prefers-reduced-motion
+    } else {
+      // ditunda sesaat: listener ini terdaftar sebelum router, tunggu view selesai berganti
+      const syncHeroVideo = () => setTimeout(() => {
+        const active = !$('#view-library').hidden && !document.hidden;
+        if (active) heroVideo.play().catch(() => { /* autoplay ditolak: poster tampil */ });
+        else heroVideo.pause();
+      }, 60);
+      window.addEventListener('hashchange', syncHeroVideo);
+      document.addEventListener('visibilitychange', syncHeroVideo);
+    }
+  }
   $('#font-dec').onclick = () => setSettings({ fontSize: Math.max(15, getSettings().fontSize - 1) });
   $('#font-inc').onclick = () => setSettings({ fontSize: Math.min(24, getSettings().fontSize + 1) });
   document.querySelectorAll('.theme-dot').forEach(d => {

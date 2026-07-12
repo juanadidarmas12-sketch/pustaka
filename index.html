@@ -14,21 +14,29 @@
 
 <!-- ===== VIEW: PERPUSTAKAAN ===== -->
 <main id="view-library" class="view">
-  <header class="lib-header">
-    <div>
-      <h1 class="brand">Pustaka</h1>
-      <p class="tagline">Karya-karya besar, gratis &amp; legal.</p>
+  <header class="hero" id="hero">
+    <video class="hero-video" id="hero-video" autoplay muted loop playsinline
+           preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-veil"></div>
+    <div class="hero-inner">
+      <h1 class="hero-brand">Pustaka</h1>
+      <p class="hero-tagline">Duduklah bersama para pemikir besar dunia &mdash; gratis, legal, selamanya.</p>
       <div class="lib-stats" id="lib-stats"></div>
+      <div class="hero-actions">
+        <button class="hero-btn hero-btn-primary" id="hero-explore">
+          <span class="hb-ic">&#128214;</span> Mulai Membaca
+        </button>
+        <a class="hero-btn hero-btn-ghost" href="#/konstelasi">
+          <span class="hb-star">&#10022;</span> Konstelasi Pengetahuan
+        </a>
+      </div>
     </div>
+    <div class="hero-scroll-cue" aria-hidden="true">&#8964;</div>
   </header>
 
   <section id="continue-card" class="continue-card" hidden></section>
-
-  <a href="#/konstelasi" class="constellation-entry" id="constellation-entry">
-    <span class="cx-entry-star">&#10022;</span>
-    <span>Jelajahi Konstelasi Pengetahuan</span>
-    <span class="cx-entry-go">&#8594;</span>
-  </a>
 
   <div class="search-row">
     <div class="search-box">

@@ -4,7 +4,7 @@
      → saat online selalu dapat versi terbaru; cache hanya cadangan offline. Ini mencegah
        "app nyangkut di versi lama" pada PWA terinstal.
    - Isi buku (books/<id>.json), ikon, foto Wikimedia, audio = CACHE-FIRST (konten stabil/besar). */
-const CACHE = 'pustaka-v24';
+const CACHE = 'pustaka-v25';
 const SHELL = [
   './',
   './index.html',
@@ -89,6 +89,9 @@ async function cacheFirst(req) {
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
   const url = new URL(e.request.url);
+  // video: biarkan browser menangani langsung — range request (206) tidak
+  // bisa disimpan Cache API dan akan bikin error
+  if (url.pathname.endsWith('.mp4')) return;
   if (isNetworkFirst(url, e.request)) {
     e.respondWith(networkFirst(e.request));
   } else {
