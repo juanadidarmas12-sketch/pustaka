@@ -1356,6 +1356,13 @@ function escHTML(str) {
 async function boot() {
   $('#detail-back').onclick = () => { location.hash = '#/'; };
   $('#constellation-back').onclick = () => { location.hash = '#/'; };
+  // profil penulis bisa dicapai dari globe, daftar penulis, atau profil lain (tab Koneksi) —
+  // kembali ke halaman asal via history; fallback ke beranda utk deep-link tanpa riwayat
+  $('#author-back').onclick = () => {
+    const before = location.href;
+    history.back();
+    setTimeout(() => { if (location.href === before) location.hash = '#/'; }, 250);
+  };
   $('#reader-back').onclick = () => {
     if (currentBook) location.hash = '#/buku/' + currentBook.meta.id;
     else location.hash = '#/';

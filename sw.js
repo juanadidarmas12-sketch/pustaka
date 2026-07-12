@@ -4,7 +4,7 @@
      → saat online selalu dapat versi terbaru; cache hanya cadangan offline. Ini mencegah
        "app nyangkut di versi lama" pada PWA terinstal.
    - Isi buku (books/<id>.json), ikon, foto Wikimedia, audio = CACHE-FIRST (konten stabil/besar). */
-const CACHE = 'pustaka-v19';
+const CACHE = 'pustaka-v20';
 const SHELL = [
   './',
   './index.html',
