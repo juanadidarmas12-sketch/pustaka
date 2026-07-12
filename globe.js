@@ -458,13 +458,14 @@ export async function initGlobe(root, ctx) {
         if (m.elVisible) { m.el.style.display = 'none'; m.elVisible = false; }
         return;
       }
-      if (!m.elVisible) { m.el.style.display = ''; m.elVisible = true; }
+      // 'block' eksplisit — CSS class-nya default display:none, jadi '' (hapus inline
+      // style) akan jatuh balik ke none dan pin tak pernah tampil
+      if (!m.elVisible) { m.el.style.display = 'block'; m.elVisible = true; }
       m.el.style.transform =
         'translate3d(' + p.x.toFixed(1) + 'px,' + p.y.toFixed(1) + 'px,0) translate(-50%,-50%) scale(' + m.currentScale.toFixed(3) + ')';
     });
   }
 
-  let __dbgFrame = 0;
   function animate() {
     if (destroyed) return;
     rafId = requestAnimationFrame(animate);
@@ -477,12 +478,6 @@ export async function initGlobe(root, ctx) {
     updatePopup(rect, tmpQuat);
     updateMarkerDom(rect, tmpQuat);
     renderer.render(scene, camera);
-    __dbgFrame++;
-    if (__dbgFrame % 30 === 0) {
-      const vis = markers.filter(m => m.elVisible).length;
-      const scaleUp = markers.filter(m => m.currentScale > 0.05).length;
-      document.title = 'DBG f' + __dbgFrame + ' vis=' + vis + ' scaleUp=' + scaleUp + ' rectW=' + Math.round(rect.width);
-    }
   }
 
   setYear(YEAR_DEFAULT);
