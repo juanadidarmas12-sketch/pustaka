@@ -86,7 +86,9 @@ function coverHTML(meta) {
 
 /* ---------- routing ---------- */
 const REDUCE_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-function supportsVT() { return !!document.startViewTransition && !REDUCE_MOTION; }
+// document.hidden: browser membatalkan view transition di tab tersembunyi
+// (InvalidStateError) — navigasi dari background langsung tanpa transisi saja
+function supportsVT() { return !!document.startViewTransition && !REDUCE_MOTION && !document.hidden; }
 
 // depth per route → menentukan arah transisi
 function routeDepth(hash) {
