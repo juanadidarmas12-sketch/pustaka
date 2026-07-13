@@ -811,10 +811,11 @@ function renderConstellationEgo(name, info, books) {
       '<path class="cx-edge' + solidCls + '" d="M ' + centerNode.x.toFixed(1) + ' ' + centerY.toFixed(1) +
       ' Q ' + midX.toFixed(1) + ' ' + centerY.toFixed(1) + ' ' + n.x.toFixed(1) + ' ' + n.y.toFixed(1) + '"' +
       ' stroke="' + meta.color + '" stroke-width="2" fill="none"' + dash + pathLen + '></path>';
-    // notasi tipe relasi, ditulis langsung di tengah garis (warna guru=murid identik,
-    // jadi teks perlu, bukan sekadar warna). Titik tengah kurva quadratic pada t=0.5.
-    const lblX = (centerNode.x + n.x) / 2;
-    const lblY = 0.75 * centerY + 0.25 * n.y;
+    // notasi tipe relasi, ditulis langsung di garis (warna guru=murid identik,
+    // jadi teks perlu, bukan sekadar warna). Digeser ke arah node (~t=0.62) agar
+    // menyebar mengikuti lajur — guru ke atas, murid ke bawah — mengurangi tumpukan.
+    const lblX = 0.4 * centerNode.x + 0.6 * n.x;
+    const lblY = 0.6 * centerY + 0.4 * n.y;
     const lblW = meta.label.length * 6.2 + 14;
     edgesHTML +=
       '<g class="cx-edge-label" aria-hidden="true">' +
