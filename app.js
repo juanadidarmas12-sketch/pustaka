@@ -691,7 +691,7 @@ function assignMapLanes(nodes, laneH, maxLanes, topPad) {
    bila IntersectionObserver tak tersedia atau prefers-reduced-motion aktif. */
 function initScrollReveal(container) {
   if (!container) return;
-  const nodes = container.querySelectorAll('.cx-node, .cx-edge');
+  const nodes = container.querySelectorAll('.cx-node, .cx-edge, .cx-edge-label');
   if (REDUCE_MOTION || !('IntersectionObserver' in window)) {
     nodes.forEach(n => n.classList.add('revealed'));
     return;
@@ -811,6 +811,16 @@ function renderConstellationEgo(name, info, books) {
       '<path class="cx-edge' + solidCls + '" d="M ' + centerNode.x.toFixed(1) + ' ' + centerY.toFixed(1) +
       ' Q ' + midX.toFixed(1) + ' ' + centerY.toFixed(1) + ' ' + n.x.toFixed(1) + ' ' + n.y.toFixed(1) + '"' +
       ' stroke="' + meta.color + '" stroke-width="2" fill="none"' + dash + pathLen + '></path>';
+    // notasi tipe relasi, ditulis langsung di tengah garis (warna guru=murid identik,
+    // jadi teks perlu, bukan sekadar warna). Titik tengah kurva quadratic pada t=0.5.
+    const lblX = (centerNode.x + n.x) / 2;
+    const lblY = 0.75 * centerY + 0.25 * n.y;
+    const lblW = meta.label.length * 6.2 + 14;
+    edgesHTML +=
+      '<g class="cx-edge-label" aria-hidden="true">' +
+        '<rect x="' + (lblX - lblW / 2).toFixed(1) + '" y="' + (lblY - 8.5).toFixed(1) + '" width="' + lblW.toFixed(1) + '" height="17" rx="8.5" fill="var(--card)" stroke="' + meta.color + '"></rect>' +
+        '<text x="' + lblX.toFixed(1) + '" y="' + (lblY + 3.4).toFixed(1) + '" text-anchor="middle" fill="' + meta.color + '">' + escHTML(meta.label) + '</text>' +
+      '</g>';
   });
 
   let nodesHTML = '';
@@ -821,12 +831,15 @@ function renderConstellationEgo(name, info, books) {
     const dimmed = n.inCatalog ? '' : ' cx-node-dim';
     const label = n.to.length > 14 ? n.to.slice(0, 13) + '…' : n.to;
     const yearLabel = n.year != null ? formatYearLabel(n.year) : '';
+    const tmeta = CONN_TYPE_META[n.type] || CONN_TYPE_META.pengaruh;
+    // teks penjelas: "Guru: Socrates" atau "Menentang: Wagner · awalnya kagum, lalu berbalik"
+    const relText = tmeta.label + ': ' + n.to + (n.note ? ' · ' + n.note : '');
     const attrs = n.inCatalog
       ? ' data-goto="' + escHTML(n.to) + '"'
-      : ' data-conn-note="' + escHTML(n.note || n.to) + '"';
+      : ' data-conn-note="' + escHTML(relText) + '"';
     nodesHTML +=
-      '<g class="cx-node' + dimmed + '" tabindex="0" role="button" aria-label="' + escHTML(n.to) + '"' + attrs + '>' +
-        '<title>' + escHTML(n.to + (n.note ? ' — ' + n.note : '')) + '</title>' +
+      '<g class="cx-node' + dimmed + '" tabindex="0" role="button" aria-label="' + escHTML(relText) + '"' + attrs + '>' +
+        '<title>' + escHTML(relText) + '</title>' +
         '<rect class="cx-node-hit" x="' + (n.x - 46).toFixed(1) + '" y="' + (n.y - 28).toFixed(1) + '" width="92" height="80" fill="transparent"></rect>' +
         nodeAvatarHTML(n.x, n.y, r, photo, fill, n.to[0]) +
         '<text class="cx-node-label" x="' + n.x.toFixed(1) + '" y="' + (n.y + r + 13).toFixed(1) + '" text-anchor="middle">' + escHTML(label) + '</text>' +

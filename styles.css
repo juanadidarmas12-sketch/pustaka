@@ -989,6 +989,12 @@ html[data-vt="tab-back"]::view-transition-new(author-panel) { animation: vt-in-l
   transition: opacity .45s ease;
 }
 .cx-edge.revealed { opacity: .7; }
+
+/* notasi tipe relasi di tiap garis koneksi */
+.cx-edge-label { opacity: 0; transition: opacity .45s ease; }
+.cx-edge-label.revealed { opacity: 1; }
+.cx-edge-label text { font: 700 9px var(--sans); letter-spacing: .2px; }
+.cx-edge-label rect { opacity: .95; }
 .cx-edge.cx-edge-solid {
   stroke-dasharray: 1; stroke-dashoffset: 1;
   transition: opacity .45s ease, stroke-dashoffset .6s ease;
