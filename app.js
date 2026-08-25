@@ -133,6 +133,64 @@ function runRouterVT(dispatch) {
   t.finished.finally(() => { delete document.documentElement.dataset.vt; });
 }
 
+/* ---------- Mode embed: lapor sesi baca ke aplikasi induk (mis. Reclaim) ----------
+   Aktif hanya via ?embed=1 → tak memengaruhi pengguna web biasa. Mengirim DELTA
+   (detik + halaman sejak laporan terakhir) via postMessage; induk mengakumulasi. */
+const EMBED_MODE = /[?&]embed=1\b/.test(location.search);
+const readSess = { tickStart: 0, pagesPending: 0, hb: null };
+
+function readerIsActive() {
+  return EMBED_MODE && !$('#view-reader').hidden && !!currentBook &&
+    document.visibilityState === 'visible';
+}
+function emitReading(secondsDelta) {
+  if (!EMBED_MODE) return;
+  const pages = readSess.pagesPending; readSess.pagesPending = 0;
+  const secs = Math.round(secondsDelta);
+  if (secs < 1 && pages === 0) return;
+  try {
+    window.parent.postMessage({
+      source: 'pustaka', type: 'reading',
+      secondsDelta: secs, pagesDelta: pages,
+      bookId: currentBook ? currentBook.meta.id : null,
+      bookTitle: currentBook ? currentBook.meta.title : null
+    }, '*');
+  } catch (e) { /* bukan iframe / diblok: abaikan */ }
+}
+function flushReading() {
+  if (readSess.tickStart) {
+    const dt = (performance.now() - readSess.tickStart) / 1000;
+    readSess.tickStart = 0;
+    emitReading(dt);
+  }
+}
+function syncReadTick() {
+  if (!EMBED_MODE) return;
+  const active = readerIsActive();
+  if (active && !readSess.tickStart) {
+    readSess.tickStart = performance.now();
+    if (!readSess.hb) {
+      readSess.hb = setInterval(() => {           // heartbeat 30 dtk: flush parsial
+        if (readSess.tickStart) {
+          const dt = (performance.now() - readSess.tickStart) / 1000;
+          readSess.tickStart = performance.now();
+          emitReading(dt);
+        }
+      }, 30000);
+    }
+  } else if (!active && readSess.tickStart) {
+    flushReading();
+    if (readSess.hb) { clearInterval(readSess.hb); readSess.hb = null; }
+  }
+}
+if (EMBED_MODE) {
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') flushReading();
+    syncReadTick();
+  });
+  window.addEventListener('pagehide', flushReading);
+}
+
 function router() {
   runRouterVT(() => routerDispatch());
 }
@@ -168,6 +226,7 @@ function routerDispatch() {
     currentBook = null;
     renderLibrary();
   }
+  syncReadTick(); // mulai/hentikan pelacakan sesi baca (mode embed)
 }
 
 /* ---------- perpustakaan ---------- */
@@ -1054,6 +1113,7 @@ async function openReader(id, ch) {
   currentChapter = Math.max(0, Math.min(ch, book.chapters.length - 1));
   clearFlips();
   renderChapter(!sameBook);
+  syncReadTick(); // currentBook baru siap → mulai hitung waktu baca (mode embed)
 }
 
 function renderChapter(restorePosition) {
@@ -1271,6 +1331,7 @@ function animateFlip(el, fromDeg, toDeg, done) {
 /* balik halaman; melewati batas bab berpindah bab otomatis */
 function goPage(delta) {
   if (!currentBook || pageState.animating || pageState.dragging) return;
+  if (delta > 0 && EMBED_MODE) readSess.pagesPending++; // hitung halaman maju (mode embed)
   const nCh = currentBook.book.chapters.length;
   const target = pageState.page + delta;
 
