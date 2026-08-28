@@ -445,6 +445,17 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   padding: 8px 16px; border-radius: 10px; border: 1px solid var(--r-line);
   font-size: 15px; font-weight: 600; color: var(--r-ink);
 }
+/* segmen (jarak baris, lebar) */
+.rs-seg { gap: 6px; }
+.rs-seg-btn {
+  padding: 6px 12px; border-radius: 9px; border: 1px solid var(--r-line);
+  font-size: 13px; font-weight: 600; color: var(--r-soft); background: transparent;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.rs-seg-btn.active {
+  color: var(--accent); border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
 .theme-dot { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--r-line); }
 .theme-dot-light { background: #fdfdfb; }
 .theme-dot-sepia { background: #f5ecd9; }
@@ -464,7 +475,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   column-fill: auto;
   font-family: var(--serif);
   font-size: var(--reader-font, 18px);
-  line-height: 1.75;
+  line-height: var(--reader-leading, 1.75);
   will-change: transform;
   transition: transform .38s cubic-bezier(.22,.61,.36,1);
 }
@@ -483,7 +494,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   margin: 0 0 28px; letter-spacing: .3px;
 }
 .reader-content p { margin: 0 0 1.15em; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
-.reader-content .chapter-meta + p::first-letter {
+.reader-content p.drop::first-letter {
   font-size: 2.6em; float: left; line-height: .9;
   padding: 4px 8px 0 0; color: var(--accent); font-weight: 600;
 }

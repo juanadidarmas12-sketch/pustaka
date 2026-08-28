@@ -38,7 +38,7 @@ function saveJSONLS(key, val) {
 }
 function getSettings() {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  return Object.assign({ fontSize: 18, theme: prefersDark ? 'gelap' : 'sepia' }, loadJSONLS(LS_SETTINGS, {}));
+  return Object.assign({ fontSize: 18, theme: prefersDark ? 'gelap' : 'sepia', leading: 'normal', measure: 'normal' }, loadJSONLS(LS_SETTINGS, {}));
 }
 function setSettings(patch) {
   const s = Object.assign(getSettings(), patch);
@@ -1067,7 +1067,7 @@ async function renderDetail(id) {
     $('#detail-toc-list').innerHTML = book.chapters.map((c, i) =>
       '<li><button data-ch="' + i + '"' + (p && p.ch === i ? ' class="toc-current"' : '') + '>' +
       '<span class="toc-no">' + (i + 1) + '</span>' +
-      '<span style="flex:1">' + escHTML(c.title) + '</span><span class="toc-min">' + estMinutes(c.words) + '</span>' +
+      '<span style="flex:1">' + escHTML(chapterNavLabel(c.title, i)) + '</span><span class="toc-min">' + estMinutes(c.words) + '</span>' +
       '</button></li>'
     ).join('');
     $('#detail-toc-list').querySelectorAll('button').forEach(btn => {
@@ -1116,6 +1116,17 @@ async function openReader(id, ch) {
   syncReadTick(); // currentBook baru siap → mulai hitung waktu baca (mode embed)
 }
 
+/* judul bab generik dari extractor fallback ("Konten", "Konten (lanjutan N)",
+   "Bagian N") tak informatif — heading disembunyikan di area baca, dan di navigasi
+   diganti "Bagian N" yang bernomor konsisten. */
+function chapterIsGeneric(t) {
+  t = (t || '').trim();
+  return /^Konten\b/i.test(t) || /^Bagian\s+\d+$/i.test(t);
+}
+function chapterNavLabel(t, index) {
+  return chapterIsGeneric(t) ? 'Bagian ' + (index + 1) : t;
+}
+
 function renderChapter(restorePosition) {
   const { meta, book } = currentBook;
   const chap = book.chapters[currentChapter];
@@ -1124,13 +1135,18 @@ function renderChapter(restorePosition) {
   $('#reader-book-title').textContent = meta.title;
 
   const isLast = currentChapter >= book.chapters.length - 1;
-  $('#reader-content').innerHTML =
+  const generic = chapterIsGeneric(chap.title);
+  const headHTML = generic ? '' :
     '<h2 class="chapter-title">' + escHTML(chap.title) + '</h2>' +
-    '<p class="chapter-meta">' + escHTML(meta.author) + ' · ' + estMinutes(chap.words) + '</p>' +
-    chap.paragraphs.map(p => '<p>' + escHTML(p) + '</p>').join('') +
+    '<p class="chapter-meta">' + escHTML(meta.author) + ' · ' + estMinutes(chap.words) + '</p>';
+  // paragraf pertama diberi kelas "drop" utk drop cap (bekerja dgn/tanpa heading)
+  const parasHTML = chap.paragraphs
+    .map((p, i) => '<p' + (i === 0 ? ' class="drop"' : '') + '>' + escHTML(p) + '</p>').join('');
+  $('#reader-content').innerHTML =
+    headHTML + parasHTML +
     '<div class="chapter-end">' + (isLast
       ? 'Tamat — kamu menyelesaikan “' + escHTML(meta.title) + '”.'
-      : 'Akhir ' + escHTML(chap.title)) + '</div>';
+      : 'Akhir ' + escHTML(chapterNavLabel(chap.title, currentChapter))) + '</div>';
 
   $('#reader-settings').hidden = true;
   $('#toc-sheet').hidden = true;
@@ -1153,7 +1169,8 @@ function layoutPages() {
   const pager = $('#pager');
   const content = $('#reader-content');
   const cw = pager.clientWidth;
-  const pageW = Math.min(cw - 44, 620);
+  const cap = READER_MEASURE[getSettings().measure] || 620;
+  const pageW = Math.min(cw - 44, cap);
   const padX = Math.round((cw - pageW) / 2);
   const gap = padX * 2;
   pager.style.paddingLeft = padX + 'px';
@@ -1190,8 +1207,9 @@ function saveReadingPosition() {
 function updateReaderChrome() {
   const { book } = currentBook;
   const chap = book.chapters[currentChapter];
-  $('#reader-chapter-label').textContent = chap.title + ' · ' + (currentChapter + 1) + '/' + book.chapters.length;
-  $('#page-pos').textContent = 'Hal ' + (pageState.page + 1) + '/' + pageState.pages + ' · ' + chap.title;
+  const navLabel = chapterNavLabel(chap.title, currentChapter);
+  $('#reader-chapter-label').textContent = navLabel + ' · ' + (currentChapter + 1) + '/' + book.chapters.length;
+  $('#page-pos').textContent = 'Hal ' + (pageState.page + 1) + '/' + pageState.pages + ' · ' + navLabel;
   const ratio = pageState.pages > 1 ? pageState.page / (pageState.pages - 1) : 1;
   $('#reader-progress-fill').style.width = Math.round(ratio * 100) + '%';
   $('#page-prev').disabled = currentChapter === 0 && pageState.page === 0;
@@ -1481,13 +1499,21 @@ function bindPagerGestures() {
 }
 
 /* ---------- pengaturan pembaca ---------- */
+const READER_LEADING = { rapat: 1.5, normal: 1.75, longgar: 2.05 };
+const READER_MEASURE = { sempit: 520, normal: 620, lebar: 740 };
+
 function applySettings(relayout) {
   const s = getSettings();
   const reader = $('#view-reader');
   reader.dataset.rtheme = s.theme;
   reader.style.setProperty('--reader-font', s.fontSize + 'px');
+  reader.style.setProperty('--reader-leading', READER_LEADING[s.leading] || 1.75);
   document.querySelectorAll('.theme-dot').forEach(d =>
     d.classList.toggle('active', d.dataset.theme === s.theme));
+  document.querySelectorAll('[data-leading]').forEach(b =>
+    b.classList.toggle('active', b.dataset.leading === s.leading));
+  document.querySelectorAll('[data-measure]').forEach(b =>
+    b.classList.toggle('active', b.dataset.measure === s.measure));
   const themeBtn = $('#reader-theme-btn');
   if (themeBtn) {
     themeBtn.innerHTML = s.theme === 'gelap' ? '&#9788;' : '&#9790;'; // ☼ / ☾
@@ -1552,6 +1578,12 @@ async function boot() {
   $('#font-inc').onclick = () => setSettings({ fontSize: Math.min(24, getSettings().fontSize + 1) });
   document.querySelectorAll('.theme-dot').forEach(d => {
     d.onclick = () => setSettings({ theme: d.dataset.theme });
+  });
+  document.querySelectorAll('[data-leading]').forEach(b => {
+    b.onclick = () => setSettings({ leading: b.dataset.leading });
+  });
+  document.querySelectorAll('[data-measure]').forEach(b => {
+    b.onclick = () => setSettings({ measure: b.dataset.measure });
   });
   $('#search-input').addEventListener('input', () => {
     searchQuery = $('#search-input').value;
@@ -1982,7 +2014,7 @@ function openTOC() {
   $('#toc-list').innerHTML = book.chapters.map((c, i) =>
     '<li><button data-ch="' + i + '"' + (i === currentChapter ? ' class="toc-current"' : '') + '>' +
     '<span class="toc-no">' + (i + 1) + '</span>' +
-    '<span style="flex:1">' + escHTML(c.title) + '</span><span class="toc-min">' + estMinutes(c.words) + '</span>' +
+    '<span style="flex:1">' + escHTML(chapterNavLabel(c.title, i)) + '</span><span class="toc-min">' + estMinutes(c.words) + '</span>' +
     '</button></li>'
   ).join('');
   $('#toc-list').querySelectorAll('button').forEach(btn => {
